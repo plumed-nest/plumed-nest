@@ -28,7 +28,7 @@ git init
 git config user.email giovanni.bussi+plumedbot@gmail.com
 git config user.name plumedbot
 set +x
-git remote add origin https://plumedbot:$GIT_TOKEN@github.com/plumed/plumed-nest.git
+git remote add origin https://plumedbot:$GIT_TOKEN@github.com/plumed/plumed-nest-site.git
 set -x
 
 cat > README.md << EOF
