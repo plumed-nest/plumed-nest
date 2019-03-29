@@ -25,22 +25,22 @@ def plumed_format(source,destination):
                     if len(words)>1 and re.match("^.*:$",words[0]):
                         action=words[1]
                     elif len(words)>0 and words[0]=="ENDPLUMED":
+                        print("````",file=o)
                         endplumed=True
                     elif len(words)>0:
                         action=words[0]
-                if action=="__FILL__":
-                    action=""
                 if len(action)>0 and not continuation:
-                    action_url='<a href="path/to/' + action + '.html" style="color:green">' + action + '</a>'
+                    action_url="[" + action + "](http://path/to/" + action + ".html)"
                     line=re.sub(action,action_url,line)
                 if len(words)>0 and words[-1]=="...":
                     continuation=True
                 if continuation and words[0]=="...":
                     continuation=False
-                line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)
-                if(endplumed):
-                    line=re.sub("(^.*$)","<span style=\"color:blue\">\\1</span>",line)
-                print(line + '<br>',file=o)
+                line=re.sub("(#.*$)","`\\1`",line)
+# "  " is newline in markdown
+                print(line + "  " ,file=o)
+            if(endplumed):
+                print("````",file=o)
 
 
 @contextmanager
@@ -77,7 +77,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             config["plumed_input"]=[str(v) for v in config["plumed_input"]]
         print(config)
         for file in config["plumed_input"]:
-            plumed_format(file,file + ".html")
+            plumed_format(file,file + ".md")
 
 
 
