@@ -1,0 +1,20 @@
+dist: trusty
+sudo: required 
+
+language: cpp
+cache: ccache
+  
+install:
+  - sudo apt update
+  - sudo apt install mpi-default-bin mpi-default-dev
+  - export PATH="$HOME/opt/bin:$PATH"
+  - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
+  - sudo ln -s ccache /usr/local/bin/mpic++
+  - export PATH=/usr/lib/ccache:${PATH}
+  - ccache -s
+# version=master or version=f123f12f3 to select a specific version
+  - CXX="mpic++" .travis/install.plumed
+  - ccache -s
+
+script:
+  - echo test
