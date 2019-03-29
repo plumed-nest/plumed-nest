@@ -7,6 +7,7 @@ cache: ccache
 install:
   - sudo apt update
   - sudo apt install mpi-default-bin mpi-default-dev
+  - pip3 install PyYAML
   - export PATH="$HOME/opt/bin:$PATH"
   - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
   - sudo ln -s ccache /usr/local/bin/mpic++
@@ -17,4 +18,5 @@ install:
   - ccache -s
 
 script:
-  - echo test
+  - python3 --version
+  - python3 nest.py
