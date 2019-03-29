@@ -8,7 +8,7 @@ install:
   - sudo apt update
   - sudo apt install mpi-default-bin mpi-default-dev
   - sudo apt-get update
-  - sudo apt-get install python3
+  - pyenv global 3.6
   - pip3 install PyYAML
   - export PATH="$HOME/opt/bin:$PATH"
   - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
