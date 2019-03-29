@@ -22,8 +22,7 @@ tar cf all.tar $@
 cd tmp/$$
 tar xf ../../all.tar
 
-  export GIT_BOT_EMAIL=giovanni.bussi+plumedbot@gmail.com
-fi
+export GIT_BOT_EMAIL=giovanni.bussi+plumedbot@gmail.com
 
 git init
 git config user.email giovanni.bussi+plumedbot@gmail.com
