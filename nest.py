@@ -59,7 +59,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
     with cd(path):
 
         stram = open("nest.yml", "r")
-        config=yaml.load(stram)
+        config=yaml.load(stram,Loader=yaml.BaseLoader)
         if not "url" in config:
             raise RuntimeError("url not found")
         print(config)
