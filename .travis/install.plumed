@@ -25,6 +25,6 @@ fi
 
 git checkout $version
 
-./configure --prefix=$HOME/opt
+./configure --prefix=$HOME/opt  --enable-modules=all
 make -j 5
 make install
