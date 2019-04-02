@@ -30,7 +30,7 @@ def plumed_format(source,destination):
                     elif len(words)>0:
                         action=words[0]
                 if len(action)>0 and not continuation:
-                    action_url="[" + action + "](http://path/to/" + action + ".html)"
+                    action_url="[" + action + "](https://plumed.github.io/doc-master/user-doc/html/" + action + ".html)"
                     line=re.sub(action,action_url,line)
                 if len(words)>0 and words[-1]=="...":
                     continuation=True
