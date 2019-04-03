@@ -57,7 +57,7 @@ def add_readme(file, success):
         badge = ''
         if success==0: 
             badge = badge + '[![Github Releases](https://img.shields.io/github/release/plumed/plumed2.svg)](https://github.com/plumed/plumed2/releases)'
-        print("| " + file + " | " + badge + " |", file=o)
+        print("| [" + file + "](/"+file+".md"+") | " + badge + " |", file=o)
 
 
 @contextmanager
