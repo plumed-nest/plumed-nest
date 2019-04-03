@@ -52,6 +52,14 @@ def plumed_input_test(source):
     rc = child.returncode
     return rc
 
+def add_readme(file, success):
+    with open("README.md","a") as o:
+        badge = ''
+        if success==0: 
+            badge = badge + '[![Github Releases](https://img.shields.io/github/release/plumed/plumed2.svg)](https://github.com/plumed/plumed2/releases)'
+        print("| " + file + " | " + badge + " |", file=o)
+
+
 @contextmanager
 def cd(newdir):
     prevdir = os.getcwd()
@@ -88,7 +96,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
             success=plumed_input_test(file)
-            print(success)
+            add_readme(file, success)
 
 
 

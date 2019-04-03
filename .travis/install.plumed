@@ -23,7 +23,8 @@ else
   echo "installing latest stable plumed $version"
 fi
 
-git checkout $version
+#commented out till next stable version that will include --parse-only
+#git checkout $version
 
 ./configure --prefix=$HOME/opt  --enable-modules=all
 make -j 5
