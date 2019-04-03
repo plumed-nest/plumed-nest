@@ -57,7 +57,7 @@ def add_readme(file, success):
         badge = ''
         if success==0: 
             badge = badge + '[![Github Releases](https://img.shields.io/github/release/plumed/plumed2.svg)](https://github.com/plumed/plumed2/releases)'
-        print("| [" + file + "](/"+file+".md"+") | " + badge + " |", file=o)
+        print("| [" + file + "](./"+file+".md"+") | | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -93,6 +93,11 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
             config["plumed_input"]=[str(v) for v in config["plumed_input"]]
         print(config)
+
+        with open("README.md","w") as o:
+            print("| file     | original plumed relase | compatible with latest relase |  ", file=o) 
+            print("|:--------:|:---------:|:--------:|  ", file=o)
+
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
             success=plumed_input_test(file)
