@@ -108,6 +108,6 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             add_readme(file, success)
 
         with open("../list.md","a") as o:
-            text='| [' + path + '](.'+path+'/README.md) | | |  ' 
+            text='| [' + path + ']('+path+') | | |  ' 
             print(text, file=o)
 
