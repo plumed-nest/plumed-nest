@@ -69,6 +69,10 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
+with open("list.tmp","w") as o:
+    print("| project     | description | author |  ", file=o) 
+    print("|:--------:|:---------:|:---------:|  ", file=o)
+
 for path in pathlib.Path('.').glob('*/nest.yml'):
 
     path=re.sub("nest.yml$","",str(path))
@@ -103,5 +107,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             success=plumed_input_test(file)
             add_readme(file, success)
 
-
+        with open("../list.tmp","a") as o:
+            text='| [' + path + '](.'+path+'/README.md) | | |  ' 
+            print(text, file=o)
 

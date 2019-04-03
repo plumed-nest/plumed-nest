@@ -32,11 +32,13 @@ git remote add origin https://plumedbot:$GIT_TOKEN@github.com/plumed/plumed-nest
 set -x
 
 cat > README.md << EOF
-${TRAVIS_BRANCH}
+PLUMED-NEST: ${TRAVIS_BRANCH}
 -----------------------------
 $hash
 
 EOF
+
+cat ../list.tmp >> README.md
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
