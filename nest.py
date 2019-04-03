@@ -11,6 +11,7 @@ import zipfile
 from contextlib import contextmanager
 import os
 import pathlib
+import subprocess
 
 def plumed_format(source,destination):
     with open(source) as f:
@@ -45,6 +46,11 @@ def plumed_format(source,destination):
             if(endplumed):
                 print("````",file=o)
 
+def plumed_input_test(source):
+    child = subprocess.Popen(['plumed', 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', source], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
+    stdout,stderr = child.communicate()
+    rc = child.returncode
+    return rc
 
 @contextmanager
 def cd(newdir):
@@ -81,6 +87,8 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         print(config)
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
+            success=plumed_input_test(file)
+            print(success)
 
 
 
