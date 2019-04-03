@@ -99,7 +99,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         print(config)
 
         with open("README.md","w") as o:
-            print("| file     | original plumed relase | compatible with latest relase |  ", file=o) 
+            print("| file     | original plumed release | compatible with latest release |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
