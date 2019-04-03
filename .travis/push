@@ -38,7 +38,7 @@ $hash
 
 EOF
 
-cat list.tmp >> README.md
+cat list.md >> README.md
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
