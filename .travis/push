@@ -35,6 +35,18 @@ cat > README.md << EOF
 PLUMED-NEST: ${TRAVIS_BRANCH}
 -----------------------------
 $hash
+* __What is PLUMED-NEST?__
+  Bla bla bla
+
+* __What is the PLUMED consortium?__
+  Bla bla bla
+
+* __How to contribute to PLUMED-NEST__
+
+* __How to cite PLUMED-NEST__
+  Bla bla bla
+
+* __Browse contributions__
 
 EOF
 
