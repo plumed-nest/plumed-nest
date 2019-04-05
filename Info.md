@@ -37,7 +37,7 @@
   If you deposited your data on the PLUMED-NEST, we invite you to add the following sentence to your paper:
 
   *All the data and PLUMED input files required to reproduce the results reported in this paper can be found
-  on PLUMED-NEST (https://github.com/plumed/plumed-nest-site), the public repository of the PLUMED consortium [cite ref].* 
+  on PLUMED-NEST (https://plumed.github.io/plumed-nest-site/), the public repository of the PLUMED consortium [cite ref].* 
 
 * __Browse contributions__
 
