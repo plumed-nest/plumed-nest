@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: PLUMED-NEST
+description: The public repository of the PLUMED consortium
+github:
+  is_project_page: false
