@@ -21,6 +21,7 @@
   </head>
   <body>
 
+    
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
@@ -31,6 +32,13 @@
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
+      {% for item in site.data.navigation.pages %}
+        {% if page.url == item.url %}
+        <a href="{{ item.url }}" class="btn"><font color="white">{{ item.title }}</font></a>
+        {% else %}
+        <a href="{{ item.url }}" class="btn">{{ item.title }}</a>
+        {% endif %}
+      {% endfor %}
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -45,4 +53,5 @@
     </main>
   </body>
 </html>
+
 

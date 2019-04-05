@@ -1,8 +1,9 @@
+pages:
 - title: Home
-  url: /
-
-- title: Contribute 
-  url: /Contribute.md
-
+  url: /plumed-nest-site
+- title: Consortium
+  url: /plumed-nest-site/Members.html
+- title: Contribute
+  url: /plumed-nest-site/Contribute.html
 - title: Browse
-  url: /list.md
+  url: /plumed-nest-site/list.html
