@@ -37,7 +37,7 @@ PLUMED-NEST: ${TRAVIS_BRANCH}
 $hash
 * __What is PLUMED-NEST?__
 
-  PLUMED-NEST is the repository of the PLUMED consortium. It provides all the data
+  PLUMED-NEST is the public repository of the PLUMED consortium. It provides all the data
   needed to reproduce the results of a PLUMED-enhanced molecular dynamics simulation (or analysis)
   contained in a published paper. 
 
@@ -54,7 +54,7 @@ $hash
 
   [citation to the paper]
 
-  and the list of current members and coordinators can be found [here](Members). 
+  and the list of current members and coordinators can be found [here](Members.md). 
 
 * __How to contribute to PLUMED-NEST__
 
