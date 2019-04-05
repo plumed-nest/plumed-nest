@@ -70,6 +70,8 @@ def cd(newdir):
         os.chdir(prevdir)
 
 with open("list.md","w") as o:
+    print("Browse deposited projects")
+    print("-----------------------------")
     print("Here is a list of the projects currently available on PLUMED-NEST")
     print(" ")
     print("| project     | category | keywords | description | author(s) | publication |", file=o) 
