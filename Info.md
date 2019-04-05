@@ -12,7 +12,7 @@
 
 * __What is the PLUMED consortium?__
 
-  The PLUMED consortium is an open community composed of current and past developers, contributors, 
+  The PLUMED consortium is an open community composed of current and past PLUMED developers, contributors, 
   and all those researchers whose work builds in part on PLUMED and at the same time drives 
   the development and dissemination of PLUMED.
   The mission of the consortium is to transform the way researchers communicate the 
