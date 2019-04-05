@@ -1,5 +1,15 @@
 The PLUMED consortium
 -----------------------------
+The PLUMED consortium is an open community composed of current and past PLUMED developers, contributors, 
+and all those researchers whose work builds in part on PLUMED and at the same time drives 
+the development and dissemination of PLUMED.
+The mission of the consortium is to transform the way researchers communicate the 
+protocols that are used in their MD simulations, in order to maximize the impact of 
+new research and promote the highest possible standards of scientific reproducibility. 
+
+More information about the PLUMED consortium can be found here:
+
+[citation to the paper]
 
 The coordinators of the PLUMED consortium are:
 

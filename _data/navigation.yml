@@ -1,6 +1,8 @@
 pages:
 - title: Home
   url: /plumed-nest-site
+- title: PLUMED
+  url: http://www.plumed.org
 - title: Consortium
   url: /plumed-nest-site/Members.html
 - title: Contribute
