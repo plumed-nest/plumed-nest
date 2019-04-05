@@ -24,4 +24,4 @@ install:
 script:
   - python3 --version
   - python3 nest.py
-  - bash .travis/push $(find . -name "*.md")
+  - bash .travis/push $(find . -name "*.md") _config.yml
