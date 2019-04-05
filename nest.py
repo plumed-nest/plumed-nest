@@ -70,10 +70,10 @@ def cd(newdir):
         os.chdir(prevdir)
 
 with open("list.md","w") as o:
-    print("Browse the nest")
-    print("-----------------------------")
-    print("Here is a list of the projects currently available on PLUMED-NEST")
-    print(" ")
+    print("Browse the nest", file=o)
+    print("-----------------------------", file=o)
+    print("Here is a list of the projects already deposited on PLUMED-NEST", file=o)
+    print(" ", file=o)
     print("| project     | category | keywords | description | author(s) | publication |", file=o) 
     print("|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
 
