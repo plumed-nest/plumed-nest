@@ -41,5 +41,6 @@
 
 * __Browse contributions__
 
-  Here is a list of contributions from current members of the PLUMED consortium and other researchers.
+  A list of contributions from current members of the PLUMED consortium as well as other researchers
+  can be found [here](list.md).
 

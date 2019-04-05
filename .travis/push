@@ -33,16 +33,14 @@ set -x
 
 # create README.md
 cat > README.md << EOF
-PLUMED-NEST: ${TRAVIS_BRANCH}
+Welcome to PLUMED-NEST!
 -----------------------------
-$hash
+${TRAVIS_BRANCH} - $hash
 
 EOF
 
 # add general informations
 cat Info.md >> README.md
-# add list of contributions
-cat list.md >> README.md
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
