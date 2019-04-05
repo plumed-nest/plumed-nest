@@ -70,8 +70,10 @@ def cd(newdir):
         os.chdir(prevdir)
 
 with open("list.md","w") as o:
-    print("| project     | category | description | author | publication |", file=o) 
-    print("|:--------:|:---------:|:---------:|:---------:|:---------:|", file=o)
+    print("Here is a list of the projects currently available on PLUMED-NEST")
+    print(" ")
+    print("| project     | category | keywords | description | author(s) | publication |", file=o) 
+    print("|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
 
 for path in pathlib.Path('.').glob('*/nest.yml'):
 
