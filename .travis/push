@@ -31,6 +31,7 @@ set +x
 git remote add origin https://plumedbot:$GIT_TOKEN@github.com/plumed/plumed-nest-site.git
 set -x
 
+# create README.md
 cat > README.md << EOF
 PLUMED-NEST: ${TRAVIS_BRANCH}
 -----------------------------

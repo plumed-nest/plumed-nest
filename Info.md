@@ -4,6 +4,12 @@
   needed to reproduce the results of a PLUMED-enhanced molecular dynamics simulation (or analysis)
   contained in a published paper. 
 
+* __What is PLUMED?__
+
+  PLUMED is a freely-available, open-source library that provides a wide range of different methods 
+  that includes enhanced-sampling algorithms, free-energy methods, and tools to analyze the vast amounts 
+  of data produced by MD simulations. More information can be found [here](http://www.plumed.org). 
+
 * __What is the PLUMED consortium?__
 
   The PLUMED consortium is an open community composed of current and past developers, contributors, 
@@ -24,7 +30,7 @@
   Everybody can contribute to PLUMED-NEST. It is sufficient to provide
   a link to an archive containing all the data needed to reproduce a 
   PLUMED-enhanced simulation (or analysis) along with some additional information.
-  More detailed instructions and the form to upload a contribution can be found here.
+  More detailed instructions and the form to upload a contribution can be found [here](Contribute.md).
 
 * __How to cite PLUMED-NEST__
 
