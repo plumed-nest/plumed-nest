@@ -70,6 +70,7 @@ $hash
 * __Browse contributions__
 
   Here is a list of contributions from current members of the PLUMED consortium and other researchers.
+
 EOF
 
 cat list.md >> README.md
