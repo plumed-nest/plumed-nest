@@ -137,12 +137,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
              try:
                print(config["instructions"], file=o)
              except KeyError:
-               try:
-                 ifile = open("Instructions.md","r")
-                 print(ifile.read(), file=o)
-                 ifile.close()
-               except FileNotFoundError:
-                 print("*Description and instructions not provided*  ",file=o)
+               print("*Description and instructions not provided*  ",file=o)
 
         # add to list of projects
         with open("../list.md","a") as o:
