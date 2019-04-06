@@ -105,12 +105,12 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         print(config)
 
         with open("README.md","w") as o:
-            print("*Project name:* ",config["pname"], file=o)
-            print("*Archive:* ",config["url"], file=o)
-            print("*Category:* ",config["category"], file=o)
-            print("*Keywords:* ",config["keyw"], file=o)
-            print("*Authors:* ",config["auths"], file=o)
-            print("*Publication:* ["+config["cit"]+"]("+config["cit_url"]+")", file=o)
+            print("*Project name:* ",config["pname"]+"  ", file=o)
+            print("*Archive:* [",config["url"]+"]("+config["url"]+")  ", file=o)
+            print("*Category:* ",config["category"]+"  ", file=o)
+            print("*Keywords:* ",config["keyw"]+"  ", file=o)
+            print("*Authors:* ",config["auths"]+"  ", file=o)
+            print("*Publication:* ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
             print("*Compatibility PLUMED input files:*", file=o)
             print("| file     | original PLUMED release | compatible with latest release |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
