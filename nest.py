@@ -85,8 +85,10 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
 
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
-        if not "url" in config:
-            raise RuntimeError("url not found")
+        # check fields
+        for field in ("url","pname","category","keyw","auths","cit","cit_url"):
+            if not field in config:
+               raise RuntimeError(field+" not found")
         print(config)
 
         if re.match("^.*\.zip$",config["url"]):
