@@ -48,6 +48,7 @@ and the current members are:
 * Thomas Löhr, University of Cambridge, Cambridge, UK
 * Fabrizio Marinelli, National Institutes of Health, Bethesda, USA
 * Layla Martin-Samos, CNR-IOM Democritos, Trieste, Italy
+* Matteo Masetti, University of Bologna, Bologna, Italy
 * Angelos Michaelides, University College London, London, UK
 * Carla Molteni, King's College London, London, UK
 * Tetsuya Morishita, National Institute of Advanced Industrial Science and Technology, Tsukuba, Japan 
