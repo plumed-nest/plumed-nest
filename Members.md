@@ -58,6 +58,7 @@ and the current members are:
 * Pablo Piaggi, ETH Zurich, Lugano, Switzerland
 * Fabio Pietrucci, Sorbonne Université, Paris, France
 * Silvio Pipolo, Sorbonne Université, Paris, France
+* Jiří Šponer, Masarykova Univerzita, Brno, Czech Republic
 * Davide Provasi, Icanhn School of Medicine at Mount Sinai, New York, USA
 * David Quigley, University of Warwick, Coventry, UK 
 * Paolo Raiteri, Curtin University, Perth, Australia
