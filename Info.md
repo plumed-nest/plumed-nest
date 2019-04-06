@@ -41,8 +41,8 @@
   *All the data and PLUMED input files required to reproduce the results reported in this paper can be found
   on PLUMED-NEST (www.plumed-nest.org), the public repository of the PLUMED consortium [cite ref].* 
 
-* __Browse contributions__
+* __How to find a project in PLUMED-NEST__
 
-  A list of contributions from current members of the PLUMED consortium as well as other researchers
+  The list of contributions to PLUMED-NEST from current members of the PLUMED consortium as well as other researchers
   can be found [here](list.md).
 
