@@ -35,7 +35,6 @@ set -x
 cat > README.md << EOF
 Welcome to PLUMED-NEST!
 -----------------------------
-${TRAVIS_BRANCH} - $hash
 
 EOF
 
