@@ -34,7 +34,7 @@
 
 * __How to cite PLUMED-NEST__
 
-  If you deposited your data on PLUMED-NEST, we invite you to add the following sentence to your paper:
+  If you deposited your data on PLUMED-NEST, we invite you to add the following sentence to your manuscript:
 
   *All the data and PLUMED input files required to reproduce the results reported in this paper can be found
   on PLUMED-NEST (www.plumed-nest.org), the public repository of the PLUMED consortium [cite ref].* 
