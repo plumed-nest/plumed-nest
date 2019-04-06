@@ -30,7 +30,7 @@
   Everybody can contribute to PLUMED-NEST. It is sufficient to provide
   a link to an archive containing all the data needed to reproduce a 
   PLUMED-enhanced simulation (or analysis) along with some additional information.
-  More detailed instructions and the form to upload a contribution can be found [here](Contribute.md).
+  More detailed instructions and the form to upload a contribution can be found [here](Contribute.html).
 
 * __How to cite PLUMED-NEST__
 
