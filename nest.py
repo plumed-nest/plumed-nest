@@ -121,7 +121,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             success=plumed_input_test(file)
             add_readme(file, success)
 
-        with open("README.md","w") as o:
+        with open("README.md","a") as o:
              print("**Project description and instructions:** ", file=o)
 
         with open("../list.md","a") as o:
