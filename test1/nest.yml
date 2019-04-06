@@ -5,3 +5,7 @@ keyw: VES
 auths: Ciccio
 cit: Comp. Phys. Comm. 185 (2014) 604
 cit_url: https://doi.org/10.1016/j.cpc.2013.09.018
+instructions: >
+  This is a test text. Here
+  you can explain how to use the provided input
+  files.
