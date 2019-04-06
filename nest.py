@@ -28,7 +28,7 @@ def plumed_format(source,destination):
                     elif len(words)>0 and words[0]=="ENDPLUMED":
                         print("````",file=o)
                         endplumed=True
-                    elif len(words)>0:
+                    elif len(words)>0 and not re.match("#",words[0]):
                         action=words[0]
                 if len(action)>0 and not continuation:
                     und_action = ''
@@ -38,7 +38,7 @@ def plumed_format(source,destination):
                     line=re.sub(action,action_url,line)
                 if len(words)>0 and words[-1]=="...":
                     continuation=True
-                if continuation and words[0]=="...":
+                if len(words)>0 and continuation and words[0]=="...":
                     continuation=False
                 line=re.sub("(#.*$)","`\\1`",line)
 # "  " is newline in markdown
@@ -47,6 +47,7 @@ def plumed_format(source,destination):
                 print("````",file=o)
 
 def plumed_input_test(source):
+    run_folder = pathlib.PurePosixPath(source).parent
     child = subprocess.Popen(['plumed', 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', source], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
     stdout,stderr = child.communicate()
     rc = child.returncode
