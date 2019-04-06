@@ -112,6 +112,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             print("**Authors:** ",config["auths"]+"  ", file=o)
             print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
+            print("  ", file=o)
             print("| file     | original PLUMED release | compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
