@@ -122,7 +122,8 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             add_readme(file, success)
 
         with open("README.md","a") as o:
-             print("**Project description and instructions:** ", file=o)
+             print("  ", file=o)
+             print("**Project description and instructions**  ", file=o)
 
         with open("../list.md","a") as o:
             text='| [' + config["pname"] + ']('+path+') | '+config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
