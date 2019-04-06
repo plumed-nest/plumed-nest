@@ -1,2 +1,7 @@
 url: https://archive.materialscloud.org/file/2019.0004/v1/inputs.zip
-description: This repository
+pname: TEST1
+category: materials
+keyw: VES
+auths: Ciccio
+cit: Comp. Phys. Comm. 185 (2014) 604
+cit_url: https://doi.org/10.1016/j.cpc.2013.09.018

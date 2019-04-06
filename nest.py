@@ -74,8 +74,8 @@ with open("list.md","w") as o:
     print("-----------------------------", file=o)
     print("Here is a list of the projects already deposited on PLUMED-NEST", file=o)
     print(" ", file=o)
-    print("| project     | category | keywords | description | author(s) | publication |", file=o) 
-    print("|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
+    print("| project     | category | keywords | author(s) |", file=o) 
+    print("|:--------:|:---------:|:---------:|:---------:|",   file=o)
 
 for path in pathlib.Path('.').glob('*/nest.yml'):
 
@@ -103,7 +103,14 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         print(config)
 
         with open("README.md","w") as o:
-            print("| file     | original plumed release | compatible with latest release |  ", file=o) 
+            print("*Project name:* ",+config["pname"], file=o)
+            print("*Archive:* ",+config["url"], file=o)
+            print("*Category:* ",+config["category"], file=o)
+            print("*Keywords:* ",+config["keyw"], file=o)
+            print("*Authors:* ",+config["auths"], file=o)
+            print("*Publication:* ["+config["cit"]+"]("+config["cit_url"]+")", file=o)
+            print("*Compatibility PLUMED input files:*", file=o)
+            print("| file     | original PLUMED release | compatible with latest release |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
@@ -112,6 +119,6 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             add_readme(file, success)
 
         with open("../list.md","a") as o:
-            text='| [' + path + ']('+path+') | | |  ' 
+            text='| [' + config["pname"] + ']('+path+') | '+config["cat"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
             print(text, file=o)
 
