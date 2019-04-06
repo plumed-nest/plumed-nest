@@ -18,10 +18,12 @@ def plumed_format(source,destination):
         with open(destination,"w") as o:
             lines = f.read().splitlines()
             continuation=False
+            comment=False
             action=""
             endplumed=False
             for line in lines:
-                words=re.sub("#.*","",line).split()
+                words=line.split()
+                #words=re.sub("#.*","",line).split()
                 if not endplumed and not continuation:
                     if len(words)>1 and re.match("^.*:$",words[0]):
                         action=words[1]
@@ -30,7 +32,9 @@ def plumed_format(source,destination):
                         endplumed=True
                     elif len(words)>0 and not re.match("#",words[0]):
                         action=words[0]
-                if len(action)>0 and not continuation:
+                    elif len(words)>0 and re.match("#",words[0]):
+                        comment = True
+                if len(action)>0 and not continuation and not comment:
                     und_action = ''
                     for ch in action:
                         und_action = und_action + '_' + ch
@@ -40,6 +44,8 @@ def plumed_format(source,destination):
                     continuation=True
                 if len(words)>0 and continuation and words[0]=="...":
                     continuation=False
+                if comment:
+                    comment=False
                 line=re.sub("(#.*$)","`\\1`",line)
 # "  " is newline in markdown
                 print(line + "  " ,file=o)
