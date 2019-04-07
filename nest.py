@@ -52,18 +52,19 @@ def plumed_format(source,destination):
             if(endplumed):
                 print("````",file=o)
 
-def plumed_input_test(source):
+def plumed_input_test(exe,source):
     run_folder = pathlib.PurePosixPath(source).parent
-    child = subprocess.Popen(['plumed', 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', source], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
+    child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', source], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
     stdout,stderr = child.communicate()
     rc = child.returncode
     return rc
 
-def add_readme(file, version, success):
+def add_readme(file, version, tested, success):
     with open("README.md","a") as o:
         badge = ''
-        if success==0: 
-            badge = badge + '[![Github Releases](https://img.shields.io/github/release/plumed/plumed2.svg)](https://github.com/plumed/plumed2/releases)'
+        for i in range(len(tested)):
+            if success[i]==0: 
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/tested-' + tested[i] + '-green.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
         print("| [" + file + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
@@ -128,8 +129,9 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
 
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
-            success=plumed_input_test(file)
-            add_readme(file, str(config["version"]), success)
+            success=plumed_input_test("plumed",file)
+            success_master=plumed_input_test("plumed",file)
+            add_readme(file, str(config["version"]) , ("v2.5","master"), (success,success_master))
 
         # print instructions, if present
         with open("README.md","a") as o:
