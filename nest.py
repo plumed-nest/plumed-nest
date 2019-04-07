@@ -131,7 +131,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             plumed_format(file,file + ".md")
             success=plumed_input_test("plumed",file)
             success_master=plumed_input_test("plumed_master",file)
-            add_readme(file, str(config["version"]) , ("v2.5","master"), (success,success_master))
+            add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
 
         # print instructions, if present
         with open("README.md","a") as o:
