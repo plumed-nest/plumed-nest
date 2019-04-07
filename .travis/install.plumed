@@ -3,10 +3,14 @@
 set -e
 set -x
 
+suffix=""
+version=""
+
 for opt
 do
 case "$opt" in
   (version=*) version="${opt#version=}" ;;
+  (suffix=*) suffix="--program-suffix=${opt#suffix=}" ;;
   (*) echo "unknown option $opt" ; exit 1 ;;
 esac
 done
@@ -25,6 +29,6 @@ fi
 
 git checkout $version
 
-./configure --prefix=$HOME/opt  --enable-modules=all
+./configure --prefix=$HOME/opt  --enable-modules=all $suffix
 make -j 5
 make install

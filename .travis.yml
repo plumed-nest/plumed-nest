@@ -19,6 +19,8 @@ install:
 # version=master or version=f123f12f3 to select a specific version
 # GB: I now select branch v2.5 in order to have --parse-only available
   - CXX="mpic++" .travis/install.plumed version=v2.5
+# GB: in addition, we install master version as plumed_master
+  - CXX="mpic++" .travis/install.plumed version=v2.5 suffix=_master
   - ccache -s
 
 script:
