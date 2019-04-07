@@ -59,12 +59,12 @@ def plumed_input_test(source):
     rc = child.returncode
     return rc
 
-def add_readme(file, success):
+def add_readme(file, version, success):
     with open("README.md","a") as o:
         badge = ''
         if success==0: 
             badge = badge + '[![Github Releases](https://img.shields.io/github/release/plumed/plumed2.svg)](https://github.com/plumed/plumed2/releases)'
-        print("| [" + file + "](./"+file+".md"+") | | " + badge + " |" + "  ", file=o)
+        print("| [" + file + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -123,13 +123,13 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
-            print("| file     | original PLUMED release | compatible with |  ", file=o) 
+            print("| file     | original compatibility | compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
             success=plumed_input_test(file)
-            add_readme(file, success)
+            add_readme(file, str(config["version"]), success)
 
         # print instructions, if present
         with open("README.md","a") as o:
