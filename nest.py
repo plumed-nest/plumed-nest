@@ -118,7 +118,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
-            print("**Version:** ",config["version"]+"  ", file=o)
+            print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Authors:** ",config["auths"]+"  ", file=o)
             print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
