@@ -56,14 +56,9 @@ def plumed_input_test(exe,source):
     cwd = os.getcwd()
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
-    print(cwd)
-    print(run_folder)
-    print(plumed_file)
     with cd(run_folder):
-        print(os.getcwd())
         child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
         stdout,stderr = child.communicate()
-        print(stdout)
         rc = child.returncode
     with cd(cwd):
         return rc
