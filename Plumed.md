@@ -8,4 +8,6 @@ PLUMED is an open-source, community-developed library that provides a wide range
 
 These techniques can be used in combination with a large toolbox of collective variables that describe complex processes in physics, chemistry, material science, and biology.
 
+PLUMED works together with some of the most popular MD engines, such as ACEMD, Amber, DL_POLY, GROMACS, LAMMPS, NAMD, OpenMM, ABIN, CP2K, i-PI, PINY-MD, and Quantum Espresso. In addition, PLUMED can be used to augment the capabilities of analysis tools such as VMD, HTMD, OpenPathSampling, and as a standalone utility to analyze pre-calculated MD trajectories.
+
 **Check it out [here](http://www.plumed.org)!
