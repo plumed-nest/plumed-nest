@@ -41,6 +41,7 @@ and the current members are:
 * Toni Giorgino, National Research Council, Milan, Italy
 * Chen Haochuan, Nankai University, Nankai Qu, China
 * Glen Hocky, New York University, New York, USA
+* Marcella Iannuzzi, University of Zurich, Zurich, Switzerland
 * Michele Invernizzi, ETH Zurich, Lugano, Switzerland
 * Alexander Jussupow, Technische Universität München, Munich, Germany
 * Alessandro Laio, International School for Advanced Studies, Trieste, Italy
