@@ -53,10 +53,14 @@ def plumed_format(source,destination):
                 print("</span>",file=o)
 
 def plumed_input_test(exe,source):
-    run_folder = pathlib.PurePosixPath(source).parent
-    child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', source], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
+    cwd = os.getcwd()
+    run_folder = str(pathlib.PurePosixPath(source).parent)
+    plumed_file = os.path.basename(source)
+    cd(run_folder)
+    child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
     stdout,stderr = child.communicate()
     rc = child.returncode
+    cd(cwd)
     return rc
 
 def add_readme(file, version, tested, success):
