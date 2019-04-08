@@ -8,8 +8,8 @@
 
 * __What is PLUMED?__
 
-  PLUMED is a freely-available, open-source library that provides a wide range of different methods 
-  that includes enhanced-sampling algorithms, free-energy methods, and tools to analyze the vast amounts 
+  PLUMED is a freely-available, open-source library that provides a wide range of different methods, which include  
+  enhanced-sampling algorithms, free-energy methods, and tools to analyze the vast amounts 
   of data produced by MD simulations. More information can be found [here](http://www.plumed.org). 
 
 * __What is the PLUMED consortium?__
