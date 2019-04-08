@@ -1,11 +1,11 @@
 pages:
 - title: Home
-  url: /
+  url: /plumed-nest-site
 - title: PLUMED
-  url: /Plumed.html
+  url: /plumed-nest-site/Plumed.html
 - title: Consortium
-  url: /Members.html
+  url: /plumed-nest-site/Members.html
 - title: Contribute
-  url: /Contribute.html
+  url: /plumed-nest-site/Contribute.html
 - title: Browse
-  url: /list.html
+  url: /plumed-nest-site/list.html
