@@ -64,7 +64,9 @@ def add_readme(file, version, tested, success):
         badge = ''
         for i in range(len(tested)):
             if success[i]==0: 
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/tested-' + tested[i] + '-green.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
+            else:
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
         print("| [" + file + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
