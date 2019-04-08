@@ -28,7 +28,7 @@ def plumed_format(source,destination):
                     if len(words)>1 and re.match("^.*:$",words[0]):
                         action=words[1]
                     elif len(words)>0 and words[0]=="ENDPLUMED":
-                        print("````",file=o)
+                        print("<span style=\"color:blue\">",file=o)
                         endplumed=True
                     elif len(words)>0 and not re.match("#",words[0]):
                         action=words[0]
@@ -46,11 +46,11 @@ def plumed_format(source,destination):
                     continuation=False
                 if comment:
                     comment=False
-                line=re.sub("(#.*$)","`\\1`",line)
+                line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)
 # "  " is newline in markdown
                 print(line + "  " ,file=o)
             if(endplumed):
-                print("````",file=o)
+                print("</span>",file=o)
 
 def plumed_input_test(exe,source):
     run_folder = pathlib.PurePosixPath(source).parent
