@@ -41,6 +41,8 @@ EOF
 # add general informations
 cat Info.md >> README.md
 
+cp $root/nest.png .
+
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
 git commit -m "Update to @$hash" >/dev/null
