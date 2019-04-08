@@ -23,6 +23,7 @@ def plumed_format(source,destination):
             endplumed=False
             for line in lines:
                 words=line.split()
+                line=re.sub(" ","&nbsp;",line)
                 #words=re.sub("#.*","",line).split()
                 if not endplumed and not continuation:
                     if len(words)>1 and re.match("^.*:$",words[0]):
