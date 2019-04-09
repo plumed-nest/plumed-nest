@@ -20,6 +20,7 @@ The coordinators of the PLUMED consortium are:
 
 and the current members are:
 
+* Pavel Banáš, Palacky University, Olomouc, Czech Republic 
 * Alessandro Barducci, Centre de Biochimie Structurale de Montpellier, Montpellier, France
 * Peter Bolhuis, University of Amsterdam, Amsterdam, The Netherlands
 * Sandro Bottaro, Italian Institute of Technology, Genova, Italy
@@ -60,13 +61,13 @@ and the current members are:
 * Pablo Piaggi, ETH Zurich, Lugano, Switzerland
 * Fabio Pietrucci, Sorbonne Université, Paris, France
 * Silvio Pipolo, Sorbonne Université, Paris, France
-* Jiří Šponer, Masarykova Univerzita, Brno, Czech Republic
 * Davide Provasi, Icanhn School of Medicine at Mount Sinai, New York, USA
 * David Quigley, University of Warwick, Coventry, UK 
 * Paolo Raiteri, Curtin University, Perth, Australia
 * Matteo Salvalaglio, University College London, London, UK
 * Gabriele Sosso, University of Warwick, Coventry, UK
 * Vojtech Spiwok, University of Chemistry and Technology, Prague, Czech Republic
+* Jiří Šponer, Masarykova Univerzita, Brno, Czech Republic
 * David Swenson, University of Amsterdam, Amsterdam, The Netherlands 
 * Pratyush Tiwary, University of Maryland, College Park, USA
 * Omar Valsson, Max Planck Institute for Polymer Research, Mainz, Germany
