@@ -42,6 +42,7 @@ EOF
 cat Info.md >> README.md
 
 cp $root/nest.png .
+cp $root/pigeon.png .
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
