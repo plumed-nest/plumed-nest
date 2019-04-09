@@ -43,6 +43,7 @@ cat Info.md >> README.md
 
 cp $root/nest.png .
 cp $root/pigeon.png .
+cp $root/CNAME .
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
