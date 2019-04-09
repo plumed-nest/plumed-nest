@@ -103,7 +103,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","auths","cit","cit_url"):
+        for field in ("url","pname","category","keyw","version","auths","cit","cit_url","date"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -129,6 +129,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Authors:** ",config["auths"]+"  ", file=o)
             print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
+            print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
             print("| file     | original compatibility | compatible with |  ", file=o) 
