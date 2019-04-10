@@ -9,7 +9,8 @@ new research and promote the highest possible standards of scientific reproducib
 
 More information about the PLUMED consortium can be found here:
 
-[citation to the paper]
+The PLUMED consortium.
+The PLUMED consortium: A community effort to promote openness, transparence and reproducibility in molecular simulations, Submitted
 
 The coordinators of the PLUMED consortium are:
 
