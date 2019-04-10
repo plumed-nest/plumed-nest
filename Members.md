@@ -47,6 +47,7 @@ and the current members are:
 * Michele Invernizzi, ETH Zurich, Lugano, Switzerland
 * Alexander Jussupow, Technische Universität München, Munich, Germany
 * Alessandro Laio, International School for Advanced Studies, Trieste, Italy
+* Vittorio Limongelli, Università della Svizzera Italiana, Lugano, Switzerland
 * Kresten Lindorff-Larsen, University of Copenhagen, Copenhagen, Denmark
 * Thomas Löhr, University of Cambridge, Cambridge, UK
 * Fabrizio Marinelli, National Institutes of Health, Bethesda, USA
@@ -66,6 +67,7 @@ and the current members are:
 * Davide Provasi, Icanhn School of Medicine at Mount Sinai, New York, USA
 * David Quigley, University of Warwick, Coventry, UK 
 * Paolo Raiteri, Curtin University, Perth, Australia
+* Stefano Raniolo, Università della Svizzera Italiana, Lugano, Switzerland
 * Matteo Salvalaglio, University College London, London, UK
 * Gabriele Sosso, University of Warwick, Coventry, UK
 * Vojtech Spiwok, University of Chemistry and Technology, Prague, Czech Republic
