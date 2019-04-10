@@ -74,35 +74,59 @@ Therefore, a delay between submission and publication on line should be expected
 <center>
 <b><p>Questions related to the submission to PLUMED-NEST can be directed to:</p>
 <p><a href="mailto:plumed.nest@gmail.com">plumed.nest@gmail.com</a></b></p>
-</center>
-    
+
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
-  <label for="name">Project name</label>
-  <input id="name" type="text" name="projectname" required> <br>
-  <label for="url">URL</label>
-  <input id="url" type="text" name="url" required> <br>
-  <label for="pinput">PLUMED input files</label>
-  <input id="pinput" type="text" name="plumedinput" placeholed="examples: colvar.dat, bias.dat, ..."> <br>
-  <label for="category">Category</label>
-  <select id="category" type="texy" name="category"><option>bio</option><option>chemistry</option><option>materials</option><option>method development</option><option>other</option></select> <br>
-  <label for="keywords">Keywords</label>
-  <input id="keywords" type="text" name="keywords" placeholder="examples: metadynamics, RNA, protein folding, small molecules, ..." required> <br>
-  <label for="instructions">Instructions</label>
-  <textarea id="instructions" name="message" type="text" required></textarea> <br>
-  <label for="version">Version</label>
-  <input id="version" type="text" name="version" required> <br>
-  <label for="authors">Authors</label>
-  <input id="authors" type="text" name="authors" required> <br>
-  <label for="publication">Publication</label>
-  <input id="publication" type="text" name="publication" placeholder="example: 10.1016/j.cpc.2013.09.018" required> <br>
-  <label for="contact">Contact</label>
-  <input id="contact" type="text" name="contact" required> <br>
-  <label for="email">Contact email</label>
-  <input id="email" type="text" name="email" required> <br>
+  <table>
+    <tr>  
+      <td><label for="name">Project name</label></td>
+      <td><input id="name" type="text" name="projectname" required> </td>
+    </tr>
+    <tr>
+      <td><label for="url">URL</label></td>
+      <td><input id="url" type="text" name="url" required> </td>
+    </tr>  
+    <tr>
+      <td><label for="pinput">PLUMED input files</label></td>
+      <td><input id="pinput" type="text" name="plumedinput" placeholed="examples: colvar.dat, bias.dat, ..."> </td>
+    </tr>
+    <tr>
+      <td><label for="category">Category</label></td>
+      <td><select id="category" type="texy" name="category"><option>bio</option><option>chemistry</option><option>materials</option><option>method development</option><option>other</option></select> </td>
+    </tr>
+    <tr>
+      <td><label for="keywords">Keywords</label></td>
+      <td><input id="keywords" type="text" name="keywords" placeholder="examples: metadynamics, RNA, protein folding, small molecules, ..." required></td>
+    </tr>
+    <tr>
+      <td><label for="instructions">Instructions</label></td>
+      <td><textarea id="instructions" name="message" type="text" required></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="version">Version</label></td>
+      <td><input id="version" type="text" name="version" required></td>
+    </tr>
+    <tr>
+      <td><label for="authors">Authors</label></td>
+      <td><input id="authors" type="text" name="authors" required></td>
+    </tr>
+    <tr>
+      <td><label for="publication">Publication</label></td>
+      <td><input id="publication" type="text" name="publication" placeholder="example: 10.1016/j.cpc.2013.09.018" required></td>
+    </tr>
+    <tr>
+      <td><label for="contact">Contact</label></td>
+      <td><input id="contact" type="text" name="contact" required></td>
+    </tr>
+    <tr>
+      <td><label for="email">Contact email</label></td>
+      <td><input id="email" type="text" name="email" required></td>
+    </tr>  
+  </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
   <input type="hidden" name="_subject" id="_subject" value="PLUMED-NEST submission"> <br>
   <button type="submit">Submit</button>
 </form>
+</center>
 
 <style>
 form.wj-contact input[type="text"], form.wj-contact textarea[type="text"], form.wj-contact select[type="text"] {
