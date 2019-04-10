@@ -1,4 +1,4 @@
-How to cite PLUMED-NEST?
+How to cite PLUMED-NEST
 -----------------------------
 All projects deposited in PLUMED-NEST are assigned a unique ID, such as XXX.
 If you deposit your data in PLUMED-NEST, we invite you to add the following sentence to your manuscript:
