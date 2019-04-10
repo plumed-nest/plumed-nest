@@ -1,0 +1,13 @@
+url: https://github.com/srnas/shape-md/archive/master.zip
+pname: RNA SHAPE
+category: materials
+keyw: RNA
+version: 2.4
+auths: Vojtech Mlynsky and Giovanni Bussi
+cit: J. Phys. Chem. Lett. 2018, 9, 313−318
+cit_url: doi.org/10.1021/acs.jpclett.7b02921
+date: 2019-04-10
+instructions: >
+  This is a test text. Here
+  you can explain how to use the provided input
+  files.
