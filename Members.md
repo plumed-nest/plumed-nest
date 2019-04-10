@@ -60,6 +60,7 @@ and the current members are:
 * Michele Parrinello, ETH Zurich, Lugano, Switzerland
 * Jim Pfaendtner, University of Washington, Seattle, USA
 * Pablo Piaggi, ETH Zurich, Lugano, Switzerland
+* Adriana Pietropaolo, University of Catanzaro, Catanzaro, Italy
 * Fabio Pietrucci, Sorbonne Université, Paris, France
 * Silvio Pipolo, Sorbonne Université, Paris, France
 * Davide Provasi, Icanhn School of Medicine at Mount Sinai, New York, USA
