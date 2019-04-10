@@ -19,13 +19,7 @@
   The mission of the consortium is to transform the way researchers communicate the 
   protocols that are used in their MD simulations, in order to maximize the impact of 
   new research and promote the highest possible standards of scientific reproducibility. 
-
-  More information about the PLUMED consortium can be found here:
-
-  The PLUMED consortium.
-  The PLUMED consortium: A community effort to promote openness, transparence and reproducibility in molecular simulations, Submitted
-
-  and the list of current members and coordinators can be found [here](Members.md). 
+  More information can be found [here](Members.md). 
 
 * __How to contribute to PLUMED-NEST__
 
