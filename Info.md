@@ -34,13 +34,6 @@
   PLUMED-enhanced simulation (or analysis) along with some additional information.
   More detailed instructions and the form to upload a contribution can be found [here](Contribute.html).
 
-* __How to cite PLUMED-NEST__
-
-  If you deposited your data on PLUMED-NEST, we invite you to add the following sentence to your manuscript:
-
-  *All the data and PLUMED input files required to reproduce the results reported in this paper can be found
-  on PLUMED-NEST (www.plumed-nest.org), the public repository of the PLUMED consortium [cite ref].* 
-
 * __How to find a project in PLUMED-NEST__
 
   The list of contributions to PLUMED-NEST from current members of the PLUMED consortium as well as other researchers
