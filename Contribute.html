@@ -71,28 +71,36 @@ Therefore, a delay between submission and publication on line should be expected
   <li>PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible</li>
 </ul>
 
-
 <center>
-
 <b><p>Questions related to the submission to PLUMED-NEST can be directed to:</p>
 <p><a href="mailto:plumed.nest@gmail.com">plumed.nest@gmail.com</a></b></p>
-
+</center>
+    
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
-  <input type="text" name="projectname" placeholder="PROJECT NAME"> <br>
-  <input type="text" name="url" placeholder="URL"> <br>
-  <input type="text" name="category" placeholder="CATEGORY"> <br>
-  <input type="text" name="keywords" placeholder="KEYWORDS"> <br>
-  <textarea name="message" type="text" placeholder="INSTRUCTIONS"></textarea> <br>
-  <input type="text" name="version" placeholder="VERSION"> <br>
-  <input type="text" name="authors" placeholder="AUTHORS"> <br>
-  <input type="text" name="publication" placeholder="PUBLICATION"> <br>
-  <input type="text" name="contact" placeholder="CONTACT"> <br>
-  <input type="text" name="email" placeholder="CONTACT EMAIL"> <br>
+  <label for="name">Project name </label>
+  <input id="name" type="text" name="projectname" required> <br>
+  <label for="url">URL </label>
+  <input id="url" type="text" name="url" required> <br>
+  <label for="category">Category </label>
+  <select id="category" name="category"><option>bio</option><option>chemistry</option><option>materials</option></select> <br>
+  <label for="keywords">Keywords </label>
+  <input id="keywords" type="text" name="keywords" required> <br>
+  <label for="instructions">Instructions </label>
+  <textarea id="instructions" name="message" type="text" required></textarea> <br>
+  <label for="version">Version </label>
+  <input id="version" type="text" name="version" required> <br>
+  <label for="authors">Authors </label>
+  <input id="authors" type="text" name="authors" required> <br>
+  <label for="publication">Publication </label>
+  <input id="publication" type="text" name="publication" required> <br>
+  <label for="contact">Contact </label>
+  <input id="contact" type="text" name="contact" required> <br>
+  <label for="email">Contact email </label>
+  <input id="email" type="text" name="email" required> <br>
   <input type="text" name="_gotcha" style="display:none"> <br>
   <input type="hidden" name="_subject" id="_subject" value="PLUMED-NEST submission"> <br>
   <button type="submit">Submit</button>
 </form>
-</center>
 
 <style>
 form.wj-contact input[type="text"], form.wj-contact textarea[type="text"] {
