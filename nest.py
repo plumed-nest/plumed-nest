@@ -91,8 +91,8 @@ with open("list.md","w") as o:
     print("  ", file=o)
     print("Here is a list of the projects already deposited on PLUMED-NEST:", file=o)
     print("  ", file=o)
-    print("| project     | category | keywords | author(s) |", file=o) 
-    print("|:--------:|:---------:|:---------:|:---------:|",   file=o)
+    print("|  ID  | Name | Category | Keywords | Author(s) |", file=o) 
+    print("|:--------:|:--------:|:---------:|:---------:|:---------:|",   file=o)
 
 for path in pathlib.Path('.').glob('*/nest.yml'):
 
@@ -132,7 +132,7 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
-            print("| file     | original compatibility | compatible with |  ", file=o) 
+            print("| File     | Declared compatibility | Compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
@@ -152,6 +152,6 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
 
         # add to list of projects
         with open("../list.md","a") as o:
-            text='| [' + config["pname"] + ']('+path+') | '+config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
+            text=' | [' + path + ']('+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
             print(text, file=o)
 
