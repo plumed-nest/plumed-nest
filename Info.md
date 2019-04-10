@@ -22,7 +22,8 @@
 
   More information about the PLUMED consortium can be found here:
 
-  [citation to the paper]
+  The PLUMED consortium.
+  The PLUMED consortium: A community effort to promote openness, transparence and reproducibility in molecular simulations, Submitted
 
   and the list of current members and coordinators can be found [here](Members.md). 
 
