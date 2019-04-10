@@ -152,6 +152,6 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
 
         # add to list of projects
         with open("../list.md","a") as o:
-            text='| [' + path[11:17] + ']('+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
+            text='| [' + path[11:17] + '](/'+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
             print(text, file=o)
 
