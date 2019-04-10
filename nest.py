@@ -21,6 +21,7 @@ def plumed_format(source,destination):
             comment=False
             action=""
             endplumed=False
+            print("<pre>",file=o)
             for line in lines:
                 words=line.split()
                 line=re.sub(" ","&nbsp;",line)
@@ -38,8 +39,7 @@ def plumed_format(source,destination):
                     und_action = ''
                     for ch in action:
                         und_action = und_action + '_' + ch
-                    
-                    action_url="[" + action + "](https://plumed.github.io/doc-master/user-doc/html/" + re.sub('___+', '__', und_action.lower()) + ".html)"
+                    action_url="<a href=\"" + "https://plumed.github.io/doc-master/user-doc/html/" + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
                     line=re.sub(action,action_url,line)
                 if len(words)>0 and words[-1]=="...":
                     continuation=True
@@ -52,6 +52,7 @@ def plumed_format(source,destination):
                     line="<span style=\"color:blue\">" + line + "</span>"
 # "  " is newline in markdown
                 print(line + "  " ,file=o)
+            print("</pre>",file=o)
 
 def plumed_input_test(exe,source):
     cwd = os.getcwd()
