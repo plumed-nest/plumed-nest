@@ -122,8 +122,8 @@ for path in pathlib.Path('.').glob('*/nest.yml'):
         print(config)
 
         with open("README.md","w") as o:
-            print("**ID:** ", path[0:-1]+"  ", file=o)
-            print("**Project name:** ",config["pname"]+"  ", file=o)
+            print("**Project ID:** ", path[0:-1]+"  ", file=o)
+            print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
