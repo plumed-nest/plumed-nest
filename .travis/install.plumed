@@ -5,19 +5,21 @@ set -x
 
 suffix=""
 version=""
+repo=https://github.com/plumed/plumed2.git
 
 for opt
 do
 case "$opt" in
   (version=*) version="${opt#version=}" ;;
   (suffix=*) suffix="--program-suffix=${opt#suffix=}" ;;
+  (repo=*) repo="${opt#repo=}" ;;
   (*) echo "unknown option $opt" ; exit 1 ;;
 esac
 done
 
 cd "$(mktemp -dt plumed.XXXXXX)"
 
-git clone https://github.com/plumed/plumed2.git
+git clone $repo
 cd plumed2
 
 if [ -n "$version" ] ; then
