@@ -1,13 +1,12 @@
 url: https://archive.materialscloud.org/file/2019.0004/v1/inputs.zip
-pname: TEST1
-category: materials
-keyw: VES
-version: 2.4
-auths: Ciccio
-cit: Comp. Phys. Comm. 185 (2014) 604
-cit_url: https://doi.org/10.1016/j.cpc.2013.09.018
-date: 2019-04-09
+pname: VesDeltaF 
+category: methods 
+keyw: VES, convergence, suboptimal CVs 
+version: 2.6
+auths: Michele Invernizzi, Michele Parrinello 
+cit: J. Chem. Theory Comput., 2019, 15, 2187–2194 
+cit_url: https://doi.org/10.1021/acs.jctc.9b00032
+date: 2019-04-11
 instructions: >
-  This is a test text. Here
-  you can explain how to use the provided input
-  files.
+  See PLUMED manual for VES_DELTA_F action
+  and https://archive.materialscloud.org/2019.0004/v1 
