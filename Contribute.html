@@ -81,7 +81,7 @@ Therefore, a delay between submission and publication on line should be expected
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
   <table>
     <tr>
-      <td width="30%"><label for="id">plumeDnest ID</label></td>
+      <td width="30%"><label for="id">plumeDnest ID<sup>*</sup></label></td>
       <td width="70%" ><input id="id" type="text" name="plumeDnest" placeholder="example: plumeDnest:19.001"></td>
     </tr>
     <tr>  
@@ -93,7 +93,7 @@ Therefore, a delay between submission and publication on line should be expected
       <td width="70%"><input id="url" type="text" name="url" required> </td>
     </tr>  
     <tr>
-      <td width="30%"><label for="pinput">PLUMED input files</label></td>
+      <td width="30%"><label for="pinput">PLUMED input files<sup>*</sup></label></td>
       <td width="70%"><input id="pinput" type="text" name="plumedinput" placeholder="examples: colvar.dat, bias.dat, ..."> </td>
     </tr>
     <tr>
@@ -130,6 +130,7 @@ Therefore, a delay between submission and publication on line should be expected
     </tr>  
   </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
+  <b>Fields marked with "<sup>*</sup>" are optional</b> <br>
   <button type="submit">Submit</button>
   <input type="hidden" name="_subject" id="_subject" value="PLUMED-NEST submission"> <br>
 </form>
