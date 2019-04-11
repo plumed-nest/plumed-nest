@@ -13,7 +13,7 @@ install:
   - pip3 install PyYAML
   - git clone --bare https://github.com/plumed/plumed2.git
 # pick newest release branch (alphabetic, will fail at v2.10)
-  - export PLUMED_LATEST_VERSION="$(cd plumed2.git ; git branch | grep '^ *v2\.[0-9]$' | tail -n 1)"
+  - export PLUMED_LATEST_VERSION="$(cd plumed2.git ; git branch | sed "s/^ *//" | grep '^v2\.[0-9]$' | tail -n 1)"
   - export PATH="$HOME/opt/bin:$PATH"
   - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
   - sudo ln -s ccache /usr/local/bin/mpic++
