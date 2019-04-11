@@ -61,6 +61,7 @@ and the current members are:
 * Michele Parrinello, ETH Zurich, Lugano, Switzerland
 * Jim Pfaendtner, University of Washington, Seattle, USA
 * Pablo Piaggi, ETH Zurich, Lugano, Switzerland
+* GiovanniMaria Piccini, ETH Zurich, Lugano, Switzerland
 * Adriana Pietropaolo, University of Catanzaro, Catanzaro, Italy
 * Fabio Pietrucci, Sorbonne Université, Paris, France
 * Silvio Pipolo, Sorbonne Université, Paris, France
