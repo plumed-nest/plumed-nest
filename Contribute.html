@@ -131,13 +131,32 @@ Therefore, a delay between submission and publication on line should be expected
   </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
   <b>Fields marked with "<sup>*</sup>" are optional</b> <br>
-  <button type="submit">Submit</button>
   <input type="hidden" name="_subject" id="_subject" value="PLUMED-NEST submission"> <br>
+  <button type="submit">Submit</button>
 </form>
 
 <style>
-form.wj-contact input[type="text"], form.wj-contact textarea[type="text"], form.wj-contact select[type="text"] {
+form.wj-contact input[type="text"]{
     width: 100%;
+    vertical-align: middle;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    padding: 0.25em;
+    font-family: monospace, sans-serif;
+    font-weight: lighter;
+    border-style: solid;
+    border-color: #444;
+    outline-color: #2e83e6;
+    border-width: 1px;
+    border-radius: 3px;
+    transition: box-shadow .2s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+form.wj-contact textarea[type="text"]{
+    width: 100%;
+    height: 50%;
     vertical-align: middle;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
