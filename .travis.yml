@@ -12,7 +12,8 @@ install:
   - pyenv global 3.6
   - pip3 install PyYAML
   - git clone --bare https://github.com/plumed/plumed2.git
-  - export PLUMED_LATEST_VERSION=v2.5
+# pick newest release branch (alphabetic, will fail at v2.10)
+  - export PLUMED_LATEST_VERSION="$(cd plumed2.git ; git branch | grep '^ *v2\.[0-9]$' | tail -n 1)"
   - export PATH="$HOME/opt/bin:$PATH"
   - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
   - sudo ln -s ccache /usr/local/bin/mpic++
@@ -20,7 +21,6 @@ install:
   - ccache -s
   - .travis/install.xdrfile
 # version=master or version=f123f12f3 to select a specific version
-# GB: I now select branch v2.5 in order to have --parse-only available
   - CXX="mpic++" .travis/install.plumed version=$PLUMED_LATEST_VERSION repo=$PWD/plumed2.git
 # GB: in addition, we install master version as plumed_master
   - CXX="mpic++" .travis/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
