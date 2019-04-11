@@ -1,10 +1,10 @@
 How to cite PLUMED-NEST
 -----------------------------
-All projects deposited in PLUMED-NEST are assigned a unique ID, such as XXX.
+All projects deposited in PLUMED-NEST are assigned a unique ID, such as plumeDnest:19.001.
 If you deposit your data in PLUMED-NEST, we invite you to add the following sentence to your manuscript:
 
 *"All the data and PLUMED input files required to reproduce the results reported in this paper are available on PLUMED-NEST (www.plumed-nest.org), 
-the public repository of the PLUMED consortium [1], under Project ID XXX"*.
+the public repository of the PLUMED consortium [1], under Project ID plumeDnest:19.001"*.
 
 **Bibliography**
 
