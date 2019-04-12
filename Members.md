@@ -23,6 +23,7 @@ and the current members are:
 
 * Pavel Banáš, Palacky University, Olomouc, Czech Republic 
 * Alessandro Barducci, Centre de Biochimie Structurale de Montpellier, Montpellier, France
+* Mattia Bernetti, International School for Advanced Studies, Trieste, Italy
 * Peter Bolhuis, University of Amsterdam, Amsterdam, The Netherlands
 * Sandro Bottaro, Italian Institute of Technology, Genova, Italy
 * Riccardo Capelli, Forschungszentrum Jülich, Jülich, Germany
