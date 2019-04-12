@@ -6,12 +6,16 @@ set -x
 suffix=""
 version=""
 repo=https://github.com/plumed/plumed2.git
+program_name=plumed
 
 for opt
 do
 case "$opt" in
   (version=*) version="${opt#version=}" ;;
-  (suffix=*) suffix="--program-suffix=${opt#suffix=}" ;;
+  (suffix=*)
+     suffix="--program-suffix=${opt#suffix=}"
+     program_name="plumed${opt#suffix=}"
+   ;;
   (repo=*) repo="${opt#repo=}" ;;
   (*) echo "unknown option $opt" ; exit 1 ;;
 esac
@@ -31,6 +35,22 @@ fi
 
 git checkout $version
 
+hash=$(git rev-parse HEAD)
+
+if test -f $HOME/opt/lib/$program_name/$hash
+then
+  echo "ALREADY AVAILABLE, NO NEED TO REINSTALL"
+else
+
+rm -fr $HOME/opt/lib/$program_name
+rm -fr $HOME/opt/bin/$program_name
+rm -fr $HOME/opt/include/$program_name
+rm -fr $HOME/opt/lib/lib$program_name.so*
+
 ./configure --prefix=$HOME/opt  --enable-modules=all $suffix
 make -j 5
 make install
+
+touch $HOME/opt/lib/$program_name/$hash
+
+fi
