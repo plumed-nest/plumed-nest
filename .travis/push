@@ -7,13 +7,17 @@ set -x
 GIT_OWNER=$(  echo $TRAVIS_REPO_SLUG | sed "s/\/.*$//" )
 GIT_REPO=$(   echo $TRAVIS_REPO_SLUG | sed "s/^.*\///" )
 
-if [ "$TRAVIS_PULL_REQUEST" != false ] ; then
-  echo "Building from a pull request, nothing to push"
+if [[ "$TRAVIS_PULL_REQUEST" != false ]] ; then
+  echo "pull request, skipping push"
   exit 0
 fi
 
-if [ "$TRAVIS_BRANCH" != master ] ; then
-  echo "Building from a non-master branch, skip push"
+if [[ "$TRAVIS_BRANCH" = master ]] ; then
+  PUSH_REPO=plumed-nest/plumed-nest.github.io.git
+elif [[ "$TRAVIS_BRANCH" = test ]] ; then
+  PUSH_REPO=plumed-nest/test-site.git
+else
+  echo "branch $TRAVIS_BRANCH, skipping push"
   exit 0
 fi
 
@@ -33,7 +37,7 @@ git init
 git config user.email giovanni.bussi+plumedbot@gmail.com
 git config user.name plumedbot
 set +x
-git remote add origin https://plumedbot:$GIT_TOKEN@github.com/plumed-nest/plumed-nest.github.io.git
+git remote add origin https://plumedbot:$GIT_TOKEN@github.com/$PUSH_REPO
 set -x
 
 # create README.md
@@ -49,6 +53,13 @@ cat Info.md >> README.md
 cp $root/nest.png .
 cp $root/pigeon.png .
 cp $root/CNAME .
+
+if [[ "$TRAVIS_BRANCH" = test ]] ; then
+  sed "s/PLUMED-NEST/PLUMED-NEST-TEST-SITE/" _config.yml > _config.yml.tmp
+  mv _config.yml.tmp _config.yml
+  cat "baseurl: /test-site" >> _config.yml
+  rm CNAME
+fi
 
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
