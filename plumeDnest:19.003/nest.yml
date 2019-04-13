@@ -1,0 +1,13 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2018/EMMI-ClpP.zip 
+pname: EMMI ClpP
+category: bio
+keyw: metainference, cryo-EM, ClpP 
+version: 2.4
+contributor: Massimiliano Bonomi
+cit: Proc. Natl. Acad. Sci. USA 2018, 115, E6447-E6456
+cit_url: https://doi.org/10.1073/pnas.1805125115 
+date: 2019-04-13
+instructions: >
+  This is a test text. Here
+  you can explain how to use the provided input
+  files.
