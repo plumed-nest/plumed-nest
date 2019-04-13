@@ -92,7 +92,7 @@ with open("list.md","w") as o:
     print("  ", file=o)
     print("Here is a list of the projects already deposited on PLUMED-NEST:", file=o)
     print("  ", file=o)
-    print("|  plumeDnest ID  | Name | Category | Keywords | Contributor | DOI |", file=o) 
+    print("| ID | Name | Category | Keywords | Contributor | DOI |", file=o) 
     print("|:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
 
 # list of paths - not ordered
