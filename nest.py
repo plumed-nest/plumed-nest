@@ -92,8 +92,8 @@ with open("list.md","w") as o:
     print("  ", file=o)
     print("Here is a list of the projects already deposited on PLUMED-NEST:", file=o)
     print("  ", file=o)
-    print("|  plumeDnest ID  | Name | Category | Keywords | Contributor |", file=o) 
-    print("|:--------:|:--------:|:---------:|:---------:|:---------:|",   file=o)
+    print("|  plumeDnest ID  | Name | Category | Keywords | Contributor | DOI |", file=o) 
+    print("|:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
 
 # list of paths - not ordered
 pathlist=list(pathlib.Path('.').glob('*/nest.yml'))
@@ -158,6 +158,12 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
 
         # add to list of projects
         with open("../list.md","a") as o:
-            text='| [' + path[11:17] + '](/'+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["contributor"] + '|' 
+            # create line
+            text  = '| [' + path[11:17] + '](/' + path + ') | '
+            text += config["pname"] + ' | '
+            text += config["category"] + ' | '
+            text += config["keyw"] + ' | '
+            text += config["contributor"] + ' | '
+            text += '[' + config["doi"] + '](https://doi.org/' + config["doi"] + ') |'
             print(text, file=o)
 
