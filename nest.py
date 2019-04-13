@@ -96,11 +96,10 @@ with open("list.md","w") as o:
     print("|:--------:|:--------:|:---------:|:---------:|:---------:|",   file=o)
 
 # list of paths - not ordered
-pathlist=pathlib.Path('.').glob('*/nest.yml')
-
+pathlist=list(pathlib.Path('.').glob('*/nest.yml'))
 # cycle on ordered list, based on first directory
 # we may need to change this is we want to move to project-2019/001...
-for path in sorted(pathlist, key=lambda m: m.split(os.sep)[0]): 
+for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]): 
 
     path=re.sub("nest.yml$","",str(path))
 
