@@ -5,7 +5,7 @@ keyw: VES, convergence, suboptimal CVs
 version: 2.6
 contributor: Michele Invernizzi and Michele Parrinello 
 cit: J. Chem. Theory Comput., 2019, 15, 2187–2194 
-cit_url: https://doi.org/10.1021/acs.jctc.9b00032
+doi: 10.1021/acs.jctc.9b00032
 date: 2019-04-11
 instructions: >
   See PLUMED manual for VES_DELTA_F action

@@ -108,7 +108,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","contributor","cit","cit_url","date"):
+        for field in ("url","pname","category","keyw","version","contributor","cit","doi","date"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -134,7 +134,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
-            print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
+            print("**Publication:** ["+config["cit"]+"](https://doi.org/"+config["doi"]+")"+"  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
