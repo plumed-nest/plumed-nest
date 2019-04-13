@@ -3,7 +3,7 @@ pname: EMMI STRA6
 category: bio
 keyw: metainference, cryo-EM, STRA6
 version: 2.4
-auths: Massimiliano Bonomi, Riccardo Pellarin, and Michele Vendruscolo 
+contributor: Massimiliano Bonomi
 cit: Biophys. J. 2018, 114, 1604-1613
 cit_url: https://doi.org/10.1016/j.bpj.2018.02.028 
 date: 2019-04-11

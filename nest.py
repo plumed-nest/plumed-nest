@@ -92,7 +92,7 @@ with open("list.md","w") as o:
     print("  ", file=o)
     print("Here is a list of the projects already deposited on PLUMED-NEST:", file=o)
     print("  ", file=o)
-    print("|  plumeDnest ID  | Name | Category | Keywords | Author(s) |", file=o) 
+    print("|  plumeDnest ID  | Name | Category | Keywords | Contributor |", file=o) 
     print("|:--------:|:--------:|:---------:|:---------:|:---------:|",   file=o)
 
 # list of paths - not ordered
@@ -108,7 +108,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","auths","cit","cit_url","date"):
+        for field in ("url","pname","category","keyw","version","contributor","cit","cit_url","date"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -133,7 +133,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
-            print("**Authors:** ",config["auths"]+"  ", file=o)
+            print("**Contributor:** ",config["contributor"]+"  ", file=o)
             print("**Publication:** ["+config["cit"]+"]("+config["cit_url"]+")"+"  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
@@ -158,6 +158,6 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
 
         # add to list of projects
         with open("../list.md","a") as o:
-            text='| [' + path[11:17] + '](/'+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["auths"] + '|' 
+            text='| [' + path[11:17] + '](/'+path+') | '+ config["pname"] + ' | ' +config["category"]+ ' | ' + config["keyw"] +' |  ' + config["contributor"] + '|' 
             print(text, file=o)
 
