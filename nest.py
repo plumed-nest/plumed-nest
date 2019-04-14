@@ -160,7 +160,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         with open("../list.md","a") as o:
             # create line
             text  = '| [' + path[11:17] + '](/' + path + ') | '
-            text += config["pname"] + ' | '
+            if(len(config["pname"])>15): name = config["pname"][0:15]+"..."
+            else: name = config["pname"]
+            text += name + ' | '
             text += config["category"] + ' | '
             text += config["keyw"] + ' | '
             text += config["contributor"] + ' | '

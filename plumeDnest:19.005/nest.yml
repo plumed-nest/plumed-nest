@@ -1,5 +1,5 @@
 url: https://github.com/tonigi/plumed2-automatic-gradients/archive/automatic-gradient-computation.zip
-pname: Automatic Gradient Computation
+pname: Automatic Gradient Computation for Collective Variables in PLUMED 2 
 category: methods 
 keyw: gradient, CV, curvature 
 version: 2.4
