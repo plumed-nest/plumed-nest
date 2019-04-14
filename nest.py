@@ -13,6 +13,10 @@ import os
 import pathlib
 import subprocess
 
+def escape_ansi(line):
+    ansi_escape =re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
+    return ansi_escape.sub('', line)
+
 def get_short_name(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
     else: sname = lname
@@ -140,7 +144,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             cit = str(subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+config["doi"], shell=True))
-            print("**Publication:** ["+cit[3:len(cit)]+"](https://doi.org/"+config["doi"]+")"+"  ", file=o)
+            line = escape_ansi(cit)
+            print("**Publication:** ["+line[3:len(line)]+"](https://doi.org/"+config["doi"]+")"+"  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
