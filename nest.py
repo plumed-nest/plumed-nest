@@ -14,7 +14,7 @@ import pathlib
 import subprocess
 
 def escape_ansi(line):
-    ansi_escape =re.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
+    ansi_escape =re.compile(r'\x1b[^m]*m')
     return ansi_escape.sub('', line)
 
 def get_short_name(lname, length):
