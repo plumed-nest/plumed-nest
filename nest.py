@@ -13,6 +13,14 @@ import os
 import pathlib
 import subprocess
 
+def get_publication(doi):
+    cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8')
+    if("DOI Not Found" in cit):
+      pub="DOI not found or not yet available. Check the provided DOI or consider posting a pre-print of your manuscript!"
+    else:
+      pub="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
+    return pub
+ 
 def get_short_name(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
     else: sname = lname
@@ -139,8 +147,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
-            cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+config["doi"], shell=True).decode('utf-8')
-            print("**Publication:** ["+cit[3:len(cit)]+"](https://doi.org/"+config["doi"]+")"+"  ", file=o)
+            pub = get_publication(config["doi"]) 
+            print("**Publication:** " + pub + "  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
