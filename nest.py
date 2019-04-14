@@ -139,7 +139,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
-            cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+config["doi"], shell=True)
+            cit = str(subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+config["doi"], shell=True))
             print("**Publication:** ["+cit[3:len(cit)]+"](https://doi.org/"+config["doi"]+")"+"  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
