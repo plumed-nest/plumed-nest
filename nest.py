@@ -113,7 +113,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","contributor","cit","doi","date"):
+        for field in ("url","pname","category","keyw","version","contributor","doi","date"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
