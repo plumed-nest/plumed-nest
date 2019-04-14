@@ -12,16 +12,14 @@ information in the form at the bottom of this page. All fields are required, unl
 * __Instructions:__ list of software used and instructions to execute the simulation(s)/analysis
 * __PLUMED version:__ the version of the code used in this project
 * __Contributor:__ project contributor (a single name or name of the research group)
-* __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on 
-* __int__ server, please type *"unpublished"*
+* __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on a preprint server, please type *"unpublished"*
 * __Contact:__ the name of a contact person to communicate with the coordinators of the PLUMED consortium
 * __Contact email:__ the email of the contact person
 
 __Please note that:__
 
 * The name and email of the contact person will not appear on the PLUMED-NEST website.
-* All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium.
-* Therefore, a delay between submission and publication on line should be expected.
+* All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium. Therefore, a delay between submission and publication on line should be expected.
 * If necessary, you will be able to edit the information on [GitHub](https://github.com/plumed-nest/plumed-nest) later or send us a revised version of the form.
 * PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible.
 * PLUMED-NEST will not test your execution scripts, but only the compatibility of the PLUMED input files provided.
