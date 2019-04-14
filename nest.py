@@ -21,7 +21,7 @@ def plumed_format(source,destination):
             comment=False
             action=""
             endplumed=False
-            print("<pre>",file=o)
+            print("{% raw %}<pre>",file=o)
             for line in lines:
                 words=line.split()
                 line=re.sub(" ","&nbsp;",line)
@@ -52,7 +52,7 @@ def plumed_format(source,destination):
                     line="<span style=\"color:blue\">" + line + "</span>"
 # "  " is newline in markdown
                 print(line + "  " ,file=o)
-            print("</pre>",file=o)
+            print("</pre>{% endraw %}",file=o)
 
 def plumed_input_test(exe,source):
     cwd = os.getcwd()
