@@ -13,6 +13,11 @@ import os
 import pathlib
 import subprocess
 
+def get_short_name(lname):
+    if(len(lname)>15): sname = lname[0:15]+"..."
+    else: sname = lname
+    return sname
+
 def plumed_format(source,destination):
     with open(source) as f:
         with open(destination,"w") as o:
@@ -160,12 +165,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         with open("../list.md","a") as o:
             # create line
             text  = '| [' + path[11:17] + '](/' + path + ') | '
-            if(len(config["pname"])>15): name = config["pname"][0:15]+"..."
-            else: name = config["pname"]
-            text += name + ' | '
-            text += config["category"] + ' | '
-            text += config["keyw"] + ' | '
-            text += config["contributor"] + ' | '
+            text += get_short_name(config["pname"]) + ' | '
+            text += get_short_name(config["category"]) + ' | '
+            text += get_short_name(config["keyw"]) + ' | '
+            text += get_short_name(config["contributor"]) + ' | '
             text += '[' + config["doi"] + '](https://doi.org/' + config["doi"] + ') |'
             print(text, file=o)
 
