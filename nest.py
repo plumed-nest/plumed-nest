@@ -14,9 +14,12 @@ import pathlib
 import subprocess
 
 def get_publication(doi):
+    # check if unpublished
+    if(doi=="unpublished"): return doi
+    # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
-      pub="DOI not found or not yet available. Check the provided DOI or consider posting a preprint of your manuscript!"
+      pub="DOI not found. Check the provided DOI!"
     else:
       pub="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
     return pub
