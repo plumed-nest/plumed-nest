@@ -13,8 +13,8 @@ import os
 import pathlib
 import subprocess
 
-def get_short_name(lname):
-    if(len(lname)>15): sname = lname[0:15]+"..."
+def get_short_name(lname, length):
+    if(len(lname)>length): sname = lname[0:length]+"..."
     else: sname = lname
     return sname
 
@@ -165,10 +165,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         with open("../list.md","a") as o:
             # create line
             text  = '| [' + path[11:17] + '](/' + path + ') | '
-            text += get_short_name(config["pname"]) + ' | '
+            text += get_short_name(config["pname"],15) + ' | '
             text += config["category"] + ' | '
-            text += config["keyw"] + ' | '
+            text += get_short_name(config["keyw"],30) + ' | '
             text += config["contributor"] + ' | '
-            text += '[' + get_short_name(config["doi"]) + '](https://doi.org/' + config["doi"] + ') |'
+            text += '[' + get_short_name(config["doi"],15) + '](https://doi.org/' + config["doi"] + ') |'
             print(text, file=o)
 
