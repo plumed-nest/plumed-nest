@@ -1,0 +1,12 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2016/MI-UBQ.zip
+pname: MI Ubiquitin 
+category: bio
+keyw: metainference, NMR
+version: 2.3
+contributor: Max Bonomi
+doi: unpublished
+date: 2019-04-14
+instructions: >
+  This is a test text. Here
+  you can explain how to use the provided input
+  files.
