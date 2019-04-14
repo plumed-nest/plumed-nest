@@ -1,0 +1,11 @@
+url: https://github.com/spiwokv/plumed_nest_by_spiwokv/raw/master/flyinggaussian2.zip
+pname: Flying Gaussian 
+category: methods 
+keyw: flying Gaussians, alanine dipeptide 
+version: 2.5.0
+contributor: Vojtech Spiwok 
+cit: J. Phys. Chem. B 2017, 121, 10479–10483 
+doi: 10.1021/acs.jpcb.7b09337 
+date: 2019-04-13
+instructions: >
+ Simple simulation used to demonstrate that free energy surface can be calculated from flying Gaussians results using umbrella sampling reweighing, despite dynamics of the bias potential. Tested on OpenMPI4.0.0, Gromacs 2018.5 and Plumed2.5.0. Script provided.
