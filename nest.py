@@ -166,9 +166,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
             # create line
             text  = '| [' + path[11:17] + '](/' + path + ') | '
             text += get_short_name(config["pname"]) + ' | '
-            text += get_short_name(config["category"]) + ' | '
-            text += get_short_name(config["keyw"]) + ' | '
-            text += get_short_name(config["contributor"]) + ' | '
+            text += config["category"] + ' | '
+            text += config["keyw"] + ' | '
+            text += config["contributor"] + ' | '
             text += '[' + config["doi"] + '](https://doi.org/' + config["doi"] + ') |'
             print(text, file=o)
 
