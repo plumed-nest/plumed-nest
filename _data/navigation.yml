@@ -2,12 +2,12 @@ pages:
 - title: Home
   url: /
 - title: PLUMED
-  url: /Plumed.html
+  url: /plumed.html
 - title: Consortium
-  url: /Members.html
+  url: /consortium.html
 - title: Contribute
-  url: /Contribute.html
+  url: /contribute.html
 - title: Cite
-  url: /Cite.html
+  url: /cite.html
 - title: Browse
-  url: /list.html
+  url: /browse.html

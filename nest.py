@@ -101,7 +101,7 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-with open("list.md","w") as o:
+with open("browse.md","w") as o:
     print("Browse the nest", file=o)
     print("-----------------------------", file=o)
     print("PLUMED-NEST provides all the data needed to reproduce the results of a PLUMED-enhanced molecular dynamics simulation or analysis contained in a published paper. Furthermore, PLUMED-NEST monitors the compatibility of the provided PLUMED input files with the current and development versions of the code and integrates links from these files to the PLUMED manual.", file=o)
@@ -174,7 +174,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
                print("*Description and instructions not provided*  ",file=o)
 
         # add to list of projects
-        with open("../list.md","a") as o:
+        with open("../browse.md","a") as o:
             # create line
             text  = '| [' + path[11:17] + '](/' + path + ') | '
             text += get_short_name(config["pname"],15) + ' | '

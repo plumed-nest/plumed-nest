@@ -19,17 +19,17 @@
   The mission of the consortium is to transform the way researchers communicate the 
   protocols that are used in their MD simulations, in order to maximize the impact of 
   new research and promote the highest possible standards of scientific reproducibility. 
-  More information can be found [here](Members.md). 
+  More information can be found [here](consortium.md). 
 
 * __How to contribute to PLUMED-NEST__
 
   Everybody can contribute to PLUMED-NEST. It is sufficient to provide
   a link to an archive containing all the data needed to reproduce a 
   PLUMED-enhanced simulation (or analysis) along with some additional information.
-  More detailed instructions and the form to upload a contribution can be found [here](Contribute.html).
+  More detailed instructions and the form to upload a contribution can be found [here](contribute.md).
 
 * __How to find a project in PLUMED-NEST__
 
   The list of contributions to PLUMED-NEST from current members of the PLUMED consortium as well as other researchers
-  can be found [here](list.md).
+  can be found [here](browse.md).
 
