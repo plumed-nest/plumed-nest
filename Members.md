@@ -43,6 +43,7 @@ and the current members are:
 * Alejandro Gil-Ley, National Institutes of Health, Bethesda, USA 
 * Toni Giorgino, National Research Council, Milan, Italy
 * Chen Haochuan, Nankai University, Nankai Qu, China
+* Gabriella Heller, University of Cambridge, Cambridge, UK
 * Glen Hocky, New York University, New York, USA
 * Marcella Iannuzzi, University of Zurich, Zurich, Switzerland
 * Michele Invernizzi, ETH Zurich, Lugano, Switzerland
