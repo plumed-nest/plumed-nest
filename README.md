@@ -13,3 +13,7 @@ In principle, we would like to be able to detect as many information as possible
 You might want to have a look at the nest.py script in this repository, which does all the processing. If you look in the [issues](https://github.com/plumed-nest/plumed-nest/issues) tab of this repository, you will find comments on the current limitations and a features that we plan to implement in the future.
 
 **Contributions to this repository, both as new projects and as improvements to our analysis scripts are welcome! Please open a new [issue](https://github.com/plumed-nest/plumed-nest/issues/new) or [pull request](https://github.com/plumed-nest/plumed-nest/compare) if you have comments or ideas to share.**
+
+## Testing the appearance of the PLUMED-NEST site
+
+If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
