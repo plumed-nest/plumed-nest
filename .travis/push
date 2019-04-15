@@ -12,6 +12,11 @@ if [ "$TRAVIS_PULL_REQUEST" != false ] ; then
   exit 0
 fi
 
+if [ "$TRAVIS_BRANCH" != master ] ; then
+  echo "Building from a non-master branch, skip push"
+  exit 0
+fi
+
 hash=$( git log -1 --format="%h")
 
 root="$PWD"

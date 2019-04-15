@@ -36,4 +36,4 @@ script:
   - python3 --version
   - python3 nest.py
 after_success:
-  - bash .travis/push $(find . -name "*.md") _config.yml _layouts _data Contribute.html
+  - bash .travis/push $(find . -name "*.md") _config.yml _layouts _data
