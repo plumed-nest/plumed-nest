@@ -1,0 +1,18 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2018/weber2018_LC.zip 
+pname: Multi-domain protein dynamics 
+category: bio
+keyw: metainference, NMR, protein dynamics 
+version: 2.4
+contributor: Carlo Camilloni 
+doi: 10.1016/j.jmb.2018.10.024 
+date: 2019-04-16
+plumed_input:
+  - weber2018_LC/r108a/plumed-mm.dat
+  - weber2018_LC/r108a/plumed-orient.dat
+  - weber2018_LC/wt/plumed-mm.dat
+  - weber2018_LC/wt/plumed-orient.dat
+instructions: >
+  this is a metadynamic metainference calculation using residual dipolar coupling to infere
+  the interdomain dynamics of a two domain proteins. There are two proteins (wt and a mutant).
+  the protoctol is in two step, first with plumed-orient.dat ones generate a good starting condition
+  for the replicas such as that the agreement with RDCs is ok, then the proper sampling begins.
