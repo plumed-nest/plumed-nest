@@ -180,7 +180,7 @@ for path in sorted(pathlist, key=lambda m: str(m)):
         # add to list of projects
         with open("../../browse.md","a") as o:
             # create line
-            text  = '| [' + path[5:11] + '](/' + path + ') | '
+            text  = '| [' + path[5:11] + '](' + path + ') | '
             text += get_short_name(config["pname"],15) + ' | '
             text += config["category"] + ' | '
             text += get_short_name(config["keyw"],25) + ' | '
