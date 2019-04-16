@@ -35,7 +35,7 @@ Fields marked with "<sup>*</sup>" are optional
   <table>
     <tr>
       <td><label for="id">plumeDnest ID<sup>*</sup></label></td>
-      <td width="600"><input id="id" type="text" name="plumeDnest" placeholder="example: 19.001"></td>
+      <td width="600"><select id="id" type="texy" name="plumeDnest"><option>new (ID to be assigned)</option>{% for item in site.data.eggs %}<option>{{ item.id }}:{{ item.shortname }}</option>{% endfor %}</select> </td>
     </tr>
     <tr>  
       <td><label for="name">Project name</label></td>
