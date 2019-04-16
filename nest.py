@@ -112,10 +112,9 @@ with open("browse.md","w") as o:
     print("|:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
 
 # list of paths - not ordered
-pathlist=list(pathlib.Path('.').glob('*/nest.yml'))
-# cycle on ordered list, based on first directory
-# we may need to change this is we want to move to project-2019/001...
-for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]): 
+pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
+# cycle on ordered list
+for path in sorted(pathlist, key=lambda m: str(m)):
 
     path=re.sub("nest.yml$","",str(path))
 
@@ -145,7 +144,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         print(config)
 
         with open("README.md","w") as o:
-            print("**Project ID:** ", path[0:-1]+"  ", file=o)
+            print("**Project ID:** ", "plumeDnest:" + path[5:11]+"  ", file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
@@ -176,9 +175,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
                print("*Description and instructions not provided*  ",file=o)
 
         # add to list of projects
-        with open("../browse.md","a") as o:
+        with open("../../browse.md","a") as o:
             # create line
-            text  = '| [' + path[11:17] + '](/' + path + ') | '
+            text  = '| [' + path[5:11] + '](/' + path + ') | '
             text += get_short_name(config["pname"],15) + ' | '
             text += config["category"] + ' | '
             text += get_short_name(config["keyw"],25) + ' | '
