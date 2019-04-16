@@ -140,6 +140,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m).split(os.sep)[0]
         if not "plumed_input" in config:
             config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
             config["plumed_input"]=[str(v) for v in config["plumed_input"]]
+        else:
+            config["plumed_input"]=[root+"/"+str(v) for v in config["plumed_input"]]
         print(config)
 
         with open("README.md","w") as o:
