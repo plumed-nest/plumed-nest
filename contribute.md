@@ -63,7 +63,7 @@ Fields marked with "<sup>*</sup>" are optional
     </tr>
     <tr>
       <td><label for="version">PLUMED version</label></td>
-      <td width="600"><input id="version" type="text" name="version" required></td>
+      <td width="600"><input id="version" type="text" name="version" placeholder="examples: 2.4, 2.5-dev", required></td>
     </tr>
     <tr>
       <td><label for="contributor">Contributor</label></td>
@@ -71,7 +71,7 @@ Fields marked with "<sup>*</sup>" are optional
     </tr>
     <tr>
       <td><label for="publication">Publication</label></td>
-      <td width="600"><input id="publication" type="text" name="publication" placeholder="example: 10.1016/j.cpc.2013.09.018" required></td>
+      <td width="600"><input id="publication" type="text" name="publication" placeholder="examples: 10.1016/j.cpc.2013.09.018, unpublished" required></td>
     </tr>
     <tr>
       <td><label for="contact">Contact</label></td>
