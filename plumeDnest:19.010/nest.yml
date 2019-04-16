@@ -7,10 +7,10 @@ contributor: Carlo Camilloni
 doi: 10.1016/j.jmb.2018.10.024 
 date: 2019-04-16
 plumed_input:
-  - weber2018_LC/r108a/plumed-mm.dat
-  - weber2018_LC/r108a/plumed-orient.dat
-  - weber2018_LC/wt/plumed-mm.dat
-  - weber2018_LC/wt/plumed-orient.dat
+  - r108a/plumed-mm.dat
+  - r108a/plumed-orient.dat
+  - wt/plumed-mm.dat
+  - wt/plumed-orient.dat
 instructions: >
   this is a metadynamic metainference calculation using residual dipolar coupling to infere
   the interdomain dynamics of a two domain proteins. There are two proteins (wt and a mutant).
