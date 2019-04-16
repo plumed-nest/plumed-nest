@@ -101,6 +101,9 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
+with open("_data/eggs.yml","w") as o:
+    print("# file containing egg database.",file=o)
+
 with open("browse.md","w") as o:
     print("Browse the nest", file=o)
     print("-----------------------------", file=o)
@@ -184,4 +187,8 @@ for path in sorted(pathlist, key=lambda m: str(m)):
             text += config["contributor"] + ' | '
             text += '[' + get_short_name(config["doi"],15) + '](https://doi.org/' + config["doi"] + ') |'
             print(text, file=o)
+
+        with open("../../_data/eggs.yml","a") as o:
+            print("- id: " + path[5:11],file=o)
+            print("  shortname: " + get_short_name(config["pname"],15),file=o)
 
