@@ -1,4 +1,4 @@
-url: https://archive.materialscloud.org/file/2019.0004/v1/inputs.zip
+url: https://archive.materialscloud.org/file/2019.0004/v2/inputs.zip
 pname: VesDeltaF 
 category: methods 
 keyw: VES, convergence, suboptimal CVs 
@@ -7,5 +7,7 @@ contributor: Michele Invernizzi
 doi: 10.1021/acs.jctc.9b00032
 date: 2019-04-11
 instructions: >
-  See PLUMED manual for VES_DELTA_F action
-  and [https://archive.materialscloud.org/2019.0004/v1](https://archive.materialscloud.org/2019.0004/v1) 
+  See the provided README file.
+  Other useful links are
+  the PLUMED manual for [https://plumed.github.io/doc-master/user-doc/html/_v_e_s__d_e_l_t_a__f.html](VES_DELTA_F) action
+  and [https://archive.materialscloud.org/2019.0004/v1](https://archive.materialscloud.org/2019.0004) 
