@@ -117,7 +117,7 @@ with open("browse.md","w") as o:
 # list of paths - not ordered
 pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
 # cycle on ordered list
-for path in sorted(pathlist, key=lambda m: str(m)):
+for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
     path=re.sub("nest.yml$","",str(path))
 
@@ -146,8 +146,10 @@ for path in sorted(pathlist, key=lambda m: str(m)):
             config["plumed_input"]=[root+"/"+str(v) for v in config["plumed_input"]]
         print(config)
 
+        egg_id=path[5:7] + "." + path[8:11]
+
         with open("README.md","w") as o:
-            print("**Project ID:** ", "plumeDnest:" + path[5:11]+"  ", file=o)
+            print("**Project ID:** ", "plumeDnest:" + egg_id +"  ", file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
@@ -180,7 +182,7 @@ for path in sorted(pathlist, key=lambda m: str(m)):
         # add to list of projects
         with open("../../browse.md","a") as o:
             # create line
-            text  = '| [' + path[5:11] + '](' + path + ') | '
+            text  = '| [' + egg_id + '](' + path + ') | '
             text += get_short_name(config["pname"],15) + ' | '
             text += config["category"] + ' | '
             text += get_short_name(config["keyw"],25) + ' | '
@@ -189,6 +191,13 @@ for path in sorted(pathlist, key=lambda m: str(m)):
             print(text, file=o)
 
         with open("../../_data/eggs.yml","a") as o:
-            print("- id: " + path[5:11],file=o)
+            print("- id: " + egg_id,file=o)
+            print("  name: " + config["pname"],file=o)
             print("  shortname: " + get_short_name(config["pname"],15),file=o)
+            print("  category: " + config["category"],file=o)
+            print("  keywords: " + config["keyw"],file=o)
+            print("  shortkeywords: " + get_short_name(config["keyw"],25),file=o)
+            print("  contributor: " + config["contributor"],file=o)
+            print("  doi: " + config["doi"],file=o)
+            print("  shortdoi: " + get_short_name(config["doi"],15),file=o)
 
