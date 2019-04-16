@@ -63,7 +63,7 @@ Fields marked with "<sup>*</sup>" are optional
     </tr>
     <tr>
       <td><label for="version">PLUMED version</label></td>
-      <td width="600"><input id="version" type="text" name="version" placeholder="examples: 2.4, 2.5-dev", required></td>
+      <td width="600"><input id="version" type="text" name="version" placeholder="examples: 2.4, 2.5-dev" required></td>
     </tr>
     <tr>
       <td><label for="contributor">Contributor</label></td>
