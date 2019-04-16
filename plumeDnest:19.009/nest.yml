@@ -1,0 +1,15 @@
+url: https://github.com/srnas/tetraloops-trajectories/archive/master.zip
+pname: RNA tetraloops folding
+category: bio
+keyw: metadynamics, RNA, folding
+version: 2.4
+contributor: Giovanni Bussi
+doi: 10.1021/acs.jpclett.6b01905
+date: 2019-04-16
+plumed_input:
+  - GAGA/ccGAGAgg.plumed.dat
+  - UUCG/ccUUCGgg.plumed.dat
+instructions: >
+  This is a test text. Here
+  you can explain how to use the provided input
+  files.
