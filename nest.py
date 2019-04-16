@@ -104,16 +104,6 @@ def cd(newdir):
 with open("_data/eggs.yml","w") as o:
     print("# file containing egg database.",file=o)
 
-with open("browse.md","w") as o:
-    print("Browse the nest", file=o)
-    print("-----------------------------", file=o)
-    print("PLUMED-NEST provides all the data needed to reproduce the results of a PLUMED-enhanced molecular dynamics simulation or analysis contained in a published paper. Furthermore, PLUMED-NEST monitors the compatibility of the provided PLUMED input files with the current and development versions of the code and integrates links from these files to the PLUMED manual.", file=o)
-    print("  ", file=o)
-    print("Here is the list of projects already deposited in PLUMED-NEST:", file=o)
-    print("  ", file=o)
-    print("| ID | Name | Category | Keywords | Contributor | DOI |", file=o) 
-    print("|:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|",   file=o)
-
 # list of paths - not ordered
 pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
 # cycle on ordered list
@@ -179,19 +169,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
 
-        # add to list of projects
-        with open("../../browse.md","a") as o:
-            # create line
-            text  = '| [' + egg_id + '](' + path + ') | '
-            text += get_short_name(config["pname"],15) + ' | '
-            text += config["category"] + ' | '
-            text += get_short_name(config["keyw"],25) + ' | '
-            text += config["contributor"] + ' | '
-            text += '[' + get_short_name(config["doi"],15) + '](https://doi.org/' + config["doi"] + ') |'
-            print(text, file=o)
-
         with open("../../_data/eggs.yml","a") as o:
-            print("- id: " + egg_id,file=o)
+# quote around id is required otherwise Jekyll thinks it is a number
+            print("- id: '" + egg_id + "'",file=o)
             print("  name: " + config["pname"],file=o)
             print("  shortname: " + get_short_name(config["pname"],15),file=o)
             print("  category: " + config["category"],file=o)
@@ -200,4 +180,5 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("  contributor: " + config["contributor"],file=o)
             print("  doi: " + config["doi"],file=o)
             print("  shortdoi: " + get_short_name(config["doi"],15),file=o)
+            print("  path: " + path,file=o)
 
