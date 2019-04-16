@@ -26,6 +26,7 @@ and the current members are:
 * Mattia Bernetti, International School for Advanced Studies, Trieste, Italy
 * Peter Bolhuis, University of Amsterdam, Amsterdam, The Netherlands
 * Sandro Bottaro, Italian Institute of Technology, Genova, Italy
+* Davide Branduardi, Schrödinger LLC, New York, USA
 * Riccardo Capelli, Forschungszentrum Jülich, Jülich, Germany
 * Paolo Carloni, Forschungszentrum Jülich, Jülich, Germany
 * Michele Ceriotti, Ecole polytechnique fédérale de Lausanne, Lausanne, Switzerland
