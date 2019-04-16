@@ -34,52 +34,52 @@ Fields marked with "<sup>*</sup>" are optional
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
   <table>
     <tr>
-      <td width="30%"><label for="id">plumeDnest ID<sup>*</sup></label></td>
-      <td width="100%" ><input id="id" type="text" name="plumeDnest" placeholder="example: 19.001"></td>
+      <td><label for="id">plumeDnest ID<sup>*</sup></label></td>
+      <td width="600"><input id="id" type="text" name="plumeDnest" placeholder="example: 19.001"></td>
     </tr>
     <tr>  
-      <td width="30%"><label for="name">Project name</label></td>
-      <td width="100%" ><input id="name" type="text" name="projectname" required> </td>
+      <td><label for="name">Project name</label></td>
+      <td width="600"><input id="name" type="text" name="projectname" required> </td>
     </tr>
     <tr>
-      <td width="30%"><label for="url">URL</label></td>
-      <td width="100%"><input id="url" type="text" name="url" required> </td>
+      <td><label for="url">URL</label></td>
+      <td width="600"><input id="url" type="text" name="url" required> </td>
     </tr>  
     <tr>
-      <td width="30%"><label for="pinput">PLUMED input files<sup>*</sup></label></td>
-      <td width="100%"><input id="pinput" type="text" name="plumedinput" placeholder="examples: colvar.dat, bias.dat, ..."> </td>
+      <td><label for="pinput">PLUMED input files<sup>*</sup></label></td>
+      <td width="600"><input id="pinput" type="text" name="plumedinput" placeholder="examples: colvar.dat, bias.dat, ..."> </td>
     </tr>
     <tr>
-      <td width="30%"><label for="category">Category</label></td>
-      <td width="100%"><select id="category" type="texy" name="category"><option>bio</option><option>chemistry</option><option>materials</option><option>methods</option><option>other</option></select> </td>
+      <td><label for="category">Category</label></td>
+      <td width="600"><select id="category" type="texy" name="category"><option>bio</option><option>chemistry</option><option>materials</option><option>methods</option><option>other</option></select> </td>
     </tr>
     <tr>
-      <td width="30%"><label for="keywords">Keywords</label></td>
-      <td width="100%"><input id="keywords" type="text" name="keywords" placeholder="examples: metadynamics, RNA, protein folding, small molecules, ..." required></td>
+      <td><label for="keywords">Keywords</label></td>
+      <td width="600"><input id="keywords" type="text" name="keywords" placeholder="examples: metadynamics, RNA, protein folding, small molecules, ..." required></td>
     </tr>
     <tr>
-      <td width="30%" height="200"><label for="instructions">Instructions</label></td>
-      <td width="100%" height="200"><textarea id="instructions" name="message" type="text" placeholder="Please explain how to use the deposited input files and provide a list of other software used (i.e. GROMACS) along with the specific version (i.e. 2018.6)" required></textarea></td>
+      <td height="200"><label for="instructions">Instructions</label></td>
+      <td width="600" height="200"><textarea id="instructions" name="message" type="text" placeholder="Please explain how to use the deposited input files and provide a list of other software used (i.e. GROMACS) along with the specific version (i.e. 2018.6)" required></textarea></td>
     </tr>
     <tr>
-      <td width="30%"><label for="version">PLUMED version</label></td>
-      <td width="100%"><input id="version" type="text" name="version" required></td>
+      <td><label for="version">PLUMED version</label></td>
+      <td width="600"><input id="version" type="text" name="version" required></td>
     </tr>
     <tr>
-      <td width="30%"><label for="contributor">Contributor</label></td>
-      <td width="100%"><input id="contributor" type="text" name="contributor" required></td>
+      <td><label for="contributor">Contributor</label></td>
+      <td width="600"><input id="contributor" type="text" name="contributor" required></td>
     </tr>
     <tr>
-      <td width="30%"><label for="publication">Publication</label></td>
-      <td width="100%"><input id="publication" type="text" name="publication" placeholder="example: 10.1016/j.cpc.2013.09.018" required></td>
+      <td><label for="publication">Publication</label></td>
+      <td width="600"><input id="publication" type="text" name="publication" placeholder="example: 10.1016/j.cpc.2013.09.018" required></td>
     </tr>
     <tr>
-      <td width="30%"><label for="contact">Contact</label></td>
-      <td width="100%"><input id="contact" type="text" name="contact" required></td>
+      <td><label for="contact">Contact</label></td>
+      <td width="600"><input id="contact" type="text" name="contact" required></td>
     </tr>
     <tr>
-      <td width="30%"><label for="email">Contact email</label></td>
-      <td width="100%"><input id="email" type="text" name="email" required></td>
+      <td><label for="email">Contact email</label></td>
+      <td width="600"><input id="email" type="text" name="email" required></td>
     </tr>  
   </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
@@ -92,8 +92,6 @@ form.wj-contact input[type="text"], form.wj-contact textarea[type="text"]{
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
     padding: 0.25em;
     font-family: monospace, sans-serif;
     font-weight: lighter;
@@ -103,12 +101,11 @@ form.wj-contact input[type="text"], form.wj-contact textarea[type="text"]{
     border-width: 1px;
     border-radius: 3px;
     transition: box-shadow .2s ease;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto
+    box-sizing: border-box;
 }
 </style>
-
     
