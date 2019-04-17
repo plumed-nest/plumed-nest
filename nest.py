@@ -76,10 +76,10 @@ def plumed_input_test(exe,source,plumed_mpi):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     with cd(run_folder):
-        if not plumed_mpi:
-            child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        else:
-            child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+#        if not plumed_mpi:
+#            child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+#        else:
+        child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         stdout,stderr = child.communicate()
         rc = child.returncode
     with cd(cwd):
