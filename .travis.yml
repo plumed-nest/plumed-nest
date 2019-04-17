@@ -1,4 +1,4 @@
-dist: trusty
+dist: xenial
 sudo: required 
 
 language: cpp
@@ -13,7 +13,7 @@ install:
   - sudo apt install mpi-default-bin mpi-default-dev
   - sudo apt install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
   - sudo apt-get update
-  - pyenv global 3.6
+  - pyenv global 3.7
   - pip3 install PyYAML
   - git clone --bare https://github.com/plumed/plumed2.git
 # pick newest release branch (alphabetic, will fail at v2.10)
