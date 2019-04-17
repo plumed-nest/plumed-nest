@@ -1,0 +1,21 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2019/paissoni19iucr.zip 
+pname: Martini-Beads multi-scale SAXS 
+category: bio
+keyw: metainference, SAXS, martini, nucleic-acids 
+version: 2.5
+contributor: Carlo Camilloni 
+doi: 10.1107/S1600576719002450
+date: 2019-04-17
+plumed_input:
+  - Protein-DNA/plumed-main.dat
+  - Protein-DNA/plumed-beads.dat 
+  - Protein-DNA/plumed-restr.dat 
+  - Protein-DNA/plumed-saxsCG.dat 
+  - Protein-RNA/plumed-main.dat
+  - Protein-RNA/plumed-beads.dat 
+  - Protein-RNA/plumed-restr.dat 
+  - Protein-RNA/plumed-saxsCG.dat 
+instructions: >
+  this is a metainference calculation using SAXS for structure refinement. In particular instead than 
+  calculting SAXS using all the atoms we first maps them on martini beads using CENTER and then we 
+  employ the structure factors parameterised in the paper.
