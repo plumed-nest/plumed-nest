@@ -39,7 +39,6 @@ def plumed_format(source):
         with open(destination,"w") as o:
             lines = f.read().splitlines()
             continuation=False
-            comment=False
             action=""
             endplumed=False
             action_next_line=False
