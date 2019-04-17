@@ -1,23 +1,13 @@
-url: https://github.com/tonigi/plumed2-automatic-gradients/releases/download/standalone-dist-v2.5.1-r1/plumed2-automatic-gradients-dist.zip
+url: https://github.com/tonigi/plumed2-automatic-gradients/releases/download/standalone-dist-v2.5.1-r2/plumed2-automatic-gradients-dist.zip
 pname: Automatic Gradient Computation for Collective Variables
 category: other
 keyw: gradient, differentiation, curvature
-version: 2.5.1
+version: 2.5
 contributor: Toni Giorgino
 doi: 10.1016/j.cpc.2018.02.017
 date: 2019-04-16
 plumed_input:
-  - regtest/curvature_autodiff/rt-1/plumed.dat
-  - regtest/curvature_autodiff/rt-2/plumed.dat
-  - regtest/curvature_codegen/rt-1/plumed.dat
-  - regtest/curvature_codegen/rt-2/plumed.dat
-  - regtest/curvature_codegen/rt-3/plumed.dat
-  - regtest/curvature_codegen/rt-4/plumed.dat
-  - regtest/curvature_codegen/rt-5/plumed.dat
-  - regtest/curvature_codegen/rt-m1/plumed.dat
-  - regtest/curvature_codegen/rt-m2/plumed.dat
-  - regtest/curvature_codegen/rt-m3/plumed.dat
-  - regtest/curvature_codegen/rt-m4/plumed.dat
+  - plumed-nest-readme.dat
 instructions: >
   This repository contains code illustrating two approaches to automate
   gradient computation for collective variables in PLUMED.  The two
