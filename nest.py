@@ -37,6 +37,7 @@ def plumed_format(source,destination):
             comment=False
             action=""
             endplumed=False
+            print("Source: " + source,file=o)
             print("{% raw %}<pre>",file=o)
             for line in lines:
                 words=line.split()
