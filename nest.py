@@ -29,47 +29,91 @@ def get_short_name(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,destination):
+def plumed_format(source):
+    suffix="md"
+    # list of generated files, returned
+    lista=[]
     with open(source) as f:
+        destination=source + "." + suffix
+        lista.append(destination)
         with open(destination,"w") as o:
             lines = f.read().splitlines()
             continuation=False
             comment=False
             action=""
             endplumed=False
+            action_next_line=False
             print("Source: " + source,file=o)
+            # make sure Jekyll does not interfere with format
+            # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
             for line in lines:
-                words=line.split()
-                line=re.sub(" ","&nbsp;",line)
-                #words=re.sub("#.*","",line).split()
-                if not endplumed and not continuation:
-                    if len(words)>1 and re.match("^.*:$",words[0]):
-                        action=words[1]
-                    elif len(words)>0 and words[0]=="ENDPLUMED":
-                        endplumed=True
-                    elif len(words)>0 and not re.match("#",words[0]):
-                        action=words[0]
-                    elif len(words)>0 and re.match("#",words[0]):
-                        comment = True
-                if len(action)>0 and not continuation and not comment:
-                    und_action = ''
-                    for ch in action:
-                        und_action = und_action + '_' + ch
-                    action_url="<a href=\"" + "https://plumed.github.io/doc-master/user-doc/html/" + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
-                    line=re.sub(action,action_url,line)
-                if len(words)>0 and words[-1]=="...":
-                    continuation=True
-                if len(words)>0 and continuation and words[0]=="...":
-                    continuation=False
-                if comment:
-                    comment=False
-                line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)
-                if(endplumed):
+                words=re.sub("#.*","",line).split()
+                if endplumed:
                     line="<span style=\"color:blue\">" + line + "</span>"
-# "  " is newline in markdown
-                print(line + "  " ,file=o)
+                else:
+                    if continuation:
+                        if len(words)>0:
+                            if words[0]=="...":
+                                # end of continuation
+                                continuation=False
+                            if action_next_line:
+                                # action was not in first line, thus it is here
+                                action=words[0]
+                                action_next_line=False
+                    else:
+                        action=""
+                        action_next_line=False
+                        if len(words)>0:
+                            if len(words)>1 and words[-1]=="...":
+                                # first line of multiline action:
+                                continuation=True
+                                if re.match("^.*:$",words[0]):
+                                    if len(words)>2:
+                                        # first word is the label
+                                        action=words[1]
+                                    else:
+                                        # first word of next nonempty line will be the action
+                                        action_next_line=True
+                                else:
+                                    action=words[0]
+                            else:
+                                # single line action, easy to parse:
+                                if re.match("^.*:$",words[0]):
+                                    action=words[1]
+                                else:
+                                    action=words[0]
+                    if len(action)>0:
+                        und_action = ''
+                        for ch in action:
+                            und_action = und_action + '_' + ch
+                        action_url="<a href=\"" + "https://plumed.github.io/doc-master/user-doc/html/" + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
+                        line=re.sub(action,action_url,line)
+                    
+                    if action=="ENDPLUMED":
+                        endplumed=True
+                    
+                    if action=="INCLUDE":
+                        # for now only oneline INCLUDE statements are supported. Could be extended later
+                        if len(words)>1 and re.match("^FILE=.*",words[1]):
+                            file=re.sub("^FILE=","",words[1])
+                            try:
+                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file)
+                                # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
+                                file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
+                                line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
+                            except FileNotFoundError:
+                                # if file is not found, do not replace the link and do not append lista
+                                pass
+                            
+                # mark comments as such
+                line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)    
+                print(line,file=o)
+                
             print("</pre>{% endraw %}",file=o)
+            # convert to set to remove duplicates
+            return list(set(lista))
+
 
 def plumed_input_test(exe,source):
     cwd = os.getcwd()
@@ -156,7 +200,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
-            plumed_format(file,file + ".md")
+# in principle returns the list of produced files, not used yet:
+            plumed_format(file)
             success=plumed_input_test("plumed",file)
             success_master=plumed_input_test("plumed_master",file)
             add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
