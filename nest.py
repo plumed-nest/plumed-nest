@@ -71,12 +71,15 @@ def plumed_format(source,destination):
                 print(line + "  " ,file=o)
             print("</pre>{% endraw %}",file=o)
 
-def plumed_input_test(exe,source):
+def plumed_input_test(exe,source,plumed_mpi):
     cwd = os.getcwd()
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     with cd(run_folder):
-        child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT) 
+        if not plumed_mpi:
+            child = subprocess.Popen([exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        else:
+            child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         stdout,stderr = child.communicate()
         rc = child.returncode
     with cd(cwd):
@@ -137,6 +140,12 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             config["plumed_input"]=[root+"/"+str(v) for v in config["plumed_input"]]
         print(config)
 
+        plumed_mpi = False
+        if "plumed_mpi" in config:
+            plumed_mpi = True
+        else:
+            plumed_mpi = False
+
         egg_id=path[5:7] + "." + path[8:11]
 
         with open("README.md","w") as o:
@@ -157,8 +166,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
         for file in config["plumed_input"]:
             plumed_format(file,file + ".md")
-            success=plumed_input_test("plumed",file)
-            success_master=plumed_input_test("plumed_master",file)
+            success=plumed_input_test("plumed",file,plumed_mpi)
+            success_master=plumed_input_test("plumed_master",file,plumed_mpi)
             add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
 
         # print instructions, if present
