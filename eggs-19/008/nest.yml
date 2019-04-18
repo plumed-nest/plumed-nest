@@ -5,10 +5,10 @@ keyw: neural network, dimensionality reduction
 version: 2.5.0
 contributor: Vojtech Spiwok 
 plumed_input:
-  - /anncolvar/c8/plumed.dat
-  - /anncolvar/trpcage/mtd/plumed.dat
-  - /anncolvar/trpcage/ptmd/plumed.dat
-  - /anncolvar/trpcage/ptmtd/plumed.dat 
+  - c8/plumed.dat
+  - trpcage/mtd/plumed.dat
+  - trpcage/ptmd/plumed.dat
+  - trpcage/ptmtd/plumed.dat 
 doi: 10.3389/fmolb.2019.00025 
 date: 2019-04-18
 instructions: >
