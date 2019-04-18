@@ -17,3 +17,10 @@ You might want to have a look at the nest.py script in this repository, which do
 ## Testing the appearance of the PLUMED-NEST site
 
 If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
+
+## Storing the checksum of a zip
+
+Optionally, the yml file can contain the md5 checksum of the zip file (see egg 19.001 for an example).
+Building fails if the checksum is not satisfied.
+The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the travis log upon failures.
+
