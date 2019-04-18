@@ -12,6 +12,19 @@ from contextlib import contextmanager
 import os
 import pathlib
 import subprocess
+import hashlib
+
+def md5(file):
+    """ Compute the MD5 hash of a file and returns it as a string """
+    BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
+    md5 = hashlib.md5()
+    with open(file, 'rb') as f:
+        while True:
+            data = f.read(BUF_SIZE)
+            if not data:
+                break
+            md5.update(data)
+    return md5.hexdigest()
 
 def get_publication(doi):
     # check if unpublished
@@ -167,6 +180,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
         if re.match("^.*\.zip$",config["url"]):
             urllib.request.urlretrieve(config["url"], 'file.zip')
+            if "md5" in config:
+                md5_=md5("file.zip")
+                if md5_ != config["md5"] :
+                   raise RuntimeError("md5 not matching " + md5_)
             zf = zipfile.ZipFile("file.zip", "r")
             root=zf.namelist()[0]
             zf.extractall()
@@ -186,6 +203,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Project ID:** ", "plumeDnest:" + egg_id +"  ", file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
+            if "md5" in config:
+                print("**Checksum (md5):**",config["md5"]+"  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)

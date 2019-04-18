@@ -1,4 +1,6 @@
-url: https://github.com/srnas/shape-md/archive/master.zip
+url: https://github.com/srnas/shape-md/archive/476e47196772e5dc109018bc4c2447c5dc234381.zip
+# optional checksum to avoid stealth updates
+md5: 12877107e2d86627750c4461eae5ac38
 pname: RNA SHAPE
 category: bio
 keyw: metadynamics, RNA, ligand binding
