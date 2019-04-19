@@ -28,7 +28,7 @@ def md5(file):
 
 def get_publication(doi):
     # check if unpublished
-    if(doi=="unpublished" || doi=="submitted"): return doi
+    if(doi=="unpublished" or doi=="submitted"): return doi
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
