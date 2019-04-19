@@ -44,6 +44,7 @@ def get_short_name(lname, length):
 
 def plumed_format(source,header=None):
     suffix="md"
+    docbase="https://plumed.github.io/doc-master/user-doc/html/"
     # list of generated files, returned
     lista=[]
     with open(source) as f:
@@ -101,7 +102,7 @@ def plumed_format(source,header=None):
                         und_action = ''
                         for ch in action:
                             und_action = und_action + '_' + ch
-                        action_url="<a href=\"" + "https://plumed.github.io/doc-master/user-doc/html/" + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
+                        action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
                         line=re.sub(action,action_url,line)
                     
                     if action=="ENDPLUMED":
@@ -122,6 +123,31 @@ def plumed_format(source,header=None):
                             
                 # mark comments as such
                 line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)    
+
+                # store special links here to make it easier to change them later if we modify the manual:
+                links={"vim":"_vim_syntax.html",
+                       "replicas":"special-replica-syntax.html",
+                       "groups":"_group.html",
+                       "molinfo":"_m_o_l_i_n_f_o.html"}
+
+                # list of special atom selections. only those that are not for a specific residue are needed.
+                # the others are found searching the dash (s)
+                keys={"groups":["mdatoms","allmdatoms"],
+                      "molinfo":["nucleic","protein","water","ions","hydrogens","nonhydrogens"]
+                     }
+
+                # link to vim:ft=plumed
+                line=re.sub("(vim: *ft=plumed)","<a href=\"" + docbase + links["vim"] +"\">\\1</a>",line)
+
+                # @ is kept out of the link so that the following substitutions do not find it
+                line=re.sub("@(replicas):","@<a href=\"" + docbase + links["replicas"]+"\">\\1</a>:",line)
+                for w in keys["groups"]:
+                    line=re.sub("@("+w+")([^0-9A-Za-z_]|$)","@<a href=\"" + docbase + links["groups"]+"\">\\1</a>\\2",line)
+                for w in keys["molinfo"]:
+                    line=re.sub("@("+w+")([^0-9A-Za-z_]|$)","@<a href=\"" + docbase + links["molinfo"]+"\">\\1</a>\\2",line)
+                # this is generic MOLINFO substitution: @anything followed by -
+                line=re.sub("@([^ ,{}<-]+-[0-9A-Za-z_-]+)","@<a href=\"" + docbase + links["molinfo"] + "\">\\1</a>",line)
+
                 print(line,file=o)
                 
             print("</pre>{% endraw %}",file=o)
