@@ -19,6 +19,8 @@ The coordinators of the PLUMED consortium are:
 * [Carlo Camilloni](http://sites.unimi.it/camilloni) (University of Milan, Italy)
 * [Gareth Tribello](http://titus.phy.qub.ac.uk/members/gareth/) (Queen's University Belfast, UK)
 
-and the current members are:
+Currently, the consortium includes {{ site.data.members | size }} members
+from {{ site.data.members | group_by:"affiliation" | size }} different institutes and
+{{ site.data.members | group_by:"country" | size }} different countries, listed below:
 {% for item in site.data.members %}
 * {{ item.name }}, {{ item.affiliation }}, {{ item.city }}, {{ item.country }}{% endfor %}
