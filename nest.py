@@ -42,7 +42,7 @@ def get_short_name(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source):
+def plumed_format(source,header=None):
     suffix="md"
     # list of generated files, returned
     lista=[]
@@ -55,7 +55,9 @@ def plumed_format(source):
             action=""
             endplumed=False
             action_next_line=False
-            print("Source: " + source,file=o)
+            if header:
+                 print(header,file=o)
+            print("Source: " + source+"  ",file=o)
             # make sure Jekyll does not interfere with format
             # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
@@ -110,7 +112,7 @@ def plumed_format(source):
                         if len(words)>1 and re.match("^FILE=.*",words[1]):
                             file=re.sub("^FILE=","",words[1])
                             try:
-                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file)
+                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,header=header)
                                 # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
                                 file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
                                 line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
@@ -219,7 +221,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
         for file in config["plumed_input"]:
 # in principle returns the list of produced files, not used yet:
-            plumed_format(file)
+            plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
             success=plumed_input_test("plumed",file)
             success_master=plumed_input_test("plumed_master",file)
             add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
