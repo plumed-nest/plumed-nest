@@ -9,6 +9,8 @@ contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.7b02921
 date: 2019-04-10
 instructions: >
-  This is a test text. Here
-  you can explain how to use the provided input
-  files.
+  The zip file contains GROMACS topologies and input files together with
+  a plumed example file. Notice that the simulations in the paper were performed
+  using bias exchange metadynamics, and the example input correspond to a single
+  replica (the one where ligand binding to residue 3 was enhanced). Input files
+  for all replicas should be similarly created in order to run a real simulation.
