@@ -11,6 +11,8 @@ plumed_input:
   - GAGA/ccGAGAgg.plumed.dat
   - UUCG/ccUUCGgg.plumed.dat
 instructions: >
-  This is a test text. Here
-  you can explain how to use the provided input
-  files.
+  The zip files contains the trajectories discussed in the paper as well as
+  a couple of plumed input files that were used for analysis. In order to run
+  the metadynamics simulations described in the paper one should fix the metadynamics
+  parameters (height and pace). In addition, histograms were computed using a syntax
+  that changed in PLUMED 2.4. To use them with a more recent PLUMED they should be updated.
