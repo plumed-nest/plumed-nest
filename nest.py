@@ -146,7 +146,7 @@ def add_readme(file, version, tested, success):
                 badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
             else:
                 badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
-        print("| [" + file + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
+        print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
