@@ -26,16 +26,16 @@ def md5(file):
             md5.update(data)
     return md5.hexdigest()
 
-def get_publication(doi):
+def get_reference(doi):
     # check if unpublished
     if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
-      pub="DOI not found. Check the provided DOI!"
+      reference="DOI not found. Check the provided DOI!"
     else:
-      pub="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
-    return pub
+      reference="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
+    return reference
  
 def get_short_name(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
@@ -237,8 +237,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
-            pub = get_publication(config["doi"]) 
-            print("**Publication:** " + pub + "  ", file=o)
+            reference = get_reference(config["doi"]) 
+            print("**Publication:** " + reference + "  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
@@ -280,4 +280,4 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("  doi: " + config["doi"],file=o)
             print("  shortdoi: " + get_short_name(config["doi"],15),file=o)
             print("  path: " + path,file=o)
-
+            print("  reference: " + reference,file=o)
