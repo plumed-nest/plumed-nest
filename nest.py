@@ -28,7 +28,7 @@ def md5(file):
 
 def get_reference(doi):
     # check if unpublished
-    if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi
+    if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
@@ -280,4 +280,4 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("  doi: " + config["doi"],file=o)
             print("  shortdoi: " + get_short_name(config["doi"],15),file=o)
             print("  path: " + path,file=o)
-            print("  reference: " + reference,file=o)
+            print("  reference: '" + reference +"'",file=o)
