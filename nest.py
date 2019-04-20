@@ -251,7 +251,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             if not "natoms" in config:
                 natoms = 100000
             else:
-                natoms = config["natoms"][k]
+                natoms = int(config["natoms"][k])
 
             print(natoms)
             plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
