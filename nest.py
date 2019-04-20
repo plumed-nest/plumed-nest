@@ -292,6 +292,5 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("  shortkeywords: " + get_short_name(config["keyw"],25),file=o)
             print("  contributor: " + config["contributor"],file=o)
             print("  doi: " + config["doi"],file=o)
-            print("  shortdoi: " + get_short_name(config["doi"],15),file=o)
             print("  path: " + path,file=o)
             print("  reference: '" + reference +"'",file=o)
