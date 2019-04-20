@@ -14,3 +14,6 @@ instructions: >
   calculting SAXS using all the atoms we first maps them on martini beads using CENTER and then we 
   employ the structure factors parameterised in the paper to efficiently calculate SAXS. The same structure
   factors can be directly used on Martini simulations
+natoms: 
+  - 120254
+  - 103421

@@ -155,12 +155,12 @@ def plumed_format(source,header=None):
             return list(set(lista))
 
 
-def plumed_input_test(exe,source):
+def plumed_input_test(exe,source,natoms):
     cwd = os.getcwd()
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     with cd(run_folder):
-        child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', '100000', '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         stdout,stderr = child.communicate()
         rc = child.returncode
     with cd(cwd):
@@ -245,12 +245,20 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("| File     | Declared compatibility | Compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
+        k=0
         for file in config["plumed_input"]:
 # in principle returns the list of produced files, not used yet:
+            if not "natoms" in config:
+                natoms = 100000
+            else:
+                natoms = config["natoms"][k]
+
+            print(natoms)
             plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
-            success=plumed_input_test("plumed",file)
-            success_master=plumed_input_test("plumed_master",file)
+            success=plumed_input_test("plumed",file,natoms)
+            success_master=plumed_input_test("plumed_master",file,natoms)
             add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
+            k=k+1
 
         # print instructions, if present
         with open("README.md","a") as o:
