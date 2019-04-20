@@ -14,6 +14,10 @@
   affiliation: University of Amsterdam
   city:        Amsterdam
   country:     The Netherlands
+- name:        Max Bonomi 
+  affiliation: Institut Pasteur - CNRS 
+  city:        Paris
+  country:     France
 - name:        Sandro Bottaro
   affiliation: Italian Institute of Technology
   city:        Genova
@@ -22,6 +26,14 @@
   affiliation: Schrödinger LLC
   city:        New York
   country:     USA
+- name:        Giovanni Bussi 
+  affiliation: International School for Advanced Studies
+  city:        Trieste 
+  country:     Italy 
+- name:        Carlo Camilloni 
+  affiliation: University of Milan
+  city:        Milan 
+  country:     Italy 
 - name:        Riccardo Capelli
   affiliation: Forschungszentrum Jülich
   city:        Jülich
@@ -226,6 +238,10 @@
   affiliation: University of Maryland
   city:        College Park
   country:     USA
+- name:        Gareth Tribello 
+  affiliation: Queen’s University Belfast 
+  city:        Belfast
+  country:     UK 
 - name:        Omar Valsson
   affiliation: Max Planck Institute for Polymer Research
   city:        Mainz
