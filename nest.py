@@ -59,6 +59,8 @@ def plumed_format(source,header=None):
             if header:
                  print(header,file=o)
             print("Source: " + source+"  ",file=o)
+            print("Stable: [stdout]("+ re.sub(".*/","",source) +".plumed.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
+            print("Master: [stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
             # make sure Jekyll does not interfere with format
             # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
@@ -156,24 +158,36 @@ def plumed_format(source,header=None):
 
 
 def plumed_input_test(exe,source,natoms):
-    cwd = os.getcwd()
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
-    with cd(run_folder):
-        child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-        stdout,stderr = child.communicate()
-        rc = child.returncode
-    with cd(cwd):
-        return rc
+    outfile=source + "." + exe + ".stdout.md"
+    errfile=source + "." + exe + ".stderr.md"
+    with open(outfile,"w") as stdout:
+        print("Stdout for source: ",source," [stderr](" + plumed_file + "." + exe + ".stderr.md)  ",file=stdout)
+        print("{% raw %}\n<pre>",file=stdout)
+    with open(errfile,"w") as stderr:
+        print("Stderr for source: ",source,"  ",file=stderr)
+        print("{% raw %}\n<pre>",file=stderr)
+    with open(outfile,"a") as stdout:
+        with open(errfile,"a") as stderr:
+            with cd(run_folder):
+                child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=stdout, stderr=stderr)
+                child.communicate()
+                rc = child.returncode
+    with open(outfile,"a") as stdout:
+        print("</pre>\n{% endraw %}",file=stdout)
+    with open(errfile,"a") as stderr:
+        print("</pre>\n{% endraw %}",file=stderr)
+    return rc
 
-def add_readme(file, version, tested, success):
+def add_readme(file, version, tested, success, exe):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
             if success[i]==0: 
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](' + file + '.' +  exe[i] + '.stdout)'
             else:
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](https://github.com/plumed/plumed2/tree/' + tested[i] + ')'
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](' + file + '.' +  exe[i] + '.stdout)'
         print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
@@ -256,7 +270,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
             success=plumed_input_test("plumed",file,natoms)
             success_master=plumed_input_test("plumed_master",file,natoms)
-            add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master))
+            add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master),("plumed","plumed_master"))
             k=k+1
 
         # print instructions, if present

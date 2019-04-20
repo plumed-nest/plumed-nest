@@ -22,6 +22,8 @@ install:
   - export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
   - export LIBRARY_PATH="$HOME/opt/lib:$LIBRARY_PATH"
   - export CPATH="$HOME/opt/include:$CPATH"
+# needed to avoid MPI warning
+  - export OMPI_MCA_btl="^openib"
   - sudo ln -s ccache /usr/local/bin/mpic++
   - export PATH=/usr/lib/ccache:${PATH}
   - ccache -s
