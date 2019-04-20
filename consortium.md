@@ -20,7 +20,7 @@ The coordinators of the PLUMED consortium are:
 * [Gareth Tribello](http://titus.phy.qub.ac.uk/members/gareth/) (Queen's University Belfast, UK)
 
 Currently, the consortium includes {{ site.data.members | size }} members
-from {{ site.data.members | group_by:"affiliation" | size }} different institutes and
+from {{ site.data.members | group_by:"affiliation" | size }} different institutions and
 {{ site.data.members | group_by:"country" | size }} different countries, listed below:
 {% for item in site.data.members %}
 * {{ item.name }}, {{ item.affiliation }}, {{ item.city }}, {{ item.country }}{% endfor %}
