@@ -1,0 +1,17 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2017/cmyc.zip 
+pname: Cmyc small molecule interaction 
+category: bio
+keyw: metadynamics, disordered protein, small molecule interaction, cmyc, IDP 
+version: 2.3.0-dev
+contributor: Gabriella Heller 
+doi: 10.1016/j.jmb.2017.07.016 
+date: 2019-04-20
+plumed_input:
+  - cmyc_alone/plumed/plumed_master.dat
+  - cmyc_alone/plumed/meta_cv_plumed.dat
+  - cmyc_alone/plumed/exp_cv_plumed.dat 
+  - cmyc_and_10058_F4/plumed/plumed_master.dat
+  - cmyc_and_10058_F4/plumed/meta_cv_plumed.dat
+  - cmyc_and_10058_F4/plumed/exp_cv_plumed.dat
+instructions: >
+  This study uses metainference metadynamics simulations restrained with NMR chemical shift data to determine the bound and unbound ensembles of a disordered peptide in the presence and absence of a small, drug-like molecule. We used PLUMED 2.3.0-dev and GROMACS 4.6.7.
