@@ -249,11 +249,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
         for file in config["plumed_input"]:
 # in principle returns the list of produced files, not used yet:
             if not "natoms" in config:
-                natoms = 100000
+                natoms = str(100000)
             else:
-                natoms = int(config["natoms"][k])
+                natoms = str(config["natoms"][k])
 
-            print(natoms)
             plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
             success=plumed_input_test("plumed",file,natoms)
             success_master=plumed_input_test("plumed_master",file,natoms)
