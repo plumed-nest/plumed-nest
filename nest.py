@@ -34,7 +34,7 @@ def get_reference(doi):
     if("DOI Not Found" in cit):
       reference="DOI not found. Check the provided DOI!"
     else:
-      reference="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
+      reference=cit[3:len(cit)]
     return reference
  
 def get_short_name(lname, length):
@@ -253,7 +253,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             reference = get_reference(config["doi"]) 
-            print("**Publication:** " + reference + "  ", file=o)
+            print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
