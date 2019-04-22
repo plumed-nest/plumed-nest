@@ -158,7 +158,7 @@ def plumed_format(source,header=None,included=False):
             return list(set(lista))
 
 
-def plumed_input_test(exe,source,natoms):
+def plumed_input_test(exe,source,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     outfile=source + "." + exe + ".stdout.md"
@@ -172,7 +172,10 @@ def plumed_input_test(exe,source,natoms):
     with open(outfile,"a") as stdout:
         with open(errfile,"a") as stderr:
             with cd(run_folder):
-                child = subprocess.Popen(['mpiexec', '-np', '2', exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', '2'], stdout=stdout, stderr=stderr)
+                if nreplicas==str(0):
+                  child = subprocess.Popen([exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=stdout, stderr=stderr)
+                else:
+                  child = subprocess.Popen(['mpiexec', '-np', nreplicas, exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', nreplicas], stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
     with open(outfile,"a") as stdout:
@@ -265,15 +268,25 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
-            if not "natoms" in file:
-                natoms = str(100000)
-            else:
+
+            if "natoms" in file:
                 natoms = str(file["natoms"])
+            elif "natoms" in config:
+                natoms = str(config["natoms"])
+            else:
+                natoms = str(100000)
+
+            if "nreplicas" in file:
+                nreplicas = str(file["nreplicas"])
+            elif "nreplicas" in config:
+                nreplicas = str(config["nreplicas"])
+            else:
+                nreplicas = str(0) # 0 means do not use mpiexec
 
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
-            success=plumed_input_test("plumed",file["path"],natoms)
-            success_master=plumed_input_test("plumed_master",file["path"],natoms)
+            success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
+            success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
             add_readme(file["path"], str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master),("plumed","plumed_master"))
 
         # print instructions, if present
