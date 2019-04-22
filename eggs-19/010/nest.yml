@@ -10,9 +10,11 @@ history:
     - 2019-04-16
     - original submission
 plumed_input:
-  - r108a/plumed-mm.dat
+  - path: r108a/plumed-mm.dat
+    nreplicas: 2
   - r108a/plumed-orient.dat
-  - wt/plumed-mm.dat
+  - path: wt/plumed-mm.dat
+    nreplicas: 2
   - wt/plumed-orient.dat
 instructions: >
   this is a metadynamic metainference calculation using residual dipolar coupling to infere
