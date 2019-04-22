@@ -281,6 +281,11 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
         # print instructions, if present
         with open("README.md","a") as o:
              print("  ", file=o)
+             if "history" in config:
+                 hlist=eval(config["history"])
+                 print("**History**  ", file=o)
+                 for h in hlist:
+                     print("* "+h[0]+": "+h[1]+"  ", file=o)
              print("**Project description and instructions**  ", file=o)
              try:
                print(config["instructions"], file=o)
