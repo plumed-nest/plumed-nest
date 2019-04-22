@@ -5,7 +5,7 @@ keyw: gradient, differentiation, curvature
 version: 2.5.1-giorgino-j.cpc.2018.02.017
 contributor: Toni Giorgino
 doi: 10.1016/j.cpc.2018.02.017
-history: (("2019-04-16","original submission"))
+history: (,("2019-04-16","original submission"))
 plumed_input:
   - plumed-nest-readme.dat
 instructions: >
