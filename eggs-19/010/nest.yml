@@ -5,7 +5,7 @@ keyw: metainference, NMR, protein dynamics
 version: 2.4
 contributor: Carlo Camilloni 
 doi: 10.1016/j.jmb.2018.10.024 
-date: 2019-04-16
+history: ("2019-04-16","original submission")
 plumed_input:
   - r108a/plumed-mm.dat
   - r108a/plumed-orient.dat

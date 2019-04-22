@@ -32,7 +32,7 @@ def get_reference(doi):
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
-      reference="DOI not found. Check the provided DOI!"
+      reference="DOI not found"
     else:
       reference=cit[3:len(cit)]
     return reference
@@ -216,7 +216,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","contributor","doi","date"):
+        for field in ("url","pname","category","keyw","version","contributor","doi","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -254,11 +254,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             # retrieve reference
             reference = get_reference(config["doi"]) 
-            if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found. Check the provided DOI!"):
+            if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found"):
               print("**Publication:** " + reference + "  ", file=o)
             else:
               print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
-            print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
             print("| File     | Declared compatibility | Compatible with |  ", file=o) 
@@ -287,11 +286,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
              print("  ", file=o)
-             if "history" in config:
-                 hlist=eval(config["history"])
-                 print("**History**  ", file=o)
-                 for h in hlist:
-                     print("* "+h[0]+": "+h[1]+"  ", file=o)
+             print("**History**  ", file=o)
+             for h in eval(config["history"]): 
+                 print("* "+h[0]+": "+h[1]+"  ", file=o)
 
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
