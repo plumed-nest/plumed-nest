@@ -15,6 +15,7 @@ information in the form at the bottom of this page. All fields are required, unl
 * __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on a preprint server, please type *"unpublished"*
 * __Contact:__ the name of a contact person to communicate with the coordinators of the PLUMED consortium
 * __Contact email:__ the email of the contact person
+* __Comments (optional):__ comments related to the submission, e.g. list of changes in case of resubmission
 
 __Please note that:__
 
@@ -81,6 +82,10 @@ Fields marked with "<sup>*</sup>" are optional
       <td><label for="email">Contact email</label></td>
       <td width="600"><input id="email" type="text" name="email" required></td>
     </tr>  
+    <tr>
+      <td><label for="comments">Comments<sup>*</sup></label></td>
+      <td width="600"><input id="comments" type="text" name="comments"></td>
+    </tr>
   </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
   <button type="submit">Submit</button>
