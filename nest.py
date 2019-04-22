@@ -257,9 +257,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
-            print("**Submitted on:** ",+convert_date(config["history"][0][0])+"  ", file=o)
+            print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
             if(len(config["history"])>1):
-              print("**Last revised:** ",+convert_date(config["history"][-1][0])+"  ", file=o)
+              print("**Last revised:** "+convert_date(config["history"][-1][0])+"  ", file=o)
             # retrieve reference
             reference = get_reference(config["doi"]) 
             if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found"):
