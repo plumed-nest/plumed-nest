@@ -235,10 +235,14 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
         if not "plumed_input" in config:
             config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
-            config["plumed_input"]=[str(v) for v in config["plumed_input"]]
+            config["plumed_input"]=[ {"path":str(v)} for v in config["plumed_input"]]
         else:
-            config["plumed_input"]=[root+"/"+str(v) for v in config["plumed_input"]]
-        print(config)
+            conf=config["plumed_input"]
+            for k in range(len(conf)):
+                if not isinstance(conf[k],dict):
+                    conf[k]={"path":conf[k]}
+            for k in range(len(conf)):
+                conf[k]["path"]=root+"/"+str(conf[k]["path"])
 
         egg_id=path[5:7] + "." + path[8:11]
 
@@ -260,19 +264,17 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("| File     | Declared compatibility | Compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
 
-        k=0
         for file in config["plumed_input"]:
-# in principle returns the list of produced files, not used yet:
-            if not "natoms" in config:
+            if not "natoms" in file:
                 natoms = str(100000)
             else:
-                natoms = str(config["natoms"][k])
+                natoms = str(file["natoms"])
 
-            plumed_format(file,header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
-            success=plumed_input_test("plumed",file,natoms)
-            success_master=plumed_input_test("plumed_master",file,natoms)
-            add_readme(file, str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master),("plumed","plumed_master"))
-            k=k+1
+# in principle returns the list of produced files, not used yet:
+            plumed_format(file["path"],header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
+            success=plumed_input_test("plumed",file["path"],natoms)
+            success_master=plumed_input_test("plumed_master",file["path"],natoms)
+            add_readme(file["path"], str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master),("plumed","plumed_master"))
 
         # print instructions, if present
         with open("README.md","a") as o:

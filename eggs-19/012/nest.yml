@@ -7,13 +7,12 @@ contributor: Carlo Camilloni
 doi: 10.1107/S1600576719002450
 date: 2019-04-17
 plumed_input:
-  - Protein-RNA/plumed-main.dat
-  - Protein-DNA/plumed-main.dat
+  - path: Protein-RNA/plumed-main.dat
+    natoms: 103421
+  - path: Protein-DNA/plumed-main.dat
+    natoms: 120254
 instructions: >
   this is a metainference calculation using SAXS for structure refinement. In particular instead than 
   calculting SAXS using all the atoms we first maps them on martini beads using CENTER and then we 
   employ the structure factors parameterised in the paper to efficiently calculate SAXS. The same structure
   factors can be directly used on Martini simulations
-natoms: 
-  - 103421
-  - 120254
