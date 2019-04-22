@@ -6,9 +6,7 @@ version: 2.3
 contributor: Max Bonomi
 doi: 10.1126/sciadv.1501177 
 history:
-  -
-    - 2019-04-14
-    - original submission
+  2019-04-14: original submission
 instructions: >
   This is a test text. Here
   you can explain how to use the provided input
