@@ -281,16 +281,17 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
         # print instructions, if present
         with open("README.md","a") as o:
              print("  ", file=o)
-             if "history" in config:
-                 hlist=eval(config["history"])
-                 print("**History**  ", file=o)
-                 for h in hlist:
-                     print("* "+h[0]+": "+h[1]+"  ", file=o)
              print("**Project description and instructions**  ", file=o)
              try:
                print(config["instructions"], file=o)
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
+             print("  ", file=o)
+             if "history" in config:
+                 hlist=eval(config["history"])
+                 print("**History**  ", file=o)
+                 for h in hlist:
+                     print("* "+h[0]+": "+h[1]+"  ", file=o)
 
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
