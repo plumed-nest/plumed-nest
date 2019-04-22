@@ -229,6 +229,13 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
                raise RuntimeError(field+" not found")
         print(config)
 
+        # allow using a dictionary. We might enforce a dictionary here if we prefer this syntax.
+        if isinstance(config["history"],dict):
+           h=[]
+           for k in sorted(config["history"]):
+              h.append([k,config["history"][k]])
+           config["history"]=h
+
         if re.match("^.*\.zip$",config["url"]):
             urllib.request.urlretrieve(config["url"], 'file.zip')
             if "md5" in config:
