@@ -172,7 +172,7 @@ def plumed_input_test(exe,source,natoms,nreplicas):
         print("Stdout for source: ",source," (see also [stderr](" + plumed_file + "." + exe + ".stderr.md))  ",file=stdout)
         print("{% raw %}\n<pre>",file=stdout)
     with open(errfile,"w") as stderr:
-        print("Stderr for source: ",source,"  ",file=stderr)
+        print("Stderr for source: ",source," (see also [stdout](" + plumed_file + "." + exe + ".stdout.md))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"a") as stdout:
         with open(errfile,"a") as stderr:
@@ -194,9 +194,9 @@ def add_readme(file, version, tested, success, exe):
         badge = ''
         for i in range(len(tested)):
             if success[i]==0: 
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](' + file + '.' +  exe[i] + '.stdout)'
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](' + file + '.' +  exe[i] + '.stderr)'
             else:
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](' + file + '.' +  exe[i] + '.stdout)'
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](' + file + '.' +  exe[i] + '.stderr)'
         print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
