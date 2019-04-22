@@ -257,6 +257,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
+            print("**Submitted on:** ",+convert_date(config["history"][0][0])+"  ", file=o)
+            if(len(config["history"])>1):
+              print("**Last revised:** ",+convert_date(config["history"][-1][0])+"  ", file=o)
             # retrieve reference
             reference = get_reference(config["doi"]) 
             if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found"):
@@ -294,7 +297,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              print("  ", file=o)
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
-                 print("**[v"+str(i+1)+"]** "+convert_date(h[0])+" "+h[1]+"  ", file=o)
+                 print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
             print("- id: '" + egg_id + "'",file=o)
