@@ -253,7 +253,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             reference = get_reference(config["doi"]) 
-            print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")", file=o)
+            print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
