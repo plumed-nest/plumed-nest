@@ -42,7 +42,7 @@ def get_short_name(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,header=None):
+def plumed_format(source,header=None,included=False):
     suffix="md"
     docbase="https://plumed.github.io/doc-master/user-doc/html/"
     # list of generated files, returned
@@ -59,8 +59,9 @@ def plumed_format(source,header=None):
             if header:
                  print(header,file=o)
             print("Source: " + source+"  ",file=o)
-            print("Stable: [stdout]("+ re.sub(".*/","",source) +".plumed.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
-            print("Master: [stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
+            if not included:
+                print("Stable: [stdout]("+ re.sub(".*/","",source) +".plumed.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
+                print("Master: [stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
             # make sure Jekyll does not interfere with format
             # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
@@ -115,7 +116,7 @@ def plumed_format(source,header=None):
                         if len(words)>1 and re.match("^FILE=.*",words[1]):
                             file=re.sub("^FILE=","",words[1])
                             try:
-                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,header=header)
+                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,header=header,included=True)
                                 # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
                                 file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
                                 line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
@@ -163,7 +164,7 @@ def plumed_input_test(exe,source,natoms):
     outfile=source + "." + exe + ".stdout.md"
     errfile=source + "." + exe + ".stderr.md"
     with open(outfile,"w") as stdout:
-        print("Stdout for source: ",source," [stderr](" + plumed_file + "." + exe + ".stderr.md)  ",file=stdout)
+        print("Stdout for source: ",source," (see also [stderr](" + plumed_file + "." + exe + ".stderr.md))  ",file=stdout)
         print("{% raw %}\n<pre>",file=stdout)
     with open(errfile,"w") as stderr:
         print("Stderr for source: ",source,"  ",file=stderr)
