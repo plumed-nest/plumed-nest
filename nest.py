@@ -258,6 +258,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
               print("**Publication:** " + reference + "  ", file=o)
             else:
               print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
+            print("  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
             print("| File     | Declared compatibility | Compatible with |  ", file=o) 
