@@ -15,12 +15,13 @@ information in the form at the bottom of this page. All fields are required, unl
 * __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on a preprint server, please type *"unpublished"*
 * __Contact:__ the name of a contact person to communicate with the coordinators of the PLUMED consortium
 * __Contact email:__ the email of the contact person
+* __Comments (optional):__ comments related to the submission, e.g. list of changes in case of resubmission
 
 __Please note that:__
 
 * The name and email of the contact person will not appear on the PLUMED-NEST website.
 * All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium. Therefore, a delay between submission and publication on line should be expected.
-* If necessary, you will be able to edit the information on [GitHub](https://github.com/plumed-nest/plumed-nest) later or send us a revised version of the form.
+* If necessary, you will be able to edit the information on [GitHub](https://github.com/plumed-nest/plumed-nest) later or send us a revised version of the form. In the latter case, please specify a list of changes in the "Comments" field.
 * PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible.
 * PLUMED-NEST will not test your execution scripts, but only the compatibility of the PLUMED input files provided.
 
@@ -81,6 +82,10 @@ Fields marked with "<sup>*</sup>" are optional
       <td><label for="email">Contact email</label></td>
       <td width="600"><input id="email" type="text" name="email" required></td>
     </tr>  
+    <tr>
+      <td><label for="comments">Comments<sup>*</sup></label></td>
+      <td width="600"><input id="comments" type="text" name="comments"></td>
+    </tr>
   </table>
   <input type="text" name="_gotcha" style="display:none"> <br>
   <button type="submit">Submit</button>

@@ -13,6 +13,11 @@ import os
 import pathlib
 import subprocess
 import hashlib
+from datetime import datetime
+
+def convert_date(date_str):
+    objDate = datetime.strptime(date_str, '%Y-%m-%d')
+    return datetime.strftime(objDate,'%d %b %Y')
 
 def md5(file):
     """ Compute the MD5 hash of a file and returns it as a string """
@@ -27,14 +32,14 @@ def md5(file):
     return md5.hexdigest()
 
 def get_reference(doi):
-    # check if unpublished
+    # check if unpublished/submitted
     if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
     if("DOI Not Found" in cit):
-      reference="DOI not found. Check the provided DOI!"
+      reference="DOI not found"
     else:
-      reference="["+cit[3:len(cit)]+"](https://doi.org/"+doi+")"
+      reference=cit[3:len(cit)]
     return reference
  
 def get_short_name(lname, length):
@@ -219,7 +224,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","contributor","doi","date"):
+        for field in ("url","pname","category","keyw","version","contributor","doi","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -259,10 +264,17 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
+            print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
+            if(len(config["history"])>1):
+              print("**Last revised:** "+convert_date(config["history"][-1][0])+"  ", file=o)
+            # retrieve reference
             reference = get_reference(config["doi"]) 
-            print("**Publication:** " + reference + "  ", file=o)
-            print("**Submission date:** ",config["date"]+"  ", file=o)
-            print("**PLUMED input files:**  ", file=o)
+            if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found"):
+              print("**Publication:** " + reference + "  ", file=o)
+            else:
+              print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
+            print("  ", file=o)
+            print("**PLUMED input files**  ", file=o)
             print("  ", file=o)
             print("| File     | Declared compatibility | Compatible with |  ", file=o) 
             print("|:--------:|:---------:|:--------:|  ", file=o)
@@ -297,7 +309,10 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
                print(config["instructions"], file=o)
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
-
+             print("  ", file=o)
+             print("**Submission history**  ", file=o)
+             for i,h in enumerate(config["history"]): 
+                 print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
             print("- id: '" + egg_id + "'",file=o)
