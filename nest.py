@@ -288,12 +288,8 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
                print("*Description and instructions not provided*  ",file=o)
              print("  ", file=o)
              print("**History**  ", file=o)
-             history = eval(config["history"])
-             if(type(history[0])!=tuple):
-                print("* "+history[0]+": "+history[1]+"  ", file=o)
-             else:
-                for h in history:
-                    print("* "+h[0]+": "+h[1]+"  ", file=o)
+             for h in config["history"]: 
+                 print("* "+h[0]+": "+h[1]+"  ", file=o)
 
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
