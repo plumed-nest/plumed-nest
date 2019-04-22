@@ -13,6 +13,11 @@ import os
 import pathlib
 import subprocess
 import hashlib
+from datetime import datetime
+
+def convert_date(date_str):
+    objDate = datetime.strptime(date_str, '%Y-%m-%d')
+    return datetime.strftime(objDate,'%d %b %Y')
 
 def md5(file):
     """ Compute the MD5 hash of a file and returns it as a string """
@@ -289,7 +294,7 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              print("  ", file=o)
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
-                 print("**v["+str(i+1)+"]** "+h[0]+": "+h[1]+"  ", file=o)
+                 print("**[v"+str(i+1)+"]** "+convert_date(h[0])+" "+h[1]+"  ", file=o)
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
             print("- id: '" + egg_id + "'",file=o)
