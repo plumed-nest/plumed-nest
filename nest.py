@@ -287,10 +287,9 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
              print("  ", file=o)
-             print("**History**  ", file=o)
-             for h in config["history"]: 
-                 print("* "+h[0]+": "+h[1]+"  ", file=o)
-
+             print("**Submission history**  ", file=o)
+             for i,h in enumerate(config["history"]): 
+                 print("**v["+str(i+1)+"]** "+h[0]+": "+h[1]+"  ", file=o)
         with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
             print("- id: '" + egg_id + "'",file=o)
