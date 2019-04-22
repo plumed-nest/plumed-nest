@@ -5,7 +5,7 @@ keyw: metainference, cryo-EM
 version: 2.5-dev
 contributor: Max Bonomi
 doi: 10.1101/516591 
-history: ("2019-04-15","original submission")
+history: (("2019-04-15","original submission"))
 instructions: >
   A detailed list of instructions as well as the scripts to reproduce the results
   can be found [here](https://github.com/fraser-lab/plumed_em_md). 

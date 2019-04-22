@@ -5,7 +5,7 @@ keyw: metainference, SAXS, martini, structure refinement, nucleic-acids, protein
 version: 2.5
 contributor: Carlo Camilloni 
 doi: 10.1107/S1600576719002450
-history: ("2019-04-17","original submission")
+history: (("2019-04-17","original submission"))
 plumed_input:
   - Protein-RNA/plumed-main.dat
   - Protein-DNA/plumed-main.dat

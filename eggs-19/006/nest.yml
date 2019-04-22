@@ -5,6 +5,6 @@ keyw: flying Gaussians, alanine dipeptide
 version: 2.5.0
 contributor: Vojtech Spiwok 
 doi: 10.1021/acs.jpcb.7b09337 
-history: ("2019-04-13","original submission")
+history: (("2019-04-13","original submission"))
 instructions: >
  Simple simulation used to demonstrate that free energy surface can be calculated from flying Gaussians results using umbrella sampling reweighing, despite dynamics of the bias potential. Tested on OpenMPI4.0.0, Gromacs 2018.5 and Plumed2.5.0. Script provided.

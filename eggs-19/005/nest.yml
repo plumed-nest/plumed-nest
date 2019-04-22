@@ -5,7 +5,7 @@ keyw: metadynamics, disordered protein, small molecule interaction, cmyc, IDP
 version: 2.5
 contributor: Gabriella Heller 
 doi: 10.1016/j.jmb.2017.07.016 
-history: ("2019-04-20","original submission")
+history: (("2019-04-20","original submission"))
 plumed_input:
   - cmyc_alone/plumed/plumed_master.dat
   - cmyc_and_10058_F4/plumed/plumed_master.dat
