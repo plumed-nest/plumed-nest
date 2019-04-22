@@ -5,7 +5,7 @@ keyw: force field, RNA
 version: 2.4
 contributor: Giovanni Bussi
 doi: submitted
-history: (,("2019-04-19","original submission"))
+history: ("2019-04-19","original submission")
 instructions: >
   The zip file contains the code used to fit dihedral corrections.
   It also contains a PLUMED input file that can be used to apply

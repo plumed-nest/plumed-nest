@@ -5,7 +5,7 @@ keyw: VES, convergence, suboptimal CVs
 version: 2.6
 contributor: Michele Invernizzi
 doi: 10.1021/acs.jctc.9b00032
-history: (("2019-04-16","fix path in PLUMED input files"),("2019-04-11","original submission"))
+history: ("2019-04-16","fix path in PLUMED input files"),("2019-04-11","original submission")
 instructions: >
   See the provided README file.
   Other useful links are
