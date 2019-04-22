@@ -27,7 +27,7 @@ def md5(file):
     return md5.hexdigest()
 
 def get_reference(doi):
-    # check if unpublished
+    # check if unpublished/submitted
     if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
     # retrieve citation
     cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
@@ -252,8 +252,12 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
             print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
+            # retrieve reference
             reference = get_reference(config["doi"]) 
-            print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
+            if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found. Check the provided DOI!"):
+              print("**Publication:** " + reference + "  ", file=o)
+            else:
+              print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
             print("**Submission date:** ",config["date"]+"  ", file=o)
             print("**PLUMED input files:**  ", file=o)
             print("  ", file=o)
