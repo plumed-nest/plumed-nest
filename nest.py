@@ -16,20 +16,21 @@ if not (sys.version_info > (3, 0)):
    raise RuntimeError("We are using too many python 3 constructs, so this is only working with python 3")
 
 class ChecksumError(Exception):
+    """ Raised when a checksum is violated. """
     pass
 
 def convert_date(date_str):
     objDate = datetime.strptime(date_str, '%Y-%m-%d')
     return datetime.strftime(objDate,'%d %b %Y')
 
-def md5(file):
-    """ Compute the MD5 hash of a file and returns it as a string """
+def md5(path):
+    """ Compute the MD5 hash of a path and return it as a string. """
     import hashlib
-    if not isinstance(file,str):
-        raise TypeError("file should be a string")
+    if not isinstance(path,str):
+        raise TypeError("path should be a string")
     BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
     md5 = hashlib.md5()
-    with open(file, 'rb') as f:
+    with open(path, 'rb') as f:
         while True:
             data = f.read(BUF_SIZE)
             if not data:
@@ -37,14 +38,14 @@ def md5(file):
             md5.update(data)
     return md5.hexdigest()
 
-def gzip(file):
-    """ Gzip a file (very much like command line gzip does) """
+def gzip(path):
+    """ Gzip a path (very much like command line gzip does) """
     import gzip as gz
     import shutil
-    with open(file, 'rb') as f_in:
-        with gz.open(file + '.gz', 'wb') as f_out:
+    with open(path, 'rb') as f_in:
+        with gz.open(path + '.gz', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
-    os.remove(file)
+    os.remove(path)
 
 def get_reference(doi):
     # check if unpublished/submitted
