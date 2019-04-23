@@ -3,7 +3,7 @@ How to contribute to PLUMED-NEST
 Contributing to PLUMED-NEST is free and easy. It is enough to provide the following
 information in the form at the bottom of this page. All fields are required, unless otherwise specified.
 
-* __plumeDnest ID:__ please select *"new"* for a new submission, or your plumeDnest ID in case of resubmission/update of an existing project
+* __plumID:__ please select *"new"* for a new submission, or your plumID in case of resubmission/update of an existing project
 * __Project name:__ the name of your project
 * __URL:__ the location of the zipped archive containing all the files needed to reproduce your PLUMED-enhanced simulation or analysis
 * __PLUMED input files (optional):__ list of non-standard PLUMED input file names, i.e. different from `plumed*.dat`
@@ -35,8 +35,8 @@ Fields marked with "<sup>*</sup>" are optional
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
   <table>
     <tr>
-      <td><label for="id">plumeDnest ID</label></td>
-      <td width="600"><select id="id" type="texy" name="plumeDnest"><option>new (ID to be assigned)</option>{% for item in site.data.eggs %}<option>{{ item.id }}:{{ item.shortname }}</option>{% endfor %} required</select> </td>
+      <td><label for="id">plumID</label></td>
+      <td width="600"><select id="id" type="texy" name="plumID"><option>new (plumID to be assigned)</option>{% for item in site.data.eggs %}<option>{{ item.id }}:{{ item.shortname }}</option>{% endfor %} required</select> </td>
     </tr>
     <tr>  
       <td><label for="name">Project name</label></td>
