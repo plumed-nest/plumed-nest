@@ -261,7 +261,12 @@ def process_egg(path,eggdb=None):
                 if md5_ != config["md5"] :
                    raise ChecksumError("md5 not matching " + md5_)
             zf = zipfile.ZipFile("file.zip", "r")
-            root=zf.namelist()[0]
+            root=zf.namelist()
+            ndir= len((set([ x.split("/")[0] for x in root ])))
+            # there is a main root directory
+            if(ndir==1): root=root[0]
+            # there is not
+            else:        root="./"
             zf.extractall()
         else:
             raise RuntimeError("cannot interpret url " + config["url"])
