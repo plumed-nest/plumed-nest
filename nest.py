@@ -190,10 +190,10 @@ def plumed_input_test(exe,source,natoms,nreplicas):
     with open(outfile,"w") as stdout:
         with open(errfile,"a") as stderr:
             with cd(run_folder):
-                if nreplicas==0:
-                  child = subprocess.Popen([exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=stdout, stderr=stderr)
-                else:
-                  child = subprocess.Popen(['mpiexec', '-np', str(nreplicas), exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', str(nreplicas)], stdout=stdout, stderr=stderr)
+                options=[exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file]
+                if nreplicas>0:
+                    options=['mpiexec', '-np', str(nreplicas)] + options + ['--multi', str(nreplicas)]
+                child = subprocess.Popen(options, stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
     with open(errfile,"a") as stderr:
