@@ -24,3 +24,103 @@ Optionally, the yml file can contain the md5 checksum of the zip file (see egg 1
 Building fails if the checksum is not satisfied.
 The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the travis log upon failures.
 
+## Instructions for filling the yml file
+
+The yml file should contain a number of fields. Please use existing yml files as a template and report if you think the documentation below is outdated.
+
+### Compulsory fields
+
+**url**: URL to a zip file with your material
+````
+url: http://path.to/file.zip
+````
+
+**pname**: Short name for your project
+````
+pname: ALA2
+````
+
+**category**: Main category for your project
+````
+category: methods
+````
+
+**keyw**: Keywords for your project.
+````
+keyw: metadynamics, RNA
+````
+
+**contributor**: Name of the contributor
+````
+contributor: Ludwig Boltzmann
+````
+
+**doi**: DOI to the related publication. If not available, write either `unpublished` or `submitted`
+````
+doi: 10.1038/nphys1170
+````
+
+**history**: This field should be either a list of pairs including date and message or a dictionary of messages using dates as keys:
+````
+history:
+  - [2019-04-20,"Changed something"]
+  - [2019-04-22,"Changed something else"]
+````
+or
+````
+history:
+  2019-04-20: Changed something
+  2019-04-22: Changed something else
+````
+
+### Optional fields
+
+**md5**: The MD5 checksum of your zip file.
+
+**instructions**: A string containing instructions about your project. This could be long, so it is recommended to split it on multiple lines
+````
+instructions: >
+  This is a long text.
+  Can be split in multiple lines using YAML rules.
+````
+
+**natoms**: This field can be used to specify how many atoms plumed should think you are using when running tests.
+````
+natoms: 200000
+````
+If not provided, we assume there are 100000 atoms (should accomodate most cases).
+
+**nreplicas**: In case your input require multiple replicas in order to run, specify the number of replicas needed.
+````
+nreplicas: 4
+````
+Avoid using too many replicas since this could slow down things! Often two replicas are sufficient to check the syntax of your input.
+
+**plumed_version**: The plumed version originally used to produce this work. Added for documentation purpose only.
+
+**plumed_input**: This field should contain a list of input files that will be tested. If this field is not provided, we will use some heuristic to find our which are the correct input files. For instance:
+````
+plumed_input:
+  - dir1/plumed.dat
+  - dir2/test.dat
+````
+For each input file you can also specify some instructions related to how this input should be executed. In this case, the input should be a dictionary. The value with key `path` will correspond to the path of the file:
+````
+plumed_input:
+  - dir1/plumed.dat
+  - path: dir2/test.dat
+    natoms: 200000
+    nreplicas: 2
+````
+Notice that the first input could have been equivalently indicated with
+````
+plumed_input:
+  - path: dir1/plumed.dat
+````
+
+The global keys that you can override at single input level are `natoms`, `nreplicas`, and `plumed_version`.
+
+
+
+
+
