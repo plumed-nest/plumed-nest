@@ -2,7 +2,7 @@ url: https://github.com/mme-ucl/plumed-nest-data/raw/master/succinnic_acid_input
 pname: Succinnic acid gamma polymorph 
 category: materials
 keyw: Succinnic acid, conformers, polymorphs, metadynamics 
-version: 2.3
+plumed_version: 2.3
 contributor: Matteo Salvalaglio 
 doi: 10.1039/C8CE00625C
 history:

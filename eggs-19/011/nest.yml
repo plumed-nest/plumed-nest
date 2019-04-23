@@ -2,7 +2,7 @@ url: https://github.com/tonigi/plumed2-automatic-gradients/releases/download/sta
 pname: Automatic Gradient Computation for Collective Variables
 category: other
 keyw: gradient, differentiation, curvature
-version: 2.5.1-giorgino-j.cpc.2018.02.017
+plumed_version: 2.5.1-giorgino-j.cpc.2018.02.017
 contributor: Toni Giorgino
 doi: 10.1016/j.cpc.2018.02.017
 history:

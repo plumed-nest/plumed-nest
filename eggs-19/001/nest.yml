@@ -4,7 +4,7 @@ md5: 12877107e2d86627750c4461eae5ac38
 pname: RNA SHAPE
 category: bio
 keyw: metadynamics, RNA, ligand binding
-version: 2.4
+plumed_version: 2.4
 contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.7b02921
 history:

@@ -2,7 +2,7 @@ url: https://github.com/mme-ucl/plumed-nest-data/raw/master/Ibuprofen_conformers
 pname: Ibuprofen conformational dynamics and thermodynamics surface
 category: materials
 keyw: Ibuprofen, crystal, surface, solvents, conformers, metadynamics
-version: 2.3
+plumed_version: 2.3
 contributor: Matteo Salvalaglio 
 doi: 10.1021/acs.jctc.8b00702 
 history:

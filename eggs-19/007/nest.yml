@@ -2,7 +2,7 @@ url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2019/EMMI
 pname: EMMI Microtubules 
 category: bio
 keyw: metainference, cryo-EM
-version: 2.5-dev
+plumed_version: 2.5-dev
 contributor: Max Bonomi
 doi: 10.1101/516591 
 history:

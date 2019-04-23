@@ -2,7 +2,7 @@ url: https://github.com/spiwokv/plumed_nest_by_spiwokv/raw/master/anncolvar.zip
 pname: anncolvar 
 category: methods 
 keyw: neural network, dimensionality reduction 
-version: 2.5.0
+plumed_version: 2.5.0
 contributor: Vojtech Spiwok 
 plumed_input:
   - c8/plumed.dat

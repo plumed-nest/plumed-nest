@@ -2,7 +2,7 @@ url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2018/
 pname: Multi-domain protein dynamics 
 category: bio
 keyw: metainference, NMR, protein dynamics 
-version: 2.4
+plumed_version: 2.4
 contributor: Carlo Camilloni 
 doi: 10.1016/j.jmb.2018.10.024 
 history:

@@ -3,7 +3,7 @@ md5: 752da87e6f72a8f2cfe5aded0ed42bfd
 pname: RNA tetraloops folding
 category: bio
 keyw: metadynamics, RNA, folding
-version: 2.4
+plumed_version: 2.4
 contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.6b01905
 history:

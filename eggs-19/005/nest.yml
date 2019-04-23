@@ -2,7 +2,7 @@ url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2017/cmyc
 pname: Cmyc small molecule interaction 
 category: bio
 keyw: metadynamics, disordered protein, small molecule interaction, cmyc, IDP 
-version: 2.5
+plumed_version: 2.5
 contributor: Gabriella Heller 
 doi: 10.1016/j.jmb.2017.07.016 
 nreplicas: 2

@@ -2,7 +2,7 @@ url: https://github.com/bussilab/ff-fitting-tools/archive/master.zip
 pname: RNA FF FITTING
 category: methods
 keyw: force field, RNA
-version: 2.4
+plumed_version: 2.4
 contributor: Giovanni Bussi
 doi: submitted
 history:

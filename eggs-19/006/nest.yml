@@ -2,7 +2,7 @@ url: https://archive.materialscloud.org/file/2019.0013/v1/flyinggaussian2.zip
 pname: Flying Gaussian proof 
 category: methods 
 keyw: flying Gaussians, alanine dipeptide 
-version: 2.5.0
+plumed_version: 2.5.0
 contributor: Vojtech Spiwok 
 doi: 10.1021/acs.jpcb.7b09337 
 history:

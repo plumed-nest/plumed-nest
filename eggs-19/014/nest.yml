@@ -2,7 +2,7 @@ url: https://github.com/mme-ucl/plumed-nest-data/raw/master/mil-101_paper_setup.
 pname: MIL101(Cr) SBUs assembly
 category: materials
 keyw: MOFs, nucleation, self-assembly, metadynamics 
-version: 2.2
+plumed_version: 2.2
 contributor: Matteo Salvalaglio 
 doi: 10.1021/jacs.9b01829
 history:
