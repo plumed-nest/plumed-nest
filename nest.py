@@ -313,7 +313,8 @@ def process_egg(path,eggdb=None):
             plumed_format(file["path"],header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
             success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
-            add_readme(file["path"], str(config["version"]) , (os.environ["PLUMED_LATEST_VERSION"],"master"), (success,success_master),("plumed","plumed_master"))
+            stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
+            add_readme(file["path"], str(config["version"]) , (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
         # print instructions, if present
         with open("README.md","a") as o:
