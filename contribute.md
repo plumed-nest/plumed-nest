@@ -80,7 +80,7 @@ Fields marked with "<sup>*</sup>" are optional
     </tr>
     <tr>
       <td><label for="email">Contact email</label></td>
-      <td width="600"><input id="email" type="text" name="email" required></td>
+      <td width="600"><input id="email" type="email" name="email" required></td>
     </tr>  
     <tr>
       <td><label for="comments">Comments<sup>*</sup></label></td>
