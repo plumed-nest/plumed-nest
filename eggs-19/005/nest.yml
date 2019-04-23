@@ -7,9 +7,7 @@ contributor: Gabriella Heller
 doi: 10.1016/j.jmb.2017.07.016 
 nreplicas: 2
 history:
-  -
-    - 2019-04-20
-    - original submission
+  2019-04-20: original submission
 plumed_input:
   - cmyc_alone/plumed/plumed_master.dat
   - cmyc_and_10058_F4/plumed/plumed_master.dat

@@ -6,9 +6,7 @@ version: 2.5
 contributor: Carlo Camilloni 
 doi: 10.1107/S1600576719002450
 history:
-  -
-    - 2019-04-17
-    - original submission
+  2019-04-17: original submission
 plumed_input:
   - path: Protein-RNA/plumed-main.dat
     natoms: 103421

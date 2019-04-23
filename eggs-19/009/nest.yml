@@ -7,9 +7,7 @@ version: 2.4
 contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.6b01905
 history:
-  -
-    - 2019-04-16
-    - original submission
+  2019-04-16: original submission
 plumed_input:
   - GAGA/ccGAGAgg.plumed.dat
   - UUCG/ccUUCGgg.plumed.dat

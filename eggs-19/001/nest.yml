@@ -8,9 +8,7 @@ version: 2.4
 contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.7b02921
 history:
-  -
-    - 2019-04-10
-    - original submission
+  2019-04-10: original submission
 instructions: >
   The zip file contains GROMACS topologies and input files together with
   a plumed example file. Notice that the simulations in the paper were performed
