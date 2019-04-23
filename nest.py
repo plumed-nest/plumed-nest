@@ -12,7 +12,6 @@ from contextlib import contextmanager
 import os
 import pathlib
 import subprocess
-import hashlib
 from datetime import datetime
 
 def convert_date(date_str):
@@ -21,6 +20,9 @@ def convert_date(date_str):
 
 def md5(file):
     """ Compute the MD5 hash of a file and returns it as a string """
+    import hashlib
+    if not isinstance(file,str):
+        raise TypeError("file should be a string")
     BUF_SIZE = 65536  # lets read stuff in 64kb chunks!
     md5 = hashlib.md5()
     with open(file, 'rb') as f:
