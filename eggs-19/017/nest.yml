@@ -6,12 +6,12 @@ plumed_version: 2.5
 contributor: Riccardo Capelli 
 doi: unpublished 
 plumed_input:
-  - metad_20ang.dat
-  - metad_22ang.dat
-  - metad_24ang.dat
-  - metad_26ang.dat
-  - metad_28ang.dat
-  - reweight_rho_c.dat
+  - plumed_metad/metad_20ang.dat
+  - plumed_metad/metad_22ang.dat
+  - plumed_metad/metad_24ang.dat
+  - plumed_metad/metad_26ang.dat
+  - plumed_metad/metad_28ang.dat
+  - plumed_reweight/reweight_rho_c.dat
 history:
   2019-04-23: original submission
 instructions: >
