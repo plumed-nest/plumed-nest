@@ -93,7 +93,7 @@ Fields marked with "<sup>*</sup>" are optional
 </form>
 
 <style>
-form.wj-contact input[type="text"], form.wj-contact textarea[type="text"]{
+form.wj-contact input[type="text"], form.wj-contact textarea[type="text"], form.wj-contact input[type="email"]{
     width: 100%;
     height: 100%;
     vertical-align: middle;
