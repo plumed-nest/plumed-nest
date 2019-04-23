@@ -269,7 +269,7 @@ def process_egg(path,eggdb=None):
         egg_id=path[5:7] + "." + path[8:11]
 
         with open("README.md","w") as o:
-            print("**Project ID:** ", "plumeDnest:" + egg_id +"  ", file=o)
+            print("**Project ID:** ", "plumID:" + egg_id +"  ", file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             if "md5" in config:
@@ -310,7 +310,7 @@ def process_egg(path,eggdb=None):
                 nreplicas = str(0) # 0 means do not use mpiexec
 
 # in principle returns the list of produced files, not used yet:
-            plumed_format(file["path"],header="**Project ID:** [plumeDnest:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
+            plumed_format(file["path"],header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
             success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
