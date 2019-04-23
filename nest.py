@@ -63,9 +63,17 @@ def get_short_name(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,header=None,included=False):
+def plumed_format(source,global_header=None,header=None,docbase=None):
+    """ Format plumed input file.
+
+    source: path to master input file
+    global_header: header added to all the (recursively) converted files.
+    run_header: header added only to the master file.
+
+    """
     suffix="md"
-    docbase="https://plumed.github.io/doc-master/user-doc/html/"
+    if not docbase:
+        docbase="https://plumed.github.io/doc-master/user-doc/html/"
     # list of generated files, returned
     lista=[]
     with open(source) as f:
@@ -77,12 +85,11 @@ def plumed_format(source,header=None,included=False):
             action=""
             endplumed=False
             action_next_line=False
+            if global_header:
+                 print(global_header,file=o)
+            print("Source: " + source+"  ",file=o)
             if header:
                  print(header,file=o)
-            print("Source: " + source+"  ",file=o)
-            if not included:
-                print("Stable: [raw gzipped stdout]("+ re.sub(".*/","",source) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
-                print("Master: [raw gzipped stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
             # make sure Jekyll does not interfere with format
             # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
@@ -137,7 +144,7 @@ def plumed_format(source,header=None,included=False):
                         if len(words)>1 and re.match("^FILE=.*",words[1]):
                             file=re.sub("^FILE=","",words[1])
                             try:
-                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,header=header,included=True)
+                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,global_header=global_header)
                                 # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
                                 file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
                                 line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
@@ -312,8 +319,11 @@ def process_egg(path,eggdb=None):
             else:
                 nreplicas = 0 # 0 means do not use mpiexec
 
+            global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n"
+            header=  "Stable: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
-            plumed_format(file["path"],header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
+            plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
