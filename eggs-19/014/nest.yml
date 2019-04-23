@@ -1,0 +1,11 @@
+url: https://github.com/mme-ucl/plumed-nest-data/blob/master/mil-101_paper_setup.zip 
+pname: MIL101(Cr) SBUs assembly
+category: materials
+keyw: MOFs, nucleation, self-assembly, metadynamics 
+version: 2.2
+contributor: Matteo Salvalaglio 
+doi: 10.1021/jacs.9b01829
+history:
+  2019-04-23: original submission
+instructions: >
+  Input files for metadynamics simulations performed with GROMACS 5.1 patched with PLUMED 2.2. 
