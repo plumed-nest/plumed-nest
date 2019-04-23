@@ -15,6 +15,9 @@ from datetime import datetime
 if not (sys.version_info > (3, 0)):
    raise RuntimeError("We are using too many python 3 constructs, so this is only working with python 3")
 
+class ChecksumError(Exception):
+    pass
+
 def convert_date(date_str):
     objDate = datetime.strptime(date_str, '%Y-%m-%d')
     return datetime.strftime(objDate,'%d %b %Y')
@@ -245,7 +248,7 @@ def process_egg(path,eggdb=None):
             if "md5" in config:
                 md5_=md5("file.zip")
                 if md5_ != config["md5"] :
-                   raise RuntimeError("md5 not matching " + md5_)
+                   raise ChecksumError("md5 not matching " + md5_)
             zf = zipfile.ZipFile("file.zip", "r")
             root=zf.namelist()[0]
             zf.extractall()
