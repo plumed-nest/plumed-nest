@@ -205,10 +205,12 @@ def add_readme(file, version, tested, success, exe):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
+            badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
             if success[i]==0: 
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'passing' + '-green.svg)](' + file + '.' +  exe[i] + '.stderr)'
+                badge = badge + 'passing-green.svg'
             else:
-                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-' + 'failed' + '-red.svg)](' + file + '.' +  exe[i] + '.stderr)'
+                badge = badge + 'failed-red.svg'
+            badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
         print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
 
 
