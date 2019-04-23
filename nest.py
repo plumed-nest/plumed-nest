@@ -87,6 +87,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             action_next_line=False
             if global_header:
                  print(global_header,file=o)
+                 print("\n",file=o)
             print("Source: " + source+"  ",file=o)
             if header:
                  print(header,file=o)
@@ -277,17 +278,18 @@ def process_egg(path,eggdb=None):
                 conf[k]["path"]=root+"/"+str(conf[k]["path"])
 
         egg_id=path[5:7] + "." + path[8:11]
+        global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  "
 
         with open("README.md","w") as o:
-            print("**Project ID:** ", "plumID:" + egg_id +"  ", file=o)
+            print(global_header, file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
             if "md5" in config:
                 print("**Checksum (md5):**",config["md5"]+"  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
-            if "version" in config:
-                print("**PLUMED version:** ",config["version"]+"  ", file=o)
+            if "plumed_version" in config:
+                print("**PLUMED version:** ",config["plumed_version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
             if(len(config["history"])>1):
@@ -320,15 +322,14 @@ def process_egg(path,eggdb=None):
             else:
                 nreplicas = 0 # 0 means do not use mpiexec
 
-            if "version" in file:
-                version=file["version"]
-            elif "version" in config:
-                version=config["version"]
+            if "plumed_version" in file:
+                plumed_version=file["plumed_version"]
+            elif "plumed_version" in config:
+                plumed_version=config["plumed_version"]
             else:
-                version="not specified"
+                plumed_version="not specified"
 
-            global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n"
-            header="Originally used with plumed version: " + version + "  \n"
+            header="Originally used with plumed version: " + plumed_version + "  \n"
             header+= "Stable: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
             header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
