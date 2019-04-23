@@ -209,7 +209,7 @@ def plumed_input_test(exe,source,natoms,nreplicas):
     gzip(outfile)
     return rc
 
-def add_readme(file, version, tested, success, exe):
+def add_readme(file, tested, success, exe):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
@@ -219,7 +219,7 @@ def add_readme(file, version, tested, success, exe):
             else:
                 badge = badge + 'failed-red.svg'
             badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
-        print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + version +" | " + badge + " |" + "  ", file=o)
+        print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -241,7 +241,7 @@ def process_egg(path,eggdb=None):
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","version","contributor","doi","history"):
+        for field in ("url","pname","category","keyw","contributor","doi","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
         print(config)
@@ -286,7 +286,8 @@ def process_egg(path,eggdb=None):
                 print("**Checksum (md5):**",config["md5"]+"  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
-            print("**PLUMED version:** ",config["version"]+"  ", file=o)
+            if "version" in config:
+                print("**PLUMED version:** ",config["version"]+"  ", file=o)
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
             print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
             if(len(config["history"])>1):
@@ -300,8 +301,8 @@ def process_egg(path,eggdb=None):
             print("  ", file=o)
             print("**PLUMED input files**  ", file=o)
             print("  ", file=o)
-            print("| File     | Declared compatibility | Compatible with |  ", file=o) 
-            print("|:--------:|:---------:|:--------:|  ", file=o)
+            print("| File     | Compatible with |  ", file=o) 
+            print("|:--------:|:--------:|  ", file=o)
 
         for file in config["plumed_input"]:
 
@@ -319,15 +320,23 @@ def process_egg(path,eggdb=None):
             else:
                 nreplicas = 0 # 0 means do not use mpiexec
 
+            if "version" in file:
+                version=file["version"]
+            elif "version" in config:
+                version=config["version"]
+            else:
+                version="not specified"
+
             global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n"
-            header=  "Stable: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            header="Originally used with plumed version: " + version + "  \n"
+            header+= "Stable: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
             header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
-            add_readme(file["path"], str(config["version"]) , (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
+            add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
         # print instructions, if present
         with open("README.md","a") as o:
