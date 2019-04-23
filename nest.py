@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from __future__ import print_function
-
 import yaml
 import sys
 import re
@@ -13,6 +11,9 @@ import os
 import pathlib
 import subprocess
 from datetime import datetime
+
+if not (sys.version_info > (3, 0)):
+   raise RuntimeError("We are using too many python 3 constructs, so this is only working with python 3")
 
 def convert_date(date_str):
     objDate = datetime.strptime(date_str, '%Y-%m-%d')
