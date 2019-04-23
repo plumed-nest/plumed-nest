@@ -217,15 +217,10 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-with open("_data/eggs.yml","w") as o:
-    print("# file containing egg database.",file=o)
+def process_egg(path,eggdb=None):
 
-# list of paths - not ordered
-pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
-# cycle on ordered list
-for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
-
-    path=re.sub("nest.yml$","",str(path))
+    if not eggdb:
+        eggdb=sys.stdout
 
     with cd(path):
 
@@ -328,15 +323,26 @@ for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
                  print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
-        with open("../../_data/eggs.yml","a") as o:
 # quote around id is required otherwise Jekyll thinks it is a number
-            print("- id: '" + egg_id + "'",file=o)
-            print("  name: " + config["pname"],file=o)
-            print("  shortname: " + get_short_name(config["pname"],15),file=o)
-            print("  category: " + config["category"],file=o)
-            print("  keywords: " + config["keyw"],file=o)
-            print("  shortkeywords: " + get_short_name(config["keyw"],25),file=o)
-            print("  contributor: " + config["contributor"],file=o)
-            print("  doi: " + config["doi"],file=o)
-            print("  path: " + path,file=o)
-            print("  reference: '" + reference +"'",file=o)
+        print("- id: '" + egg_id + "'",file=eggdb)
+        print("  name: " + config["pname"],file=eggdb)
+        print("  shortname: " + get_short_name(config["pname"],15),file=eggdb)
+        print("  category: " + config["category"],file=eggdb)
+        print("  keywords: " + config["keyw"],file=eggdb)
+        print("  shortkeywords: " + get_short_name(config["keyw"],25),file=eggdb)
+        print("  contributor: " + config["contributor"],file=eggdb)
+        print("  doi: " + config["doi"],file=eggdb)
+        print("  path: " + path,file=eggdb)
+        print("  reference: '" + reference +"'",file=eggdb)
+
+if __name__ == "__main__":
+    with open("_data/eggs.yml","w") as eggdb:
+        print("# file containing egg database.",file=eggdb)
+
+        # list of paths - not ordered
+        pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
+        # cycle on ordered list
+        for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
+
+            process_egg(re.sub("nest.yml$","",str(path)),eggdb)
+
