@@ -1,0 +1,11 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/Ibuprofen_conformers_JCTC.zip 
+pname: Ibuprofen conformational dynamics and thermodynamics surface
+category: materials
+keyw: Ibuprofen, crystal, surface, solvents, conformers, metadynamics
+version: 2.3
+contributor: Matteo Salvalaglio 
+doi: 10.1021/acs.jctc.8b00702 
+history:
+  2019-04-23: original submission
+instructions: >
+  Input files for metadynamics simulations performed with GROMACS 5.1.4 patched with PLUMED 2.3.
