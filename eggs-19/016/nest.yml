@@ -1,0 +1,11 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/succinnic_acid_input_files.zip 
+pname: Succinnic acid gamma polymorph 
+category: materials
+keyw: Succinnic acid, conformers, polymorphs, metadynamics 
+version: 2.3
+contributor: Matteo Salvalaglio 
+doi: 10.1039/C8CE00625C
+history:
+  2019-04-23: original submission
+instructions: >
+  Input files for metadynamics simulations performed with GROMACS 5.2 patched with PLUMED 2.3.
