@@ -190,10 +190,10 @@ def plumed_input_test(exe,source,natoms,nreplicas):
     with open(outfile,"w") as stdout:
         with open(errfile,"a") as stderr:
             with cd(run_folder):
-                if nreplicas==str(0):
-                  child = subprocess.Popen([exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=stdout, stderr=stderr)
+                if nreplicas==0:
+                  child = subprocess.Popen([exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file], stdout=stdout, stderr=stderr)
                 else:
-                  child = subprocess.Popen(['mpiexec', '-np', nreplicas, exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', nreplicas], stdout=stdout, stderr=stderr)
+                  child = subprocess.Popen(['mpiexec', '-np', str(nreplicas), exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', str(nreplicas)], stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
     with open(errfile,"a") as stderr:
@@ -296,18 +296,18 @@ def process_egg(path,eggdb=None):
         for file in config["plumed_input"]:
 
             if "natoms" in file:
-                natoms = str(file["natoms"])
+                natoms = int(file["natoms"])
             elif "natoms" in config:
-                natoms = str(config["natoms"])
+                natoms = int(config["natoms"])
             else:
-                natoms = str(100000)
+                natoms = 100000
 
             if "nreplicas" in file:
-                nreplicas = str(file["nreplicas"])
+                nreplicas = int(file["nreplicas"])
             elif "nreplicas" in config:
-                nreplicas = str(config["nreplicas"])
+                nreplicas = int(config["nreplicas"])
             else:
-                nreplicas = str(0) # 0 means do not use mpiexec
+                nreplicas = 0 # 0 means do not use mpiexec
 
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  \n")
