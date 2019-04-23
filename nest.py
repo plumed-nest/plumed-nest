@@ -33,6 +33,15 @@ def md5(file):
             md5.update(data)
     return md5.hexdigest()
 
+def gzip(file):
+    """ Gzip a file (very much like command line gzip does) """
+    import gzip as gz
+    import shutil
+    with open(file, 'rb') as f_in:
+        with gz.open(file + '.gz', 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
+    os.remove(file)
+
 def get_reference(doi):
     # check if unpublished/submitted
     if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
@@ -67,8 +76,8 @@ def plumed_format(source,header=None,included=False):
                  print(header,file=o)
             print("Source: " + source+"  ",file=o)
             if not included:
-                print("Stable: [stdout]("+ re.sub(".*/","",source) +".plumed.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
-                print("Master: [stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout) [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
+                print("Stable: [raw gzipped stdout]("+ re.sub(".*/","",source) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",source) +".plumed.stderr)  ",file=o)
+                print("Master: [raw gzipped stdout]("+ re.sub(".*/","",source) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",source) +".plumed_master.stderr)  ",file=o)
             # make sure Jekyll does not interfere with format
             # <pre> marks a preformatted block
             print("{% raw %}<pre>",file=o)
@@ -168,15 +177,13 @@ def plumed_format(source,header=None,included=False):
 def plumed_input_test(exe,source,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
-    outfile=source + "." + exe + ".stdout.md"
+    outfile=source + "." + exe + ".stdout.txt"
     errfile=source + "." + exe + ".stderr.md"
-    with open(outfile,"w") as stdout:
-        print("Stdout for source: ",source," (see also [stderr](" + plumed_file + "." + exe + ".stderr.md))  ",file=stdout)
-        print("{% raw %}\n<pre>",file=stdout)
     with open(errfile,"w") as stderr:
-        print("Stderr for source: ",source," (see also [stdout](" + plumed_file + "." + exe + ".stdout.md))  ",file=stderr)
+        print("Stderr for source: ",source,"  ",file=stderr)
+        print("(download [gzipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.gz))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
-    with open(outfile,"a") as stdout:
+    with open(outfile,"w") as stdout:
         with open(errfile,"a") as stderr:
             with cd(run_folder):
                 if nreplicas==str(0):
@@ -185,10 +192,9 @@ def plumed_input_test(exe,source,natoms,nreplicas):
                   child = subprocess.Popen(['mpiexec', '-np', nreplicas, exe, 'driver', '--natoms', natoms, '--parse-only', '--kt', '2.49', '--plumed', plumed_file, '--multi', nreplicas], stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
-    with open(outfile,"a") as stdout:
-        print("</pre>\n{% endraw %}",file=stdout)
     with open(errfile,"a") as stderr:
         print("</pre>\n{% endraw %}",file=stderr)
+    gzip(outfile)
     return rc
 
 def add_readme(file, version, tested, success, exe):
