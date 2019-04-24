@@ -4,6 +4,8 @@ PLUMED-NEST provides all the data needed to reproduce the results of a PLUMED-en
   
 Here is the list of projects already deposited in PLUMED-NEST, while a complete bibliography can be found [here](bibliography.md).
   
+{:#browse-table .display .compact }
+| plumID | Name | Category | Keywords | Contributor |
 | plumID | Name | Category | Keywords | Contributor |
 |:--------:|:--------:|:---------:|:---------:|:---------:|
 {% for item in site.data.eggs %}| [{{ item.id }}]({{ item.path }}) | {{ item.shortname }} | {{ item.category }} | {{ item.shortkeywords }} | {{ item.contributor }} |
