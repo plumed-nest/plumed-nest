@@ -3,6 +3,7 @@
 
 import yaml
 import sys
+import shutil
 import re
 import urllib.request
 import zipfile
@@ -221,7 +222,7 @@ def add_readme(file, tested, success, exe):
             else:
                 badge = badge + 'failed-red.svg'
             badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
-        print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
+        print("| [" + re.sub("^data/","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -256,6 +257,12 @@ def process_egg(path,eggdb=None):
            config["history"]=h
 
         if re.match("^.*\.zip$",config["url"]):
+            if os.path.exists("download"):
+               shutil.rmtree("download")
+            os.mkdir("download")
+            if os.path.exists("data"):
+               shutil.rmtree("data")
+            os.mkdir("data")
             urllib.request.urlretrieve(config["url"], 'file.zip')
             if "md5" in config:
                 md5_=md5("file.zip")
@@ -263,25 +270,29 @@ def process_egg(path,eggdb=None):
                    raise ChecksumError("md5 not matching " + md5_)
             zf = zipfile.ZipFile("file.zip", "r")
             root=zf.namelist()
+            zf.extractall(path="download")
             ndir= len((set([ x.split("/")[0] for x in root ])))
             # there is a main root directory
-            if(ndir==1): root=root[0]
+            if(ndir==1): root="download/" + root[0]
             # there is not
-            else:        root="./"
-            zf.extractall()
+            else:        root="download/"
+            for f in os.listdir(root):
+                shutil.move(root + "/" + f,"data/")
         else:
             raise RuntimeError("cannot interpret url " + config["url"])
 
         if not "plumed_input" in config:
-            config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
-            config["plumed_input"]=[ {"path":str(v)} for v in config["plumed_input"]]
+            with cd("data"):
+                config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
+                config["plumed_input"]=[ {"path":str(v)} for v in config["plumed_input"]]
         else:
             conf=config["plumed_input"]
             for k in range(len(conf)):
                 if not isinstance(conf[k],dict):
                     conf[k]={"path":conf[k]}
-            for k in range(len(conf)):
-                conf[k]["path"]=root+"/"+str(conf[k]["path"])
+
+        for f in config["plumed_input"]:
+            f["path"]="data/" + f["path"]
 
         egg_id=path[5:7] + "." + path[8:11]
         global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  "
@@ -368,6 +379,8 @@ def process_egg(path,eggdb=None):
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
         print("  reference: '" + reference +"'",file=eggdb)
+
+    eggdb.flush()
 
 if __name__ == "__main__":
     with open("_data/eggs.yml","w") as eggdb:
