@@ -19,7 +19,7 @@ $(document).ready(function() {
             this.api().columns().every( function () {
                 var column = this;
                 var select = $('<select><option value=""></option></select>')
-                    .appendTo( $("#example thead tr:eq(1) th").eq(column.index()).empty() )
+                    .appendTo( $("#browse-table thead tr:eq(1) th").eq(column.index()).empty() )
                     .on( 'change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(
                             $(this).val()
