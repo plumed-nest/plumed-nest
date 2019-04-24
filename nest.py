@@ -89,7 +89,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             if global_header:
                  print(global_header,file=o)
                  print("\n",file=o)
-            print("Source: " + source+"  ",file=o)
+            print("Source: " + re.sub("^data/","",source)+"  ",file=o)
             if header:
                  print(header,file=o)
             # make sure Jekyll does not interfere with format
@@ -189,13 +189,14 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             return list(set(lista))
 
 
-def plumed_input_test(exe,source,natoms,nreplicas):
+def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     outfile=source + "." + exe + ".stdout.txt"
     errfile=source + "." + exe + ".stderr.md"
     with open(errfile,"w") as stderr:
-        print("Stderr for source: ",source,"  ",file=stderr)
+        print(global_header,file=stderr)
+        print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
         print("(download [gzipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.gz))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"w") as stdout:
@@ -247,7 +248,7 @@ def process_egg(path,eggdb=None):
         for field in ("url","pname","category","keyw","contributor","doi","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
-        print(config)
+        print(path,config)
 
         # allow using a dictionary. We might enforce a dictionary here if we prefer this syntax.
         if isinstance(config["history"],dict):
@@ -351,8 +352,8 @@ def process_egg(path,eggdb=None):
             header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
-            success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
-            success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
+            success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
+            success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
