@@ -246,7 +246,7 @@ def process_egg(path,eggdb=None):
         for field in ("url","pname","category","keyw","contributor","doi","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
-        print(config)
+        print(path,config)
 
         # allow using a dictionary. We might enforce a dictionary here if we prefer this syntax.
         if isinstance(config["history"],dict):
@@ -368,6 +368,8 @@ def process_egg(path,eggdb=None):
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
         print("  reference: '" + reference +"'",file=eggdb)
+
+    eggdb.flush()
 
 if __name__ == "__main__":
     with open("_data/eggs.yml","w") as eggdb:
