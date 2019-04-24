@@ -3,6 +3,7 @@
 
 import yaml
 import sys
+import shutil
 import re
 import urllib.request
 import zipfile
@@ -87,8 +88,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             action_next_line=False
             if global_header:
                  print(global_header,file=o)
-                 print("\n",file=o)
-            print("Source: " + source+"  ",file=o)
+            print("Source: " + re.sub("^data/","",source)+"  ",file=o)
             if header:
                  print(header,file=o)
             # make sure Jekyll does not interfere with format
@@ -188,13 +188,14 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             return list(set(lista))
 
 
-def plumed_input_test(exe,source,natoms,nreplicas):
+def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     outfile=source + "." + exe + ".stdout.txt"
     errfile=source + "." + exe + ".stderr.md"
     with open(errfile,"w") as stderr:
-        print("Stderr for source: ",source,"  ",file=stderr)
+        print(global_header,file=stderr)
+        print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
         print("(download [gzipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.gz))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"w") as stdout:
@@ -221,7 +222,7 @@ def add_readme(file, tested, success, exe):
             else:
                 badge = badge + 'failed-red.svg'
             badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
-        print("| [" + re.sub("^.[^/]*//*","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
+        print("| [" + re.sub("^data/","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -256,6 +257,9 @@ def process_egg(path,eggdb=None):
            config["history"]=h
 
         if re.match("^.*\.zip$",config["url"]):
+            if os.path.exists("download"):
+               shutil.rmtree("download")
+            os.mkdir("download")
             urllib.request.urlretrieve(config["url"], 'file.zip')
             if "md5" in config:
                 md5_=md5("file.zip")
@@ -265,23 +269,30 @@ def process_egg(path,eggdb=None):
             root=zf.namelist()
             ndir= len((set([ x.split("/")[0] for x in root ])))
             # there is a main root directory
-            if(ndir==1): root=root[0]
+            if(ndir==1): root="download/" + root[0]
             # there is not
-            else:        root="./"
-            zf.extractall()
+            else:        root="download/"
+            zf.extractall(path="download")
+            if os.path.exists("data"):
+               shutil.rmtree("data")
+            shutil.move(root,"data")
         else:
             raise RuntimeError("cannot interpret url " + config["url"])
 
         if not "plumed_input" in config:
-            config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
-            config["plumed_input"]=[ {"path":str(v)} for v in config["plumed_input"]]
+            # discover path relative to data dir
+            with cd("data"):
+                config["plumed_input"]=sorted(pathlib.Path('.').glob('**/plumed*.dat'))
+                config["plumed_input"]=[ {"path":str(v)} for v in config["plumed_input"]]
         else:
             conf=config["plumed_input"]
             for k in range(len(conf)):
                 if not isinstance(conf[k],dict):
                     conf[k]={"path":conf[k]}
-            for k in range(len(conf)):
-                conf[k]["path"]=root+"/"+str(conf[k]["path"])
+
+        # prepend data to all paths
+        for f in config["plumed_input"]:
+            f["path"]="data/" + f["path"]
 
         egg_id=path[5:7] + "." + path[8:11]
         global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  "
@@ -340,8 +351,8 @@ def process_egg(path,eggdb=None):
             header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
-            success=plumed_input_test("plumed",file["path"],natoms,nreplicas)
-            success_master=plumed_input_test("plumed_master",file["path"],natoms,nreplicas)
+            success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
+            success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
