@@ -22,12 +22,6 @@ You might want to have a look at the nest.py script in this repository, which do
 
 If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
 
-## Storing the checksum of a zip
-
-Optionally, the yml file can contain the md5 checksum of the zip file (see egg 19.001 for an example).
-Building fails if the checksum is not satisfied.
-The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the travis log upon failures.
-
 ## Instructions for filling the yml file
 
 The yml file should contain a number of fields. Please use existing yml files as a template and report if you think the documentation below is outdated.
@@ -79,7 +73,14 @@ history:
 
 ### Optional fields
 
-**md5**: The MD5 checksum of your zip file.
+**md5**: The MD5 checksum of your zip file. In case the md5 sum of the downloaded zip files does not match this one, the build will fail. The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the travis log upon failures. Example
+````
+url: https://github.com/srnas/shape-md/archive/476e47196772e5dc109018bc4c2447c5dc234381.zip
+# optional checksum to avoid stealth updates
+md5: 12877107e2d86627750c4461eae5ac38
+````
+This field might become compulsory in the future in order to allow for reproducible builds.
+
 
 **instructions**: A string containing instructions about your project. This could be long, so it is recommended to split it on multiple lines
 ````
