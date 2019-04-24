@@ -1,5 +1,5 @@
-url: https://github.com/riccardocapelli/papers_data/raw/master/pathway_search2019/input_data.zip 
-pname: Ligand binding pathways exploration 
+url: https://github.com/riccardocapelli/papers_data/blob/master/pathway_search2019/input_data.zip 
+pname: Ligand binding pathways exploration
 category: bio
 keyw: metadynamics, ligand binding 
 plumed_version: 2.5
@@ -14,6 +14,7 @@ plumed_input:
   - plumed_reweight/reweight_rho_c.dat
 history:
   2019-04-23: original submission
+  2019-04-24: corrected paths for input files (ndx, pdb, dat), example data files added for the reweighting procedure
 instructions: >
   The data are in three different folders:
   * input, which contains the GROMACS (2016.5) input files (gro, top, itp, and mdp) to run the MD simulation.
