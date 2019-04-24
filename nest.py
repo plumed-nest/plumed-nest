@@ -135,7 +135,8 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                         for ch in action:
                             und_action = und_action + '_' + ch
                         action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
-                        line=re.sub(action,action_url,line)
+                        # only replace first instance
+                        line=re.sub(action,action_url,line,count=1)
                     
                     if action=="ENDPLUMED":
                         endplumed=True
