@@ -8,7 +8,4 @@ doi: 10.1063/1.5024679
 history:
   2019-04-25: original submission 
 instructions: >
-  The zip file provide a typical example of the Frequency adaptive metadynamics method described in [https://doi.org/10.1063/1.5024679](https://doi.org/10.1063/1.5024679) including plumed input files and instructions to run with Gromacs. Users should be able to adopt this to other situations.
-The used software versions are:
- - PLUMED v2.5
- - GROMACS 2015.4
+  The zip file provide a typical example of the Frequency adaptive metadynamics method described in [https://doi.org/10.1063/1.5024679](https://doi.org/10.1063/1.5024679) including plumed input files and instructions to run with Gromacs. Users should be able to adopt this to other situations. The used software versions are PLUMED v2.5and GROMACS 2015.4.
