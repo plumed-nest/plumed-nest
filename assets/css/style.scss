@@ -8,3 +8,6 @@ table.dataTable {
 }
 .dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button; } 
 .dataTables_wrapper .dataTables_filter input[type="search"]{-webkit-appearance: searchfield; } 
+table.dataTable thead th, table.dataTable thead td {
+  border: 0px;
+}
