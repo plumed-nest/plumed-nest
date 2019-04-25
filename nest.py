@@ -42,7 +42,6 @@ def md5(path):
 def gzip(path):
     """ Gzip a path (very much like command line gzip does) """
     import gzip as gz
-    import shutil
     with open(path, 'rb') as f_in:
         with gz.open(path + '.gz', 'wb') as f_out:
             shutil.copyfileobj(f_in, f_out)
