@@ -1,0 +1,10 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+table.dataTable {
+  padding-top: 10px;
+}
+.dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button; } 
+.dataTables_wrapper .dataTables_filter input[type="search"]{-webkit-appearance: searchfield; } 
