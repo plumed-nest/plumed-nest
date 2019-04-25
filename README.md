@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/plumed-nest/plumed-nest.svg?branch=master)](https://travis-ci.org/plumed-nest/plumed-nest)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/context:python)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/context:javascript)
