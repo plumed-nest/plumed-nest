@@ -118,6 +118,10 @@
   affiliation: New York University
   city:        New York
   country:     USA
+- name:        Evgeny Kirilin
+  affiliation: Lomonosov Moscow State University
+  city:        Moscow
+  country:     Russia
 - name:        Marcella Iannuzzi
   affiliation: University of Zurich
   city:        Zurich
