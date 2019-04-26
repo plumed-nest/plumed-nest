@@ -7,5 +7,5 @@ Here is the list of projects already deposited in PLUMED-NEST, while a complete 
 {:#browse-table .display .compact }
 | plumID | Name | Category | Keywords | Contributor |
 |:--------:|:--------:|:---------:|:---------:|:---------:|
-{% for item in site.data.eggs %}| [{{ item.id }}]({{ item.path }}) | {{ item.shortname }} | {{ item.category }} | {{ item.shortkeywords }} | {{ item.contributor }} |
+{% for item in site.data.eggs %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.category }} | {{ item.keywords }} | {{ item.contributor }} |
 {% endfor %}
