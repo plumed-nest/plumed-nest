@@ -1,0 +1,11 @@
+url: https://github.com/mbernett/zip_for_nest/raw/master/Ntail.zip 
+pname: PTMetaD-WTE simulation of the Ntail IDP 
+category: bio 
+keyw: metadynamics, IDPs, protein folding 
+plumed_version: 2.2
+contributor: Mattia Bernetti 
+doi: 10.1021/acs.jpcb.7b08925  
+history:
+  2019-04-26: original submission 
+instructions: >
+ Input files for the simulation of the Ntail IDP using the PTMetaD-WTE scheme. The zip comprises two directories: step-1 and step-2. The former contains the equilibrated *.gro files at each of the 8 temperatures considered, plus the plumed.*.dat necessary to enlarge the fluctuations of the potential energy by sampling the well-tempered ensemble (WTE) along with the GROMACS (version 4.6.7) *.mdp files needed to launch the simulation. The second directory includes the plumed.*.dat files to subsequently combine this PT-WTE scheme with a metadynamics simulation using the radius of gyration and the alpha helical content as CVs, resulting in the PTMetaD-WTE framework. 
