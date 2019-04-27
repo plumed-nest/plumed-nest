@@ -52,3 +52,24 @@ table.dataTable thead th, table.dataTable thead td {
   color: #00B4CC;
 }
 
+.bottom{
+	width: 100%;
+    justify-content: space-between;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    flex-wrap: wrap;
+	}
+.bottom .dt-buttons{
+  padding-top: 0.25em;
+  flex-grow: 1;
+}
+.bottom .dataTables_paginate{
+  flex-grow: 1;
+}
+@media screen and (max-width: 767px){
+  .bottom .dt-buttons{
+	margin-top: 0.5em;
+  }
+}

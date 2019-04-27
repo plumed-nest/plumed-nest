@@ -13,8 +13,11 @@ Here is the list of projects already deposited in PLUMED-NEST, while a complete 
 <script>
 $(document).ready(function() {
 var table = $('#browse-table').DataTable({
-  "dom": '<"search"f><"top"il>rt<"bottom"p><"clear">',
-  language: { search: '', searchPlaceholder: "Search project..." }
+  "dom": '<"search"f><"top"il>rt<"bottom"Bp><"clear">',
+  language: { search: '', searchPlaceholder: "Search project..." },
+  buttons: [
+        'copy', 'excel', 'pdf'
+  ]
   });
 $('#browse-table-searchbar').keyup(function () {
   table.search( this.value ).draw();
