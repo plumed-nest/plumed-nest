@@ -3,11 +3,9 @@ pname: Coarse-Grained Directed Simulation
 category: methods
 keyw: experiment directed simulation, coarse-grain, bias 
 plumed_version: 2.5b
-contributor: Glen Hocky 
+contributor: Glen Hocky
 doi: 10.1021/acs.jctc.7b00690 
 history:
   2019-04-29: original submission 
 instructions: >
- Everything should be self-explanatory with run scripts in tar file. Used GROMACS 5.1.X.
-This tar contains all inputs and analysis scripts for the paper.
-Figures can be generated with included Python2 Jupyter notebooks after producing data. 
+ Everything should be self-explanatory with run scripts in tar file. Used GROMACS 5.1.X. This tar contains all inputs and analysis scripts for the paper. Figures can be generated with included Python2 Jupyter notebooks after producing data. 
