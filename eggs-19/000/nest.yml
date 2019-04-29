@@ -1,0 +1,15 @@
+url: https://archive.materialscloud.org/file/2019.0004/v2/inputs.zip
+pname: VesDeltaF 
+category: methods 
+keyw: VES, convergence, suboptimal CVs 
+plumed_version: 2.6
+contributor: Michele Invernizzi
+doi: 10.1021/acs.jctc.9b00032
+history:
+  2019-04-11: original submission
+  2019-04-16: fix path in PLUMED input files
+instructions: >
+  See the provided README file.
+  Other useful links are
+  the PLUMED manual for [VES_DELTA_F](https://plumed.github.io/doc-master/user-doc/html/_v_e_s__d_e_l_t_a__f.html) action
+  and [https://archive.materialscloud.org/2019.0004](https://archive.materialscloud.org/2019.0004)
