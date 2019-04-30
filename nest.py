@@ -296,6 +296,21 @@ def process_egg(path,eggdb=None):
         egg_id=path[5:7] + "." + path[8:11]
         global_header="**Project ID:** [plumID:" + egg_id+"]({{ '/' | absolute_url }}" + path + ")  "
 
+        with open("badge.svg","w") as badge:
+            print("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"20\">", file=badge)
+            print("<linearGradient id=\"a\" x2=\"0\" y2=\"100%\">", file=badge)
+            print("<stop offset=\"0\" stop-color=\"#bbb\" stop-opacity=\".1\"/>", file=badge)
+            print("<stop offset=\"1\" stop-opacity=\".1\"/></linearGradient>", file=badge)
+            print("<rect rx=\"3\" width=\"120\" height=\"20\" fill=\"#555\"/>", file=badge)
+            print("<rect rx=\"3\" x=\"67\" width=\"53\" height=\"20\" fill=\"#155799\"/>", file=badge)
+            print("<path fill=\"#155799\" d=\"M67 0h4v20h-4z\"/>", file=badge)
+            print("<rect rx=\"3\" width=\"120\" height=\"20\" fill=\"url(#a)\"/>", file=badge)
+            print("<g fill=\"#fff\" text-anchor=\"middle\" font-family=\"DejaVu Sans,Verdana,Geneva,sans-serif\" font-size=\"11\">", file=badge)
+            print("<text x=\"34.5\" y=\"15\" fill=\"#010101\" fill-opacity=\".3\">plumID</text>", file=badge)
+            print("<text x=\"34.5\" y=\"14\">plumID</text>", file=badge)
+            print("<text x=\"92.5\" y=\"15\" fill=\"#010101\" fill-opacity=\".3\">"+egg_id+"</text>", file=badge)
+            print("<text x=\"92.5\" y=\"14\">"+egg_id+"</text></g></svg>", file=badge)
+
         with open("README.md","w") as o:
             print(global_header, file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
@@ -367,6 +382,7 @@ def process_egg(path,eggdb=None):
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
                  print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
+             print("[![plumeDnest:" + egg_id +"](./badge.svg)](./badge.svg) ", file=o)
 # quote around id is required otherwise Jekyll thinks it is a number
         print("- id: '" + egg_id + "'",file=eggdb)
         print("  name: " + config["pname"],file=eggdb)
