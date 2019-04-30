@@ -17,7 +17,8 @@ var table = $('#browse-table').DataTable({
   language: { search: '', searchPlaceholder: "Search project..." },
   buttons: [
         'copy', 'excel', 'pdf'
-  ]
+  ],
+  "order": [[ 0, "desc" ]]
   });
 $('#browse-table-searchbar').keyup(function () {
   table.search( this.value ).draw();

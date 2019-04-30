@@ -1,0 +1,18 @@
+url: https://archive.materialscloud.org/file/2019.0014/v1/anncolvar.zip 
+pname: anncolvar 
+category: methods 
+keyw: neural network, dimensionality reduction 
+plumed_version: 2.5.0
+contributor: Vojtech Spiwok 
+plumed_input:
+  - c8/plumed.dat
+  - trpcage/mtd/plumed.dat
+  - trpcage/ptmd/plumed.dat
+  - trpcage/ptmtd/plumed.dat 
+doi: 10.3389/fmolb.2019.00025 
+history:
+  2019-04-16: original submission
+  2019-04-18: updated DOI
+  2019-04-24: zip moved to materialscloud.org
+instructions: >
+  Neural networks were created by ancolvar (https://github.com/spiwokv/anncolvar) and used to approximate Isomap CVs for 5 ns metadynamics of cyclooctane derivative and to approximate molecular surface area for 0.5 ns metadynamics, 1 ns parallel tempering and 1 ns parallel tempering metadynamics of Trp-cage folding with molecular surface area and alpha-RMSD CVs. 

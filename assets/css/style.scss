@@ -36,6 +36,7 @@ table.dataTable thead th, table.dataTable thead td {
   width:100%;
 }
 .search input {
+  -webkit-appearance: none !important; //needed for sSafari. First remove default styling then apply our css
   display: block;
   width: 100%;
   border: 3px solid #158768;

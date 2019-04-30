@@ -1,0 +1,12 @@
+url: https://archive.materialscloud.org/file/2019.0013/v1/flyinggaussian2.zip
+pname: Flying Gaussian proof 
+category: methods 
+keyw: flying Gaussians, alanine dipeptide 
+plumed_version: 2.5.0
+contributor: Vojtech Spiwok 
+doi: 10.1021/acs.jpcb.7b09337 
+history:
+  2019-04-13: original submission
+  2019-04-21: zip moved to materialscloud.org
+instructions: >
+ Simple simulation used to demonstrate that free energy surface can be calculated from flying Gaussians results using umbrella sampling reweighing, despite dynamics of the bias potential. Tested on OpenMPI4.0.0, Gromacs 2018.5 and Plumed2.5.0. Script provided.

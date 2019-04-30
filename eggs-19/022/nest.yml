@@ -1,0 +1,17 @@
+url: https://github.com/HanatoK/eABF_plumed_examples/raw/master/eABF_NANMA_gmx.zip
+pname: eABF simulation of NANMA (alanine dipeptide)
+category: methods
+keyw: eABF, DRR, alanine dipeptide 
+plumed_version: 2.4
+contributor: Haochuan Chen 
+doi: 10.1021/acs.jcim.8b00115 
+history:
+  2019-04-30: original submission 
+instructions: >
+ The software used is GROMACS version >2018.6. Assuming GROMACS is installed as /usr/local/gromacs/bin/gmx and compiled with PLUMED support, you can run: \
+ /usr/local/gromacs/bin/gmx mdrun -ntomp 8 -s ./alad_600ns.tpr -plumed ./plumed.dat& \
+ After the simulation, you can extract the gradients from the .drrstate file using \
+ plumed drr_tool --extract ./alad.drrstate -v \
+ and then integrate the alad.czar.grad file by \
+ abf_integrate alad.czar.grad \
+ The abf_integrate program can be found at [here](https://github.com/Colvars/colvars/tree/master) 
