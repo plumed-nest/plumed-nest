@@ -273,7 +273,6 @@ def process_egg(path,eggdb=None):
             zf = zipfile.ZipFile("file.zip", "r")
             root=list(set([ x.split("/")[0] for x in zf.namelist()]))
             # there is a main root directory
-            # I dont' understand the need for download/data. a bit confusing for me
             if(len(root)==1): root="download/" + root[0]
             # there is not
             else:        root="download/"
@@ -352,8 +351,8 @@ def process_egg(path,eggdb=None):
                 plumed_version="not specified"
 
             header="**Originally used with PLUMED version:** " + plumed_version + "  \n"
-            header+= "**Stable: **[raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
-            header+= "**Master: **[raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+            header+= "**Stable:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            header+= "**Master:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
