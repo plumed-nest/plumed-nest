@@ -93,7 +93,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             action_next_line=False
             if global_header:
                  print(global_header,file=o)
-            print("Source: " + re.sub("^data/","",source)+"  ",file=o)
+            print("**Source:** " + re.sub("^data/","",source)+"  ",file=o)
             if header:
                  print(header,file=o)
             # make sure Jekyll does not interfere with format
