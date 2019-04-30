@@ -37,4 +37,4 @@ script:
   - python3 --version
   - python3 nest.py
 after_success:
-  - bash .travis/push $(find . -name "*.md") $(find . -name "*.stdout.txt.gz") _config.yml _layouts _data assets _sass
+  - bash .travis/push $(find . -name "*.md") $(find . -name "*.stdout.txt.gz") $(find . -name "*badge.svg") _config.yml _layouts _data assets _sass
