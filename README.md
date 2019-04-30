@@ -126,7 +126,17 @@ plumed_input:
 
 The global keys that you can override at single input level are `natoms`, `nreplicas`, and `plumed_version`.
 
+## Where should the zip files be hosted
 
+We have no preference on the place where the zip files will be hosted. The only crucial point is that they should
+be accessible with an URL, so that while we generate the webpages we will be able to download them. Existing projects can
+be used for inspiration. Here are some possibilities.
 
+**MaterialsCloud**: [MaterialsCloud](www.materialscloud.org) allows users to upload files in their [archive](https://archive.materialscloud.org/). Files are guaranteed to be retained for 10 years and are accessible with an URL.
+There are a number of fields that you should fill in order to upload our files on MaterialsCloud. However, notice that there is a significant overlap between what is requested when uploading information on PLUMED-NEST and on MaterialsCloud. Moreover, this would be a very convenient path if you want to simultaneously exploit the analysis capabilities of MaterialsCloud and of PLUMED-NEST.
 
+**GitHub**: [GitHub](http:://github.com) provides convenient space to archive your data for free if they are open source. Notice that GitHub is designed for source code rather than for binary files, so it is expected to work well only if you upload small files. You would typically have two ways to use GitHub to store your zip files:
+1. Generate the zip files on your computer and then upload them to a designated GitHub repository. The zip file will then be reachable at an URL such as `https://github.com/USER/REPOSITORY/raw/TAG/DIR/FILE.zip`. The advantage of this approach is that it allows you to use a single repository for all your projects (of course, only if the data files are small enough to fit).
+2. Use a whole repository for each project. In this case, GitHub can generate the zip for you at an URL such as `https://github.com/USER/PROJECT/archive/TAG.zip`. The advantage of this approach is that it will make your files directly browseable from GitHub (at `https://github.com/USER/PROJECT`).
 
+In both these cases, `TAG` represents the git snapshot corresponding to your file. If you use `master` for instance, we will always download the latest version of your file (this however has the drawback of making the build possibly not reproducible). Alternatively, you could use a specific git hash to indentify exactly the version of your file.
