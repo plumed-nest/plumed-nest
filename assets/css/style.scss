@@ -1,0 +1,76 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+table.dataTable {
+  padding-top: 10px;
+}
+.dataTables_wrapper .dataTables_filter input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button; } 
+.dataTables_wrapper .dataTables_filter input[type="search"]{-webkit-appearance: searchfield; } 
+
+table.dataTable thead th, table.dataTable thead td {
+  border: 0px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap-search{
+  width: 100%;
+}
+
+.top{
+	width: 100%;
+	justify-content: space-between;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+#browse-table_length{
+  padding-top: 0.755em;
+}
+
+.search .dataTables_filter{
+  width:100%;
+}
+.search input {
+  -webkit-appearance: none !important; //needed for sSafari. First remove default styling then apply our css
+  display: block;
+  width: 100%;
+  border: 3px solid #158768;
+  padding: 5px;
+  border-radius: 5px ;
+  outline: none;
+  color: #9DBFAF;
+  margin-left: 0px !important;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.search input:focus{
+  color: #15945b;
+}
+
+.bottom{
+	width: 100%;
+    justify-content: space-between;
+    display: flex;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    flex-wrap: wrap;
+	}
+.bottom .dt-buttons{
+  padding-top: 0.25em;
+  flex-grow: 1;
+}
+.bottom .dataTables_paginate{
+  flex-grow: 1;
+}
+@media screen and (max-width: 767px){
+  .bottom .dt-buttons{
+	margin-top: 0.5em;
+  }
+}

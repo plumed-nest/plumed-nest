@@ -58,8 +58,14 @@ def get_reference(doi):
       reference=cit[3:len(cit)]
     return reference
  
-def get_short_name(lname, length):
+def get_short_name_ini(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
+    else: sname = lname
+    return sname
+
+def get_short_name_end(lname, length):
+    l=len(lname)
+    if(l>length): sname = "..."+lname[l-length:l]
     else: sname = lname
     return sname
 
@@ -87,7 +93,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
             action_next_line=False
             if global_header:
                  print(global_header,file=o)
-            print("Source: " + re.sub("^data/","",source)+"  ",file=o)
+            print("**Source:** " + re.sub("^data/","",source)+"  ",file=o)
             if header:
                  print(header,file=o)
             # make sure Jekyll does not interfere with format
@@ -221,7 +227,7 @@ def add_readme(file, tested, success, exe):
             else:
                 badge = badge + 'failed-red.svg'
             badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
-        print("| [" + re.sub("^data/","",file) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
+        print("| [" + get_short_name_end(re.sub("^data/","",file), 50) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
 @contextmanager
@@ -265,10 +271,9 @@ def process_egg(path,eggdb=None):
                 if md5_ != config["md5"] :
                    raise ChecksumError("md5 not matching " + md5_)
             zf = zipfile.ZipFile("file.zip", "r")
-            root=zf.namelist()
-            ndir= len((set([ x.split("/")[0] for x in root ])))
+            root=list(set([ x.split("/")[0] for x in zf.namelist()]))
             # there is a main root directory
-            if(ndir==1): root="download/" + root[0]
+            if(len(root)==1): root="download/" + root[0]
             # there is not
             else:        root="download/"
             zf.extractall(path="download")
@@ -360,9 +365,9 @@ def process_egg(path,eggdb=None):
             else:
                 plumed_version="not specified"
 
-            header="Originally used with plumed version: " + plumed_version + "  \n"
-            header+= "Stable: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
-            header+= "Master: [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+            header="**Originally used with PLUMED version:** " + plumed_version + "  \n"
+            header+= "**Stable:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            header+= "**Master:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
@@ -386,10 +391,10 @@ def process_egg(path,eggdb=None):
 # quote around id is required otherwise Jekyll thinks it is a number
         print("- id: '" + egg_id + "'",file=eggdb)
         print("  name: " + config["pname"],file=eggdb)
-        print("  shortname: " + get_short_name(config["pname"],15),file=eggdb)
+        print("  shortname: " + get_short_name_ini(config["pname"],15),file=eggdb)
         print("  category: " + config["category"],file=eggdb)
         print("  keywords: " + config["keyw"],file=eggdb)
-        print("  shortkeywords: " + get_short_name(config["keyw"],25),file=eggdb)
+        print("  shortkeywords: " + get_short_name_ini(config["keyw"],25),file=eggdb)
         print("  contributor: " + config["contributor"],file=eggdb)
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
