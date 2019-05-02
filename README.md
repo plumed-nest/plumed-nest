@@ -144,6 +144,6 @@ There are a number of fields that you should fill in order to upload our files o
 
 In both these cases, `TAG` represents the git snapshot corresponding to your file. If you use `master` for instance, we will always download the latest version of your file (this however has the drawback of making the build possibly not reproducible). Alternatively, you could use a specific git hash to indentify exactly the version of your file.
 
-**ArXiv**: [ArXiv](http://arxiv.org) allows you to include supporting information by uploading "ancillary files" in a `anc` directory. These files are accessible at an URL such as `https://arxiv.org/src/ID/anc/FILENAME.zip` If you include a zip file there we would be able to reach it.
+**ArXiv**: [ArXiv](http://arxiv.org) allows you to include supporting information by uploading "ancillary files" in a `anc` directory. These files are accessible at an URL such as `https://arxiv.org/src/ID/anc/FILENAME.zip`. If you include a zip file there we would be able to reach it.
 
-**Supporting Information**: Some publishers (e.g., [ACS](https://pubs.acs.org/)) allow you to upload Supporting Information that is then available free of charge. If you include a zip file in the Supporting Information its URL should be accessible and we should be able to reach it.
+**Supporting Information**: Some publishers (e.g., [ACS](https://pubs.acs.org/)) allow you to upload Supporting Information that is then available free of charge. If these files are accessible at an URL (for ACS it would be something like  `https://pubs.acs.org/doi/suppl/DOI/suppl_file/FILENAME.zip`) we should be able to reach them.
