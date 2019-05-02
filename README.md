@@ -53,24 +53,27 @@ keyw: metadynamics, RNA
 ````
 contributor: Ludwig Boltzmann
 ````
+Make sure to provide it as `Name Surname` because it will be abbreviated as `Surname N.` in the summary table.
 
 **doi**: DOI to the related publication. If not available, write either `unpublished` or `submitted`
 ````
 doi: 10.1038/nphys1170
 ````
+The DOI will be used to retrieve the full citation to the paper.
 
-**history**: This field should be either a list of pairs including date and message or a dictionary of messages using dates as keys:
+**history**: This field should be either a list of pairs including date and message:
 ````
 history:
   - [2019-04-20,"Changed something"]
   - [2019-04-22,"Changed something else"]
 ````
-or
+or a dictionary of messages using dates as keys:
 ````
 history:
   2019-04-20: Changed something
   2019-04-22: Changed something else
 ````
+The former syntax is more redundant but is the only one that would allow having more than one change on the same date.
 
 ### Optional fields
 
@@ -130,7 +133,7 @@ The global keys that you can override at single input level are `natoms`, `nrepl
 
 We have no preference on the place where the zip files will be hosted. The only crucial point is that they should
 be accessible with an URL, so that while we generate the webpages we will be able to download them. Existing projects can
-be used for inspiration. Here are some possibilities.
+be used for inspiration. Below are some possibilities. Notice that Dropbox or Google Driver links seem difficult to manage since the URLs do not refer to the zip file but rather to an intermediate html file.
 
 **MaterialsCloud**: [MaterialsCloud](www.materialscloud.org) allows users to upload files in their [archive](https://archive.materialscloud.org/). Files are guaranteed to be retained for 10 years and are accessible with an URL.
 There are a number of fields that you should fill in order to upload our files on MaterialsCloud. However, notice that there is a significant overlap between what is requested when uploading information on PLUMED-NEST and on MaterialsCloud. Moreover, this would be a very convenient path if you want to simultaneously exploit the analysis capabilities of MaterialsCloud and of PLUMED-NEST.
@@ -141,4 +144,5 @@ There are a number of fields that you should fill in order to upload our files o
 
 In both these cases, `TAG` represents the git snapshot corresponding to your file. If you use `master` for instance, we will always download the latest version of your file (this however has the drawback of making the build possibly not reproducible). Alternatively, you could use a specific git hash to indentify exactly the version of your file.
 
-**arXiv** [ArXiv](http://arxiv.org) allows you to include supporting information by uploading "ancillary files" in a `anc` directory. These files are accessible at an URL such as `https://arxiv.org/src/ID/anc/FILENAME.zip` If you include a zip file there we would be able to reach it.
+**arXiv**: [ArXiv](http://arxiv.org) allows you to include supporting information by uploading "ancillary files" in a `anc` directory. These files are accessible at an URL such as `https://arxiv.org/src/ID/anc/FILENAME.zip` If you include a zip file there we would be able to reach it.
+
