@@ -47,6 +47,12 @@ def gzip(path):
             shutil.copyfileobj(f_in, f_out)
     os.remove(path)
 
+def zip(path):
+    """ Zip a path removing the original file """
+    with zipfile.ZipFile(path + ".zip", "w") as f_out:
+        f_out.write(path)
+    os.remove(path)
+
 def get_reference(doi):
     # check if unpublished/submitted
     if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
@@ -201,7 +207,7 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     with open(errfile,"w") as stderr:
         print(global_header,file=stderr)
         print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
-        print("(download [gzipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.gz))  ",file=stderr)
+        print("(download [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"w") as stdout:
         with open(errfile,"a") as stderr:
@@ -214,7 +220,7 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
                 rc = child.returncode
     with open(errfile,"a") as stderr:
         print("</pre>\n{% endraw %}",file=stderr)
-    gzip(outfile)
+    zip(outfile)
     return rc
 
 def add_readme(file, tested, success, exe):
@@ -351,8 +357,8 @@ def process_egg(path,eggdb=None):
                 plumed_version="not specified"
 
             header="**Originally used with PLUMED version:** " + plumed_version + "  \n"
-            header+= "**Stable:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
-            header+= "**Master:** [raw gzipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.gz) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+            header+= "**Stable:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            header+= "**Master:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
