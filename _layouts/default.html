@@ -20,7 +20,7 @@
   </head>
   <body>
     <section class="page-header">
-      <a class="site-title" href="{{ '/' | absolute_url }}"><img width="200" src="{{ '/' | absolute_url }}nest.png"></a>
+      <a class="site-title" href="{{ '/' | absolute_url }}"><img width="200" src="{{ '/' | absolute_url }}nest.png" alt="nest"></a>
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">The public repository of the PLUMED consortium</h2>
       {% for item in site.data.navigation.pages %}
@@ -52,6 +52,22 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    <script>
+      var modal = document.getElementById('myModal');
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
 
