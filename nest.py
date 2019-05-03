@@ -393,7 +393,15 @@ def process_egg(path,eggdb=None):
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
                  print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
-             print("[![plumeDnest:" + egg_id +"](./badge.svg)](./badge.svg) ", file=o)
+             print("<br><img src=\"./badge.svg\" alt=\"plumeDnest:" + egg_id + "\" id=\"myBtn\"/>", file=o)
+             print("<div id=\"myModal\" class=\"modal\">", file=o)
+             print("  <div class=\"modal-content\">", file=o)
+             print("    <span class=\"close\">&times;</span>", file=o)
+             print("    Markdown<pre>[![plumID:" + egg_id + "](https://www.plumed-nest.org/eggs-" + path[5:7] + "/" + path[8:11] + "/badge.svg)](https://www.plumed-nest.org/test-site/eggs-" + path[5:7] + "/" + path[8:11] + "/)</pre>", file=o)
+             print("    HTML<pre>&lt;a href=\"https://www.plumed-nest.org/test-site/eggs-" + path[5:7] + "/" + path[8:11] + "/\"&gt;&lt;img src=\"https://www.plumed-nest.org/eggs-" + path[5:7] + "/" + path[8:11] + "/badge.svg\" alt=\"plumID:" + egg_id + "\"&gt;&lt;/a&gt;</pre>", file=o)
+             print("  </div>", file=o)
+             print("</div>", file=o)
+
 # quote around id is required otherwise Jekyll thinks it is a number
         print("- id: '" + egg_id + "'",file=eggdb)
         print("  name: " + config["pname"],file=eggdb)
