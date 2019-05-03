@@ -8,7 +8,7 @@ doi: 10.1063/1.4981211
 history:
   2019-05-03: original submission
 plumed_input:
-  - path: run-c22/plumed.dat
+  - path: mm-egwas/run-c22/plumed.dat
     nreplicas: 2
 instructions: >
   this is a metadynamic metainference calculation using chemical shifts, residual dipolar coupling and chemical shifts 
