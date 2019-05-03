@@ -129,7 +129,8 @@ plumed_input:
 
 The global keys that you can override at single input level are `natoms`, `nreplicas`, and `plumed_version`.
 
-## Where should the zip files be hosted <a name="zip-info"></a>
+<a name="zip-info"></a>
+## Where should the zip files be hosted 
 
 We have no preference on the place where the zip files will be hosted. The crucial points are:
 * they should be accessible with an URL, so that while we generate the webpages we will be able to download them;
