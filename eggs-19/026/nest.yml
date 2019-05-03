@@ -5,6 +5,8 @@ keyw: forward flux sampling, crystal nucleation, water, ice, organic crystals
 plumed_version: 2.3.0-dev
 contributor: Gabriele Sosso
 doi: 10.1039/c8sc02753f
+plumed_input:
+  - EXAMPLE/plumed.dat
 history:
   2019-05-03: original submission
 instructions: >
