@@ -1,4 +1,4 @@
-url: https://github.com/hockyg/CGDS-Paper/raw/master/CGDS_JCTC_2017_HockyEtAl.zip 
+url: https://github.com/hockyg/CGDS-Paper/raw/master/CGDS_JCTC_2017_HockyEtAl.zip
 pname: Coarse-Grained Directed Simulation 
 category: methods
 keyw: experiment directed simulation, coarse-grain, bias 
@@ -9,22 +9,16 @@ plumed_input:
   - ./Trajectories/EDS-flattening-enm/us-flatten-dihed-mean/gatp-enm-12site_FEStart_eq175ns.flatten_us_k500/gatp-enm-12site_FEStart_eq175ns.flatten_us_k500.50ps.run.20000000.plumed.dat
   - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-target/meant_0.11/gatp-enm-11site_FEStart_eq175ns.range10_init0/gatp-enm-11site_FEStart_eq175ns.range10_init0.10ps.run.20000000.plumed.dat
   - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-cleft-mean/simul/gatp-enm-12site_FEStart_eq175ns.range10_init0/gatp-enm-12site_FEStart_eq175ns.range10_init0.10ps.run.30000000.plumed.dat
-  - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-cleft-mean/simul/gatp-enm-12site_FEStart_eq175ns.range1_init0/gatp-enm-12site_FEStart_eq175ns.range1_init0.10ps.run.30000000.plumed.dat
   - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-cleft-mean/sgd/gatp-enm-12site_FEStart_eq175ns.range10_init0/gatp-enm-12site_FEStart_eq175ns.range10_init0.10ps.run.40000000.plumed.dat
-  - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-mean2-cleft-mean-mean2/simul/gatp-enm-11site_FEStart_eq175ns.range10_init0/gatp-enm-11site_FEStart_eq175ns.range10_init0.20ps.run.20000000.plumed.dat
-  - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-mean2-cleft-mean-mean2/lm_adaptive/gatp-enm-12site_FEStart_eq175ns.range1_init0_lm01/gatp-enm-12site_FEStart_eq175ns.range1_init0_lm01.10ps.run.20000000.plumed.dat
+  - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-mean2-cleft-mean-mean2/simul/gatp-enm-12site_FEStart_eq175ns.range1_init0/gatp-enm-12site_FEStart_eq175ns.range1_init0.10ps.run.40000000.plumed.dat
   - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-mean2-cleft-mean-mean2/sgd/gatp-enm-11site_FEStart_eq175ns.range10_init0/gatp-enm-11site_FEStart_eq175ns.range10_init0.20ps.run.20000000.plumed.dat
   - ./Trajectories/EDS-flattening-enm/flatten-dihed-mean-mean2-cleft-mean-mean2/lm_fixed/gatp-enm-12site_FEStart_eq175ns.range1_init0_lm001/gatp-enm-12site_FEStart_eq175ns.range1_init0_lm001.100ps.run.20000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-oatp_4moment/flatten_extra_oatp_4moment_range1_i100ps_lm0.1_adaptive_p100/factin_extra_oatp_4moment_i100ps_lm0.1_p100.run.90000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-oatp_4moment/flatten_extra_oatp_4moment_range1_i100ps_lm0.1_adaptive_p100/factin_extra_oatp_4moment_i100ps_lm0.1_p100.run.80000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-oatp_4moment/flatten_extra_oatp_4moment_range1_i100ps_lm0.1_adaptive_p100/continue_fixed_40000000/factin_extra_oatp_4moment_i100ps_lm0.1_p100.run.90000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-oatp_4moment/flatten_extra_oatp_4moment_range1_i100ps_lm0.1_adaptive_p100/factin_extra_oatp_4moment_i100ps_lm0.1_p100.run.20000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-gatp_4moment_lm0.1/flatten_extra_gatp_4moment_range1_i100ps_lm0.01_adaptive_p100/factin_extra_gatp_4moment_i100ps_lm0.01_p100.run.40000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-gactin-2cv-us/run_gatpu_us_cacb_k5000/actin-gatpu_ionized.run.80000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-trimer-angular-lm-t12/flatten_trimer_3phi_3dist_extraflat_ang_i100ps_lm0.01_p100/factin_3mono_ATP_flatten_ang_3phi_3dist_extraflat_i100ps_lm0.01_p100.run.110000000.plumed.dat
+  - ./Trajectories/EDS-flattening-atomistic/flatten-gactin-2cv-us/run_gatpu_us_cacb_k500/actin-gatpu_ionized.run.10000000.plumed.dat
+  - ./Trajectories/EDS-flattening-atomistic/flatten-trimer-angular-lm-t12/flatten_trimer_3phi_3dist_extraflat_ang_i100ps_lm0.01_p100/factin_3mono_ATP_flatten_ang_3phi_3dist_extraflat_i100ps_lm0.01_p100.run.90000000.plumed.dat
   - ./Trajectories/EDS-flattening-atomistic/flatten-trimer-angular-lm-t12/flatten_trimer_3phi_continue_extraflat_ang_i100ps_lm0.01_p100/factin_3mono_ATP_flatten_ang_3phi_extraflat_i100ps_lm0.01_p100.run.70000000.plumed.dat
-  - ./Trajectories/EDS-flattening-atomistic/flatten-trimer-angular-lm-t12/flatten_trimer_3phi_extraflat_ang_i100ps_lm0.01_p100/factin_3mono_ATP_flatten_ang_3phi_extraflat_i100ps_lm0.01_p100.run.50000000.plumed.dat
+  - ./Trajectories/EDS-flattening-atomistic/flatten-trimer-angular-lm-t12/flatten_trimer_3phi_extraflat_ang_i100ps_lm0.01_p100/factin_3mono_ATP_flatten_ang_3phi_extraflat_i100ps_lm0.01_p100.run.40000000.plumed.dat
 history:
   2019-04-29: original submission 
+  2019-05-01: fix path files
 instructions: >
  Everything should be self-explanatory with run scripts in tar file. Used GROMACS 5.1.X. This tar contains all inputs and analysis scripts for the paper. Figures can be generated with included Python2 Jupyter notebooks after producing data. 

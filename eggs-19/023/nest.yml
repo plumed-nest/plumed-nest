@@ -1,0 +1,14 @@
+url: https://github.com/bussilab/paper-rect-plumed-nest/archive/cab4a6c4f3d31f59e4ae680ae56902bf07c23e99.zip
+# optional checksum to avoid stealth updates
+md5: a6c0b87e7d5bca4ec39c1fd047045963
+pname: RECT
+category: methods
+keyw: metadynamics, replica exchange
+plumed_version: 2.3
+contributor: Giovanni Bussi
+doi: 10.1021/ct5009087
+history:
+  2019-05-02: original submission
+instructions: >
+  This repository contains the input file reported in the SI of the original paper.
+  Notice that input files should be adjusted on the different replicas.

@@ -1,0 +1,17 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2017/mm-egwas.zip 
+pname: Metadynamic metainference Convergence towards force field independent structural ensembles of a disordered peptide 
+category: bio
+keyw: metainference, NMR, protein dynamics, force-fields 
+plumed_version: 2.4
+contributor: Carlo Camilloni 
+doi: 10.1063/1.4981211 
+history:
+  2019-05-03: original submission
+plumed_input:
+  - path: mm-egwas/run-c22/plumed.dat
+    nreplicas: 2
+instructions: >
+  this is a metadynamic metainference calculation using chemical shifts, residual dipolar coupling and chemical shifts 
+  to infere the intramolecular dynamics of a short peptide. By using multiple force-fields it is possible to show how the
+  final result converges towards a common conformational ensemble. Simulations are performed with gromacs 2016 or newer
+plumed_mpi: True

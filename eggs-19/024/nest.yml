@@ -1,0 +1,13 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2012/PT-MetaD-WTE.zip
+pname: PT-MetaD-WTE 
+category: methods
+keyw: metadynamics, WTE, trp cage, PT
+plumed_version: 2.5
+contributor: Jim Pfaendtner 
+doi: 10.1021/ct300297t
+history:
+  2019-05-03: original submission
+instructions: >
+  Detailed instructions can be found [here](http://dx.doi.org/10.1007/978-1-4939-1465-4_8),
+  in section 4.1 (system setup) and 4.4 (how to run PT-MetaD-WTE simulations).
+  The original GROMACS and PLUMED input files have been updated to version 2018.3 and 2.5, respectively. 
