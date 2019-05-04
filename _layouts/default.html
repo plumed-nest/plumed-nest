@@ -24,11 +24,7 @@
       <h1 class="project-name">{{ site.title }}</h1>
       <h2 class="project-tagline">The public repository of the PLUMED consortium</h2>
       {% for item in site.data.navigation.pages %}
-        {% if page.url == item.url %}
-        <a href="{{ site.baseurl }}{{ item.url }}" class="btn"><font color="white">{{ item.title }}</font></a>
-        {% else %}
         <a href="{{ site.baseurl }}{{ item.url }}" class="btn">{{ item.title }}</a>
-        {% endif %}
       {% endfor %}
     </section>
 
