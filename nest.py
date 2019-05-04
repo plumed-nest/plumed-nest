@@ -400,8 +400,8 @@ def process_egg(path,eggdb=None):
              print("<div id=\"myModal\" class=\"modal\">", file=o)
              print("  <div class=\"modal-content\">", file=o)
              print("    <span class=\"close\">&times;</span>", file=o)
-             print("    Markdown<pre>[![plumID:" + egg_id + "](https://www.plumed-nest.org/eggs-" + path[5:7] + "/" + path[8:11] + "/badge.svg)](https://www.plumed-nest.org/test-site/eggs-" + path[5:7] + "/" + path[8:11] + "/)</pre>", file=o)
-             print("    HTML<pre>&lt;a href=\"https://www.plumed-nest.org/test-site/eggs-" + path[5:7] + "/" + path[8:11] + "/\"&gt;&lt;img src=\"https://www.plumed-nest.org/eggs-" + path[5:7] + "/" + path[8:11] + "/badge.svg\" alt=\"plumID:" + egg_id + "\"&gt;&lt;/a&gt;</pre>", file=o)
+             print("    Markdown<pre>[![plumID:" + egg_id + "](https://www.plumed-nest.org/eggs/" + path[5:7] + "/" + path[8:11] + "/badge.svg)](https://www.plumed-nest.org/eggs/" + path[5:7] + "/" + path[8:11] + "/)</pre>", file=o)
+             print("    HTML<pre>&lt;a href=\"https://www.plumed-nest.org/eggs/" + path[5:7] + "/" + path[8:11] + "/\"&gt;&lt;img src=\"https://www.plumed-nest.org/eggs/" + path[5:7] + "/" + path[8:11] + "/badge.svg\" alt=\"plumID:" + egg_id + "\"&gt;&lt;/a&gt;</pre>", file=o)
              print("  </div>", file=o)
              print("</div>", file=o)
 
@@ -424,7 +424,7 @@ if __name__ == "__main__":
         print("# file containing egg database.",file=eggdb)
 
         # list of paths - not ordered
-        pathlist=list(pathlib.Path('.').glob('eggs*/*/nest.yml'))
+        pathlist=list(pathlib.Path('.').glob('eggs/*/*/nest.yml'))
         # cycle on ordered list
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
