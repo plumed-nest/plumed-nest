@@ -1,0 +1,13 @@
+url: https://github.com/gcsosso/plumed_nest_sosso/raw/master/FFS_ICE_CHL.zip
+pname: Ice Nucleation on Cholesterol Crystals
+category: materials
+keyw: forward flux sampling, crystal nucleation, water, ice, organic crystals
+plumed_version: 2.3.0-dev
+contributor: Gabriele Sosso
+doi: 10.1039/c8sc02753f
+plumed_input:
+  - EXAMPLE/plumed.dat
+history:
+  2019-05-03: original submission
+instructions: >
+  This contribution refers to the following paper ["Unravelling the origins of ice nucleation on organic crystals"](https://pubs.rsc.org/en/content/articlelanding/2018/sc/c8sc02753f#!divAbstract) by Gabriele C. Sosso, Thomas F. Whale, Mark A. Holden, Philipp Pedevilla, Benjamin J. Murray and Angelos Michaelides, published in Chemical Science, Vol. 9, Pag. 8077-8088 (2018). A working (he said confidently...) example of a single FFS shoot can be found in EXAMPLE. This includes the plumed.dat file. The PLUMED version needed is a custom one, and can be found in PLUMED_FFS_CHL.

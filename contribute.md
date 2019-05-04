@@ -22,7 +22,7 @@ __Please note that:__
 * The name and email of the contact person will not appear on the PLUMED-NEST website.
 * All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium. Therefore, a delay between submission and online publication should be expected.
 * If necessary, you will be able to edit the information on [GitHub](https://github.com/plumed-nest/plumed-nest) later or send us a revised version of the form. In the latter case, please specify a list of changes in the "Comments" field.
-* PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible.
+* PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible. More info about where to host your contribution can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
 * PLUMED-NEST will not test your execution scripts, but only the compatibility of the PLUMED input files provided.
 
 <center>

@@ -129,11 +129,14 @@ plumed_input:
 
 The global keys that you can override at single input level are `natoms`, `nreplicas`, and `plumed_version`.
 
-## Where should the zip files be hosted
+<a name="zip-info"></a>
+## Where should the zip files be hosted 
 
-We have no preference on the place where the zip files will be hosted. The only crucial point is that they should
-be accessible with an URL, so that while we generate the webpages we will be able to download them. Existing projects can
-be used for inspiration. Below are some possibilities. Notice that Dropbox or Google Driver links seem difficult to manage since the URLs do not refer to the zip file but rather to an intermediate html file.
+We have no preference on the place where the zip files will be hosted. The crucial points are:
+* they should be accessible with an URL, so that while we generate the webpages we will be able to download them;
+* the PLUMED input files are not contained in a tar or zip file within the main zip file. 
+
+Existing projects can be used for inspiration. Below are some possibilities. Notice that Dropbox or Google Driver links seem difficult to manage since the URLs do not refer to the zip file but rather to an intermediate html file.
 
 **MaterialsCloud**: [MaterialsCloud](www.materialscloud.org) allows users to upload files in their [archive](https://archive.materialscloud.org/). Files are guaranteed to be retained for 10 years and are accessible with an URL.
 There are a number of fields that you should fill in order to upload our files on MaterialsCloud. However, notice that there is a significant overlap between what is requested when uploading information on PLUMED-NEST and on MaterialsCloud. Moreover, this would be a very convenient path if you want to simultaneously exploit the analysis capabilities of MaterialsCloud and of PLUMED-NEST.
