@@ -1,0 +1,13 @@
+url: https://archive.materialscloud.org/file/2019.0016/v1/Sodium.zip 
+pname: Multithermal-multibaric simulations using VES 
+category: methods
+keyw: ves, Wang Landau, multicanonical, water, density anomaly 
+plumed_version: 2.4-dev
+contributor: Pablo Piaggi 
+doi: 10.1103/PhysRevLett.122.050601 
+plumed_input:
+  - EXAMPLE/plumed.dat
+history:
+  2019-05-04: original submission
+instructions: >
+  Multithermal-multibaric simulations of liquid sodium and liquid TIP4P/Ice water. Input files for Gromacs 2018.1 and Lammps (>2019) patched with a development version of PLUMED 2.4. The required PLUMED source files are also included in the [Materials Cloud](https://archive.materialscloud.org/2019.0016/v1) record. One should recompile PLUMED after copying these files to the PLUMED source directory. Reweighting at different temperatures and pressures is performed with PLUMED. Jupyter Notebooks are provided to exemplify the analysis.
