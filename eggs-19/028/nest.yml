@@ -4,8 +4,8 @@ category: methods
 keyw: RAVE, reaction coordinate, deep learning, metadynamics, kinetics 
 plumed_version: 2.3
 contributor: Pratyush Tiwary 
-doi: 10.1063/1.5025487 
+doi: 10.1101/507822
 history:
   2019-05-04: original submission
 instructions: >
-  This needs PLUMED, GROMACS, tensorflow and Keras. Multiple rounds of MD and deep learning are performed to obtained converged reaction coordinate and free energy. All files for alanine dipeptide and benzene-T4L99A lysozyme are provided. Other info can be found [here](https://pubs.acs.org/doi/10.1021/acs.jctc.8b00869) and [here](https://www.biorxiv.org/content/10.1101/507822v1).
+  This needs PLUMED, GROMACS, tensorflow and Keras. Multiple rounds of MD and deep learning are performed to obtained converged reaction coordinate and free energy. All files for alanine dipeptide and benzene-T4L99A lysozyme are provided. Other info can be found [here](https://aip.scitation.org/doi/10.1063/1.5025487) and [here](https://pubs.acs.org/doi/10.1021/acs.jctc.8b00869).
