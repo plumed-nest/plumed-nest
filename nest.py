@@ -396,7 +396,7 @@ def process_egg(path,eggdb=None):
              print("  ", file=o)
              print("**Badge**  ", file=o)
              print("Click on the image below and get the code to add the badge to your website!  ", file=o)
-             print("<br><img src=\"./badge.svg\" alt=\"plumeDnest:" + egg_id + "\" id=\"myBtn\"/>", file=o)
+             print("<img src=\"./badge.svg\" alt=\"plumeDnest:" + egg_id + "\" id=\"myBtn\" class="badge">", file=o)
              print("<div id=\"myModal\" class=\"modal\">", file=o)
              print("  <div class=\"modal-content\">", file=o)
              print("    <span class=\"close\">&times;</span>", file=o)
