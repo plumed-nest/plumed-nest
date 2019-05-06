@@ -11,7 +11,7 @@ information in the form at the bottom of this page. All fields are required, unl
 * __Keywords:__ keywords describing the project
 * __Instructions:__ list of software used and instructions to execute the simulation(s)/analysis
 * __PLUMED version:__ the version of the code used in this project
-* __Contributor:__ project contributor (a single name or name of the research group)
+* __Contributor:__ project contributor
 * __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on a preprint server, please type *"unpublished"*
 * __Contact:__ the name of a contact person to communicate with the coordinators of the PLUMED consortium
 * __Contact email:__ the email of the contact person

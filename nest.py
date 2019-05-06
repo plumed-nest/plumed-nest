@@ -267,27 +267,27 @@ def process_egg(path,eggdb=None):
               h.append([k,config["history"][k]])
            config["history"]=h
 
-        if re.match("^.*\.zip$",config["url"]):
-            if os.path.exists("download"):
-               shutil.rmtree("download")
-            os.mkdir("download")
-            urllib.request.urlretrieve(config["url"], 'file.zip')
-            if "md5" in config:
-                md5_=md5("file.zip")
-                if md5_ != config["md5"] :
-                   raise ChecksumError("md5 not matching " + md5_)
-            zf = zipfile.ZipFile("file.zip", "r")
-            root=list(set([ x.split("/")[0] for x in zf.namelist()]))
-            # there is a main root directory
-            if(len(root)==1): root="download/" + root[0]
-            # there is not
-            else:        root="download/"
-            zf.extractall(path="download")
-            if os.path.exists("data"):
-               shutil.rmtree("data")
-            shutil.move(root,"data")
-        else:
-            raise RuntimeError("cannot interpret url " + config["url"])
+        #if re.match("^.*\.zip$",config["url"]):
+        if os.path.exists("download"):
+           shutil.rmtree("download")
+        os.mkdir("download")
+        urllib.request.urlretrieve(config["url"], 'file.zip')
+        if "md5" in config:
+            md5_=md5("file.zip")
+            if md5_ != config["md5"] :
+               raise ChecksumError("md5 not matching " + md5_)
+        zf = zipfile.ZipFile("file.zip", "r")
+        root=list(set([ x.split("/")[0] for x in zf.namelist()]))
+        # there is a main root directory
+        if(len(root)==1): root="download/" + root[0]
+        # there is not
+        else:        root="download/"
+        zf.extractall(path="download")
+        if os.path.exists("data"):
+           shutil.rmtree("data")
+        shutil.move(root,"data")
+        #else:
+        #    raise RuntimeError("cannot interpret url " + config["url"])
 
         if not "plumed_input" in config:
             # discover path relative to data dir
