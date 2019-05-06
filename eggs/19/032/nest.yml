@@ -1,0 +1,11 @@
+url: https://sites.google.com/site/fabiopietrucci/Home/download/example-plumed2-pathcoordtable.zip 
+pname: Chemical reaction in solution using path collective variables based on coordination patterns 
+category: chemistry
+keyw: chemical reactions, solutions, metadynamics, coordination patterns 
+plumed_version: 2.4
+contributor: Fabio Pietrucci 
+doi: 10.1073/pnas.1512486112 
+history:
+  2019-05-06: original submission
+instructions: >
+  The input file plumed.dat defines a path collective variable based on distances between coordination patterns (tables of coordination numbers). In file path.pdb only two reference patterns, for the reactant and product state, are required, but more can be used if further information on the pathway is available. In this specific case the reaction goes from formamide to CO+NH3 in explicit water, and can be simulated, e.g., using quantum espresso or cp2k. A simple tool is also provided to simplify the creation of the path.pdb file. 
