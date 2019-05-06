@@ -2,12 +2,15 @@ url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2016/MI-U
 pname: MI Ubiquitin 
 category: bio
 keyw: metainference, NMR
-plumed_version: 2.3
+plumed_version: 2.5
 contributor: Max Bonomi
 doi: 10.1126/sciadv.1501177 
 history:
   2019-04-14: original submission
+  2019-05-06: update description
 instructions: >
-  This is a test text. Here
-  you can explain how to use the provided input
-  files.
+  Metainference is used to model a conformational ensemble of Ubiquitin using NMR chemical shifts
+  and residual dipolar couplings data. 4, 8, and 16 metainference replicas are used.
+  The archive contains the GROMACS input files (SETUP directory, GROMACS 2018),
+  along with the PLUMED input files (16REP, 4REP, 8REP, and DATA directories).
+  These files have been updated to work with PLUMED version > 2.4.
