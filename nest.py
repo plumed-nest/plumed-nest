@@ -277,10 +277,11 @@ def process_egg(path,eggdb=None):
             if md5_ != config["md5"] :
                raise ChecksumError("md5 not matching " + md5_)
         zf = zipfile.ZipFile("file.zip", "r")
-        root=list(set([ x.split("/")[0] for x in zf.namelist()]))
+        zf_namelist = zf.namelist()
+        root=list(set([ x.split("/")[0] for x in zf_namelist]))
         # there is a main root directory
-        if(len(root)==1): root="download/" + root[0]
-        # there is not
+        if(len(root)==1 and len(zf_namelist)!=1): root="download/" + root[0]
+        # there is not (or special case of one single file)
         else:        root="download/"
         zf.extractall(path="download")
         if os.path.exists("data"):
