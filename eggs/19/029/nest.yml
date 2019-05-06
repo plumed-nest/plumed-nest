@@ -1,0 +1,13 @@
+url: https://github.com/ELELAB/URNF1_FF_publication/raw/master/archive_URNF1_FF_plumed_nest.zip 
+pname: WTE-metaD of FF domain of URNF1 C57D variant 
+category: bio 
+keyw: metadynamics, mutations, post-translational modification, ff domain 
+plumed_version: 2.2
+contributor: Elena Papaleo 
+doi: 10.1016/j.redox.2017.10.022
+plumed_input:
+ - C57D.plumed2/plumed.dat
+history:
+  2019-05-06: original submission
+instructions: >
+  This repository contains the input data for the wte metadynamics simulations of our publication. The calculations were originally performed with the PLUMED 1.3 plugin and Gromacs 4.6.5 but we also provide an input file in the version for PLUMED 2 for one of the variants as an example (to be found in the folder C57D_plumed2). The three main folders in the repository contain (WT) input files for metaD of the wild-type variant (C57D) input files for metaD of the mutant variant (C57D.plumed2) corresponding input files for PLUMED 2. NB. the original mdp files were set for 1000 ns but we collected 550 ns per analysis, as explained in the article.
