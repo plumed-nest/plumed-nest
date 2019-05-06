@@ -6,11 +6,11 @@ plumed_version: 2.4
 contributor: Giovanni Bussi
 doi: 10.1021/acs.jctc.9b00206
 history:
-  2019-04-19: original submission 
+  2019-04-19: original submission
+  2019-05-06: added DOI
 instructions: >
   The zip file contains the code used to fit dihedral corrections.
   It also contains a PLUMED input file that can be used to apply
   corrections for a AAAA tetranucleotide. In order to generate
   corrections for RNA molecules with different sequences, one should
-  download the script and modify it accordingly. The paper describing this work
-  is currently submitted.
+  download the script and modify it accordingly.
