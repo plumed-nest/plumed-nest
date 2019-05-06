@@ -61,7 +61,7 @@ def get_reference(doi):
     if("DOI Not Found" in cit):
       reference="DOI not found"
     else:
-      reference=cit[3:len(cit)]
+      reference=cit[3:cit.find(", doi")]
     return reference
  
 def get_short_name_ini(lname, length):
