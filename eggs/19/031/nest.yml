@@ -1,0 +1,11 @@
+url: https://sites.google.com/site/fabiopietrucci/Home/download/plumed-input-nucleation.zip
+pname: Ice nucleation using PIV-based path coordinates 
+category: materials
+keyw: phase transitions, nucleation, TIP4P, path CV, PIV, metadynamics 
+plumed_version: 2.5-dev
+contributor: Silvio Pipolo 
+doi: 10.1103/PhysRevLett.119.245701 
+history:
+  2019-05-06: original submission
+instructions: >
+  The input files provided were used in [Phys. Rev. Lett. 119, 245701 (2017)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.119.245701) to simulate the nucleation of ice from liquid water, using the TIP4P/2005 potential and GROMACS as MD engine. Two reference pdb files are needed, providing the endpoints of the transition. PLUMED must be compiled including the PIV module (configure --enable-modules=piv). 
