@@ -3,7 +3,7 @@ pname: Ice Nucleation on Cholesterol Crystals
 category: materials
 keyw: forward flux sampling, crystal nucleation, water, ice, organic crystals
 plumed_version: 2.3.0-dev
-contributor: Gabriele Sosso
+contributor: Gabriele Cesare Sosso
 doi: 10.1039/c8sc02753f
 plumed_input:
   - EXAMPLE/plumed.dat
