@@ -1,0 +1,13 @@
+url: wget https://github.com/praiteri/plumed_nest_dyes/archive/master.zip 
+pname: Scission free energy of organic dyes 
+category: chemistry 
+keyw: metadynamics, multiple walkers, matheval/lepton 
+plumed_version: 2.3
+contributor: Paolo Raiteri 
+doi: 10.1021/jacs.6b08267
+plumed_input:
+  - plumed_mtd.inp 
+history:
+  2019-05-07: original submission 
+instructions: >
+ The simulations were run with LAMMPS. plumed.mtd.inp contains the definition of the CVs and the set up for the multiple walkers calculation.  prepare_plumed.sh is a simple script that can be used to create the directory structure for the multiple walkers calculation. Sample output files to test the CVs are also provided. More info can be found [here](https://pubs.acs.org/doi/10.1021/cg500752x). 
