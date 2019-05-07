@@ -1,4 +1,4 @@
-url: wget https://github.com/praiteri/plumed_nest_dyes/archive/master.zip 
+url: https://github.com/praiteri/plumed_nest_dyes/archive/master.zip 
 pname: Scission free energy of organic dyes 
 category: chemistry 
 keyw: metadynamics, multiple walkers, matheval/lepton 
