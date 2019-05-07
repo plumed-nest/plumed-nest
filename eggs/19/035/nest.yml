@@ -1,0 +1,11 @@
+url: https://github.com/dprovasi/plumed_repo/raw/master/dimer_US.zip
+pname: Dimerization of GPCRs from coarse-grained umbrella sampling 
+category: bio
+keyw: Umbrella sampling, coarse-grained, GPCR, protein-protein binding free energy, dimerization 
+plumed_version: 2.2.3
+contributor: Davide Provasi 
+doi: 10.1038/s41598-018-26070-8
+history:
+  2019-05-07: original submission
+instructions: >
+  The contributed input files define umbrella sampling simulations on the relative distance and orientation of two mu-opioid receptor dimers. The proteins and explicit membrane are described using the Martini coarse-grained model. Gromacs (5.1.3) and PLUMED (2.2.3) input files and Martini 2.0 topologies are provided.
