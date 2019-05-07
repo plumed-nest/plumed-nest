@@ -1,0 +1,11 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2019/comet.zip 
+pname: Optimal Metric for Path Collective Variables
+category: bio 
+keyw: metadynamics, path collective variables, sgoop, alanine tripeptide, conformational changes, optimal path 
+plumed_version: 2.3
+contributor: Francesco Luigi Gervasio 
+doi: 10.1021/acs.jctc.8b00563
+history:
+  2019-05-07: original submission
+instructions: >
+  Run the provided tpr files with Gromacs (5.0.6 used previously) and plumed.dat files. In one case, the plumed_full.dat was used for post-processing (driving on the entire trajectory).
