@@ -1,7 +1,7 @@
 News
 -----------------------------
 
-Find out below the latest contributions to PLUMED-NEST and news.
+Find out below the latest contributions to PLUMED-NEST.
 
 <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
 <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
