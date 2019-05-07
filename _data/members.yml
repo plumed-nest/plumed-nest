@@ -50,8 +50,12 @@
   affiliation: International School for Advanced Studies
   city:        Trieste
   country:     Italy
+- name:        Haochuan Chen
+  affiliation: Nankai University
+  city:        Tianjin
+  country:     China
 - name:        Francesco Colizzi
-  affiliation: Institute for Research in Biomedicine
+  affiliation: Institute for Research in Biomedicine (IRB Barcelona), The Barcelona Institute of Science and Technology (BIST)
   city:        Barcelona
   country:     Spain
 - name:        Sandip De
@@ -106,10 +110,6 @@
   affiliation: National Research Council
   city:        Milan
   country:     Italy
-- name:        Chen Haochuan
-  affiliation: Nankai University
-  city:        Tianjin 
-  country:     China
 - name:        Gabriella T. Heller
   affiliation: University of Cambridge
   city:        Cambridge
