@@ -1,0 +1,11 @@
+url: https://github.com/dprovasi/plumed_repo/raw/master/receptor_activation.zip 
+pname: Thermodynamics and kinetics of G protein-coupled receptor activation 
+category: bio
+keyw: metadynamics, allostery, receptor conformation, GPCR, pharmacology 
+plumed_version: 2.2
+contributor: Davide Provasi 
+doi: 10.1063/1.5060960
+history:
+  2019-05-07: original submission
+instructions: >
+  Path collective variables (PCV) defined using inter-molecular contact maps between the side-chain center of masses of residues are used to describe the transition between the active and inactive crystal structures of the mu-opioid receptor bound to morphine. PLUMED (2.2.3) and Gromacs (5.1.4) input topologies and initial coordinates are provided. 
