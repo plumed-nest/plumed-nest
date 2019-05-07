@@ -146,6 +146,8 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                         for ch in action:
                             if(not ch.isdigit()):
                                 und_action = und_action + '_' + ch
+                            else:
+                                und_action = und_action + ch
                         action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
                         # only replace first instance
                         line=re.sub(action,action_url,line,count=1)
