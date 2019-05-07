@@ -1,0 +1,11 @@
+url: http://www.acmm.nl/ensing/software/pmd_nest.zip 
+pname: PMD (path-metadynamics) 
+category: methods
+keyw: path-CV, metadynamics, multiple-walker, polyproline 
+plumed_version: 2.3-dev
+contributor: Bernd Ensing 
+doi: 10.1063/1.5027392 
+history:
+  2019-05-07: original submission
+instructions: >
+  This allows to run multiple-walker path-metadynamics on the right- to left-handed helix transition in tetrameric polyproline with a 3D CV-space. It can be easily adjusted to bigger systems with higher-dimensional CV-spaces. It requires PLUMED compiled with MPI and with the Path-CV code provided in the URL above. It also requires an MD engine that can run parallel replicas. We use GROMACS 5.1.4 compiled with MPI. Notice that in the PLUMED input files WALKERS_ID must be adjusted for the different walkers.
