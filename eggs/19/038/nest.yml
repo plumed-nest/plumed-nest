@@ -1,0 +1,19 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2019/achour2019_mb2m.zip 
+pname: native state dynamics of human and mouse b2m 
+category: bio
+keyw: metainference, NMR, chemical shifts, metadynamics, protein dynamics, aggregation 
+plumed_version: 2.4
+contributor: Carlo Camilloni 
+doi: submitted 
+history:
+  2019-05-07: original submission
+plumed_input:
+  - path: achour2019_mb2m/hb2m/plumed.dat
+    nreplicas: 2
+  - path: achour2019_mb2m/mb2m/plumed.dat
+    nreplicas: 2
+instructions: >
+  this is a metadynamic metainference calculation using chemical shifts to infere and compare
+  the native state dynamics of the human and mouse b2-microglobulin. This is performed using
+  multi replicas (at least 8) and gromacs 2016.x or newer 
+plumed_mpi: True
