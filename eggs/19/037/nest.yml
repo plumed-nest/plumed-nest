@@ -6,7 +6,8 @@ plumed_version: 2.3
 contributor: Paolo Raiteri 
 doi: 10.1021/jacs.6b08267
 plumed_input:
-  - plumed.mtd.inp
+  - Walker_0/plumed.mtd.inp
+  - Walker_1/plumed.mtd.inp
 history:
   2019-05-07: original submission 
 instructions: >
