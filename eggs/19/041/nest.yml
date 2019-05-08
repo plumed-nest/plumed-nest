@@ -1,0 +1,11 @@
+url: https://github.com/UWPRG/Coco_Code/raw/master/PLUMED-NEST.zip 
+pname: Molecular Driving Forces in Peptide Adsorption to Metal Oxide Surfaces 
+category: bio 
+keyw: metadynamics, collective variables, conformational changes, multiple walkers, Well-Tempered MetaD, peptide, binding, phosphorylation, post-transitional motif, sio2, adsorption 
+plumed_version: 2.4.0-dev
+contributor: Jim Pfaendtner 
+doi: 10.1021/acs.langmuir.8b01392
+history:
+  2019-05-08: original submission
+instructions: >
+  The simulations were run with GROMACS 5.1.2. The plumed.dat files contain the definition of the CVs and the set up for well-tempered metad with multiple walkers. 
