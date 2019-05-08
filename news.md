@@ -3,7 +3,4 @@ News
 
 Find out below the latest contributions to PLUMED-NEST.
 
-<script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
-<link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
-<ul class="juicer-feed" data-feed-id="plumednest" data-per="3" data-columns="3"><h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer</a></h1></ul>
-
+<a class="twitter-timeline" data-width="600" data-height="400" href="https://twitter.com/PlumedN?ref_src=twsrc%5Etfw">Tweets about #plumednest</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
