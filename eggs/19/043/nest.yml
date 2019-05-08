@@ -1,0 +1,11 @@
+url: https://github.com/piccig/HLDA/raw/master/3_class_HLDA.zip 
+pname: Multi Class - Harmonic Linear Discriminant Analysis (MC-HLDA)
+category: methods
+keyw: metadynamics, chemistry, HLDA 
+plumed_version: 2.3
+contributor: GiovanniMaria Piccini 
+doi: 10.1021/acs.jctc.8b00634 
+history:
+  2019-05-08: original submission
+instructions: >
+  MC-HLDA example for a 3-class problem (a symmetric SN2 reaction with three identical metastable states). A detailed explanation of the repository can be found [here](https://github.com/piccig/HLDA/blob/master/README.md).
