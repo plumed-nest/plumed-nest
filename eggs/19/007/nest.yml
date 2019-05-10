@@ -4,9 +4,10 @@ category: bio
 keyw: metainference, cryo-EM
 plumed_version: 2.5-dev
 contributor: Max Bonomi
-doi: 10.1101/516591 
+doi: 10.1073/pnas.1900441116
 history:
   2019-04-15: original submission
+  2019-05-10: updated doi
 instructions: >
   A detailed list of instructions as well as the scripts to reproduce the results
   can be found [here](https://github.com/fraser-lab/plumed_em_md). 
