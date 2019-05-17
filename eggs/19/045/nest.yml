@@ -1,0 +1,72 @@
+url: https://github.com/marcodelapierre/plumed-nest-calcite-1ion/raw/master/calcite-1ion.zip 
+pname: Adsorption free energy of Ca/CO3 ions on calcite steps in contact with water 
+category: materials 
+keyw: metadynamics, well-tempered, multiple walkers, LAMMPS 
+plumed_version: 2.3
+contributor: Marco De La Pierre 
+doi: 10.1002/anie.201701701 
+plumed_input:
+ - Walker_0/plumed.equi.inp
+ - Walker_0/plumed.mtd.inp
+ - Walker_1/plumed.equi.inp
+ - Walker_1/plumed.mtd.inp
+ - Walker_10/plumed.equi.inp
+ - Walker_10/plumed.mtd.inp
+ - Walker_11/plumed.equi.inp
+ - Walker_11/plumed.mtd.inp
+ - Walker_12/plumed.equi.inp
+ - Walker_12/plumed.mtd.inp
+ - Walker_13/plumed.equi.inp
+ - Walker_13/plumed.mtd.inp
+ - Walker_14/plumed.equi.inp
+ - Walker_14/plumed.mtd.inp
+ - Walker_15/plumed.equi.inp
+ - Walker_15/plumed.mtd.inp
+ - Walker_16/plumed.equi.inp
+ - Walker_16/plumed.mtd.inp
+ - Walker_17/plumed.equi.inp
+ - Walker_17/plumed.mtd.inp
+ - Walker_18/plumed.equi.inp
+ - Walker_18/plumed.mtd.inp
+ - Walker_19/plumed.equi.inp
+ - Walker_19/plumed.mtd.inp
+ - Walker_2/plumed.equi.inp
+ - Walker_2/plumed.mtd.inp
+ - Walker_20/plumed.equi.inp
+ - Walker_20/plumed.mtd.inp
+ - Walker_21/plumed.equi.inp
+ - Walker_21/plumed.mtd.inp
+ - Walker_22/plumed.equi.inp
+ - Walker_22/plumed.mtd.inp
+ - Walker_23/plumed.equi.inp
+ - Walker_23/plumed.mtd.inp
+ - Walker_24/plumed.equi.inp
+ - Walker_24/plumed.mtd.inp
+ - Walker_25/plumed.equi.inp
+ - Walker_25/plumed.mtd.inp
+ - Walker_26/plumed.equi.inp
+ - Walker_26/plumed.mtd.inp
+ - Walker_27/plumed.equi.inp
+ - Walker_27/plumed.mtd.inp
+ - Walker_28/plumed.equi.inp
+ - Walker_28/plumed.mtd.inp
+ - Walker_29/plumed.equi.inp
+ - Walker_29/plumed.mtd.inp
+ - Walker_3/plumed.equi.inp
+ - Walker_3/plumed.mtd.inp
+ - Walker_4/plumed.equi.inp
+ - Walker_4/plumed.mtd.inp
+ - Walker_5/plumed.equi.inp
+ - Walker_5/plumed.mtd.inp
+ - Walker_6/plumed.equi.inp
+ - Walker_6/plumed.mtd.inp
+ - Walker_7/plumed.equi.inp
+ - Walker_7/plumed.mtd.inp
+ - Walker_8/plumed.equi.inp
+ - Walker_8/plumed.mtd.inp
+ - Walker_9/plumed.equi.inp
+ - Walker_9/plumed.mtd.inp
+history:
+  2019-05-17: original submission
+instructions: >
+ LAMMPS is required to run. The LAMMPS input assumes running 30 multiple walkers. It can be submitted by taking the command line inside job.sh as an example.
