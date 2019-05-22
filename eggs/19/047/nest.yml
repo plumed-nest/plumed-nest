@@ -1,0 +1,12 @@
+url: https://archive.materialscloud.org/file/2019.0021/v1/close_structure.zip 
+pname: Close Structure 
+category: methods 
+keyw: metadynamics, RMSD, path collective variables, property map 
+plumed_version: 2.5
+contributor: Vojtech Spiwok 
+doi: 10.1063/1.4978296 
+history:
+  2019-05-22: original submission
+instructions: >
+ Input files (input structures, topology, PLUMED input) for simulations used to demonstrate functionality of Close Structure algorithm ([J. Chem. Phys. 2017, 146, 115101](https://doi.org/10.1063/1.4978296)). The method replaces frequent calculations of root mean square deviations in Path collective variables or Property Map collective variables. This accelerates simulations. Input files for metadynamics simulation of cyclooctane derivative in vacuum and Trp-cage in implicit solvent with two or three, respectively, Isomap CVs (with and without Close Structure). Tested with OpenMPI4.0.0, Gromacs 2018.5 and PLUNED v2.5.0. Scripts provided
+ 
