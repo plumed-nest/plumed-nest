@@ -12,6 +12,7 @@ import os
 import pathlib
 import subprocess
 from datetime import datetime
+from pytz import timezone
 
 if not (sys.version_info > (3, 0)):
    raise RuntimeError("We are using too many python 3 constructs, so this is only working with python 3")
@@ -388,7 +389,7 @@ def process_egg(path,eggdb=None):
         # print instructions, if present
         with open("README.md","a") as o:
              print("  ", file=o)
-             currentDT = datetime.now()
+             currentDT = datetime.now(timezone('CET'))
              print("**Last tested:**  "+currentDT.strftime("%d %b %Y, %H:%M:%S"), file=o)
              print("  ", file=o)
              print("**Project description and instructions**  ", file=o)
