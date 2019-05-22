@@ -388,6 +388,9 @@ def process_egg(path,eggdb=None):
         # print instructions, if present
         with open("README.md","a") as o:
              print("  ", file=o)
+             currentDT = datetime.now()
+             print("**Last tested:**  "+currentDT.strftime("%d %b %Y, %H:%M:%S"), file=o)
+             print("  ", file=o)
              print("**Project description and instructions**  ", file=o)
              try:
                print(config["instructions"], file=o)
