@@ -7,5 +7,6 @@ contributor: Faidon Brotzakis
 doi: 10.1021/acs.jctc.8b00934
 history:
   2019-05-19: original submission
+  2019-05-20: modified instructions and zip file
 instructions: >
- The simulations have been carried out using GROMACS 5.1.4 and plumed v2.5. For detailed instructions, please visit [this link](https://gitlab.e-cam2020.eu/brotzakis/vac_metad_applications). 
+ The simulations have been carried out using GROMACS 5.1.4 and plumed v2.5. For detailed instructions, please visit [this link](https://gitlab.e-cam2020.eu/brotzakis/vac_metad_applications). To obtaini the Funnel Metadynamics files, please contact Prof. Vittorio Limongelli (limonv_at_usi.ch).  The VAC-MetaD cpp file is available at Isaac Yang Yi's [GitHub page](https://github.com/helloyesterday/PLUMED2_TICA/raw/master/src/analysis/TICA.cpp). 
