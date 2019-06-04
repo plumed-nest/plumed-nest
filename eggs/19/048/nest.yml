@@ -1,0 +1,16 @@
+url: https://github.com/Gervasiolab/Gervasio-Protein-Dynamics/raw/master/ADORA/ADORA_PLUMED_NEST.zip 
+pname: Understanding Ligand Binding Selectivity in a Prototypical GPCR Family 
+category: bio 
+keyw: metadynamics, Parallel-tempering metadynamics, GPCRs, ligand binding 
+plumed_version: 2.3.1
+contributor: Francesco Gervasio 
+doi: 10.1021/acs.jcim.9b00298
+plumed_input:
+  - A1_LUF.dat
+  - A1_ZMA.dat
+  - A2a_LUF.dat
+  - A1_LUF.dat
+history:
+  2019-06-04: original submission
+instructions: >
+ These are the inpout files used to fully converge the free energy landscapes of two ligands (ZM241385, an A2aR-selective inverse agonist, and its dehydroxy derivative LUF545215) binding to two adenosine receptors (A1R and A2aR). The input files were used with GROMACS 5.1.4 and PLUMED 2.3.1 using the AMBER14SB force field, phospholipid topologies from LipidBook and ligands parameterized with Gaussian09 and Antechamber.
