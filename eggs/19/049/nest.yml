@@ -8,6 +8,7 @@ plumed_input:
   - plumed_GeTe.dat
   - plumed_lj_gas_liquid.dat
   - plumed_urea.dat
+natoms: 32768
 history:
   2019-06-04: original submission
 instructions: >
