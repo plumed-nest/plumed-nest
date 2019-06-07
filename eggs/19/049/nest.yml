@@ -1,0 +1,16 @@
+url: https://github.com/gtribello/plumed-inputs/raw/master/Clustering/inputs.zip 
+pname: Determining the sizes of solid/liquid clusters in MD trajectories of nucleation
+category: methods
+keyw: nucleation, metadynamics, clustering, Steinhardt order parameters 
+contributor: Gareth Tribello
+doi: 10.1021/acs.jctc.6b01073
+plumed_input:
+  - plumed_GeTe.dat
+  - plumed_lj_gas_liquid.dat
+  - plumed_urea.dat
+history:
+  2019-06-04: original submission
+instructions: >
+   These are the input files that were used to perform (i) the metadynamics simulations of the vapour liquid transition that is 
+   described in the paper, (ii) the analysis of the urea nucleation trajectories and (iii) the analysis of the GeTe nucleation 
+   trajectories that are described in the paper.
