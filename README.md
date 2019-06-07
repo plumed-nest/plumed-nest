@@ -150,3 +150,5 @@ In both these cases, `TAG` represents the git snapshot corresponding to your fil
 **ArXiv**: [ArXiv](http://arxiv.org) allows you to include supporting information by uploading "ancillary files" in a `anc` directory. These files are accessible at an URL such as `https://arxiv.org/src/ID/anc/FILENAME.zip`. If you include a zip file there we would be able to reach it.
 
 **Supporting Information**: Some publishers (e.g., [ACS](https://pubs.acs.org/)) allow you to upload Supporting Information that is then available free of charge. If these files are accessible at an URL (for ACS it would be something like  `https://pubs.acs.org/doi/suppl/DOI/suppl_file/FILENAME.zip`) we should be able to reach them.
+
+**Open Science Foundation**: [Open Science Foundation](http://osf.io) (OFS) also provides long term storage for simulation files. We have no example yet on this line, but if you can point us to an zip file stored at OSF with an URL we should be able to reach it.
