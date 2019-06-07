@@ -1,0 +1,16 @@
+url: https://github.com/gtribello/plumed-inputs/raw/master/Membranes/inputs.zip
+pname: Using intrinsic surface to calculate the free-energ change when nanoparticles adsorb on membranes
+category: chemistry 
+keyw: metadynamics, membranes, Willard Chandler surface
+contributor: Gareth Tribello
+doi: 10.1021/acs.jpcb.8b03661
+plumed_input:
+  - plumed_histogram.dat
+  - plumed_metad.dat
+  - plumed_reweight.dat
+history:
+  2019-06-04: original submission
+instructions: >
+   The input files were used to perform a metadynamics simulation in which a nanoparticle was forced to adsorb and desorb from a membrane surface. 
+   The free energy as a function of the distance between the nanoparticle and the surface was computed. As discussed in the attached article 
+   molecular dynamics simulations were performed using GROMACS 5 and the non-polarizable MARTINI model.

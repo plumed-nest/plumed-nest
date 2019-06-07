@@ -1,0 +1,14 @@
+url: https://github.com/gtribello/plumed-inputs/raw/master/Capillary-fluctuations/inputs.zip
+pname: Capillary fluctuations with PLUMED 
+category: methods
+keyw: nucleation, surface tension, capillary fluctuations
+contributor: Gareth Tribello
+doi: 10.1088/1361-648X/aa893d
+plumed_input:
+  - plumed.dat
+history:
+  2019-06-04: original submission
+instructions: >
+  The input file here can be used to calculate the Fourier transform of the position of the interface between the solid and liquid phases of the material. 
+  As discussed in the paper the ensemble average of this Fourier transform is related to the surface stiffness.   In the paper, calculations were performed 
+  with LAMMPS and analyzed with PLUMED. 

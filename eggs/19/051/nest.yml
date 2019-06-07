@@ -1,0 +1,13 @@
+url: https://github.com/gtribello/plumed-inputs/raw/master/BQ1/inputs.zip
+pname: Solid-liquid interfacial free energy out of equilibrium
+category: materials
+keyw: metadynamics, nucleation, surface excess free energy
+contributor: Gareth Tribello
+doi: 10.1103/PhysRevB.92.180102
+plumed_input:
+  - plumed.dat
+history:
+  2019-06-04: original submission
+instructions: >
+  This is an example input file for the metadynamics calculations that were performed in this paper in order to calculate the surface excess free energy. 
+  As detailed in the paper and its SI these simulations were performed with LAMMPS
