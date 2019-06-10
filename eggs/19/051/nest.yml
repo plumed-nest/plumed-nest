@@ -4,8 +4,6 @@ category: materials
 keyw: metadynamics, nucleation, surface excess free energy
 contributor: Gareth Tribello
 doi: 10.1103/PhysRevB.92.180102
-plumed_input:
-  - plumed.dat
 history:
   2019-06-04: original submission
 instructions: >
