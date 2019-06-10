@@ -1,5 +1,5 @@
 url: https://github.com/gtribello/plumed-inputs/raw/master/BQ1/inputs.zip
-pname: Solid-liquid interfacial free energy out of equilibrium
+pname: Solid liquid interfacial free energy out of equilibrium
 category: materials
 keyw: metadynamics, nucleation, surface excess free energy
 contributor: Gareth Tribello

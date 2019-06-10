@@ -1,5 +1,5 @@
 url: https://github.com/gtribello/plumed-inputs/raw/master/Membranes/inputs.zip
-pname: Using intrinsic surface to calculate the free-energ change when nanoparticles adsorb on membranes
+pname: Using intrinsic surface to calculate the free energy change when nanoparticles adsorb on membranes
 category: chemistry 
 keyw: metadynamics, membranes, Willard Chandler surface
 contributor: Gareth Tribello
