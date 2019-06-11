@@ -232,7 +232,9 @@ def add_readme(file, tested, success, exe):
         badge = ''
         for i in range(len(tested)):
             badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
-            if success[i]==0: 
+            if success[i]=="custom":
+                badge = badge + 'custom-yellow.svg'
+            elif success[i]==0: 
                 badge = badge + 'passing-green.svg'
             else:
                 badge = badge + 'failed-red.svg'
@@ -383,6 +385,9 @@ def process_egg(path,eggdb=None):
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
+            if(re.match(".*-mod",plumed_version)):
+                success="custom"
+                success_master="custom"
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
