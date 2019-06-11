@@ -1,5 +1,5 @@
 url: https://github.com/gtribello/plumed-inputs/raw/master/Capillary-fluctuations/inputs.zip
-pname: "test with !! some crazy *** : name"
+pname: "name with : colon only"
 category: methods
 keyw: nucleation, surface tension, capillary fluctuations
 contributor: Gareth Tribello
