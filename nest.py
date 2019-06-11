@@ -413,17 +413,21 @@ def process_egg(path,eggdb=None):
              print("  </div>", file=o)
              print("</div>", file=o)
 
-# quote around id is required otherwise Jekyll thinks it is a number
-        print("- id: '" + egg_id + "'",file=eggdb)
-        print("  name: " + config["pname"],file=eggdb)
-        print("  shortname: " + get_short_name_ini(config["pname"],15),file=eggdb)
-        print("  category: " + config["category"],file=eggdb)
-        print("  keywords: " + config["keyw"],file=eggdb)
-        print("  shortkeywords: " + get_short_name_ini(config["keyw"],25),file=eggdb)
-        print("  contributor: " + config["contributor"],file=eggdb)
-        print("  doi: " + config["doi"],file=eggdb)
-        print("  path: " + path,file=eggdb)
-        print("  reference: '" + reference +"'",file=eggdb)
+        yaml_data={
+                    "id":egg_id,
+                    "name":config["pname"],
+                    "shortname":get_short_name_ini(config["pname"],15),
+                    "category":config["category"],
+                    "keywords":config["keyw"],
+                    "shortkeywords":get_short_name_ini(config["keyw"],25),
+                    "contributor":config["contributor"],
+                    "doi":config["doi"],
+                    "path":path,
+                    "reference":reference
+                  }
+
+        # default_flow_style=False writes one item per line
+        yaml.dump(yaml_data,eggdb,default_flow_style=False)
 
     eggdb.flush()
 
