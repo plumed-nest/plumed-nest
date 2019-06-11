@@ -10,7 +10,7 @@ information in the form at the bottom of this page. All fields are required, unl
 * __Category:__ the category that best defines the project
 * __Keywords:__ keywords describing the project
 * __Instructions:__ list of software used and instructions to execute the simulation(s)/analysis
-* __PLUMED version:__ the version of the code used in this project
+* __PLUMED version:__ the version of the code used in this project (use -mod to indicate that you use a modified version not officially distributed, e.g. 2.5-mod)
 * __Contributor:__ project contributor
 * __Publication:__ the DOI identifying the paper related to this project. If the work is still unpublished and not available on a preprint server, please type *"unpublished"*
 * __Contact:__ the name of a contact person to communicate with the coordinators of the PLUMED consortium
@@ -64,7 +64,7 @@ Fields marked with "<sup>*</sup>" are optional
     </tr>
     <tr>
       <td><label for="version">PLUMED version</label></td>
-      <td width="600"><input id="version" type="text" name="version" placeholder="examples: 2.4, 2.5-dev" required></td>
+      <td width="600"><input id="version" type="text" name="version" placeholder="examples: 2.4, 2.5-mod (for 2.5 plus personal code)" required></td>
     </tr>
     <tr>
       <td><label for="contributor">Contributor</label></td>
