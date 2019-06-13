@@ -5,6 +5,15 @@ keyw: VES, convergence, suboptimal CVs
 plumed_version: 2.6
 contributor: Michele Invernizzi
 doi: 10.1021/acs.jctc.9b00032
+plumed_input:
+  - alanine/plumed-metad.dat
+  - alanine/plumed-ves.dat
+  - model/plumed-metad.dat
+  - model/plumed-ves.dat
+  - path: sodium/plumed-metad.dat
+    natoms: 250
+  - path: sodium/plumed-ves.dat
+    natoms: 250
 history:
   2019-04-11: original submission
   2019-04-16: fix path in PLUMED input files
