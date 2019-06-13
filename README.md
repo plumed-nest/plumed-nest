@@ -23,9 +23,11 @@ You might want to have a look at the nest.py script in this repository, which do
 
 If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
 
+If the nest pages appear to be taking a long time to update you can check the progress of your build by looking at the [Travis page][https://travis-ci.org/plumed-nest/plumed-nest] and the progress of the [upload][https://github.com/plumed-nest/test-site/commits/master].
+
 ## Instructions for filling the yml file
 
-The yml file should contain a number of fields. Please use existing yml files as a template and report if you think the documentation below is outdated.
+The yml file should contain a number of fields. Please use existing yml files as a template and report if you think the documentation below is outdated.  Also note that you can test that your file contains valid yml using online testers such as [this one][http://www.yamllint.com]
 
 ### Compulsory fields
 
