@@ -150,8 +150,10 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                             else:
                                 und_action = und_action + ch
                         action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
-                        # only replace first instance
-                        line=re.sub(action,action_url,line,count=1)
+                        # only replace first instance and make sure it is followed by a space or an end of line
+                        # this is to avoid problems when someone use in the label the name of the action
+                        line=re.sub(action+"([ #])",action_url+"\\1",line,count=1)
+                        line=re.sub(action+"$",action_url,line,count=1)
                     
                     if action=="ENDPLUMED":
                         endplumed=True
