@@ -245,9 +245,9 @@ def add_readme(file, tested, success, exe, has_load, has_custom):
                     badge = badge + 'failed-red.svg'
                 badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
         if has_load:
-            badge += ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/with-LOAD-yellow.svg)]()'
+            badge += ' [![with LOAD](https://img.shields.io/badge/with-LOAD-yellow.svg)]()'
         if has_custom:
-            badge += ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/with-custom_code-red.svg)]()'
+            badge += ' [![with custom code](https://img.shields.io/badge/with-custom_code-red.svg)]()'
         print("| [" + get_short_name_end(re.sub("^data/","",file), 50) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
