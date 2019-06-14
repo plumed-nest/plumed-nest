@@ -235,16 +235,17 @@ def add_readme(file, tested, success, exe, has_load):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
-            badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
-            if success[i]=="custom":
-                badge = badge + 'custom-yellow.svg'
-            elif success[i]==0: 
-                badge = badge + 'passing-green.svg'
-            else:
-                badge = badge + 'failed-red.svg'
-            if has_load:
-                badge += "?labelColor=yellow"
-            badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
+            if success[i]!="ignore":
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
+                if success[i]=="custom":
+                    badge = badge + 'custom-yellow.svg'
+                elif success[i]==0: 
+                    badge = badge + 'passing-green.svg'
+                else:
+                    badge = badge + 'failed-red.svg'
+                if has_load:
+                    badge += "?labelColor=yellow"
+                badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
         print("| [" + get_short_name_end(re.sub("^data/","",file), 50) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
@@ -397,8 +398,11 @@ def process_egg(path,eggdb=None):
             if(re.match(".*-mod",plumed_version)):
                 success="custom"
                 success_master="custom"
-            stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
-            add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load)
+            stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
+            if plumed_version != "not specified":
+                if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
+                   success="ignore"
+            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load)
 
         # print instructions, if present
         with open("README.md","a") as o:
