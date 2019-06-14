@@ -231,21 +231,23 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     zip(outfile)
     return rc
 
-def add_readme(file, tested, success, exe, has_load):
+def add_readme(file, tested, success, exe, has_load, has_custom):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
             if success[i]!="ignore":
                 badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
-                if success[i]=="custom":
+                if success[i]=="custom": # not used now 
                     badge = badge + 'custom-yellow.svg'
                 elif success[i]==0: 
                     badge = badge + 'passing-green.svg'
                 else:
                     badge = badge + 'failed-red.svg'
-                if has_load:
-                    badge += "?labelColor=yellow"
                 badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
+        if has_load:
+            badge += ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/with-LOAD-yellow.svg)]()'
+        if has_custom:
+            badge += ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/with-custom_code-red.svg)]()'
         print("| [" + get_short_name_end(re.sub("^data/","",file), 50) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
@@ -392,17 +394,15 @@ def process_egg(path,eggdb=None):
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header,actions=actions)
             has_load = "LOAD" in actions
+            has_custom = re.match(".*-mod",plumed_version)
             
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
-            if(re.match(".*-mod",plumed_version)):
-                success="custom"
-                success_master="custom"
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             if plumed_version != "not specified":
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
                    success="ignore"
-            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load)
+            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
 
         # print instructions, if present
         with open("README.md","a") as o:
