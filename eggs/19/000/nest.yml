@@ -2,7 +2,7 @@ url: https://archive.materialscloud.org/file/2019.0004/v3/inputs.zip
 pname: VesDeltaF 
 category: methods 
 keyw: VES, convergence, suboptimal CVs 
-plumed_version: 2.6
+plumed_version: 2.6-dev
 contributor: Michele Invernizzi
 doi: 10.1021/acs.jctc.9b00032
 plumed_input:
