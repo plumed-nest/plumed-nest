@@ -6,10 +6,6 @@ set -x
 cd "$(mktemp -dt plumed.XXXXXX)"
 
 echo "installing xdrfile library"
-# wget ftp://ftp.gromacs.org/pub/contrib/xdrfile-1.1.4.tar.gz
-# xdrfile was removed from gromacs ftp
-# as a workaround I added a copy to people.sissa.it/~bussi/plumed
-# this complies with its license
 
 if test -f $HOME/opt/lib/libxdrfile.so
 then
@@ -18,7 +14,11 @@ else
 
 rm -f $HOME/opt/lib/libxdrfile.so
 
-wget people.sissa.it/~bussi/plumed/xdrfile-1.1.4.tar.gz
+wget ftp://ftp.gromacs.org/pub/contrib/xdrfile-1.1.4.tar.gz
+# xdrfile was removed from gromacs ftp
+# as a workaround I added a copy to people.sissa.it/~bussi/plumed
+# this complies with its license
+# wget people.sissa.it/~bussi/plumed/xdrfile-1.1.4.tar.gz
 
 tar xzf xdrfile-1.1.4.tar.gz
 
