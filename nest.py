@@ -76,7 +76,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,global_header=None,header=None,docbase=None):
+def plumed_format(source,global_header=None,header=None,docbase=None,actions=None):
     """ Format plumed input file.
 
     source: path to master input file
@@ -154,6 +154,8 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                         # this is to avoid problems when someone use in the label the name of the action
                         line=re.sub(action+"([ #])",action_url+"\\1",line,count=1)
                         line=re.sub(action+"$",action_url,line,count=1)
+                        if actions is not None:
+                            actions.append(action)
                     
                     if action=="ENDPLUMED":
                         endplumed=True
@@ -163,7 +165,7 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                         if len(words)>1 and re.match("^FILE=.*",words[1]):
                             file=re.sub("^FILE=","",words[1])
                             try:
-                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,global_header=global_header)
+                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,global_header=global_header,actions=actions)
                                 # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
                                 file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
                                 line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
@@ -229,18 +231,23 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     zip(outfile)
     return rc
 
-def add_readme(file, tested, success, exe):
+def add_readme(file, tested, success, exe, has_load, has_custom):
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
-            badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
-            if success[i]=="custom":
-                badge = badge + 'custom-yellow.svg'
-            elif success[i]==0: 
-                badge = badge + 'passing-green.svg'
-            else:
-                badge = badge + 'failed-red.svg'
-            badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
+            if success[i]!="ignore":
+                badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
+                if success[i]=="custom": # not used now 
+                    badge = badge + 'custom-yellow.svg'
+                elif success[i]==0: 
+                    badge = badge + 'passing-green.svg'
+                else:
+                    badge = badge + 'failed-red.svg'
+                badge = badge + ')](' + file + '.' +  exe[i] + '.stderr)'
+        if has_load:
+            badge += ' [![with LOAD](https://img.shields.io/badge/with-LOAD-yellow.svg)]()'
+        if has_custom:
+            badge += ' [![with custom code](https://img.shields.io/badge/with-custom_code-red.svg)]()'
         print("| [" + get_short_name_end(re.sub("^data/","",file), 50) + "](./"+file+".md"+") | " + badge + " |" + "  ", file=o)
 
 
@@ -383,15 +390,19 @@ def process_egg(path,eggdb=None):
             header="**Originally used with PLUMED version:** " + plumed_version + "  \n"
             header+= "**Stable:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
             header+= "**Master:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+            actions=[]
 # in principle returns the list of produced files, not used yet:
-            plumed_format(file["path"],global_header=global_header,header=header)
+            plumed_format(file["path"],global_header=global_header,header=header,actions=actions)
+            has_load = "LOAD" in actions
+            has_custom = re.match(".*-mod",plumed_version)
+            
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
-            if(re.match(".*-mod",plumed_version)):
-                success="custom"
-                success_master="custom"
-            stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
-            add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
+            stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
+            if plumed_version != "not specified":
+                if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
+                   success="ignore"
+            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
 
         # print instructions, if present
         with open("README.md","a") as o:
