@@ -1,0 +1,11 @@
+url: https://github.com/piccig/MetaFEP/raw/master/nest_repo_MetaFEP.zip 
+pname: MetaFEP 
+category: methods
+keyw: metadynamics, chemistry, free energy perturbation 
+plumed_version: 2.3
+contributor: GiovanniMaria Piccini 
+doi: submitted
+history:
+  2019-06-12: original submission
+instructions: >
+  A COLVAR file is present and a python script to run the MetaFEP free energy calculation. A README file illustrates how to produce a similar COLVAR file.

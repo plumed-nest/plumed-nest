@@ -12,5 +12,6 @@ plumed_input:
   - A1_LUF.dat
 history:
   2019-06-04: original submission
+  2019-06-11: fix labels input files
 instructions: >
  These are the inpout files used to fully converge the free energy landscapes of two ligands (ZM241385, an A2aR-selective inverse agonist, and its dehydroxy derivative LUF545215) binding to two adenosine receptors (A1R and A2aR). The input files were used with GROMACS 5.1.4 and PLUMED 2.3.1 using the AMBER14SB force field, phospholipid topologies from LipidBook and ligands parameterized with Gaussian09 and Antechamber.

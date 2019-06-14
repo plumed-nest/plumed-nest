@@ -105,7 +105,7 @@ nreplicas: 4
 ````
 Avoid using too many replicas since this could slow down things! Often two replicas are sufficient to check the syntax of your input.
 
-**plumed_version**: The plumed version originally used to produce this work. Added for documentation purpose only.
+**plumed_version**: The plumed version originally used to produce this work. It is used to decide the color of the badge associated to each run. In particular, when indicating a version name that ends with `-mod` (e.g. `v2.5-mod`) the badges will appear as yellow irrespectively of the result, to indicate that the user should install a modified version of PLUMED in order to reproduce the results.
 
 **plumed_input**: This field should contain a list of input files that will be tested. If this field is not provided, we will use some heuristic to find our which are the correct input files. For instance:
 ````

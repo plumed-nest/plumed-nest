@@ -2,7 +2,7 @@ url: https://github.com/limresgrp/FMAP_v1/raw/master/FM_NEST.zip
 pname: Funnel Metadynamics 
 category: bio 
 keyw: funnel-metadynamics, absolute binding free energy, ligand-receptor complexes 
-plumed_version: 2.3-dev
+plumed_version: 2.3-mod
 contributor: Vittorio Limongelli
 doi: unpublished 
 history:

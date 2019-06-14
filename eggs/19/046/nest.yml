@@ -2,7 +2,7 @@ url: https://gitlab.e-cam2020.eu/brotzakis/vac_metad_applications/raw/master/TRY
 pname: Optimal Collective from short simulations for Benzamidine-Trypsin ligand binding 
 category: bio
 keyw: VAC-MetaD, optimised collective variables, binding free energy, unbinding rates, benzamidine trypsin, Structure Activity Relation 
-plumed_version: 2.5
+plumed_version: 2.5-mod
 contributor: Faidon Brotzakis 
 doi: 10.1021/acs.jctc.8b00934
 history:

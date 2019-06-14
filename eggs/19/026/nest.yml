@@ -2,7 +2,7 @@ url: https://github.com/gcsosso/plumed_nest_sosso/raw/master/FFS_ICE_CHL.zip
 pname: Ice Nucleation on Cholesterol Crystals
 category: materials
 keyw: forward flux sampling, crystal nucleation, water, ice, organic crystals
-plumed_version: 2.3.0-dev
+plumed_version: 2.3.0-mod
 contributor: Gabriele Cesare Sosso
 doi: 10.1039/c8sc02753f
 plumed_input:

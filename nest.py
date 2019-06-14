@@ -150,8 +150,10 @@ def plumed_format(source,global_header=None,header=None,docbase=None):
                             else:
                                 und_action = und_action + ch
                         action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
-                        # only replace first instance
-                        line=re.sub(action,action_url,line,count=1)
+                        # only replace first instance and make sure it is followed by a space or an end of line
+                        # this is to avoid problems when someone use in the label the name of the action
+                        line=re.sub(action+"([ #])",action_url+"\\1",line,count=1)
+                        line=re.sub(action+"$",action_url,line,count=1)
                     
                     if action=="ENDPLUMED":
                         endplumed=True
@@ -232,7 +234,9 @@ def add_readme(file, tested, success, exe):
         badge = ''
         for i in range(len(tested)):
             badge = badge + ' [![tested on ' + tested[i] + '](https://img.shields.io/badge/' + tested[i] + '-'
-            if success[i]==0: 
+            if success[i]=="custom":
+                badge = badge + 'custom-yellow.svg'
+            elif success[i]==0: 
                 badge = badge + 'passing-green.svg'
             else:
                 badge = badge + 'failed-red.svg'
@@ -383,6 +387,9 @@ def process_egg(path,eggdb=None):
             plumed_format(file["path"],global_header=global_header,header=header)
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
+            if(re.match(".*-mod",plumed_version)):
+                success="custom"
+                success_master="custom"
             stable_version='v' + subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             add_readme(file["path"], (stable_version,"master"), (success,success_master),("plumed","plumed_master"))
 
