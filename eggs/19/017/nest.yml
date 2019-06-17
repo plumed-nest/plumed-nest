@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, ligand binding 
 plumed_version: 2.5
 contributor: Riccardo Capelli 
-doi: unpublished 
+doi: 10.1021/acs.jpclett.9b01183
 plumed_input:
   - plumed_metad/metad_20ang.dat
   - plumed_metad/metad_22ang.dat
@@ -15,6 +15,7 @@ plumed_input:
 history:
   2019-04-23: original submission
   2019-04-24: corrected paths for input files (ndx, pdb, dat), example data files added for the reweighting procedure
+  2019-06-17: doi added
 instructions: >
   The data are in three different folders:
   * input, which contains the GROMACS (2016.5) input files (gro, top, itp, and mdp) to run the MD simulation.
