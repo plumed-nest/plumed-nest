@@ -2,7 +2,7 @@ url: http://www.acmm.nl/ensing/software/ptcv_plumednest.zip
 pname: PTCV (proton tracker collective variable) 
 category: methods
 keyw: proton tracker collective variable, path-metadynamics, CP2K, DFT-MD, acetic acid 
-plumed_version: 2.4-mod
+plumed_version: 2.4
 contributor: Bernd Ensing 
 doi: 10.1063/1.5027392 
 history:
