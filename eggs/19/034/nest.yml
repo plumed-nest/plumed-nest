@@ -1,4 +1,4 @@
-url: http://www.acmm.nl/ensing/software/ptcv_nest.zip 
+url: http://www.acmm.nl/ensing/software/ptcv_plumednest.zip
 pname: PTCV (proton tracker collective variable) 
 category: methods
 keyw: proton tracker collective variable, path-metadynamics, CP2K, DFT-MD, acetic acid 
@@ -7,5 +7,6 @@ contributor: Bernd Ensing
 doi: 10.1063/1.5027392 
 history:
   2019-05-07: original submission
+  2019-06-17: new archive
 instructions: >
   This allows to simulate proton dissociation. It requires PLUMED compiled with the Path-CV and PTCV code provided [here](http://www.acmm.nl/ensing/software/index.html). All the parameters used are explained in the PLUMED input file and in the article [J. Chem. Phys. 149 (2018), 072320](https://aip.scitation.org/doi/10.1063/1.5027392).
