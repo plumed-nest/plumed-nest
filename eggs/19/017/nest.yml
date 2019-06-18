@@ -21,4 +21,4 @@ instructions: >
   * input, which contains the GROMACS (2016.5) input files (gro, top, itp, and mdp) to run the MD simulation.
   * plumed_metad, which contains the PLUMED input file to perform volume-based metadynamics with different restraining potential size
   * plumed_reweight, which contains the PLUMED reweighing input file.
- 
+acknowledgement: Paolo Carloni acknowledges funding  by the Deutsche Forschungsgemeinschaft- FOR 2518 DynIon project P6, and, along with Riccardo Capelli, the Human Brain Project. 

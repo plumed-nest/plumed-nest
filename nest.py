@@ -419,7 +419,11 @@ def process_egg(path,eggdb=None):
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
                  print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
-             print("  ", file=o)
+             if "acknowledgement" in config:
+                print("  ", file=o)
+                print("**Acknowledgement**  ", file=o)
+                print(config["acknowledgement"], file=o)
+             print("  ", file=o)   
              print("**Badge**  ", file=o)
              print("Click on the image below and get the code to add the badge to your website!  ", file=o)
              print("<img src=\"./badge.svg\" alt=\"plumeDnest:" + egg_id + "\" id=\"myBtn\" class=\"badge\">", file=o)
