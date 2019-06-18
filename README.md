@@ -30,7 +30,7 @@ If you would prefer to submit your data to the PLUMED nest using a pull request 
 * Test the yml you have written using an [online tester][http://www.yamllint.com]
 * Push your changes to your fork and setup the pull request on the upstream branch using GitHub.
 
-Do not worry about following the instructions in the section immediately after this one about testing the appearance of your page before setting up the pull request.  This is only possible if you are working on the plumed-nest/plumed-nest repository directly.  When working on your fork you can work on the master branch of your fork directly.   All the tests on the appearance of the site will be done automatically when you setup the pull request. 
+Do not worry about following the instructions in the section immediately after this one about testing the appearance of your page before setting up the pull request.  This is only possible if you are working on the plumed-nest/plumed-nest repository directly.  When working on your fork you can work on the master branch of your fork directly.   Tests on the setup of the site will be done automatically when you setup the pull request.  You can check the appearance of your pages once the pull request is merged. 
 
 ## Testing the appearance of the PLUMED-NEST site
 
