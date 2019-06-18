@@ -1,4 +1,4 @@
-url: https://github.com/spiwokv/plumed_nest_by_spiwokv/raw/master/flyinggaussian1.zip 
+url: https://archive.materialscloud.org/file/2019.0032/v1/flyinggaussian.zip 
 pname: Flying Gaussian method
 category: methods
 keyw: flying Gaussians, alanine dipeptide, peptide bond, Met-enkephalin 
@@ -7,5 +7,6 @@ contributor: Vojtech Spiwok
 doi: 10.1021/acs.jctc.6b00551
 history:
   2019-06-17: original submission
+  2019-06-18: Switched to Materials Cloud
 instructions: >
   Input files (input structures, topology, Plumed input files) for simulations used to demonstrate functionality of Flying Gaussian algorithm ([J. Chem. Theory Comput. 2016, 12, 4644-4650](https://pubs.acs.org/doi/10.1021/acs.jctc.6b00551)). The method simulates a molecular system in multiple replicas and enhances sampling by disfavoring states that are close to each other in different replicas. Input files for Flying Gaussian simulation of alanine dipeptide in vacuum and water, cis/trans isomerization of Ace-(Pro)n-NH2 and Met-enkephalin are provided.
