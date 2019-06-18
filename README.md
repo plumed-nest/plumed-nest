@@ -129,6 +129,8 @@ plumed_input:
 
 The global keys that you can override at single input level are `natoms`, `nreplicas`, and `plumed_version`.
 
+**acknowledgement**: This field can be used to add acknowledgements to funding connected to the data deposited in the nest.
+
 <a name="zip-info"></a>
 ## Where should the zip files be hosted 
 
