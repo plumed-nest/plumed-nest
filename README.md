@@ -19,6 +19,19 @@ You might want to have a look at the nest.py script in this repository, which do
 
 **Contributions to this repository, both as new projects and as improvements to our analysis scripts are welcome! Please open a new [issue](https://github.com/plumed-nest/plumed-nest/issues/new) or [pull request](https://github.com/plumed-nest/plumed-nest/compare) if you have comments or ideas to share.**
 
+## Adding data to the PLUMED-NEST site using a pull request
+
+If you would prefer to submit your data to the PLUMED nest using a pull request on GitHub you can.  Please follow the instructions below:
+
+* Make a fork of this repository and clone it to your local machine.
+* Collect the files you used in your calculations.  Please test the validity of the PLUMED input files you are submitting before you upload.  The tests that are run by the nest use the command `plumed driver --natoms 100000 --parse-only --kt 2.49 --plumed plumed.dat`
+* Create and upload a zip file containing all your inputs.  Info about where to host your zip file can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
+* Create the yml file that containing the information on your submission by following the instructions in the next but one section. 
+* Test the yml you have written using an [online tester][http://www.yamllint.com]
+* Push your changes to your fork and setup the pull request on the upstream branch using GitHub.
+
+Do not worry about following the instructions in the section immediately after this one about testing the appearance of your page before setting up the pull request.  This is only possible if you are working on the plumed-nest/plumed-nest repository directly.  When working on your fork you can work on the master branch of your fork directly.   All the tests on the appearance of the site will be done automatically when you setup the pull request. 
+
 ## Testing the appearance of the PLUMED-NEST site
 
 If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
