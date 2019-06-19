@@ -1,12 +1,17 @@
 How to contribute to PLUMED-NEST
 --------------------------------
-Contributing to PLUMED-NEST is free and easy. It is enough to provide the following
-information in the form at the bottom of this page. All fields are required, unless otherwise specified.
+Contributing to PLUMED-NEST is free and easy. To do so you must:
+
+* Collect the files you used in your calculations.  Please test the validity of the PLUMED input files you are submitting before you upload.  The tests that are run by the nest use the command `plumed driver --natoms 100000 --parse-only --kt 2.49 --plumed plumed.dat`
+* Create and upload a zip file containing all your inputs.  Info about where to host your zip file can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
+* Fill in the sections of the form below. All fields are required, unless otherwise specified.
+
+The fields you must fill are:
 
 * __plumID:__ please select *"new"* for a new submission, or your plumID in case of resubmission/update of an existing project
 * __Project name:__ the name of your project
-* __URL:__ the location of the zipped archive containing all the files needed to reproduce your PLUMED-enhanced simulation or analysis
-* __PLUMED input files (optional):__ list of non-standard PLUMED input file names, i.e. different from `plumed*.dat`
+* __URL:__ the location of the zipped archive containing all the files needed to reproduce your PLUMED-enhanced simulation or analysis.  See [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
+* __PLUMED input files (optional):__ list of non-standard PLUMED input file names, i.e. file names that are different to `plumed*.dat`
 * __Category:__ the category that best defines the project
 * __Keywords:__ keywords describing the project
 * __Instructions:__ list of software used and instructions to execute the simulation(s)/analysis
@@ -19,8 +24,8 @@ information in the form at the bottom of this page. All fields are required, unl
 
 __Please note that:__
 
+* <b> All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium. Therefore, a delay between submission and online publication should be expected.</b>
 * The name and email of the contact person will not appear on the PLUMED-NEST website.
-* All contributions are curated and manually uploaded by the coordinators of the PLUMED consortium. Therefore, a delay between submission and online publication should be expected.
 * If necessary, you will be able to edit the information on [GitHub](https://github.com/plumed-nest/plumed-nest) later or send us a revised version of the form. In the latter case, please specify a list of changes in the "Comments" field.
 * PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible. More info about where to host your contribution can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
 * PLUMED-NEST will not test your execution scripts, but only the compatibility of the PLUMED input files provided.
