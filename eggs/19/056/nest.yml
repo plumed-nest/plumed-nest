@@ -1,0 +1,18 @@
+url: https://github.com/jakryd/plumed-eggs/raw/master/2019_CPC/2019_CPC.zip 
+pname: maze 
+category: methods
+keyw: maze, ligand unbinding 
+plumed_version: 2.6-dev
+contributor: Jakub Rydzewski 
+doi: submitted
+plumed_input:
+  - 4w52/plumed.dat
+  - 4w53/plumed.dat
+  - 4w54/plumed.dat
+  - 4w55/plumed.dat
+  - 4w56/plumed.dat
+history:
+  2019-07-03: original submission 
+instructions: >
+ For details on how to download and install the maze module for sampling ligand unbinding, see [here](https://maze-code.github.io). The folders in 2019_CPC are labeled by the system PDB ID.
+ 
