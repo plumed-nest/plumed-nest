@@ -1,0 +1,16 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2019/paissoni19diubq.zip 
+pname: SAXS ensembles using Martini-Beads multi-scale SAXS 
+category: methods 
+keyw: metainference, SAXS, martini, ensemble determination, metadynamics, protein dynamics 
+plumed_version: 2.5
+contributor: Cristina Paissoni 
+doi: submitted
+history:
+  2019-07-03: original submission
+plumed_input:
+  - path: diubq_k63/plumed-main.dat
+    natoms: 117366
+    nreplicas: 2
+instructions: >
+  this is a metadynamics metainference calculation using SAXS for protein structural ensemble determination. Simulations can be run
+  using GROMACS 2018.x and PLUMED-ISDB. This uses multiple replica simulations i.e. -multi 18 
