@@ -1,0 +1,11 @@
+url: https://github.com/JelfsMaterialsGroup/PLUMED_files/raw/master/ConstrainedMD.zip 
+pname: Constrained MD for maintaining a cavity in a calculation 
+category: chemistry 
+keyw: constrained MD, porous molecules, porosity, cavity 
+plumed_version: 2.5
+contributor: Kim Jelfs 
+doi: 10.1039/C5CC05344G
+history:
+  2019-07-12: original submission
+instructions: >
+  The files can be used with DLPOLY2.20 and a porous molecule in order to run a constrained MD simulation where none of a set of numbered atoms are allowed to go within a defined cavity of that molecule. One example is for a spherical cavity, the other for a cylindrical cavity. 
