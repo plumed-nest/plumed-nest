@@ -9,5 +9,5 @@ the public repository of the PLUMED consortium [1], as plumID:XX.YYYY"*.
 **Bibliography**
 
 [1] The PLUMED consortium.
-_A community effort to promote transparency and reproducibility in enhanced molecular simulations_,
+_Promoting transparency and reproducibility in enhanced molecular simulations_,
 Submitted
