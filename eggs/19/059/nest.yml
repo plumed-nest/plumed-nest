@@ -1,0 +1,11 @@
+url: https://github.com/fabsugar/plumed-nest-files/raw/master/AAPAK_input.zip 
+pname: cis-trans isomerization of the Ac-Ala-Ala-Pro-Ala-Lys-NH2 peptide 
+category: bio
+keyw: bias-exchange metadynamics, cis-trans isomerization 
+plumed_version: 2.2.3
+contributor: Fabrizio Marinelli 
+doi: unpublished
+history:
+  2019-07-19: original submission
+instructions: >
+  The deposited files contain the necessary input to run bias-exchange metadynamics simulations to investigate the cis-trans isomerization of the Ac-Ala-Ala-Pro-Ala-Lys-NH2 peptide using two replicas, each one using a specific torsion angle as collective variable. The simulations were performed using GROMACS VERSION 5.0.2 and PLUMED VERSION 2.2.3.  The simulations can be run for example using the command  "mpirun -np 4 gmx_mpi mdrun -deffnm metad-be -plumed plumed -multi 2 -replex 2000 > & meta-be.out &". Newer versions of GROMACS are able to read the .tpr files and run the simulations as well as newer versions of PLUMED. 
