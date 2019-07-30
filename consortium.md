@@ -11,7 +11,7 @@ More information about the PLUMED consortium can be found here:
 
 The PLUMED consortium.
 _Promoting transparency and reproducibility in enhanced molecular simulations_,
-Submitted
+[Nat. Methods 16, 670 (2019)](https://doi.org/10.1038/s41592-019-0506-8)
 
 The coordinators of the PLUMED consortium are:
 
