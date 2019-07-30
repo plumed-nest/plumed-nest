@@ -10,4 +10,4 @@ the public repository of the PLUMED consortium [1], as plumID:XX.YYYY"*.
 
 [1] The PLUMED consortium.
 _Promoting transparency and reproducibility in enhanced molecular simulations_,
-Submitted
+[Nat. Methods 16, 670 (2019)](https://doi.org/10.1038/s41592-019-0506-8)
