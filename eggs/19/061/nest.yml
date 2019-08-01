@@ -1,0 +1,11 @@
+url: https://github.com/JelfsMaterialsGroup/PLUMED_files/blob/master/diffusion_xylene_plumed_input.zip
+pname: Diffusion in porous materials
+category: materials
+keyw: metadynamics, porous materials, diffusion
+plumed_version: 2.5
+contributor: Kim E. Jelfs
+doi: 10.1021/acs.jpcc.9b05953
+history:
+  2019-08-01: original submission
+instructions: >
+  Use with DL_POLY. Place guest within porous structure.
