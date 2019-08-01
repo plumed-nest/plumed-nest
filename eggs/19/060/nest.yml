@@ -1,0 +1,12 @@
+url: https://github.com/luigibonati/deep-ves-data/raw/master/deep-ves-data.zip 
+pname: Neural networks-based variationally enhanced sampling
+category: methods 
+keyw: ves, neural networks
+plumed_version: 2.5-mod
+contributor: Luigi Bonati
+doi: submitted 
+history:
+  2019-08-01: original submission
+instructions: >
+ Code, input files, and example results of the DEEP-VES method, as presented in the paper [Neural networks-based variationally enhanced sampling](https://arxiv.org/abs/1904.01305). More information about the content can be found [here](https://github.com/luigibonati/deep-ves-data/blob/master/README.md). Please note that the code requires LibTorch to work. As of now it is provided without documentation since we are still working on it. We plan to release it in PLUMED soon.
+ 
