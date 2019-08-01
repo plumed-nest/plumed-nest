@@ -1,4 +1,4 @@
-url: https://github.com/JelfsMaterialsGroup/PLUMED_files/blob/master/diffusion_xylene_plumed_input.zip
+url: https://github.com/JelfsMaterialsGroup/PLUMED_files/raw/master/diffusion_xylene_plumed_input.zip
 pname: Diffusion in porous materials
 category: materials
 keyw: metadynamics, porous materials, diffusion
