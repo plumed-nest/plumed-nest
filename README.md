@@ -155,7 +155,7 @@ We have no preference on the place where the zip files will be hosted. The cruci
 
 Existing projects can be used for inspiration. Below are some possibilities. Notice that Dropbox or Google Driver links seem difficult to manage since the URLs do not refer to the zip file but rather to an intermediate html file.
 
-**MaterialsCloud**: [MaterialsCloud](www.materialscloud.org) allows users to upload files in their [archive](https://archive.materialscloud.org/). Files are guaranteed to be retained for 10 years and are accessible with an URL.
+**MaterialsCloud**: [MaterialsCloud](https://www.materialscloud.org) allows users to upload files in their [archive](https://archive.materialscloud.org/). Files are guaranteed to be retained for 10 years and are accessible with an URL.
 There are a number of fields that you should fill in order to upload our files on MaterialsCloud. However, notice that there is a significant overlap between what is requested when uploading information on PLUMED-NEST and on MaterialsCloud. Moreover, this would be a very convenient path if you want to simultaneously exploit the analysis capabilities of MaterialsCloud and of PLUMED-NEST.
 
 **GitHub**: [GitHub](http://github.com) provides convenient space to archive your data for free if they are open source. Notice that GitHub is designed for source code rather than for binary files, so it is expected to work well only if you upload small files. You would typically have two ways to use GitHub to store your zip files:
