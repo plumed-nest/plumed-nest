@@ -4,7 +4,7 @@ category: materials
 keyw: metadynamics, porous materials, diffusion
 plumed_input:
   - diffusion_meta.dat
-  - ple_metad.dat
+  - ple_meta.dat
 plumed_version: 2.5
 contributor: Kim E. Jelfs
 doi: 10.1021/acs.jpcc.9b05953
