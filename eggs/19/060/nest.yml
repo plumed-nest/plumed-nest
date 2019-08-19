@@ -9,5 +9,5 @@ history:
   2019-08-01: original submission
   2019-08-19: updated doi
 instructions: >
- Code, input files, and example results of the DEEP-VES method, as presented in the paper [Neural networks-based variationally enhanced sampling](https://arxiv.org/abs/1904.01305). More information about the content can be found [here](https://github.com/luigibonati/deep-ves-data/blob/master/README.md). Please note that the code requires LibTorch to work. As of now it is provided without documentation since we are still working on it. We plan to release it in PLUMED soon.
+ Code, input files, and example results of the DEEP-VES method, as presented in the paper [Neural networks-based variationally enhanced sampling](https://doi.org/10.1073/pnas.1907975116). More information about the content can be found [here](https://github.com/luigibonati/deep-ves-data/blob/master/README.md). Please note that the code requires LibTorch to work. As of now it is provided without documentation since we are still working on it. We plan to release it in PLUMED soon.
  
