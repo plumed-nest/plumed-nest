@@ -4,8 +4,9 @@ category: methods
 keyw: metadynamics, chemistry, free energy perturbation 
 plumed_version: 2.3
 contributor: GiovanniMaria Piccini 
-doi: submitted
+doi: 10.1021/acs.jpclett.9b01301  
 history:
   2019-06-12: original submission
+  2019-08-19: updated doi
 instructions: >
   A COLVAR file is present and a python script to run the MetaFEP free energy calculation. A README file illustrates how to produce a similar COLVAR file.
