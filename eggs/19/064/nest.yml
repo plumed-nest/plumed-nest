@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/preview_file/2cfa5df7c35a35a928d6881ca42d9bf2346708a6719650d4/LKA14.zip 
+pname: Amphiphilic Peptide Binding on Crystalline vs. Amorphous Silica from Molecular Dynamics Simulations 
+category: materials
+keyw: metadynamics, peptide-surface binding 
+plumed_version: 2.4
+contributor: Jim Pfaendtner 
+doi: 10.1080/00268976.2019.1657192
+history:
+  2019-08-20: original submission
+instructions: >
+  The plumed*.dat files correspond to the input used for parallel tempering metadynamics in the well tempered ensemble runs The HILLS* files correspond to the Gaussian hills deposited during the simulation, used to generate free energy profiles. The simulations were performed with GROMACS 2018.3.
