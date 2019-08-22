@@ -4,7 +4,7 @@ category: methods
 keyw: maze, ligand unbinding 
 plumed_version: 2.6-dev
 contributor: Jakub Rydzewski 
-doi: submitted
+doi: 10.1016/j.cpc.2019.106865
 plumed_input:
   - 4w52/plumed.dat
   - 4w53/plumed.dat
@@ -13,6 +13,7 @@ plumed_input:
   - 4w56/plumed.dat
 history:
   2019-07-03: original submission 
+  2019-08-22: updated DOI
 instructions: >
  For details on how to download and install the maze module for sampling ligand unbinding, see [here](https://maze-code.github.io). The folders in 2019_CPC are labeled by the system PDB ID.
  
