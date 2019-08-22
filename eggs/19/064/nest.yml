@@ -8,4 +8,4 @@ doi: 10.1080/00268976.2019.1657192
 history:
   2019-08-20: original submission
 instructions: >
-  The plumed.dat files correspond to the input used for parallel tempering metadynamics in the well tempered ensemble runs The HILLS files correspond to the Gaussian hills deposited during the simulation, used to generate free energy profiles. The simulations were performed with GROMACS 2018.3.
+  The plumed.dat files correspond to the input used for parallel tempering metadynamics in the well tempered ensemble runs. The HILLS files correspond to the Gaussian hills deposited during the simulation, used to generate free energy profiles. The simulations were performed with GROMACS 2018.3.
