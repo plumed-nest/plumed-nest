@@ -4,9 +4,10 @@ category: bio
 keyw: metadynamics, path CVs, ligand binding 
 plumed_version: 2.1
 contributor: Mattia Bernetti 
-doi: unpublished 
+doi: 10.1021/acs.jctc.9b00450 
 history:
   2019-08-17: original submission
+  2019-08-29: updated doi
 instructions: >
   Input file to carry out a well-tempered metadynamics simulation of the alprenolol-b2AR binding process using path CVs. The zip includes a structure file gro.gro file to use as initial configuration to launch the simulations, the corresponding topology file top.top, the plumed input file plumed_path.dat necessary to perform metadynamics with path CVs, and the GROMACS (version 4.6.7) parameter file prod.mdp where the simulations parameters are specified. The frameset.pdb file is the guess path necessary to use the path CVs.
  
