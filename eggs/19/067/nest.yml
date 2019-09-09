@@ -1,0 +1,11 @@
+url: https://github.com/jakryd/plumed-eggs/raw/master/2018_JCTC/2018_JCTC.zip 
+pname: Kinetics of Huperzine A Dissociation from Acetylcholinesterase via Multiple Unbinding Pathways 
+category: bio 
+keyw: metadynamics, ligand unbinding 
+plumed_version: 2.4
+contributor: Jakub Rydzewski 
+doi: 10.1021/acs.jctc.8b00173
+history:
+  2019-09-09: original submission
+instructions: >
+ Input files for PLUMED (plumed-*.dat) and reaction pathways for ligand unbinding (pwf.pdb and pws.pdb).
