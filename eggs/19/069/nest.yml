@@ -5,6 +5,19 @@ keyw: ibuprofen, crystal, solvent, surface
 plumed_version: 2.3
 contributor: Matteo Salvalaglio
 doi: submitted
+plumed_input:
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/002_face/plumed.dat 
+    natoms: 200000
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/011_face/plumed.dat
+    natoms: 200000
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/100_apolar/plumed.dat 
+    natoms: 200000
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/100_polar/plumed.dat 
+    natoms: 200000
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/110_face/plumed.dat
+    natoms: 200000
+  - path: ibuprofen_solvent_interfaces_input_and_plumed/bulk_solution/plumed.dat
+    natoms: 200000
 history:
   2019-09-21: original submission
 instructions: >
