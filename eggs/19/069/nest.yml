@@ -1,0 +1,11 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/ibuprofen_solvent_interfaces_input_and_plumed.zip 
+pname: Solvent Dynamics and Thermodynamics at the Crystal-Solution Interface of Ibuprofen 
+category: materials
+keyw: ibuprofen, crystal, solvent, surface 
+plumed_version: 2.3
+contributor: Matteo Salvalaglio
+doi: submitted
+history:
+  2019-09-21: original submission
+instructions: >
+ PLUMED files used in the analysis of MD trajectories of crystal/solution interfaces generated with GROMACS. Example surface configurations and Force field parameters are included in the archive. More info can be found [here](https://chemrxiv.org/ndownloader/files/16526450). 
