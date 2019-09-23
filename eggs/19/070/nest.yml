@@ -1,0 +1,11 @@
+url: https://github.com/sbottaro/UUCG_UNEXPECTED/raw/master/plumed_nest_uucg.zip  
+pname: Unexpected Dynamics in the UUCG RNA Tetraloop 
+category: bio
+keyw: well-tempered metadynamics, RNA, UUCG, maximum entropy 
+plumed_version: 2.5
+contributor: Sandro Bottaro 
+doi: 10.1101/690412
+history:
+  2019-09-23: original submission
+instructions: >
+ Simulations have been carried out with GROMACS 2016.4 and PLUMED 2.5.0. More information [here](https://www.biorxiv.org/content/10.1101/690412v2). 
