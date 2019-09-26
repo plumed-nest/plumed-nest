@@ -1,0 +1,14 @@
+url: https://github.com/bussilab/plumed-nest-sine/archive/4c288794ee470cd694231ff2976607991df11649.zip
+# optional checksum to avoid stealth updates
+md5: 67f64ac04c91977cfacfd1579c4539bf
+pname: SINE hairpin MD+NMR
+category: bio
+keyw: metadynamics, RNA, NMR
+plumed_version: 2.4
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2019-09-26: original submission
+instructions: >
+  Input files for RECT simulations with MAXENT using NMR restraints.
+  Paper is in preparation.
