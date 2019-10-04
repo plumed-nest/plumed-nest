@@ -1,6 +1,6 @@
-url: https://github.com/bussilab/plumed-nest-colizzi-2019/archive/c85c59ab90224218d5e9fe87400d979fd61e8c05.zip
+url: https://github.com/bussilab/plumed-nest-colizzi-2019/archive/ae2f9a3ccedfc122cabc983a2d8f6ff02e2f5638.zip
 # optional checksum to avoid stealth updates
-md5: 9b6e7b3ae3697b854fc1b4d7c228faeb
+md5: 4426abdb18ef478ee210743389c33b14
 pname: Asymmetric base pair opening in nucleic acids
 category: bio
 keyw: double helix, DNA, RNA, unwindability
