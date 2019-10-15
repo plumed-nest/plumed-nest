@@ -342,7 +342,7 @@ def process_egg(path,eggdb=None):
             print(global_header, file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
             browse_archive=""
-            if re.match("https://github\.com/[^/]+/[^*]+/archive/[^/]+\.zip\Z",config["url"]):
+            if re.match("https://github\.com/[^/]+/[^/]+/archive/[^/]+\.zip\Z",config["url"]):
                 browse_archive=" [(browse)](" + (
                     re.sub("\.zip\Z","",re.sub("/archive/","/tree/",config["url"]))
                 )+ ")"
