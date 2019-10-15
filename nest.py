@@ -341,7 +341,13 @@ def process_egg(path,eggdb=None):
         with open("README.md","w") as o:
             print(global_header, file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
-            print("**Archive:** [",config["url"]+"]("+config["url"]+")  ", file=o)
+            browse_archive=""
+            if re.match("https://github\.com/[^/]+/[^*]+/archive/[^/]+\.zip\Z",config["url"]):
+                browse_archive=" [(browse)](" + (
+                    re.sub("\.zip\Z","",re.sub("/archive/","/tree/",config["url"]))
+                )+ ")"
+            print("**Archive:** [",config["url"]+"]("+config["url"]+")" +
+                  browse_archive +"  ", file=o)
             if "md5" in config:
                 print("**Checksum (md5):**",config["md5"]+"  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
