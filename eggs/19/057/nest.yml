@@ -8,7 +8,7 @@ doi: submitted
 history:
   2019-07-03: original submission
 plumed_input:
-  - path: plumed-main.dat
+  - path: diubq_k63/plumed-main.dat
     natoms: 117366
     nreplicas: 2
 instructions: >
