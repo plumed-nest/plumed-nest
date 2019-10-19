@@ -1,0 +1,11 @@
+url: https://github.com/giorginolab/plumed2-pycv/archive/v2.6-pycv.zip 
+pname: PYCV - a PLUMED 2 Module Enabling the Rapid Prototyping of Collective Variables in Python 
+category: other
+keyw: Python, automatic differentiation 
+plumed_version: 2.6
+contributor: Toni Giorgino 
+doi: 10.21105/joss.01773 
+history:
+  2019-10-18: original submission
+instructions: >
+  Requires Python 3. Modules jax and jaxlib recommended for auto-differentiation. See [here](https://giorginolab.github.io/plumed2-pycv/).
