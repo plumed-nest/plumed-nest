@@ -2,7 +2,7 @@ url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2019/
 pname: SAXS ensembles using Martini-Beads multi-scale SAXS 
 category: methods 
 keyw: metainference, SAXS, martini, ensemble determination, metadynamics, protein dynamics 
-plumed_version: 2.5
+plumed_version: 2.6
 contributor: Cristina Paissoni 
 doi: submitted
 history:
