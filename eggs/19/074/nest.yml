@@ -6,9 +6,10 @@ category: bio
 keyw: double helix, DNA, RNA, unwindability
 plumed_version: 2.5
 contributor: Giovanni Bussi
-doi: unpublished
+doi: 10.1073/pnas.1901086116 
 history:
   2019-10-04: original submission
+  2019-10-20: updated doi
 instructions: >
   Input files for unzipping simulations. Original simulations were
   done using PLUMED 1.3. This egg contains input files translated to
