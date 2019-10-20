@@ -1,8 +1,8 @@
-url: https://github.com/giorginolab/plumed2-pycv/archive/v2.6-pycv.zip 
+url: https://github.com/giorginolab/plumed2-pycv/releases/download/v2.6-pycv-v1.5/pycv-plumed-nest.zip 
 pname: PYCV - a PLUMED 2 Module Enabling the Rapid Prototyping of Collective Variables in Python 
 category: other
 keyw: Python, automatic differentiation 
-plumed_version: 2.6
+plumed_version: 2.5.2-mod 
 contributor: Toni Giorgino 
 doi: 10.21105/joss.01773 
 history:
