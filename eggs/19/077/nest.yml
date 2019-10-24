@@ -1,0 +1,12 @@
+url: https://archive.materialscloud.org/preview_file/ca2a18f61da2facf6f6748baec7c332b19a9cc84cd71a655/TBP.zip 
+pname: Molecular Recognition and Specificity of Biomolecules to Titanium Dioxide from MD Simulations 
+category: materials
+keyw: metadynamics, peptide-surface binding 
+plumed_version: 2.4
+contributor: Jim Pfaendtner 
+doi: unpublished 
+history:
+  2019-10-24: original submission
+instructions: >
+  The input files can be used to generate free energy profiles in the manuscript, using "sum_hills --hills *.HILLS --idw d1.z --kt 2.5 --mintozero".
+  GROMACS 5.1.2 package was used for MD simulations.
