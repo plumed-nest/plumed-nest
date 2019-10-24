@@ -6,7 +6,7 @@ the development and dissemination of PLUMED.
 The mission of the consortium is to transform the way researchers communicate the 
 protocols that are used in their MD simulations, in order to maximize the impact of 
 new research and promote the highest possible standards of scientific reproducibility.
-Researchers that share our vision are welcome to join! Just contact the coordinators listed below. 
+**Researchers that share our vision are welcome to join! Just contact the coordinators listed below.** 
 
 More information about the PLUMED consortium can be found here:
 
