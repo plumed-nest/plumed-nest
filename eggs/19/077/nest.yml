@@ -3,6 +3,23 @@ pname: Molecular Recognition and Specificity of Biomolecules to Titanium Dioxide
 category: materials
 keyw: metadynamics, peptide-surface binding 
 plumed_version: 2.4
+plumed_input:
+  - path: 12mer_NH.dat
+  - path: 12mer_NeNH.dat
+  - path: 6mer_NH.dat
+  - path: 6mer_NeNH.dat
+  - path: ARG_NH.dat
+  - path: ARG_NNH.dat
+  - path: ARG_NeH.dat
+  - path: ARG_NeNH.dat
+  - path: ASP_NH.dat
+  - path: ASP_NNH.dat
+  - path: ASP_NeH.dat
+  - path: ASP_NeNH.dat
+  - path: LYS_NH.dat
+  - path: LYS_NNH.dat
+  - path: LYS_NeH.dat
+  - path: LYS_NeNH.dat
 contributor: Jim Pfaendtner 
 doi: unpublished 
 history:
