@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/preview_file/b097046083409b275cc741f4a9a3a682b518d4d43f0aa11e/ITRE_plumed_inputs.zip 
+pname: Iterative unbiasing of quasi-equilibrium sampling 
+category: methods
+keyw: Metadynamics, reweighting 
+plumed_version: 2.5-mod
+contributor: Federico Giberti 
+doi: unpublished 
+history:
+  2019-10-31: original submission
+instructions: >
+The plumed.dat and input files can be used to run Metadynamics calculations of a Langevin particle in 2, 3 and 6 dimensions. This is achieved by moving 2 or 3 atoms in a potential identified by the components of their distances. The plumed_reweight.dat files are used to create the weights for the Metadynamics calculation, and reweight the biased trajectory to obtain the unbiased probability distribution. For the LJ-38 examples, the .zip file contains also the input data and input script for LAMMPS, as well as the plumed.dat for the Metadynamics and plumed_reweight.dat for the reweighting.
