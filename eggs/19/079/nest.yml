@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/preview_file/ef7f615b417d728d97d06ec4b47f5ab0339a45f4ce6f46d4/nest.zip 
+pname: Impact of Glutamate Carboxylation in the Adsorption of the alpha-1 Domain of Osteocalcin to Hydroxyapatite and Titania 
+category: bio
+keyw: metadynamics, peptide adsorption, parallel tempering, well-tempered ensemble 
+plumed_version: 2.4.2
+contributor: Sarah Alamdari 
+doi: unpublished 
+history:
+  2019-11-07: original submission
+instructions: >
+  Provided are the HILLS files for PT-MTD-WTE, as described in the corresponding paper, used to calculate free energy, example .tpr files used for each simulation, and a single .gro file. Simulations were all done in GROMACS.2018.3. 
