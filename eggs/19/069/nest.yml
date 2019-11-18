@@ -4,7 +4,7 @@ category: materials
 keyw: ibuprofen, crystal, solvent, surface 
 plumed_version: 2.3
 contributor: Matteo Salvalaglio
-doi: submitted
+doi: 10.1021/acs.cgd.9b00983 
 plumed_input:
   - path: ibuprofen_solvent_interfaces_input_and_plumed/002_face/plumed.dat 
     natoms: 200000
