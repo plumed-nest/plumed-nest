@@ -2,7 +2,7 @@ url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2019/
 pname: Martini-Beads multi-scale SAXS 
 category: methods 
 keyw: metainference, SAXS, martini, structure refinement, nucleic-acids, protein complex
-plumed_version: 2.5
+plumed_version: 2.6
 contributor: Carlo Camilloni 
 doi: 10.1107/S1600576719002450
 history:
