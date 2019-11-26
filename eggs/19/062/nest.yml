@@ -4,8 +4,9 @@ category: bio
 keyw: peptide folding, metadynamics, well-tempered ensemble, parallel tempering 
 plumed_version: 2.3
 contributor: Jim Pfaendtner 
-doi: submitted 
+doi: 10.1021/acs.biomac.9b01191 
 history:
   2019-08-15: original submission
+  2019-11-26: added doi
 instructions: >
   The necessary input files to reproduce simulations and analysis are available [here](https://github.com/UWPRG/ek-conformation-project). 
