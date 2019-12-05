@@ -4,8 +4,9 @@ category: methods
 keyw: metadynamics, reweighting
 plumed_version: 2.5-mod
 contributor: Federico Giberti 
-doi: unpublished 
+doi: 10.1021/acs.jctc.9b00907 
 history:
   2019-10-31: original submission
+  2019-12-05: doi added
 instructions: >
   The plumed.dat and input files can be used to run Metadynamics calculations of a Langevin particle in 2, 3 and 6 dimensions. This is achieved by moving 2 or 3 atoms in a potential identified by the components of their distances. The plumed_reweight.dat files are used to create the weights for the Metadynamics calculation, and reweight the biased trajectory to obtain the unbiased probability distribution. For the LJ-38 examples, the .zip file contains also the input data and input script for LAMMPS, as well as the plumed.dat for the Metadynamics and plumed_reweight.dat for the reweighting. Calculations have been carried out using the 'hack-the-tree' branch of PLUMED, available [here](https://github.com/plumed/plumed2/tree/hack-the-tree).
