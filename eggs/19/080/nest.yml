@@ -1,0 +1,35 @@
+url: https://uantwerpen.be/images/uantwerpen/personalpage31526/files/jpcl_ensemble_vibrations.zip  
+pname: Ensemble-Based Molecular Simulation of Chemical Reactions under Vibrational Non-Equilibrium
+category: methods
+keyw: ves, vibrational excitation, variationally enhanced sampling, chemical reactions
+plumed_version: 2.4.1
+contributor: Kristof Bal 
+doi: unpublished 
+plumed_input:
+  - path: ohco2/bend-fes/plumed.inp
+  - path: ohco2/asymm-sample/plumed.inp
+  - path: ohco2/symm-param/plumed.inp
+  - path: ohco2/symm-sample/plumed.inp
+  - path: ohco2/asymm-fes/plumed.inp
+  - path: ohco2/symm-fes/plumed.inp
+  - path: ohco2/bend-sample/plumed.inp
+  - path: ohco2/asymm-param/plumed.inp
+  - path: ohco2/bend-param/plumed.inp
+  - path: clch3cl/ch-fes/plumed.inp
+  - path: clch3cl/ccl-sample/plumed.inp
+  - path: clch3cl/ccl-param/plumed.inp
+  - path: clch3cl/ch-sample/plumed.inp
+  - path: clch3cl/ccl-fes/plumed.inp
+  - path: clch3cl/ch-param/plumed.inp
+  - path: h3/explicit/plumed.inp
+  - path: h3/param/plumed.inp
+  - path: h3/fes/plumed.inp
+  - path: h3/sample/plumed.inp
+history:
+  2019-12-09: original submission
+instructions: >
+  Used alongside with a recent LAMMPS version and a development version of CP2K (7.0 branch).  There are three types of calculations being done for each system reported in the publication. 
+ ** Sampling of a high-temperature distribution p*(u) along a CV u 
+ ** Parametrization of bias potential V(u) to reproduce p*(u) at low temperature 
+ ** Free energy calculation along a reaction coordinate s, under influence of V(u).
+ The attached examples are always for a vibrational temperature of 1500 K but other cases are fully analoguous. Required LAMMPS/CP2K inputs are also provided.
