@@ -29,7 +29,7 @@ history:
   2019-12-09: original submission
 instructions: >
   Used alongside with a recent LAMMPS version and a development version of CP2K (7.0 branch).  There are three types of calculations being done for each system reported in the publication. 
- ** Sampling of a high-temperature distribution p*(u) along a CV u 
- ** Parametrization of bias potential V(u) to reproduce p*(u) at low temperature 
- ** Free energy calculation along a reaction coordinate s, under influence of V(u).
+ * Sampling of a high-temperature distribution p*(u) along a CV u 
+ * Parametrization of bias potential V(u) to reproduce p*(u) at low temperature 
+ * Free energy calculation along a reaction coordinate s, under influence of V(u).
  The attached examples are always for a vibrational temperature of 1500 K but other cases are fully analoguous. Required LAMMPS/CP2K inputs are also provided.
