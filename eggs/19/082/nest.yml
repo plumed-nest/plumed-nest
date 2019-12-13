@@ -1,0 +1,11 @@
+url: https://github.com/gilgalad33/Ammonia-Borane-Dehydrogenation/archive/master.zip 
+pname: Ammonia Borane Dehydrogenation 
+category: chemistry 
+keyw: metadynamics, reaction discovery, hydrogen production, chemistry 
+plumed_version: 2.5
+contributor: Valerio Rizzi
+doi: 10.1002/anie.201900134 
+history:
+  2019-12-13: original submission
+instructions: >
+ The simulations were run on CP2K 5.1. 
