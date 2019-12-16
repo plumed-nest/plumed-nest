@@ -4,8 +4,9 @@ category: bio
 keyw: metadynamics, peptide adsorption, parallel tempering, well-tempered ensemble 
 plumed_version: 2.4.2
 contributor: Sarah Alamdari 
-doi: unpublished 
+doi: 10.1039/C9ME00158A 
 history:
   2019-11-07: original submission
+  2019-12-16: updated DOI 
 instructions: >
   Provided are the HILLS files for PT-MTD-WTE, as described in the corresponding paper, used to calculate free energy, example .tpr files used for each simulation, and a single .gro file. Simulations were all done in GROMACS.2018.3. 
