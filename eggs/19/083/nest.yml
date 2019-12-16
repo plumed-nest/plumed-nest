@@ -1,0 +1,11 @@
+url: https://github.com/gilgalad33/Chemical_pathway_search/archive/master.zip 
+pname: Blind Search for Complex Chemical Pathways Using Harmonic Linear Discriminant Analysis 
+category: chemistry 
+keyw: metadynamics, chemical reactions, reaction discovery 
+plumed_version: 2.5
+contributor: Valerio Rizzi
+doi: 10.1021/acs.jctc.9b00358 
+history:
+  2019-12-16: original submission
+instructions: >
+ The simulations were run on CP2K 5.1. 
