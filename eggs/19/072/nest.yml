@@ -6,9 +6,9 @@ category: bio
 keyw: metadynamics, RNA, NMR
 plumed_version: 2.4
 contributor: Giovanni Bussi
-doi: unpublished
+doi: 10.1093/nar/gkz1184/5691221
 history:
   2019-09-26: original submission
+  2020-01-01: added doi
 instructions: >
   Input files for RECT simulations with MAXENT using NMR restraints.
-  Paper is in preparation.
