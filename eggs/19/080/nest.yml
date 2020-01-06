@@ -1,10 +1,10 @@
-url: https://uantwerpen.be/images/uantwerpen/personalpage31526/files/jpcl_ensemble_vibrations.zip  
-pname: Ensemble-Based Molecular Simulation of Chemical Reactions under Vibrational Non-Equilibrium
+url: https://pubs.acs.org/doi/suppl/10.1021/acs.jpclett.9b03356/suppl_file/jz9b03356_si_002.zip 
+pname: Ensemble-Based Molecular Simulation of Chemical Reactions under Vibrational Nonequilibrium 
 category: methods
-keyw: ves, vibrational excitation, variationally enhanced sampling, chemical reactions
+keyw: ves, variationally enhanced sampling, vibrational excitation, chemical reactions 
 plumed_version: 2.4.1
 contributor: Kristof Bal 
-doi: unpublished 
+doi: 10.1021/acs.jpclett.9b03356 
 plumed_input:
   - path: ohco2/bend-fes/plumed.inp
   - path: ohco2/asymm-sample/plumed.inp
@@ -27,5 +27,6 @@ plumed_input:
   - path: h3/sample/plumed.inp
 history:
   2019-12-09: original submission
+  2020-01-06: url and doi updated
 instructions: >
-  Used alongside with a recent LAMMPS version and a development version of CP2K (7.0 branch).  There are three types of calculations being done for each system reported in the publication. * Sampling of a high-temperature distribution p*(u) along a CV u. * Parametrization of bias potential V(u) to reproduce p*(u) at low temperature. * Free energy calculation along a reaction coordinate s, under influence of V(u). The attached examples are always for a vibrational temperature of 1500 K but other cases are fully analoguous. Required LAMMPS/CP2K inputs are also provided.
+  Used with a recent LAMMPS snapshot and a development version of CP2K (7.0 branch). There are three types of calculations being done for each system reported in the publication, and representative inputs are provided for all of them. These are (1) Sampling of a high-temperature distribution p(u) along a CV u. (2) Parametrization of a bias potential V(u) to reproduce p(u) at low temperature. (3) Free energy calculation along a reaction coordinate s, under influence of V(u). The attached examples are always for a vibrational temperature of 1500 K but other cases are fully analoguous. Required LAMMPS and CP2K inputs are also provided.
