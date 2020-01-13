@@ -11,7 +11,7 @@ plumed_input:
   - path: mm-egwas/run-c22/plumed.dat
     nreplicas: 2
 instructions: >
-  this is a metadynamic metainference calculation using chemical shifts, residual dipolar coupling and chemical shifts 
+  this is a metadynamic metainference calculation using j-couplings, residual dipolar coupling and chemical shifts 
   to infere the intramolecular dynamics of a short peptide. By using multiple force-fields it is possible to show how the
   final result converges towards a common conformational ensemble. Simulations are performed with gromacs 2016 or newer
 plumed_mpi: True
