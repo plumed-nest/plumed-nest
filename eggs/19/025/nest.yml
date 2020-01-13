@@ -9,7 +9,7 @@ nreplicas: 2
 history:
   2019-05-03: original submission
 plumed_input:
-  - path: mm-egwas/run-c22/plumed.dat
+  - mm-egwas/run-c22/plumed.dat
 instructions: >
   this is a metadynamic metainference calculation using j-couplings, residual dipolar coupling and chemical shifts 
   to infere the intramolecular dynamics of a short peptide. By using multiple force-fields it is possible to show how the
