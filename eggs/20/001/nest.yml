@@ -1,0 +1,15 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2020/sala20_b2m.zip
+pname: The unexpected biophysical properties of the crystalline state 
+category: bio
+keyw: metainference, metadynamics, NMR, protein dynamics, b2m, protein crystals 
+plumed_version: 2.6
+contributor: Carlo Camilloni 
+doi: unpublished 
+nreplicas: 2
+history:
+  2020-01-15: original submission
+plumed_input:
+instructions: >
+  this is a metadynamic metainference calculation using chemical shifts to infere the intramolecular dynamics of b2m. 
+  Simulations are performed with gromacs 2016 or newer
+plumed_mpi: True
