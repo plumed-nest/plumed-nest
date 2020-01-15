@@ -8,7 +8,6 @@ doi: unpublished
 nreplicas: 2
 history:
   2020-01-15: original submission
-plumed_input:
 instructions: >
   this is a metadynamic metainference calculation using chemical shifts to infere the intramolecular dynamics of b2m. 
   Simulations are performed with gromacs 2016 or newer
