@@ -4,7 +4,7 @@ category: bio
 keyw: molecular chaperones, Hsp70, protein folding, non equilibrium thermodynamics 
 plumed_version: 2.1
 contributor: Salvatore Assenza
-doi: unpublished 
+doi: 10.7554/eLife.48491 
 plumed_input:
   - path: Pulling/000000/pl1
   - path: Pulling/000000/pleq1
@@ -136,5 +136,6 @@ plumed_input:
   - path: Pulling/111111/pleq1
 history:
   2019-10-21: original submission
+  2020-01-25: updated doi
 instructions: >
   The Plumed script introduces a harmonic potential with moving center to perform steered Molecular Dynamics. This script is called by the main simulation script in.mix1 (located in the same folder), which implements the simulation in LAMMPS (tested on v. 10Aug15), built as described in IDP_potential_lammps/README. More info [here](https://arxiv.org/abs/1902.01612). 
