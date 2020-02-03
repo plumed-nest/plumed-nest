@@ -5,6 +5,10 @@ keyw: multiple walker metadynamics, well-tempered metadynamics, funnel metadynam
 plumed_version: 2.5 
 contributor: Riccardo Capelli 
 doi: 10.1021/acs.jctc.9b00118
+plumed_input:
+  - path: ratchet/rMD_plumed.dat
+  - path: funnel_metad/funnel_metad_plumed.dat 
+  - path: reweighting/reweighting.dat
 history:
   2020-02-03: original submission
 instructions: >
