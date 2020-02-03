@@ -1,0 +1,11 @@
+url: https://github.com/riccardocapelli/papers_data/raw/master/muscarinic_m2_2019/input_data.zip
+pname: Muscarinic M2 receptor-ligand funnel metadynamics 
+category: bio
+keyw: multiple walker metadynamics, well-tempered metadynamics, funnel metadynamics, MC-HLDA, GPCR, receptor, Adiabatic Bias MD 
+plumed_version: 2.5 
+contributor: Riccardo Capelli 
+doi: 10.1021/acs.jctc.9b00118
+history:
+  2020-02-03: original submission
+instructions: >
+  This egg contains (I) the structure and input files for the M2 muscarinic receptor with iperoxo (input folder), (II) the plumed file for Ratcheted MD (ratcheted folder), (III) the plumed file for funnel metadynamics (funnel_metad folder), and (IV) the input file for the reweighting procedure.
