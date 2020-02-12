@@ -1,0 +1,11 @@
+url: https://github.com/rocello/P-NESTs_files/raw/master/GABAB1_zip-4-NEST.zip 
+pname: Exploring conformational dynamics of the extracellular Venus flytrap domain of the GABAB receptor: a path-metadynamics study
+category: bio
+keyw: Metadynamics, path CVs 
+plumed_version: 2.4
+contributor: Riccardo Ocello 
+doi: unpublished 
+history:
+  2020-02-12: original submission
+instructions: >
+ The following plumed.dat script allows users to perform a Well-Tempered Metadynamics on Venus fly-trap GABAB receptor, in order to simulate conformational changes (open-to-closed), along the pathMSD CV previously parametrized from multiple classical MDs trajecories. All simulations were performed using GROMACS2016 and PLUMED 2.4 
