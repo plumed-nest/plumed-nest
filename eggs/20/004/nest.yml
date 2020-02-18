@@ -1,0 +1,11 @@
+url: https://github.com/luigibonati/data-driven-CVs/archive/master.zip 
+pname: Data-driven collective variables for enhanced sampling 
+category: methods 
+keyw: collective variables, machine learning, deep-lda 
+plumed_version: 2.5-dev 
+contributor: Luigi Bonati 
+doi: unpublished 
+history:
+  2020-02-18: original submission
+instructions: >
+ Inputs and codes to build a Deep-LDA collective variable by optimizing a neural network using Fisher's linear discriminant as the objective function, as described [here](https://arxiv.org/abs/2002.06562). PLUMED needs to be compiled with LibTorch (ver.<=1.2). 
