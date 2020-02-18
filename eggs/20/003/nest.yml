@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/file/2019.0010/v1/Enhanced_TS_Data.zip
+pname: Enhanced sampling of transition states 
+category: methods 
+keyw: Variationally Enhanced Sampling, Target distribution, Transition state, Enhanced Sampling, Nucleation, chemical reaction 
+plumed_version: 2.6-dev 
+contributor: Jayashrita Debnath 
+doi: 10.1021/acs.jctc.8b01283 
+history:
+  2020-02-13: original submission
+instructions: >
+ The input files can be used to rerun the simulations. CP2K-6.1 was used for the chemical reaction simulation while LAMMPS ( 22 August 2018 stable release) was used for the nucleation example. 
