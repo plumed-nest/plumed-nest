@@ -1,11 +1,12 @@
-url: https://github.com/limresgrp/FMAP_v1/raw/master/FM_NEST.zip
-pname: Funnel Metadynamics 
-category: bio 
-keyw: funnel-metadynamics, absolute binding free energy, ligand-receptor complexes 
-plumed_version: 2.3-mod
+url: https://github.com/limresgrp/FMAP_v1/raw/master/input_example.zip
+pname: Funnel Metadynamics
+category: bio
+keyw: funnel-metadynamics, absolute binding free energy, ligand-receptor complexes
+plumed_version: 2.6-dev
 contributor: Vittorio Limongelli
-doi: unpublished 
+doi: 10.1073/pnas.1303186110
 history:
   2019-05-07: original submission
+  2020-02-21: separate module
 instructions: >
-  To run from scratch [Funnel-Metadynamics](https://www.pnas.org/content/110/16/6358), please request the additional codes to be included in PLUMED to Vittorio Limongelli (vittoriolimongelli_AT_gmail.com).
+  Funnel-Metadynamics has been incorporated in PLUMED as a module. Please follow the instructions on how to install modules in PLUMED and add --enable-modules=funnel to configure PLUMED with Funnel-Metadynamics.
