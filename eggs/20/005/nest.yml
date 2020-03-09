@@ -6,10 +6,10 @@ plumed_version: 2.5
 contributor: Riccardo Capelli 
 doi: unpublished
 plumed_input:
-  - path: classical/FA-metaD/FA-MetaD_plumed.dat
-  - path: classical/WT-metaD/WT-MetaD_plumed.dat
-  - path: classical/ratchet/rMD_plumed.dat
-  - path: classical/reweighting/reweighting.dat
+  - path: input_data/classical/FA-metaD/FA-MetaD_plumed.dat
+  - path: input_data/classical/WT-metaD/WT-MetaD_plumed.dat
+  - path: input_data/classical/ratchet/rMD_plumed.dat
+  - path: input_data/classical/reweighting/reweighting.dat
 history:
   2020-03-09: original submission
 instructions: >
