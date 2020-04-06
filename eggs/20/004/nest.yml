@@ -4,8 +4,9 @@ category: methods
 keyw: collective variables, machine learning, deep-lda 
 plumed_version: 2.5-dev 
 contributor: Luigi Bonati 
-doi: unpublished 
+doi: 10.1021/acs.jpclett.0c00535 
 history:
   2020-02-18: original submission
+  2020-04-06: updated doi and instructions
 instructions: >
- Inputs and codes to build a Deep-LDA collective variable by optimizing a neural network using Fisher's linear discriminant as the objective function, as described [here](https://arxiv.org/abs/2002.06562). PLUMED needs to be compiled with LibTorch (ver.<=1.2). 
+ This egg contains the Pytorch interface and input files necessary to use a Deep-LDA collective variable, as well as additional code to reproduce the result reported in the paper. The Deep-LDA CV is constructed by optimizing a neural network using Fisher's linear discriminant as the objective function to maximize the separation between the states.  Note that the build fails because PLUMED needs to be manually compiled with LibTorch. We have released a Google Colab Notebook, available [here](https://colab.research.google.com/drive/1dG0ohT75R-UZAFMf_cbYPNQwBaOsVaAA) with a tutorial about the Deep-LDA CV training and the PLUMED configuration needed to use it. The code has been tested with the latest version of Pytorch (1.4).
