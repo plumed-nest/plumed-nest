@@ -1,0 +1,11 @@
+url: https://github.com/tiwarylab/T4-lysozyme-loop/raw/master/archive/nest.zip 
+pname: Discovering loop conformational flexibility in T4lysozyme mutants through artificial intelligence aided molecular dynamics 
+category: bio
+keyw: metadynamics, loop movement, artificial intelligence 
+plumed_version: 2.4.2
+contributor: Pratyush Tiwary 
+doi: unpublished
+history:
+  2020-04-07: original submission
+instructions: >
+  Use md.tpr to run GROMACS (version 2016.5p2.4.2) patched with PLUMED 2.4.2 using plumed.dat. The rmsd.pdb files are used for the quadratic wall preventing the systems from exploring conformations with distorted secondary structure. No wall was used for the triple mutant.
