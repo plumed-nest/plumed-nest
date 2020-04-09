@@ -1,0 +1,11 @@
+url: https://github.com/krossi19/metad-inputs/raw/master/metad-inputs.zip 
+pname: Simulating solvation and acidity in complex mixtures with first-principles accuracy. The case of CH3SO3H and H2O2 in phenol 
+category: chemistry
+keyw: proton trasfer, metadynamics 
+plumed_version: 2.5.1
+contributor: Kevin Rossi
+doi: unpublished
+history:
+  2020-04-09: original submission
+instructions: >
+ Example PLUMED input file (plumed.dat) and init.xyz configuration to perform proton transfer sampling and probe the acidity of CH3SO3H in phenol. 
