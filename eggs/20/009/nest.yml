@@ -1,0 +1,14 @@
+url: https://github.com/carlocamilloni/papers-data/raw/master/zip-for-nest/2020/polyubiquitin_files.zip
+pname:  
+category: bio
+keyw: saxs, martini, metainference, metadynamics, ubiquitin, protein dynamics
+plumed_version: 2.6
+contributor: Carlo Camilloni 
+doi: unpublished 
+nreplicas: 2
+history:
+  2020-04-14: original submission
+instructions: >
+  this is a metadynamic metainference Martini calculation using SAXS. 
+  Simulations are performed with gromacs 2016 or newer
+plumed_mpi: True
