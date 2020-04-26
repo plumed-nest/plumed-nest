@@ -1,0 +1,11 @@
+url: https://github.com/UWPRG/pbut_analysis/raw/master/plumed-nest.zip
+pname: Uremic toxin analysis 
+category: bio 
+keyw: metadynamics, uremic toxin, serum albumin 
+plumed_version: 2.4
+contributor: Jim Pfaendtner 
+doi: unpublished 
+history:
+  2020-04-26: original submission
+instructions: >
+ Basic demonstration of CV calculation in the associated paper.
