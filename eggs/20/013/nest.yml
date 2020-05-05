@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/file/2020.0049/v1/tiwithfg.zip 
+pname: Improving accuracy of biased Alchemistic simulations 
+category: methods
+keyw: flying Gaussian method, Alchemistic simulations, thermodynamic integration, reweighting 
+plumed_version: 2.5
+contributor: Vojtech Spiwok 
+doi: unpublished 
+history:
+  2020-05-05: original submission
+instructions: >
+ Input files (input structures, topology, Gromacs and Plumed input files, analysis scripts) for simulations used to demonstrate functionality of combined thermodynamic integration and flying Gaussian method. The method is demonstrated on N-acetylproline. Tested on OpenMPI 4.0.0, Gromacs 2018.5 and Plumed 2.5.0. Submission scripts are provided. 
