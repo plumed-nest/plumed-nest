@@ -1,0 +1,13 @@
+url: https://github.com/gthh2/amyloid-beta_small_mol/raw/master/Metadynamic_metainference/PLUMED_input_files.zip  
+pname: amyloid beta small molecule interaction 
+category: bio
+keyw: intrinsically disordered proteins, disordered proteins, IDPs, fuzzy binding, small molecule, drugs, entropy, binding, Alzheimer's disease, amyloid beta 
+plumed_version: 2.6.0
+contributor: Gabriella Heller
+doi: 10.1101/729392 
+nreplicas: 2
+history:
+  2020-05-08: original submission
+instructions: >
+ This study uses metadynamic metainference simulations restrained with NMR chemical shift data to determine the bound and unbound ensembles of a disordered peptide (amyloid beta) in the presence and absence of a small, drug-like molecule. We used PLUMED version 2.6.0 and GROMACS 2018.3.
+plumed_mpi: True
