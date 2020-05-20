@@ -291,7 +291,11 @@ def process_egg(path,eggdb=None):
             md5_=md5("file.zip")
             if md5_ != config["md5"] :
                raise ChecksumError("md5 not matching " + md5_)
-        zf = zipfile.ZipFile("file.zip", "r")
+        # try to open the zip file
+        try:
+          zf = zipfile.ZipFile("file.zip", "r")
+        except zipfile.BadZipFile:
+          exit(0)
         zf_namelist = zf.namelist()
         root=list(set([ x.split("/")[0] for x in zf_namelist]))
         # there is a main root directory
