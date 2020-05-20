@@ -295,7 +295,7 @@ def process_egg(path,eggdb=None):
         try:
           zf = zipfile.ZipFile("file.zip", "r")
         except zipfile.BadZipFile:
-          continue
+          return
         zf_namelist = zf.namelist()
         root=list(set([ x.split("/")[0] for x in zf_namelist]))
         # there is a main root directory
