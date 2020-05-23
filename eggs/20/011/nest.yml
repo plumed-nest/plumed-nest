@@ -4,8 +4,9 @@ category: bio
 keyw: metadynamics, uremic toxin, serum albumin 
 plumed_version: 2.4
 contributor: Jim Pfaendtner 
-doi: unpublished 
+doi: 10.1021/acs.jpcb.0c02015 
 history:
   2020-04-26: original submission
+  2020-05-23: updated doi
 instructions: >
  Basic demonstration of CV calculation in the associated paper.
