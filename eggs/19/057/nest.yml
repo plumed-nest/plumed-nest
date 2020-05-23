@@ -4,9 +4,10 @@ category: methods
 keyw: metainference, SAXS, martini, ensemble determination, metadynamics, protein dynamics 
 plumed_version: 2.6
 contributor: Cristina Paissoni 
-doi: 10.26434/chemrxiv.8798285.v1 
+doi: 10.1021/acs.jctc.9b01181 
 history:
   2019-07-03: original submission
+  2020-05-23: updated doi
 plumed_input:
   - path: diubq_k63/plumed-main.dat
     natoms: 117366

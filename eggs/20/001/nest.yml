@@ -4,7 +4,7 @@ category: bio
 keyw: metainference, metadynamics, NMR, protein dynamics, b2m, protein crystals 
 plumed_version: 2.6
 contributor: Carlo Camilloni 
-doi: unpublished 
+doi: 10.1101/2020.04.27.063909 
 nreplicas: 2
 history:
   2020-01-15: original submission

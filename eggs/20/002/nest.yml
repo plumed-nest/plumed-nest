@@ -4,8 +4,9 @@ category: bio
 keyw: Metadynamics, path CVs 
 plumed_version: 2.4
 contributor: Riccardo Ocello 
-doi: unpublished 
+doi: 10.1021/acs.jcim.0c00163 
 history:
   2020-02-12: original submission
+  2020-05-23: updated doi
 instructions: >
  The following plumed.dat script allows users to perform a Well-Tempered Metadynamics on Venus fly-trap GABAB receptor, in order to simulate conformational changes (open-to-closed), along the pathMSD CV previously parametrized from multiple classical MDs trajecories. All simulations were performed using GROMACS2016 and PLUMED 2.4 

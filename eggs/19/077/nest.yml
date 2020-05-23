@@ -21,9 +21,10 @@ plumed_input:
   - path: TBP/LYS_NeH.dat
   - path: TBP/LYS_NeNH.dat
 contributor: Jim Pfaendtner 
-doi: unpublished 
+doi: 10.1038/s41524-020-0288-7
 history:
   2019-10-24: original submission
+  2020-05-23: updated doi
 instructions: >
   The input files can be used to generate free energy profiles in the manuscript, using "sum_hills --hills *.HILLS --idw d1.z --kt 2.5 --mintozero".
   GROMACS 5.1.2 package was used for MD simulations.

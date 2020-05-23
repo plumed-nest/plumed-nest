@@ -4,8 +4,9 @@ category: bio
 keyw: metadynamics, well-tempered ensemble, ligand binding, binding affinity calculations, novel COLVAR, funnel restraints, Hamiltonian replica-exchange, PathCV, COMetPath, SWISH
 plumed_version: 2.4.2
 contributor: Francesco Gervasio 
-doi: unpublished 
+doi: 10.1021/acs.jctc.0c00075 
 history:
   2020-04-29: original submission
+  2020-05-23: updated doi
 instructions: >
  These are the input files used to fully converge the free energy landscapes of the human soluble epoxide hydrolase (sEH, PDB code 5AKK) using different methodologies, Funnel-shaped restraint metadynamics (fun-metaD), funnel-shaped restraint with SWISH (fun-SWISH) and COMetPath. The input files were used with GROMACS 2018.3 and PLUMED 2.4.2 using the AMBER99SB-disp force field. They include a novel COLVAR(ProjectionOnAxis.cpp) which is included in all directories. 

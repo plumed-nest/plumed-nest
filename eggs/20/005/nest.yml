@@ -4,7 +4,7 @@ category: bio
 keyw: Frequency-adaptive metadynamics, multiple-walkers metadynamics, well-tempered metadynamics, GPCR, receptor, Adiabatic Bias MD
 plumed_version: 2.5 
 contributor: Riccardo Capelli 
-doi: unpublished
+doi: 10.1101/2020.03.30.015396  
 plumed_input:
   - path: input_data/classical/FA-metaD/FA-MetaD_plumed.dat
   - path: input_data/classical/WT-metaD/WT-MetaD_plumed.dat
@@ -12,5 +12,6 @@ plumed_input:
   - path: input_data/classical/reweighting/reweighting.dat
 history:
   2020-03-09: original submission
+  2020-05-23: updated doi
 instructions: >
   This egg contains the structure and input files for the M2 muscarinic receptor with iperoxo calculations for both classical force field (with GROMACS 2018.6) and QM/MM (GROMACS+CPMD with MiMiC interface), the PLUMED files for Ratcheted MD (ratchet folder), well-tempered metadynamics (WT-MetaD folder), frequency-adaptive metadynamics (FA-MetaD), and reweighting procedure (reweighting).
