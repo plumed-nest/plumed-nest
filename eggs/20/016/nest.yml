@@ -1,0 +1,11 @@
+url: https://github.com/PabloPiaggi/PNAS-2018-Polymorphism/archive/master.zip 
+pname: Predicting polymorphism in molecular crystals using orientational entropy 
+category: materials
+keyw: metadynamics, polymorphism, urea, naphthalene, g(r), pair correlation, entropy 
+plumed_version: 2.6-dev
+contributor: Pablo Piaggi 
+doi: 10.1073/pnas.1811056115 
+history:
+  2020-05-23: original submission
+instructions: >
+ The simulations were performed with Gromacs 5.1.4. 
