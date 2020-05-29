@@ -289,7 +289,7 @@ def process_egg(path,eggdb=None):
         # try to download
         try:
          urllib.request.urlretrieve(url, 'file.zip')
-        except:
+        except urllib.error.URLError:
          return
         if "md5" in config:
             md5_=md5("file.zip")
