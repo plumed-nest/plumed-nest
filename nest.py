@@ -286,7 +286,11 @@ def process_egg(path,eggdb=None):
         if os.path.exists("download"):
            shutil.rmtree("download")
         os.mkdir("download")
-        urllib.request.urlretrieve(config["url"], 'file.zip')
+        # try to download
+        try:
+         urllib.request.urlretrieve(url, 'file.zip')
+        except:
+         return
         if "md5" in config:
             md5_=md5("file.zip")
             if md5_ != config["md5"] :
