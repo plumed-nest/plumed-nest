@@ -1,5 +1,5 @@
 url: https://github.com/PabloPiaggi/Crystallization-of-IceIh/archive/light.zip 
-pname: Melting temperature of a model of hexagonal ice from enhanced sampling molecular dynamics simulations
+pname: Phase equilibrium of liquid water and hexagonal ice from enhanced sampling molecular dynamics simulations
 category: materials
 keyw: water, ice, TIP4P, crystallization, EnvironmentSimilarity, RefCV, kernel, VES, variationally enhanced sampling 
 plumed_version: 2.6-dev
@@ -8,5 +8,6 @@ doi: 10.1063/5.0011140
 history:
   2020-04-15: original submission
   2020-05-29: updated doi
+  2020-06-03: updated title
 instructions: >
   The simulations were performed with LAMMPS and the master branch of PLUMED. The crystallization and ves modules of PLUMED have to be enabled. The light branch of the GitHub repository does not contain outputs. You can find output files for the simulations in the master branch [here](https://github.com/PabloPiaggi/Crystallization-of-IceIh). 
