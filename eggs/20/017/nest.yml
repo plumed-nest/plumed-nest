@@ -1,0 +1,17 @@
+url: https://github.com/hocky-research-group/plumed-nest-eggs/raw/master/fisst-plumed-nest.zip 
+pname: FISST 
+category: methods 
+keyw: FISST, force, peptide, sampling, tempering 
+plumed_version: 2.7
+plumed_input:
+  - path: ala10/ala10.plumed.dat
+  - path: beaded-helix/helix_fisst_fmin-2.0_fmax8.0_eps7.5_10000000.plumed.dat
+  - path: beaded-helix/helix_sf_f-4.5_eps7.5_10000000.plumed.dat
+  - path: v-shape-potential/v-shape.plumed.dat
+contributor: Glen Hocky 
+doi: unpublished
+history:
+  2020-06-04: original submission
+instructions: >
+ This file contains three examples. 1) An analytical 'v-shaped' potential, which is run with FISST using the PLUMED driver. It also contains a python script to analyze the results. 2) A toy helix model to run in LAMMPS (any version with PLUMED). This has an example of FISST and pulling with a single applied force on the ends. 3) FISST applied to ends of Alanine-10, to run in GROMACS (tested in 2018.6)  Each has a run_example.sh script that shows how to perform one representative simulation from the paper. More info [here](https://arxiv.org/abs/1910.14064).
+ 
