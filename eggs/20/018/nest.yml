@@ -1,0 +1,17 @@
+url: https://www.uantwerpen.be/images/uantwerpen/personalpage31526/files/jcp_fesbarrier.zip 
+pname: Free energy barriers from biased molecular dynamics simulations 
+category: methods 
+keyw: kinetics, free energy barriers, chemical reactions, nucleation, metadynamics 
+plumed_version: 2.6-mod
+plumed_input:
+ - path: da-tt/plumed.inp
+ - path: da-wt/plumed.inp
+ - path: dimer/plumed.inp
+ - path: na/plumed.inp
+contributor: Kristof Bal 
+doi: unpublished
+history:
+  2020-06-24: original submission
+instructions: >
+ Used with a recent LAMMPS snapshot and CP2K 7.1. A representative PLUMED input for each system or setup is provided. Extra codes are included. Matching LAMMPS and CP2K inputs are also provided. 
+ 
