@@ -4,8 +4,9 @@ category: bio
 keyw: metadynamics, well-tempered ensemble, multiple walkers, Parallel-tempering metadynamics, GPCRs, ligand binding 
 plumed_version: 2.4.3
 contributor: Francesco Gervasio 
-doi: unpublished
+doi: 10.1073/pnas.1921851117 
 history:
   2020-04-07: original submission
+  2020-06-27: updated doi
 instructions: >
   These are the input files used to fully converge the free energy landscapes of the glucagon receptor activation with and without G-protein. The input files were used with GROMACS 2016.3 and PLUMED 2.4.3 using the AMBER14SB force field, phospholipid topologies from LipidBook.
