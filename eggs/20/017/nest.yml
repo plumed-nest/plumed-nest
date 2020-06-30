@@ -9,9 +9,10 @@ plumed_input:
   - path: beaded-helix/helix_sf_f-4.5_eps7.5_10000000.plumed.dat
   - path: v-shape-potential/v-shape.plumed.dat
 contributor: Glen Hocky 
-doi: unpublished
+doi: 10.1063/5.0009280 
 history:
   2020-06-04: original submission
+  2020-06-30: updated doi
 instructions: >
  This file contains three examples. 1) An analytical 'v-shaped' potential, which is run with FISST using the PLUMED driver. It also contains a python script to analyze the results. 2) A toy helix model to run in LAMMPS (any version with PLUMED). This has an example of FISST and pulling with a single applied force on the ends. 3) FISST applied to ends of Alanine-10, to run in GROMACS (tested in 2018.6)  Each has a run_example.sh script that shows how to perform one representative simulation from the paper. More info [here](https://arxiv.org/abs/1910.14064).
  
