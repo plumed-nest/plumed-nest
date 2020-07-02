@@ -1,0 +1,12 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/Crystal-Energy-Landscapes.zip 
+pname: Systematic finite-temperature reduction of crystal energy landscapes 
+category: materials
+keyw: crystals, organics, structure prediction 
+plumed_version: 2.3-mod
+contributor: Matteo Salvalaglio 
+doi: unpublished
+history:
+  2020-07-02: original submission
+instructions: >
+ PLUMED files used to generate distributions and to perform metadynamics simulations in the context of the workflow discussed in the paper Systematic finite-temperature reduction of crystal energy landscapes by N. Francia et al. 
+ 
