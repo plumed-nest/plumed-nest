@@ -9,3 +9,4 @@ history:
   2020-07-06: original submission
 instructions: >
  PLUMED input files used in the original PBMETAD paper to simulate Trp-cage in implicit solvent.
+ A tpr file used with GROMACS version 5.05 is also included.
