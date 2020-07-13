@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/3941575/files/PLUMED_NEST_AncestralTS.zip 
+pname: Evolution of an interaction between disordered proteins resulted in increased heterogeneity of the binding transition state 
+category: bio
+keyw: phi-values, restrained MD, transition-state, protein folding, disordered proteins, protein evolution 
+plumed_version: 2.6
+contributor: Cristina Paissoni 
+doi: unpublished 
+history:
+  2020-07-13: original submission
+instructions: >
+  this is a restrained MD simulation using simulated annealing employed to model the transition state of a protein using phi-value data
+  it can be run using gromacs 2018 or more recent
