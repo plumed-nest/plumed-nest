@@ -1,0 +1,11 @@
+url: https://github.com/invemichele/OPESexpanded/archive/master.zip 
+pname: A Unified Approach to Enhanced Sampling 
+category: methods
+keyw: OPES, expanded ensembles, importance sampling 
+plumed_version: 2.6-dev
+contributor: Michele Invernizzi 
+doi: unpublished 
+history:
+  2020-07-14: original submission
+instructions: >
+  Perform replica-exchange-like sampling using a bias-potential method based on collective variables. Using OPES allows for fast convergence and requires extremely few external parameters. Only post-processing required is a simple umbrella-sampling reweighting.  The provided code is fully functional, but a more general implementation will be available as a separate PLUMED module, using a slightly different input syntax. More information on the method can be found [here](https://arxiv.org/abs/2007.03055). 
