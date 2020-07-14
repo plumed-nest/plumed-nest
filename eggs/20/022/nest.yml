@@ -2,7 +2,7 @@ url: https://github.com/invemichele/OPESexpanded/archive/master.zip
 pname: A Unified Approach to Enhanced Sampling 
 category: methods
 keyw: OPES, expanded ensembles, importance sampling 
-plumed_version: 2.6-dev
+plumed_version: 2.7
 contributor: Michele Invernizzi 
 doi: unpublished 
 history:
