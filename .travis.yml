@@ -13,8 +13,8 @@ install:
   - sudo apt install mpi-default-bin mpi-default-dev
   - sudo apt install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
   - sudo apt-get update
-  - pyenv install -v 3.6.3
-  - pyenv global 3.6.3
+  - pyenv versions 
+  - pyenv global 3.7
   - pip3 install PyYAML pytz
   - git clone --bare https://github.com/plumed/plumed2.git
   - export PATH="$HOME/opt/bin:$PATH"
