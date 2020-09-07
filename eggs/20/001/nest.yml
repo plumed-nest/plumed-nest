@@ -4,10 +4,11 @@ category: bio
 keyw: metainference, metadynamics, NMR, protein dynamics, b2m, protein crystals 
 plumed_version: 2.6
 contributor: Carlo Camilloni 
-doi: 10.1101/2020.04.27.063909 
+doi: 10.1016/j.bpj.2020.07.015 
 nreplicas: 2
 history:
   2020-01-15: original submission
+  2020-09-07: updated doi
 instructions: >
   this is a metadynamic metainference calculation using chemical shifts to infere the intramolecular dynamics of b2m. 
   Simulations are performed with gromacs 2018 or newer
