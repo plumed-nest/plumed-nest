@@ -1,0 +1,11 @@
+url: https://github.com/gilgalad33/Deep-LDA_LigandBinding_SAMPL5/archive/master.zip 
+pname: The role of water in host-guest interaction
+category: bio 
+keyw: ligand binding, water, opes, SAMPL5 
+plumed_version: 2.5-dev
+contributor: 
+doi: submitted 
+history:
+  2020-09-14: original submission
+instructions: >
+ This egg contains the input files for replicating ligand binding simulations from the SAMPL5 challenge with a Deep-LDA CV. The CV focuses on accelerating the water throughout the binding/unbinding events. For more information about Deep-LDA, we refer to [plumID:20.004](https://www.plumed-nest.org/eggs/20/004/). The CVs were trained with Pytorch version 1.4 and the simulations were run with Gromacs 2019.4.
