@@ -3,7 +3,7 @@ pname: The role of water in host-guest interaction
 category: bio 
 keyw: ligand binding, water, opes, SAMPL5 
 plumed_version: 2.5-dev
-contributor: 
+contributor: Valerio Rizzi 
 doi: submitted 
 history:
   2020-09-14: original submission
