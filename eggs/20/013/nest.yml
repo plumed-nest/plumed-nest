@@ -4,7 +4,7 @@ category: methods
 keyw: flying Gaussian method, Alchemistic simulations, thermodynamic integration, reweighting 
 plumed_version: 2.5
 contributor: Vojtech Spiwok 
-doi: unpublished 
+doi: 10.1016/j.cplett.2020.138012 
 history:
   2020-05-05: original submission
 instructions: >
