@@ -7,5 +7,6 @@ contributor: Vojtech Spiwok
 doi: 10.1016/j.cplett.2020.138012 
 history:
   2020-05-05: original submission
+  2020-09-23: updated doi
 instructions: >
  Input files (input structures, topology, Gromacs and Plumed input files, analysis scripts) for simulations used to demonstrate functionality of combined thermodynamic integration and flying Gaussian method. The method is demonstrated on N-acetylproline. Tested on OpenMPI 4.0.0, Gromacs 2018.5 and Plumed 2.5.0. Submission scripts are provided. 
