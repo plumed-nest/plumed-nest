@@ -2,11 +2,11 @@ url: https://github.com/invemichele/opes/archive/master.zip
 pname: Rethinking Metadynamics 
 category: methods
 keyw: metadynamics, opes, convergence 
-plumed_version: 2.6
+plumed_version: 2.7
 contributor: Michele Invernizzi 
 doi: 10.1021/acs.jpclett.0c00497 
 history:
   2019-09-18: original submission
   2020-03-24: added doi and description
 instructions: >
- On-the-fly Probability Enhanced Sampling (OPES) is a new method that, building on the long experience with metadynamics, aims at making enhanced sampling more efficient and easier to use. All the input files of the simulations in the paper are provided, together with the code and post-processing python scripts. You can try OPES yourself without recompiling PLUMED, by using the LOAD keyword (see examples).
+ On-the-fly Probability Enhanced Sampling (OPES) is a new method that, building on the long experience with metadynamics, aims at making enhanced sampling more efficient and easier to use. All the input files of the simulations in the paper are provided, together with the results and post-processing python scripts. From v2.7 OPES is included in PLUMED as a contributed module: https://www.plumed.org/doc-master/user-doc/html/_o_p_e_s.html.
