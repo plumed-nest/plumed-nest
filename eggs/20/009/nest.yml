@@ -4,10 +4,11 @@ category: bio
 keyw: saxs, martini, metainference, metadynamics, ubiquitin, protein dynamics
 plumed_version: 2.6
 contributor: Carlo Camilloni 
-doi: 10.1101/2020.04.14.041327 
+doi: 10.1126/sciadv.abc3786 
 nreplicas: 2
 history:
   2020-04-14: original submission
+  2020-10-15: updated doi
 instructions: >
   this is a metadynamic metainference Martini calculation using SAXS. 
   Simulations are performed with gromacs 2016 or newer
