@@ -9,9 +9,9 @@ history:
   2019-07-03: original submission
   2020-05-23: updated doi
 plumed_input:
-  - path: diubq_k63/plumed-main.dat
-    natoms: 117366
-    nreplicas: 2
+  - plumed-main.dat
+natoms: 117366
+nreplicas: 2
 instructions: >
   this is a metadynamics metainference calculation using SAXS for protein structural ensemble determination. Simulations can be run
   using GROMACS 2018.x and PLUMED-ISDB. This uses multiple replica simulations i.e. -multidir  
