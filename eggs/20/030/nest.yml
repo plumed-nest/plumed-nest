@@ -1,0 +1,11 @@
+url: https://zenodo.org/record/4196336/files/PLUMED_NEST_MJ0366.zip 
+pname: Converging experimental and computational views of the knotting mechanism of the smallest knotted protein 
+category: bio 
+keyw: phi-values, transition state, knotted proteins 
+plumed_version: 2.6
+contributor: Cristina Paissoni 
+doi: unpublished 
+history:
+  2020-11-02: original submission
+instructions: >
+  this is a phi-value restrained annealing MD simulations using GROMACS + PLUMED. The restraint strength is increased gradually. 
