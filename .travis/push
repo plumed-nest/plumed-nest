@@ -4,20 +4,15 @@ WHAT=$1
 
 set -x
 
-GIT_OWNER=$(  echo $TRAVIS_REPO_SLUG | sed "s/\/.*$//" )
-GIT_REPO=$(   echo $TRAVIS_REPO_SLUG | sed "s/^.*\///" )
+GIT_OWNER=plumed-nest
+GIT_REPO=plumed-nest
 
-if [[ "$TRAVIS_PULL_REQUEST" != false ]] ; then
-  echo "pull request, skipping push"
-  exit 0
-fi
-
-if [[ "$TRAVIS_BRANCH" = master ]] ; then
+if [[ "${GITHUB_REF##*/}" = master ]] ; then
   PUSH_REPO=plumed-nest/plumed-nest.github.io.git
-elif [[ "$TRAVIS_BRANCH" = test ]] ; then
+elif [[ "${GITHUB_REF##*/}" = test ]] ; then
   PUSH_REPO=plumed-nest/test-site.git
 else
-  echo "branch $TRAVIS_BRANCH, skipping push"
+  echo "branch ${GITHUB_REF##*/}, skipping push"
   exit 0
 fi
 
@@ -37,7 +32,7 @@ git init
 git config user.email giovanni.bussi+plumedbot@gmail.com
 git config user.name plumedbot
 set +x
-git remote add origin https://plumedbot:$GIT_TOKEN@github.com/$PUSH_REPO
+git remote add origin https://plumedbot:$PLUMED_NEST_GITHUB_TOKEN@github.com/$PUSH_REPO
 set -x
 
 # create README.md
@@ -54,7 +49,7 @@ cp $root/nest.png .
 cp $root/pigeon.png .
 cp $root/CNAME .
 
-if [[ "$TRAVIS_BRANCH" = test ]] ; then
+if [[ "${GITHUB_REF##*/}" = test ]] ; then
   sed "s/PLUMED-NEST/PLUMED-NEST-TEST-SITE/" _config.yml > _config.yml.tmp
   mv _config.yml.tmp _config.yml
   cat "baseurl: /test-site" >> _config.yml
@@ -64,5 +59,5 @@ fi
 git add --all .
 # >/dev/null to avoid excessive noise on travis log
 git commit -m "Update to @$hash" >/dev/null
-# -q and 2> is not to show the GIT_TOKEN on Travis log
+# -q and 2> is not to show the PLUMED_NEST_GITHUB_TOKEN log
 git push -q -f origin master 2> /dev/null 
