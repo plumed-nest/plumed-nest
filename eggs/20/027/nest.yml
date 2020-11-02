@@ -1,0 +1,14 @@
+url: https://github.com/Tenchberry/Allosteric_SARSCoV2_MetaD/raw/main/MetaD_MPro_His41.zip 
+pname: Allosteric Regulation of SARS-CoV-2 Protease. Towards Informed Structure-Based Drug Discovery 
+category: bio
+keyw: SARS-CoV2, MPro, Covid-19, Molecular Dynamics, Metadynamics, Computer-Aided Drug Discovery 
+plumed_version: 2.5
+plumed_input:
+  - path: MetaD_script.dat 
+  - path: MetaD_analysis.dat 
+contributor: Khaled Abdel-Maksoud 
+doi: 10.26434/chemrxiv.12967655.v2 
+history:
+  2020-10-09: original submission
+instructions: >
+ MetaD_script - Script for executing metadynamics simulation biasing over the His41 side chain dihedral within SARS-CoV2 main protease. MetaD_analysis - Outputs the evolution of the His41 side chain dihedrals and the His41-Cys145 dyad distance within SARS-CoV2 MPro simulations. 

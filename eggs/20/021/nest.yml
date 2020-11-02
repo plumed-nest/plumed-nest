@@ -1,10 +1,10 @@
 url: https://zenodo.org/record/3941575/files/PLUMED_NEST_AncestralTS.zip 
-pname: Evolution of an interaction between disordered proteins resulted in increased heterogeneity of the binding transition state 
+pname: Mapping the transition state for a binding reaction between ancient intrinsically disordered proteins. 
 category: bio
 keyw: phi-values, restrained MD, transition-state, protein folding, disordered proteins, protein evolution 
 plumed_version: 2.6
 contributor: Cristina Paissoni 
-doi: unpublished 
+doi: 10.1074/jbc.RA120.015645 
 history:
   2020-07-13: original submission
 instructions: >

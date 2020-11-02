@@ -4,8 +4,9 @@ category: chemistry
 keyw: proton trasfer, metadynamics 
 plumed_version: 2.5.1
 contributor: Kevin Rossi
-doi: unpublished
+doi: 10.1021/acs.jctc.0c00362 
 history:
   2020-04-09: original submission
+  2020-09-07: updated doi
 instructions: >
  Example PLUMED input file (plumed.dat) and init.xyz configuration to perform proton transfer sampling and probe the acidity of CH3SO3H in phenol. 

@@ -1,0 +1,14 @@
+url: https://github.com/HuixiaLu/well-tempered-metadynamics-on-wt.-onc.-KRas-4B-binding-on-the-anionic-membrane/archive/master.zip  
+pname: Well-tempered metadynamics on wt/onc KRas-4B, binding on the anionic membrane 
+category: bio
+keyw: metadynamics, KRas-4B, anionic membrane 
+plumed_version: 2.5
+plumed_input:
+  - path: wild-type/plumed-1.dat
+  - path: oncogenic/plumed-1.dat 
+contributor: Huixia Lu 
+doi: unpublished 
+history:
+  2020-10-26: original submission
+instructions: >
+ Use command line 'gmx mdrun -deffnm 800ns-metadynamics -v -plumed plumed-1.dat' to start the metadynamics simulation 

@@ -4,9 +4,10 @@ category: materials
 keyw: crystals, organics, structure prediction 
 plumed_version: 2.3-mod
 contributor: Matteo Salvalaglio 
-doi: unpublished
+doi: 10.1021/acs.cgd.0c00918 
 history:
   2020-07-02: original submission
+  2020-10-05: updated doi
 instructions: >
  PLUMED files used to generate distributions and to perform metadynamics simulations in the context of the workflow discussed in the paper Systematic finite-temperature reduction of crystal energy landscapes by N. Francia et al. 
  
