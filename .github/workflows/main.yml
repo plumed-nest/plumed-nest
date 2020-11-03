@@ -17,6 +17,14 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    - uses: actions/cache@v2
+      with:
+        path: |
+          ~/opt
+          ~/.ccache
+        key: ccache-${{ runner.os }}-${{ github.sha }}
+        restore-keys: ccache-${{ runner.os }}-
       
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
