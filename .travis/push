@@ -52,7 +52,7 @@ cp $root/CNAME .
 if [[ "${GITHUB_REF##*/}" = test ]] ; then
   sed "s/PLUMED-NEST/PLUMED-NEST-TEST-SITE/" _config.yml > _config.yml.tmp
   mv _config.yml.tmp _config.yml
-  cat "baseurl: /test-site" >> _config.yml
+  echo "baseurl: /test-site" >> _config.yml
   rm CNAME
 fi
 
