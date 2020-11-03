@@ -31,9 +31,7 @@ export GIT_BOT_EMAIL=giovanni.bussi+plumedbot@gmail.com
 git init
 git config user.email giovanni.bussi+plumedbot@gmail.com
 git config user.name plumedbot
-set +x
 git remote add origin https://plumedbot:$PLUMED_NEST_GITHUB_TOKEN@github.com/$PUSH_REPO
-set -x
 
 # create README.md
 cat > README.md << EOF
