@@ -1,0 +1,11 @@
+url: https://github.com/adpietropaolo/nanoshuttle/raw/main/nanoshuttle_simulations.zip 
+pname: Soft fluorescent nanoshuttles targeting receptors
+category: chemistry 
+keyw: polymers, receptors, nanoparticles, fluorescent probes 
+plumed_version: 2.7
+contributor: Adriana Pietropaolo
+doi: unpublished 
+history:
+  2020-11-10: original submission
+instructions: >
+  Open data of the enhanced sampling simulations of fluorescent soft nanoshuttles binding folate receptor alpha, varying the length of ethylene glycol repeating units (4, 8 or 16) as m04, m08 and m16 in this repository. PLUMED package (v. 2.7.0) was used within GROMACS v.2020.2.  The data include the coordinates belonging to the free-energy minimum of the complex, the topologies, the force field parameters and PLUMED files. 
