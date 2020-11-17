@@ -9,4 +9,4 @@ history:
   2020-07-14: original submission
   2020-11-17: moved to v2.8 and added doi
 instructions: >
-  Perform replica-exchange-like sampling using a bias-potential method based on collective variables. Using OPES allows for fast convergence and requires extremely few external parameters. Only post-processing required is a simple umbrella-sampling reweighting.  More information on the method can be found here [here](https://www.plumed.org/doc-master/user-doc/html/_o_p_e_s.html). 
+  Perform replica-exchange-like sampling using a bias-potential method based on collective variables. Using OPES allows for fast convergence and requires extremely few external parameters. Only post-processing required is a simple umbrella-sampling reweighting.  More information on the method can be found [here](https://www.plumed.org/doc-master/user-doc/html/_o_p_e_s.html). 
