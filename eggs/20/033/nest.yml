@@ -1,0 +1,12 @@
+url: https://github.com/vendruscolo-lab/Spike-OpeningTransitionEnsemble/raw/main/SpikeInput.zip 
+pname: COVID-19 Spike protein opening transition mechanism 
+category: bio 
+keyw: EMMI, CryoEM, COVID-19, Spike, Metainference 
+plumed_version: 2.6
+contributor: Faidon Brotzakis 
+doi: unpublished 
+history:
+  2020-11-25: original submission
+instructions: >
+ The deposited input files contain the following directories. 1) The "TOPO_MDP" directory containing the GROMACS topology and parameter files. 2) The "PRODUCTION" directory containing the plumed input file for EMMI and the associated companion files such as an index file, data GMM file (SARS_COV2.dat) and pdb files for the definition of the CVs. 3) The "ANALYSIS" directory containing the plumed histogram file to project the 2D FES using the equilibrated trajectory data COLVAR_final of the EMMI simulations. More information can be found [here](https://github.com/vendruscolo-lab/Spike-OpeningTransitionEnsemble). GROMACS 2018.6 double precision patched with PLUMED 2.6.0-dev was used.
+ 
