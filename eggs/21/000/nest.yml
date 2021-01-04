@@ -3,9 +3,6 @@ pname: Uremic toxin time scale dynamics
 category: bio
 keyw: uremic toxin, serum albumin, Time-structure Independent Components Analysis (tICA), Markov state models (MSMs) 
 plumed_version: 2.4
-plumed_input:
-  - path: MetaD_script.dat 
-  - path: MetaD_analysis.dat 
 contributor: Jim Pfaendtner 
 doi: unpublished 
 history:
