@@ -1,0 +1,11 @@
+url: https://github.com/tarsisferreira/Substrate-recognition-and-catalysis-by-glycosaminoglycan-sulfotransferases/raw/main/Substrate-recognition-and-catalysis-by-glycosaminoglycan-sulfotransferases-main.zip  
+pname: Substrate recognition and catalysis by glycosaminoglycan sulfotransferases 
+category: bio
+keyw: metadynamics, well-tempered metadynamics, puckering, coordination 
+plumed_version: 2.4
+contributor: Tarsis Ferreira 
+doi: unpublished 
+history:
+  2021-01-04: original submission
+instructions: >
+ These are the input files used to converge the puckering free energy landscapes of the acceptor uronic acid of the chicken 2-o-sulfotransferase (PDB code 4NDZ) and the water coordination around the catalytic histidine of the zebrafish 6-o-sulfotransferase. The input files were used with amber16 and PLUMED 2.3.8 for calculating the puckering metadynamics and GROMACS 2018.3 and PLUMED 2.4.2. 
