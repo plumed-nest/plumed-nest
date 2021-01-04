@@ -1,0 +1,14 @@
+url: https://github.com/UWPRG/pbut_tica-msm/raw/master/plumed-nest.zip 
+pname: Uremic toxin time scale dynamics 
+category: bio
+keyw: uremic toxin, serum albumin, Time-structure Independent Components Analysis (tICA), Markov state models (MSMs) 
+plumed_version: 2.4
+plumed_input:
+  - path: MetaD_script.dat 
+  - path: MetaD_analysis.dat 
+contributor: Jim Pfaendtner 
+doi: unpublished 
+history:
+  2021-01-04: original submission
+instructions: >
+ Basic plumed files used to determine residues key to the bound poses of uremic toxins in HSA's Sudlow site ii. Plumed files are used to analyze GROMACS (2016) trajectories. 
