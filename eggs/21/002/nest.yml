@@ -5,6 +5,7 @@ keyw: ice, water, SCAN, OPES, VES, multithermal, crystallization, environment si
 plumed_version: 2.7-dev
 contributor: Pablo Piaggi 
 doi: unpublished 
+nreplicas: 2
 history:
   2021-01-09: original submission
 instructions: >
