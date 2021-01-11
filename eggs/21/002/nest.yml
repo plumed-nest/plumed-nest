@@ -2,7 +2,7 @@ url: https://github.com/PabloPiaggi/PhaseEquilibriumWaterIceSCAN/archive/main.zi
 pname: Phase equilibrium of water with hexagonal and cubic ice using the SCAN functional 
 category: materials
 keyw: ice, water, SCAN, OPES, VES, multithermal, crystallization, environment similarity, refcv, reweighting 
-plumed_version: 2.7-dev
+plumed_version: 2.8
 contributor: Pablo Piaggi 
 doi: unpublished 
 nreplicas: 2
