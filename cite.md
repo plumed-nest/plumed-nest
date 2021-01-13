@@ -14,9 +14,8 @@ _Promoting transparency and reproducibility in enhanced molecular simulations_,
 
 Download citation:
 
-RIS format: <a id="risc">consortium as authors</a> | <a id="ris4">Plumed four + consortium as authors</a> | <a id="risa">full list of authors</a>
-
-BibTeX format: <a id="bibc">consortium as authors</a> | <a id="bib4">Plumed four + consortium as authors</a> | <a id="biba">full list of authors</a>
+RIS format: | <a id="risc">consortium as authors</a> | <a id="ris4">Plumed four + consortium as authors</a> | <a id="risa">full list of authors</a>
+BibTeX format: | <a id="bibc">consortium as authors</a> | <a id="bib4">Plumed four + consortium as authors</a> | <a id="biba">full list of authors</a>
 
 <script>
 const downloadToFile = (content, filename, contentType) => {
@@ -29,6 +28,12 @@ URL.revokeObjectURL(a.href);
 };
 document.querySelector('#risc').addEventListener('click', () => {
 const text = "hovno";
+downloadToFile(text, 'my-new-file.txt', 'text/plain');
+});
+URL.revokeObjectURL(a.href);
+};
+document.querySelector('#ris4').addEventListener('click', () => {
+const text = "prdel";
 downloadToFile(text, 'my-new-file.txt', 'text/plain');
 });
 </script>
