@@ -30,8 +30,6 @@ document.querySelector('#risc').addEventListener('click', () => {
 const text = "hovno";
 downloadToFile(text, 'my-new-file.txt', 'text/plain');
 });
-URL.revokeObjectURL(a.href);
-};
 document.querySelector('#ris4').addEventListener('click', () => {
 const text = "prdel";
 downloadToFile(text, 'my-new-file.txt', 'text/plain');
