@@ -18,7 +18,7 @@ RIS format: <a id="risc">consortium as authors</a> | <a id="ris4">Plumed four + 
 
 BibTeX format: <a id="bibc">consortium as authors</a> | <a id="bib4">Plumed four + consortium as authors</a> | <a id="biba">full list of authors</a>
 
-<scirpt>
+<script>
 const downloadToFile = (content, filename, contentType) => {
 const a = document.createElement('a');
 const file = new Blob([content], {type: contentType});
