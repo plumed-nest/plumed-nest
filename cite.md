@@ -27,143 +27,15 @@ a.click();
 URL.revokeObjectURL(a.href);
 };
 document.querySelector('#risc').addEventListener('click', () => {
-const text = "
-TY  - JOUR
-AU  - The PLUMED consortium,
-PY  - 2019
-DA  - 2019/08/01
-TI  - Promoting transparency and reproducibility in enhanced molecular simulations
-JO  - Nature Methods
-SP  - 670
-EP  - 673
-VL  - 16
-IS  - 8
-AB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analys is of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.
-SN  - 1548-7105
-UR  - https://doi.org/10.1038/s41592-019-0506-8
-DO  - 10.1038/s41592-019-0506-8
-ID  - Bonomi2019
-ER  - 
-";
+const text = "TY  - JOUR\nAU  - The PLUMED consortium,\nPY  - 2019\nDA  - 2019/08/01\nTI  - Promoting transparency and reproducibility in enhanced molecular simulations\nJO  - Nature Methods\nSP  - 670\nEP  - 673\nVL  - 16\nIS  - 8\nAB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.\nSN  - 1548-7105\nUR  - https://doi.org/10.1038/s41592-019-0506-8\nDO  - 10.1038/s41592-019-0506-8\nID  - Bonomi2019\nER  -";
 downloadToFile(text, 'plumed.ris', 'text/plain');
 });
 document.querySelector('#ris4').addEventListener('click', () => {
-const text = "
-TY  - JOUR
-AU  - Bonomi, Massimiliano
-AU  - Bussi, Giovanni
-AU  - Camilloni, Carlo
-AU  - Tribello, Gareth A.
-AU  - The PLUMED consortium,
-PY  - 2019
-DA  - 2019/08/01
-TI  - Promoting transparency and reproducibility in enhanced molecular simulations
-JO  - Nature Methods
-SP  - 670
-EP  - 673
-VL  - 16
-IS  - 8
-AB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.
-SN  - 1548-7105
-UR  - https://doi.org/10.1038/s41592-019-0506-8
-DO  - 10.1038/s41592-019-0506-8
-ID  - Bonomi2019
-ER  - 
-";
+const text = "TY  - JOUR\nAU  - Bonomi, Massimiliano\nAU  - Bussi, Giovanni\nAU  - Camilloni, Carlo\nAU  - Tribello, Gareth A.\nAU  - The PLUMED consortium,\nPY  - 2019\nDA  - 2019/08/01\nTI  - Promoting transparency and reproducibility in enhanced molecular simulations\nJO  - Nature Methods\nSP  - 670\nEP  - 673\nVL  - 16\nIS  - 8\nAB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.\nSN  - 1548-7105\nUR  - https://doi.org/10.1038/s41592-019-0506-8\nDO  - 10.1038/s41592-019-0506-8\nID  - Bonomi2019\nER  - ";
 downloadToFile(text, 'plumed.ris', 'text/plain');
 });
 document.querySelector('#risa').addEventListener('click', () => {
-const text = "
-TY  - JOUR
-AU  - Bonomi, Massimiliano
-AU  - Bussi, Giovanni
-AU  - Camilloni, Carlo
-AU  - Tribello, Gareth A.
-AU  - Banáš, Pavel
-AU  - Barducci, Alessandro
-AU  - Bernetti, Mattia
-AU  - Bolhuis, Peter G.
-AU  - Bottaro, Sandro
-AU  - Branduardi, Davide
-AU  - Capelli, Riccardo
-AU  - Carloni, Paolo
-AU  - Ceriotti, Michele
-AU  - Cesari, Andrea
-AU  - Chen, Haochuan
-AU  - Chen, Wei
-AU  - Colizzi, Francesco
-AU  - De, Sandip
-AU  - De La Pierre, Marco
-AU  - Donadio, Davide
-AU  - Drobot, Viktor
-AU  - Ensing, Bernd
-AU  - Ferguson, Andrew L.
-AU  - Filizola, Marta
-AU  - Fraser, James S.
-AU  - Fu, Haohao
-AU  - Gasparotto, Piero
-AU  - Gervasio, Francesco Luigi
-AU  - Giberti, Federico
-AU  - Gil-Ley, Alejandro
-AU  - Giorgino, Toni
-AU  - Heller, Gabriella T.
-AU  - Hocky, Glen M.
-AU  - Iannuzzi, Marcella
-AU  - Invernizzi, Michele
-AU  - Jelfs, Kim E.
-AU  - Jussupow, Alexander
-AU  - Kirilin, Evgeny
-AU  - Laio, Alessandro
-AU  - Limongelli, Vittorio
-AU  - Lindorff-Larsen, Kresten
-AU  - Löhr, Thomas
-AU  - Marinelli, Fabrizio
-AU  - Martin-Samos, Layla
-AU  - Masetti, Matteo
-AU  - Meyer, Ralf
-AU  - Michaelides, Angelos
-AU  - Molteni, Carla
-AU  - Morishita, Tetsuya
-AU  - Nava, Marco
-AU  - Paissoni, Cristina
-AU  - Papaleo, Elena
-AU  - Parrinello, Michele
-AU  - Pfaendtner, Jim
-AU  - Piaggi, Pablo
-AU  - Piccini, GiovanniMaria
-AU  - Pietropaolo, Adriana
-AU  - Pietrucci, Fabio
-AU  - Pipolo, Silvio
-AU  - Provasi, Davide
-AU  - Quigley, David
-AU  - Raiteri, Paolo
-AU  - Raniolo, Stefano
-AU  - Rydzewski, Jakub
-AU  - Salvalaglio, Matteo
-AU  - Sosso, Gabriele Cesare
-AU  - Spiwok, Vojtěch
-AU  - Šponer, Jiří
-AU  - Swenson, David W. H.
-AU  - Tiwary, Pratyush
-AU  - Valsson, Omar
-AU  - Vendruscolo, Michele
-AU  - Voth, Gregory A.
-AU  - White, Andrew
-PY  - 2019
-DA  - 2019/08/01
-TI  - Promoting transparency and reproducibility in enhanced molecular simulations
-JO  - Nature Methods
-SP  - 670
-EP  - 673
-VL  - 16
-IS  - 8
-AB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.
-SN  - 1548-7105
-UR  - https://doi.org/10.1038/s41592-019-0506-8
-DO  - 10.1038/s41592-019-0506-8
-ID  - Bonomi2019
-ER  - 
-";
+const text = "TY  - JOUR\nAU  - Bonomi, Massimiliano\nAU  - Bussi, Giovanni\nAU  - Camilloni, Carlo\nAU  - Tribello, Gareth A.\nAU  - Banáš, Pavel\nAU  - Barducci, Alessandro\nAU  - Bernetti, Mattia\nAU  - Bolhuis, Peter G.\nAU  - Bottaro, Sandro\nAU  - Branduardi, Davide\nAU  - Capelli, Riccardo\nAU  - Carloni, Paolo\nAU  - Ceriotti, Michele\nAU  - Cesari, Andrea\nAU  - Chen, Haochuan\nAU  - Chen, Wei\nAU  - Colizzi, Francesco\nAU  - De, Sandip\nAU  - De La Pierre, Marco\nAU  - Donadio, Davide\nAU  - Drobot, Viktor\nAU  - Ensing, Bernd\nAU  - Ferguson, Andrew L.\nAU  - Filizola, Marta\nAU  - Fraser, James S.\nAU  - Fu, Haohao\nAU  - Gasparotto, Piero\nAU  - Gervasio, Francesco Luigi\nAU  - Giberti, Federico\nAU  - Gil-Ley, Alejandro\nAU  - Giorgino, Toni\nAU  - Heller, Gabriella T.\nAU  - Hocky, Glen M.\nAU  - Iannuzzi, Marcella\nAU  - Invernizzi, Michele\nAU  - Jelfs, Kim E.\nAU  - Jussupow, Alexander\nAU  - Kirilin, Evgeny\nAU  - Laio, Alessandro\nAU  - Limongelli, Vittorio\nAU  - Lindorff-Larsen, Kresten\nAU  - Löhr, Thomas\nAU  - Marinelli, Fabrizio\nAU  - Martin-Samos, Layla\nAU  - Masetti, Matteo\nAU  - Meyer, Ralf\nAU  - Michaelides, Angelos\nAU  - Molteni, Carla\nAU  - Morishita, Tetsuya\nAU  - Nava, Marco\nAU  - Paissoni, Cristina\nAU  - Papaleo, Elena\nAU  - Parrinello, Michele\nAU  - Pfaendtner, Jim\nAU  - Piaggi, Pablo\nAU  - Piccini, GiovanniMaria\nAU  - Pietropaolo, Adriana\nAU  - Pietrucci, Fabio\nAU  - Pipolo, Silvio\nAU  - Provasi, Davide\nAU  - Quigley, David\nAU  - Raiteri, Paolo\nAU  - Raniolo, Stefano\nAU  - Rydzewski, Jakub\nAU  - Salvalaglio, Matteo\nAU  - Sosso, Gabriele Cesare\nAU  - Spiwok, Vojtěch\nAU  - Šponer, Jiří\nAU  - Swenson, David W. H.\nAU  - Tiwary, Pratyush\nAU  - Valsson, Omar\nAU  - Vendruscolo, Michele\nAU  - Voth, Gregory A.\nAU  - White, Andrew\nPY  - 2019\nDA  - 2019/08/01\nTI  - Promoting transparency and reproducibility in enhanced molecular simulations\nJO  - Nature Methods\nSP  - 670\nEP  - 673\nVL  - 16\nIS  - 8\nAB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.\nSN  - 1548-7105\nUR  - https://doi.org/10.1038/s41592-019-0506-8\nDO  - 10.1038/s41592-019-0506-8\nID  - Bonomi2019\nER  - ";
 downloadToFile(text, 'plumed.ris', 'text/plain');
 });
 </script>
