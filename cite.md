@@ -14,7 +14,7 @@ _Promoting transparency and reproducibility in enhanced molecular simulations_,
 
 Download citation:
 
-RIS format: [consortium as authors](bib/plumednest.ris) | [Plumed four + consortium as authors](bib/plumednest4.ris) | [full list of authors](bib/plumednest_full.ris)
+RIS format: <a id="risc">consortium as authors</a> | <a id="ris4">Plumed four + consortium as authors</a> | <a id="risa">full list of authors</a>
 
-BibTeX format: [consortium as authors](bib/plumednest.ris) | [Plumed four + consortium as authors](bib/plumednest4.ris) | [full list of authors](bib/plumednest_full.ris)
+BibTeX format: <a id="bibc">consortium as authors</a> | <a id="bib4">Plumed four + consortium as authors</a> | <a id="biba">full list of authors</a>
 
