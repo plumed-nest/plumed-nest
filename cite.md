@@ -12,9 +12,9 @@ the public repository of the PLUMED consortium [1], as plumID:XX.YYY"*.
 _Promoting transparency and reproducibility in enhanced molecular simulations_,
 [Nat. Methods 16, 670 (2019)](https://doi.org/10.1038/s41592-019-0506-8)
 
-Cite:
+Download citation:
 
-[RIS - consortium](bib/plumednest.ris) | [RIS - Plumed4 + consortium](bib/plumednest4.ris) | [RIS - full](bib/plumednest_full.ris)
+RIS format: [consortium as authors](bib/plumednest.ris) | [Plumed four + consortium as authors](bib/plumednest4.ris) | [full list of authors](bib/plumednest_full.ris)
 
-[BIB - consortium](bib/plumednest.bib) | [BIB - Plumed4 + consortium](bib/plumednest4.bib) | [BIB - full](bib/plumednest_full.bib)
+BibTeX format: [consortium as authors](bib/plumednest.ris) | [Plumed four + consortium as authors](bib/plumednest4.ris) | [full list of authors](bib/plumednest_full.ris)
 
