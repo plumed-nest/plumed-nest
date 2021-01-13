@@ -27,7 +27,7 @@ a.download = filename;
 a.click();
 URL.revokeObjectURL(a.href);
 };
-document.querySelector('#rics').addEventListener('click', () => {
+document.querySelector('#risc').addEventListener('click', () => {
 const text = "hovno";
 downloadToFile(text, 'my-new-file.txt', 'text/plain');
 });
