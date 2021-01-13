@@ -166,22 +166,4 @@ ER  -
 ";
 downloadToFile(text, 'plumed.ris', 'text/plain');
 });
-document.querySelector('#bibc').addEventListener('click', () => {
-const text = "
-@Article{Bonomi2019,
-author={{The PLUMED consortium}},
-title={Promoting transparency and reproducibility in enhanced molecular simulations},
-journal={Nature Methods},
-year={2019},
-month={Aug},
-day={01},
-volume={16},
-number={8},
-pages={670-673},
-abstract={The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analysis of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.},
-issn={1548-7105},
-doi={10.1038/s41592-019-0506-8},
-url={https://doi.org/10.1038/s41592-019-0506-8}
-}
-";
 </script>
