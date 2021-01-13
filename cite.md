@@ -27,24 +27,23 @@ a.click();
 URL.revokeObjectURL(a.href);
 };
 document.querySelector('#risc').addEventListener('click', () => {
-const text = "
-TY  - JOUR
-AU  - The PLUMED consortium,
-PY  - 2019
-DA  - 2019/08/01
-TI  - Promoting transparency and reproducibility in enhanced molecular simulations
-JO  - Nature Methods
-SP  - 670
-EP  - 673
-VL  - 16
-IS  - 8
-AB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analys is of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling molecular simulations.
-SN  - 1548-7105
-UR  - https://doi.org/10.1038/s41592-019-0506-8
-DO  - 10.1038/s41592-019-0506-8
-ID  - Bonomi2019
-ER  - 
-";
+const text = "TY  - JOUR";
+//AU  - The PLUMED consortium,
+//PY  - 2019
+//DA  - 2019/08/01
+//TI  - Promoting transparency and reproducibility in enhanced molecular simulations
+//JO  - Nature Methods
+//SP  - 670
+//EP  - 673
+//VL  - 16
+//IS  - 8
+//AB  - The PLUMED consortium unifies developers and contributors to PLUMED, an open-source library for enhanced-sampling, free-energy calculations and the analys //is of molecular dynamics simulations. Here, we outline our efforts to promote transparency and reproducibility by disseminating protocols for enhanced-sampling //molecular simulations.
+//SN  - 1548-7105
+//UR  - https://doi.org/10.1038/s41592-019-0506-8
+//DO  - 10.1038/s41592-019-0506-8
+//ID  - Bonomi2019
+//ER  - 
+//";
 downloadToFile(text, 'plumed.ris', 'text/plain');
 });
 document.querySelector('#ris4').addEventListener('click', () => {
