@@ -20,15 +20,15 @@ BibTeX format: <a id="bibc">consortium as authors</a> | <a id="bib4">Plumed four
 
 <scirpt>
 const downloadToFile = (content, filename, contentType) => {
-  const a = document.createElement('a');
-  const file = new Blob([content], {type: contentType});
-  a.href= URL.createObjectURL(file);
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(a.href);
+const a = document.createElement('a');
+const file = new Blob([content], {type: contentType});
+a.href= URL.createObjectURL(file);
+a.download = filename;
+a.click();
+URL.revokeObjectURL(a.href);
 };
 document.querySelector('#rics').addEventListener('click', () => {
-  const text = "hovno";
-  downloadToFile(text, 'my-new-file.txt', 'text/plain');
+const text = "hovno";
+downloadToFile(text, 'my-new-file.txt', 'text/plain');
 });
 </script>
