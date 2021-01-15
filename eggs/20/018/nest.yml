@@ -1,4 +1,4 @@
-url: https://www.uantwerpen.be/images/uantwerpen/personalpage31526/files/jcp_fesbarrier.zip 
+url: https://github.com/kbal/fesbarrier/archive/main.zip
 pname: Free energy barriers from biased molecular dynamics simulations 
 category: methods 
 keyw: kinetics, free energy barriers, chemical reactions, nucleation, metadynamics 
@@ -13,6 +13,7 @@ doi: 10.1063/5.0020240
 history:
   2020-06-24: original submission
   2020-09-23: updated doi
+  2020-12-02: fixed file links
 instructions: >
  Used with a recent LAMMPS snapshot and CP2K 7.1. A representative PLUMED input for each system or setup is provided. Extra codes are included. Matching LAMMPS and CP2K inputs are also provided. 
  
