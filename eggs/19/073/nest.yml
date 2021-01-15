@@ -4,8 +4,9 @@ category: materials
 keyw: metadynamics, MOF, MIL101Cr, conformational 
 plumed_version: 2.4
 contributor: Matteo Salvalaglio 
-doi: 10.26434/chemrxiv.9947228.v2 
+doi: 10.1002/adts.202000092 
 history:
   2019-10-03: original submission
+  2021-01-15: updated doi
 instructions: >
   PLUMED and GROMACS input files used to generate and analyse the trajectories discussed in the paper "On the role of enthalpic and entropic contributions on the conformational free energy landscape of MIL-101(Cr) building units". Additional relevant files can be found [here](https://www.plumed-nest.org/eggs/19/014/).
