@@ -1,4 +1,4 @@
-url: https://uantwerpen.be/images/uantwerpen/personalpage31526/files/jpcl_ensemble_vibrations.zip
+url: https://github.com/kbal/vibrationalensemble/archive/main.zip
 pname: Ensemble-Based Molecular Simulation of Chemical Reactions under Vibrational Nonequilibrium
 category: methods
 keyw: ves, variationally enhanced sampling, vibrational excitation, chemical reactions 
@@ -28,5 +28,6 @@ plumed_input:
 history:
   2019-12-09: original submission
   2020-01-06: url and doi updated
+  2020-12-02: fixed file links
 instructions: >
   Used with a recent LAMMPS snapshot and a development version of CP2K (7.0 branch). There are three types of calculations being done for each system reported in the publication, and representative inputs are provided for all of them. These are (1) Sampling of a high-temperature distribution p(u) along a CV u. (2) Parametrization of a bias potential V(u) to reproduce p(u) at low temperature. (3) Free energy calculation along a reaction coordinate s, under influence of V(u). The attached examples are always for a vibrational temperature of 1500 K but other cases are fully analoguous. Required LAMMPS and CP2K inputs are also provided.
