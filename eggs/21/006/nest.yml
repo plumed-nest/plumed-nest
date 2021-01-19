@@ -8,4 +8,4 @@ doi: unpublished
 history:
   2021-01-19: original submission
 instructions: >
- Some simple examples of different OPES target distributions, using alanine dipeptide in vacuum. These simulations where used to present the OPES method in the [this](https://arxiv.org/abs/2101.06991).
+ Some simple examples of different OPES target distributions, using alanine dipeptide in vacuum. These simulations where used to present the OPES method in the [this](https://arxiv.org/abs/2101.06991). The software used is GROMACS 2018 and PLUMED 2.8.
