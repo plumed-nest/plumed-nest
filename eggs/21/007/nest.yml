@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/record/file?record_id=725&filename=rosetta_mtd.tar.gz&file_id=1d739bb1-8310-4010-b0c4-c8aa43043115 
+pname: Sampling enhancement by metadynamics driven by machine learning and de novo protein modelling 
+category: bio 
+keyw: metadynamics, machine learning, protein folding 
+plumed_version: 2.4
+contributor: Vojtech Spiwok 
+doi: unpublished 
+history:
+  2021-01-25: original submission
+instructions: >
+ These files make it possible to rerun all simulations. The directory METAD contains input files for metadynamics (no folding events observed). The directory PT-METAD contains input files for parallel tempering metadynamics. All simulations were done using Gromacs 2016.4, Anncolvar 0.8, Plumed 2.4 and OpenMPI 4.0.0. 
