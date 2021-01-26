@@ -1,0 +1,11 @@
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2021/REM-FEP.zip
+pname: Multi-replica biased sampling for photoisomerization processes in conjugated polymers  
+category: methods 
+keyw: metadynamics, FEP, replica-exchange
+plumed_version: 2.7
+contributor: Adriana Pietropaolo 
+doi: unpublished 
+history:
+  2021-01-26: original submission
+instructions: >
+ Included are the PLUMED input files to run Metadynamics Hamiltonian Replica Exchange between ground and first two excited states of a 5-mer of poly(9,9-dioctylfluoren-2,7-diyl), as well as GROMACS topology and mdp files. Simulations have been run with GROMACS version 2020.2 equipped with PLUMED 2.7.
