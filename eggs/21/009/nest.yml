@@ -1,0 +1,19 @@
+url: https://github.com/kbal/nucleationrate/archive/main.zip 
+pname: Nucleation rates from small scale atomistic simulations and transition state theory 
+category: materials
+keyw: kinetics, free energy barriers, nucleation, droplets, metadynamics 
+plumed_version: 2.6
+contributor: Kristof Bal 
+doi: unpublished 
+plumed_input:
+  - path: nvt-committor/recross/plumed.inp
+  - path: nvt-committor/smd/plumed.inp
+  - path: npt-fes/plumed.inp
+  - path: npt-committor/recross/plumed.inp
+  - path: npt-committor/smd/plumed.inp
+  - path: nvt-fes/plumed.inp
+
+history:
+  2021-02-08: original submission
+instructions: >
+ Used with a recent LAMMPS snapshot (matching LAMMPS inputs are provided as well). 
