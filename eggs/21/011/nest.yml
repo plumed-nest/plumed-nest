@@ -6,9 +6,9 @@ plumed_version: 2.5.1
 contributor: Aaron Finney
 doi: unpublished 
 plumed_input:
-  - path: clusters.plmd
-  - path: cmumd.plmd 
-  - path: coordination-profiles.plmd 
+  - path: NaCl_at_graphite/clusters.plmd
+  - path: NaCl_at_graphite/cmumd.plmd 
+  - path: NaCl_at_graphite/coordination-profiles.plmd 
 history:
   2021-03-19: original submission
 instructions: >
