@@ -1,4 +1,4 @@
-url: https://github.com/mme-ucl/plumed-nest-data/raw/master/NaCl_at_graphite.zip 
+url: https://github.com/aaronrfinney/plumed-nest/raw/main/NaCl_at_graphite-cmumd.zip
 pname: CmuMD simulations of NaCl(aq) at graphite 
 category: chemistry 
 keyw: CmuMD, DFS clustering
@@ -6,10 +6,10 @@ plumed_version: 2.5.1
 contributor: Aaron Finney
 doi: unpublished 
 plumed_input:
-  - path: NaCl_at_graphite/clusters.plmd
-  - path: NaCl_at_graphite/cmumd.plmd 
-  - path: NaCl_at_graphite/coordination-profiles.plmd 
+  - path: NaCl_at_graphite-cmumd/clusters.plmd
+  - path: NaCl_at_graphite-cmumd/cmumd.plmd 
+  - path: NaCl_at_graphite-cmumd/coordination-profiles.plmd 
 history:
   2021-03-19: original submission
 instructions: >
-  To run CmuMD simulations using cmumd.plmd, download and install the CmuMD code [here](https://github.com/mme-ucl/CmuMD). Run using GROMACS (2018.6) according to e.g., *gmx mdrun -deffnm cmumd -cpi md.cpt -plumed cmumd.plmd*. The files *coordination-profiles.plmd* and *clusters.plmd* are PLUMED driver files for post-processing of MD trajectory files. They generate average coordination number profiles and information regarding ion clusters in solution.
+  Run using GROMACS (2018.6) according to e.g., *gmx mdrun -deffnm cmumd -cpi md.cpt -plumed cmumd.plmd*. The files *coordination-profiles.plmd* and *clusters.plmd* are PLUMED driver files for post-processing of MD trajectory files. They generate average coordination number profiles and information regarding ion clusters in solution. More info can be found [here](https://github.com/mme-ucl/CmuMD).
