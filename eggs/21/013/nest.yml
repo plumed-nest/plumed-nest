@@ -1,0 +1,30 @@
+url: https://github.com/kbal/vibrationscatalysis/archive/refs/heads/main.zip 
+pname: Role of vibrational excitation in heterogeneous catalysis 
+category: chemistry
+keyw: catalysis, vibrational excitation, free energy barriers, dissociation, chemisorption 
+plumed_version: 2.6 
+contributor: Kristof Bal 
+doi: unpublished 
+plumed_input:
+ - path: vibrationscatalysis-main/h2-diss/ni001/plumed.inp
+ - path: vibrationscatalysis-main/h2-diss/ni111-excited/plumed.inp
+ - path: vibrationscatalysis-main/h2-diss/ni111/plumed.inp
+ - path: vibrationscatalysis-main/h2-diss/ni211/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/asymm-sample/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/symm-param/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/symm-sample/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/bend-sample/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/asymm-param/plumed.inp
+ - path: vibrationscatalysis-main/ch4-base/bend-param/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni111-asymm/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni111-symm/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni001/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni111/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni111-bend/plumed.inp
+ - path: vibrationscatalysis-main/ch4-diss/ni211/plumed.inp
+ - path: vibrationscatalysis-main/h2-base/param/plumed.inp
+ - path: vibrationscatalysis-main/h2-base/sample/plumed.inp
+history:
+  2021-04-08: original submission
+instructions: >
+  Used with a recent LAMMPS snapshot. Matching LAMMPS inputs are provided as well, and seemingly missing LAMMPS input data should be available in the data/ dir. 
