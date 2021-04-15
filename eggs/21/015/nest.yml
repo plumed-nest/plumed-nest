@@ -1,0 +1,65 @@
+url: Coarse-grained metadynamics and umbrella sampling simulations to investigte interactions of carbohydrate-binding modules with chitin 
+pname: https://github.com/gcourtade/papers/raw/master/2021/CBM5-CBM73-MetaD-US/CBM5-CBM73-MetaD-US.zip 
+category: bio 
+keyw: metadynamics, umbrella sampling, coarse-grained, MARTINI, chitin, carbohydrate-binding module 
+plumed_version: 2.5
+contributor: Gaston Courtade 
+doi: unpublished 
+plumed_input:
+  - path: MetaD/CBM5/post_processing/coordination-groups.dat
+  - path: MetaD/CBM5/post_processing/calc-weights.dat
+  - path: MetaD/CBM5/plumed.dat
+  - path: MetaD/CBM73/post_processing/coordination-groups.dat
+  - path: MetaD/CBM73/post_processing/plumed_post_processing.dat
+  - path: MetaD/CBM73/plumed.dat
+  - path: US/CBM5/plumed12.dat
+  - path: US/CBM5/plumed13.dat
+  - path: US/CBM5/plumed11.dat
+  - path: US/CBM5/plumed10.dat
+  - path: US/CBM5/plumed14.dat
+  - path: US/CBM5/plumed15.dat
+  - path: US/CBM5/plumed17.dat
+  - path: US/CBM5/plumed8.dat
+  - path: US/CBM5/plumed9.dat
+  - path: US/CBM5/plumed16.dat
+  - path: US/CBM5/plumed4.dat
+  - path: US/CBM5/plumed5.dat
+  - path: US/CBM5/plumed18.dat
+  - path: US/CBM5/plumed7.dat
+  - path: US/CBM5/plumed6.dat
+  - path: US/CBM5/plumed19.dat
+  - path: US/CBM5/plumed21.dat
+  - path: US/CBM5/plumed2.dat
+  - path: US/CBM5/plumed3.dat
+  - path: US/CBM5/plumed20.dat
+  - path: US/CBM5/plumed22.dat
+  - path: US/CBM5/plumed1.dat
+  - path: US/CBM5/plumed0.dat
+  - path: US/CBM73/plumed12.dat
+  - path: US/CBM73/plumed13.dat
+  - path: US/CBM73/plumed11.dat
+  - path: US/CBM73/plumed10.dat
+  - path: US/CBM73/plumed14.dat
+  - path: US/CBM73/plumed15.dat
+  - path: US/CBM73/plumed17.dat
+  - path: US/CBM73/plumed8.dat
+  - path: US/CBM73/plumed9.dat
+  - path: US/CBM73/plumed16.dat
+  - path: US/CBM73/plumed4.dat
+  - path: US/CBM73/plumed5.dat
+  - path: US/CBM73/plumed18.dat
+  - path: US/CBM73/plumed7.dat
+  - path: US/CBM73/plumed6.dat
+  - path: US/CBM73/plumed19.dat
+  - path: US/CBM73/plumed21.dat
+  - path: US/CBM73/plumed2.dat
+  - path: US/CBM73/plumed3.dat
+  - path: US/CBM73/plumed20.dat
+  - path: US/CBM73/plumed22.dat
+  - path: US/CBM73/plumed1.dat
+  - path: US/CBM73/plumed0.dat
+history:
+  2021-04-15: original submission
+instructions: >
+  To run MetaD on CBM5, please use MetaD/CBM5/run_gmx.sh and the postprocessing script MetaD/CBM5/post_processing/Flow_post-processing.sh. To run MetaD on CBM73, please use MetaD/CBM73/run_gmx.sh and the postprocessing script MetaD/CBM73/post_processing/Flow_post-processing.sh. To run Umbrella Sampling simulations, please use US/CBM5/submit{0-22}.sh  and US/CBM73/submit{0-22}.sh. All simulations have been performed with PLUMED v2.5 and GROMACS 5.1.4.
+ 
