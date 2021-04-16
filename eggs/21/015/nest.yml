@@ -1,5 +1,5 @@
-url: Coarse-grained metadynamics and umbrella sampling simulations to investigte interactions of carbohydrate-binding modules with chitin 
-pname: https://github.com/gcourtade/papers/raw/master/2021/CBM5-CBM73-MetaD-US/CBM5-CBM73-MetaD-US.zip 
+url: https://github.com/gcourtade/papers/raw/master/2021/CBM5-CBM73-MetaD-US/CBM5-CBM73-MetaD-US.zip 
+pname: Coarse-grained metadynamics and umbrella sampling simulations to investigate interactions of carbohydrate-binding modules with chitin 
 category: bio 
 keyw: metadynamics, umbrella sampling, coarse-grained, MARTINI, chitin, carbohydrate-binding module 
 plumed_version: 2.5
