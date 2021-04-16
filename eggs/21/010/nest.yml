@@ -1,0 +1,12 @@
+url: https://github.com/physix-repo/glycine_strecker_plumed/raw/main/supplementary_files_archives.zip
+pname: Step by Step Strecker Amino Acid Synthesis from Ab Initio Prebiotic Chemistry 
+category: chemistry 
+keyw: Strecker reaction, free energy landscape, ab initio molecular dynamics, glycine, prebiotic synthesis
+plumed_version: 1.3
+contributor: Théo Magrino 
+doi: 10.1021/acs.jpclett.1c00194 
+history:
+  2021-03-08: original submission
+instructions: >
+ Supplementary files for [this](https://dx.doi.org/10.1021/acs.jpclett.1c00194) article. The files available here are necessary for reproducing work. Files MTD_X-Y_plumed.dat and MTD_X-Y_frames.dat contain respectively input files for PLUMED 1.3 and corresponding reference structures for path-based CVs definition. Files MTD_X-Y_plumed.dat and MTD_X-Y_frames.dat correspond to metadynamics that allows exploration between metastable states X and Y. Folders umbrella_sampling_X-Y contain each a serie of folders that correspond to umbrella sampling windows. Each folder contains plumed.dat and frames.dat input for plumed1.3. Umbrella sampling between metastable states X and Y is made of the comprehensive set of simulations contains in the umbrella_sampling_X-Y.
+ 

@@ -4,8 +4,9 @@ category: bio
 keyw: ligand binding, water, opes, SAMPL5 
 plumed_version: 2.5-dev
 contributor: Valerio Rizzi 
-doi: submitted 
+doi: 10.1038/s41467-020-20310-0 
 history:
   2020-09-14: original submission
+  2021-01-15: updated doi
 instructions: >
  This egg contains the input files for replicating ligand binding simulations from the SAMPL5 challenge with a Deep-LDA CV. The CV focuses on accelerating the water throughout the binding/unbinding events. For more information about Deep-LDA, we refer to [plumID:20.004](https://www.plumed-nest.org/eggs/20/004/). The CVs were trained with Pytorch version 1.4 and the simulations were run with Gromacs 2019.4.

@@ -1,0 +1,21 @@
+url: https://zenodo.org/record/4676091/files/PLUMED-NEST_chignolin.zip 
+pname: how to determine statistically accurate conformational ensembles 
+category: bio 
+keyw: metadynamics, metainference, errors, cv, SAXS, ensemble determination 
+plumed_version: 2.7
+contributor: Cristina Paissoni 
+doi: unpublished 
+history:
+  2021-04-09: original submission
+plumed_input:
+  - path: PLUMED-NEST_chignolin/Part1_MetaD_PBMetaD/plumed_ME2.dat
+  - path: PLUMED-NEST_chignolin/Part1_MetaD_PBMetaD/plumed_PB4.dat
+  - path: PLUMED-NEST_chignolin/Part1_MetaD_PBMetaD/plumed_PB20.dat
+  - path: PLUMED-NEST_chignolin/Part2_MM/plumed_PB4_prior.dat
+  - path: PLUMED-NEST_chignolin/Part2_MM/plumed_ME2_MM.dat
+    nreplicas: 2
+  - path: PLUMED-NEST_chignolin/Part2_MM/plumed_PB4_MM.dat
+    nreplicas: 2
+instructions: >
+  These are multiple walker metadynamics and PBMetaD simulation, some coupled with Metainference. The system simulated is chignolin and the experimental data are synthetic. Simulations can be run
+  using GROMACS 2020.x and PLUMED-ISDB. This uses multiple replica simulations i.e. -multidir  

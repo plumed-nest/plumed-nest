@@ -1,0 +1,11 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/Clustering_Sildenafil.zip 
+pname: Modeling the thermodynamics of conformational isomerism in solution via unsupervised clustering, the case of Sildenafil 
+category: materials 
+keyw: clustering, conformational isomers 
+plumed_version: 2.4
+contributor: Matteo Salvalaglio 
+doi: unpublished 
+history:
+  2020-11-17: original submission
+instructions: >
+ Examples of plumed files used to compute and print to file the instantaneous value of the 6 dihedral dihedral angles defining the conformational state of sildenafil in vacuum, solution and in the crystal phase. In solution the slowest of the dihedral angles is biased. The angles are used to construct 1D FES and to perform unsupervised clustering to identify highly populated conformational states. 

@@ -1,0 +1,12 @@
+url: https://github.com/PabloPiaggi/PhaseEquilibriumWaterIceSCAN/archive/main.zip 
+pname: Phase equilibrium of water with hexagonal and cubic ice using the SCAN functional 
+category: materials
+keyw: ice, water, SCAN, OPES, VES, multithermal, crystallization, environment similarity, refcv, reweighting 
+plumed_version: 2.8
+contributor: Pablo Piaggi 
+doi: unpublished 
+nreplicas: 2
+history:
+  2021-01-09: original submission
+instructions: >
+ The simulations were performed with LAMMPS, PLUMED, the DeePMD-kit and QuantumEspresso. 

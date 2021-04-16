@@ -7,8 +7,9 @@ plumed_input:
   - path: wild-type/plumed-1.dat
   - path: oncogenic/plumed-1.dat 
 contributor: Huixia Lu 
-doi: unpublished 
+doi: 10.1021/acs.jpclett.0c02809 
 history:
   2020-10-26: original submission
+  2021-01-15: updated doi
 instructions: >
  Use command line 'gmx mdrun -deffnm 800ns-metadynamics -v -plumed plumed-1.dat' to start the metadynamics simulation 

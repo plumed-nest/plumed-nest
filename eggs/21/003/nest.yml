@@ -1,0 +1,12 @@
+url: https://github.com/KULL-Centre/papers/raw/master/2021/aSYN-ahmed-et-al/metainf_input.zip 
+pname: aSYN SAXS metainference 
+category: bio 
+keyw: metainference, SAXS 
+plumed_version: 2.4
+contributor: Kresten Lindorff-Larsen 
+doi: 10.1101/2021.01.15.426794 
+nreplicas: 2
+history:
+  2021-01-14: original submission
+instructions: >
+ Input for metainference of alpha-Synuclein using SAXS data. GROMACS 2018.1 with PLUMED version 2.4.

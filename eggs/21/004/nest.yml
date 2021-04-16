@@ -1,0 +1,11 @@
+url: https://gitlab.iit.it/Dorothea.Gobbo/pathnest/-/raw/master/pathNEST.zip 
+pname: Machine Learning and Enhanced Sampling Simulations for Computing the Potential of Mean Force and Standard Binding Free Energy 
+category: bio 
+keyw: machine learning, well-tempered metadynamics, path collective variable, potential of mean force, standard binding free energy calculations, host-guest, protein-ligand unbinding 
+plumed_version: 2.5
+contributor: Dorothea Gobbo 
+doi: unpublished 
+history:
+  2021-01-14: original submission
+instructions: >
+ For all systems, gro and top are provided. In the folders HST-GST/CB8-G6 and GSK/3, the plumed_path.dat files are provided in order to run Well-Tempered MetaD with PCVs along the dissociation paths that have been optimized in terms of spacing between consecutive frames. The input files were used with GROMACS 2016.5 and PLUMED 2.5. 

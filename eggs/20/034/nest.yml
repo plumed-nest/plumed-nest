@@ -1,0 +1,11 @@
+url: https://github.com/sbottaro/COVID_RNA/raw/main/NEST.zip 
+pname: Conformational Ensembles of Non-Coding Elements in the SARS-CoV-2 Genome from Molecular Dynamics Simulations 
+category: bio 
+keyw: RNA, SARS-CoV-2, partial tempering 
+plumed_version: 2.5.3 
+contributor: Sandro Bottaro 
+doi: unpublished 
+history:
+  2020-12-11: original submission
+instructions: >
+ GROMACS 2019.4 patched with PLUMED 2.5.3. 

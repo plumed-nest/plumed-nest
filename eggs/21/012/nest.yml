@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/4645964/files/plumed-nest.zip 
+pname: NMR-Guided Rational Engineering of Endocellulase from Acidothermus Cellulolyticus for Reducing Product Inhibition 
+category: bio 
+keyw: funnel metadynamics 
+plumed_version: 2.3-mod
+contributor: Jim Pfaendtner 
+doi: unpublished 
+history:
+  2021-03-20: original submission
+  2021-03-29: updated link
+instructions: >
+  These simulations were run using GROMACS 2018.3, and PLUMED 2.3 compiled with funnel metadynamics files.

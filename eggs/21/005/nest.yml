@@ -1,0 +1,12 @@
+url: https://github.com/Tarakk/Crystallization/archive/main.zip 
+pname: Crystallization Collective Variable  
+category: methods
+keyw: Crystallization, Collective Variable, OPES, Structure Factor, Phase transitions, Deep-LDA 
+plumed_version: 2.7-mod
+contributor: Tarak Karmakar  
+doi: unpublished 
+history:
+  2021-01-15: original submission
+instructions: >
+ This entry includes all input files required to run OPES simulations with the Structure Factor Deep-LDA collective variable. The simulations were carried out in GROMACS-2019.4 patched with PLUMED-2.7-dev code. Additionally, it requires a PyTorch interface which is discussed [here](https://www.plumed-nest.org/eggs/20/004/).
+ 

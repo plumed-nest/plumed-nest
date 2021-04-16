@@ -7,8 +7,9 @@ plumed_input:
   - path: plumed.dat
   - path: plumed_WTMD.dat 
 contributor: Brandon Peters 
-doi: unpublished
+doi: 10.1371/journal.pone.0243313
 history:
   2020-10-05: original submission
+  2021-01-15: updated doi
 instructions: >
  There are the input files for well tempered metadynamics (WTMD) and umbrella sampling for 5-HT2B GPCR simulations with ligand, LSD. I run the PLUMED script as given for WTMD, "gmx grompp -f md.mdp -c lsd_final.gro -p topol.top -n index.ndx -o md_0_1_plumed.tpr" and "mpiexec mdrun_mpi -ntomp 2 -deffnm md_0_1_plumed -plumed plumed_WTMD.dat" and finally "plumed sum_hills --hills hills --outfile fes-lsd-final.dat". Then I run "python 2Dplot_contour_plumed" which gives the Free Energy Surface and the history of hills. I ran the script for restraint. "gmx grompp -f md.mdp -c lsd-final.gro -p topol.top -n index.ndx -o md_final_plumed_startnew2.tpr" and "gmx mdrun -ntmpi 1 -ntomp 16 -v -deffnm md_final_plumed_startnew2 -plumed plumed_restrain.dat". I follow [this tutorial](https://www.plumed.org/doc-v2.5/user-doc/html/belfast-4.html) closely using "create-restraint.sh". 
