@@ -1,0 +1,14 @@
+url: https://github.com//archive/d54b27a82ab828f4f7a2c168c2c8c8f02d08ce09.zip
+md5: a09f79551b4602fc53290a4bb0b3d0f1
+pname: MD SAXS GTPase associated center
+category: bio
+keyw: metadynamics, RNA, folding, SAXS
+plumed_version: 2.5
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2021-04-19: original submission
+plumed_input:
+  - input_files/plumed.dat
+instructions: >
+  The zip files contains the all the input files.
