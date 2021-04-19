@@ -9,4 +9,5 @@ doi: unpublished
 history:
   2021-04-19: original submission
 plumed_input:
-  - input_files/plumed.dat
+  - path: input_files/plumed.dat
+    natoms: 168751
