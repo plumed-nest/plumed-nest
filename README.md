@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/plumed-nest/plumed-nest.svg?branch=master)](https://travis-ci.org/plumed-nest/plumed-nest)
+[![CI](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml/badge.svg)](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/context:python)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/plumed-nest/plumed-nest.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/plumed-nest/plumed-nest/context:javascript)
@@ -9,7 +9,7 @@ This repository contains all the sources and scripts required to build the websi
 Documentation is still partial and will be improved. Meanwhile, you can find some note here.
 
 Each "project" uploaded through the [web form](https://www.plumed-nest.org/contribute.html) will result is a single directory
-in this repository, with a name corresponding to the ID associated to the project. Each ID is a unique progressive number. Each directory contains a single `nest.yml` file with some metadata. The reason why we use a full directory per project, rather than a single file, is that in the future we might add the possibility to upload small additional files related to your project on this repository. However, the bulk of your material is expected to be located elsewhere. This data is routinely analyzed by a script that runs on [Travis-CI](https://travis-ci.org/plumed-nest/plumed-nest) and that builds the real website.
+in this repository, with a name corresponding to the ID associated to the project. Each ID is a unique progressive number. Each directory contains a single `nest.yml` file with some metadata. The reason why we use a full directory per project, rather than a single file, is that in the future we might add the possibility to upload small additional files related to your project on this repository. However, the bulk of your material is expected to be located elsewhere. This data is routinely analyzed by a script that runs on [GitHub Actions](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml) and that builds the real website.
 
 The most important information is the URL of the zip file containing your material. This zip file is **not hosted on the PLUMED-NEST**. It could be included as a Supporting Material of a paper, it could be on a service such as [materials cloud](https://www.materialscloud.org/), on [arXiv](https://arxiv.org/), etc. In case you want to move your zip file elsewhere, you should modify the URL stored in the `nest.yml` file (or ask the maintainers to do it for you) so that at the next round the script will be able to find your data again. We currently only support zip files, but it would be easy to add more formats. Please open an issue if you would like us to do so!
 
@@ -36,7 +36,7 @@ Do not worry about following the instructions in the section immediately after t
 
 If you push a commit on branch `test`, the result will appear on www.plumed-nest.org/test-site. Use this to double check changes to the layout before committing to master branch. Feel free to force push this branch (with `git push -f origin yourbranch:test`), this branch is just used for testing.
 
-If the nest pages appear to be taking a long time to update you can check the progress of your build by looking at the [Travis page](https://travis-ci.org/plumed-nest/plumed-nest) and the progress of the [upload](https://github.com/plumed-nest/test-site/commits/master).
+If the nest pages appear to be taking a long time to update you can check the progress of your build by looking at the [GitHub Actions page](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml) and the progress of the [upload](https://github.com/plumed-nest/test-site/commits/master).
 
 ## Instructions for filling the yml file
 
@@ -92,7 +92,7 @@ The former syntax is more redundant but is the only one that would allow having 
 
 ### Optional fields
 
-**md5**: The MD5 checksum of your zip file. In case the md5 sum of the downloaded zip files does not match this one, the build will fail. The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the travis log upon failures. Example
+**md5**: The MD5 checksum of your zip file. In case the md5 sum of the downloaded zip files does not match this one, the build will fail. The checksum can be obtained a priori using the command line tool `md5`, or it can be seen in the GitHub actions log upon failures. Example
 ````
 url: https://github.com/srnas/shape-md/archive/476e47196772e5dc109018bc4c2447c5dc234381.zip
 # optional checksum to avoid stealth updates
