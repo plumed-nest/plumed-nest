@@ -31,8 +31,18 @@ jobs:
       with:
         python-version: 3.8
 
-    # Runs a single command using the runners shell
-    - name: Run
+    - name: Set paths
+      run: |
+        echo "$HOME/opt/bin" >> $GITHUB_PATH
+        echo "CPATH=$HOME/opt/include:$CPATH" >> $GITHUB_ENV
+        echo "INCLUDE=$HOME/opt/include:$INCLUDE" >> $GITHUB_ENV
+        echo "LIBRARY_PATH=$HOME/opt/lib:$LIBRARY_PATH" >> $GITHUB_ENV
+        echo "LD_LIBRARY_PATH=$HOME/opt/lib:$LD_LIBRARY_PATH" >> $GITHUB_ENV
+        echo "PYTHONPATH=$HOME/opt/lib/plumed/python:$PYTHONPATH" >> $GITHUB_ENV
+        # needed to avoid MPI warning
+        echo "OMPI_MCA_btl=^openib" >> $GITHUB_ENV
+
+    - name: Install software
       run: |
         sudo apt update
         sudo apt install mpi-default-bin mpi-default-dev
@@ -41,12 +51,6 @@ jobs:
         sudo apt-get update
         pip install PyYAML pytz
         git clone --bare https://github.com/plumed/plumed2.git
-        export PATH="$HOME/opt/bin:$PATH"
-        export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
-        export LIBRARY_PATH="$HOME/opt/lib:$LIBRARY_PATH"
-        export CPATH="$HOME/opt/include:$CPATH"
-        # needed to avoid MPI warning
-        export OMPI_MCA_btl="^openib"
         sudo ln -s ccache /usr/local/bin/mpic++
         export PATH=/usr/lib/ccache:${PATH}
         ccache -s
@@ -57,8 +61,13 @@ jobs:
         # GB: in addition, we install master version as plumed_master
         CXX="mpic++" .travis/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
         ccache -s
+    - name: Run
+      run: |
         python --version
         python nest.py
-        export PLUMED_NEST_GITHUB_TOKEN="${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}"
+    - name : Upload
+      env:
+        PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
+      run: |
         bash .travis/push $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*badge.svg") _config.yml _layouts _data assets _sass
 
