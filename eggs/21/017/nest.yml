@@ -1,0 +1,21 @@
+url: https://zenodo.org/record/4722960/files/plumed.tgz
+pname: All-atom simulations of the Vav1 AD construct
+category: bio
+keyw: metadynamics, parallel-bias, well-tempered 
+plumed_version: 2.5
+contributor: Simone Orioli 
+doi: unpublished
+history:
+  2021-04-27: original submission
+plumed_input:
+  - path: pbmetad/plumed.dat
+  - path: pbmetad/reweight.dat
+  - path: md/nmr_disp.dat
+  - path: md/nmr_c36m.dat
+  - path: md/cry_disp.dat
+  - path: md/cry_c36m.dat
+  - path: md/shootings.dat
+  - path: wtmetad/plumed.dat
+  - path: wtmetad/reweight.dat
+instructions: >
+    The scripts are needed to reproduce and reweight the metadynamics simulations (WTMetaD and PBMetaD) and to calculate the CVs from the all-atom MD simulations. Simulations have been performed with Gromacs 2018.6 and Plumed 2.5.0
