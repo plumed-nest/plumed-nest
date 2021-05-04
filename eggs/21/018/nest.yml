@@ -1,0 +1,11 @@
+url: https://github.com/riccardocapelli/papers_data/raw/master/LV-MetaD_2021/input_data.zip 
+pname: Localized Volume-based Metadynamics
+category: bio
+keyw: LV-MetaD, Volume-based MetaD, Metadynamics, Ligand binding, Induced-fit effects, Binding pose identification
+plumed_version: 2.6
+contributor: Riccardo Capelli
+doi: unpublished
+history:
+  2021-05-04: original submission
+instructions: >
+    All the input files to simulate MacroD1, MacroD2, and the studied mutants of MacroD2 (Y190N and I189R) in complex with ADPr using Gromacs 2019.2 are in the *input* folder.   In the *plumed_metad* folder 2 reference input files for parabolic and 1/3 sphere volume restraint are available.  In the *plumed_reweight* folder the reweight input file is available. 
