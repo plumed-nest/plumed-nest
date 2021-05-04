@@ -5,6 +5,15 @@ keyw: LV-MetaD, Volume-based MetaD, Metadynamics, Ligand binding, Induced-fit ef
 plumed_version: 2.6
 contributor: Riccardo Capelli
 doi: unpublished
+plumed_input:
+  - path: input_data/input/MacroD2_I189R_input/metad_35ang.dat
+  - path: input_data/input/MacroD1_para_input/metad_35ang.dat
+  - path: input_data/input/MacroD2_Y190N_input/metad_35ang.dat
+  - path: input_data/input/MacroD2_para_input/metad_35ang.dat
+  - path: input_data/input/MacroD2_sphere_input/metad_35ang.dat
+  - path: input_data/plumed_metad/metad_35ang_sphere.dat
+  - path: input_data/plumed_metad/metad_35ang_para.dat
+  - path: input_data/plumed_reweight/reweight_rho_hb.dat
 history:
   2021-05-04: original submission
 instructions: >
