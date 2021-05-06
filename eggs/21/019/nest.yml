@@ -8,4 +8,4 @@ doi: unpublished
 history:
   2021-05-06: original submission
 instructions: >
-    Example plumed files used for the generation of crystal cell fingerprints for the clustering and reduction of crystal energy landscapes. More information on the application of the method and on the implementation of the reduction workflow can be found on [here](https://github.com/mme-ucl/pypol). 
+    Example plumed files used for the generation of crystal cell fingerprints for the clustering and reduction of crystal energy landscapes. More information on the application of the method and on the implementation of the reduction workflow can be found [here](https://github.com/mme-ucl/pypol). 
