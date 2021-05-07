@@ -6,18 +6,18 @@ plumed_version: 2.8-mod
 contributor: Kristof Bal 
 doi: unpublished
 plumed_input:
-  - path: reweightedjarzynski-main/droplet/smd/plumed1.inp
-  - path: reweightedjarzynski-main/droplet/smd/plumed2.inp
-  - path: reweightedjarzynski-main/droplet/fes/plumed.inp
-  - path: reweightedjarzynski-main/dimer/smd/plumed1.inp
-  - path: reweightedjarzynski-main/dimer/smd/plumed2.inp
-  - path: reweightedjarzynski-main/dimer/fes/plumed.inp
-  - path: reweightedjarzynski-main/sn2/smd/plumed.inp
-  - path: reweightedjarzynski-main/sn2/fes/plumed.inp
-  - path: reweightedjarzynski-main/hbr/smd/plumed.inp
-  - path: reweightedjarzynski-main/hbr/fes/plumed.inp
-  - path: reweightedjarzynski-main/hbr/hlda/1/plumed.inp
-  - path: reweightedjarzynski-main/hbr/hlda/2/plumed.inp
+  - path: droplet/smd/plumed1.inp
+  - path: droplet/smd/plumed2.inp
+  - path: droplet/fes/plumed.inp
+  - path: dimer/smd/plumed1.inp
+  - path: dimer/smd/plumed2.inp
+  - path: dimer/fes/plumed.inp
+  - path: sn2/smd/plumed.inp
+  - path: sn2/fes/plumed.inp
+  - path: hbr/smd/plumed.inp
+  - path: hbr/fes/plumed.inp
+  - path: hbr/hlda/1/plumed.inp
+  - path: hbr/hlda/2/plumed.inp
 history:
   2021-05-07: original submission
 instructions: >
