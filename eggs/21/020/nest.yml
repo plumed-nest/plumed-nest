@@ -26,5 +26,5 @@ instructions: >
    as follows. 1) Perform a number of steered MD (SMD) runs along the reaction coordinate of choice. 2) Fit a neural network (NN) to the approximate free energy surface with the
    nn.py script. 3) Calculate the true free energy surface from a biased run, using the NN as bias potential, as a reweighted histogram.
    A matching nn.py script is provided for each system, and depends on scikit-learn and numpy. For the HBr system we also have inputs for the HLDA analysis, for
-   which you'll need G. Piccini's [scripts](https://github.com/piccig/HLDAUsed) with CP2K and LAMMPS (matching inputs provided). 
+   which you'll need G. Piccini's [scripts](https://github.com/piccig/HLDA) with CP2K and LAMMPS (matching inputs provided). 
    Processing of the SMD runs has to be done with the (also provided) nn.py scripts.
