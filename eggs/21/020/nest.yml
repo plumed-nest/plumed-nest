@@ -1,0 +1,30 @@
+url: https://github.com/kbal/reweightedjarzynski/archive/main.zip 
+pname: Reweighted Jarzynski sampling 
+category: methods
+keyw: free energies, steered MD, neural network, nonequilibrium work, nucleation, chemical reactions 
+plumed_version: 2.8-mod
+contributor: Kristof Bal 
+doi: unpublished
+plumed_input:
+  - path: reweightedjarzynski-main/droplet/smd/plumed1.inp
+  - path: reweightedjarzynski-main/droplet/smd/plumed2.inp
+  - path: reweightedjarzynski-main/droplet/fes/plumed.inp
+  - path: reweightedjarzynski-main/dimer/smd/plumed1.inp
+  - path: reweightedjarzynski-main/dimer/smd/plumed2.inp
+  - path: reweightedjarzynski-main/dimer/fes/plumed.inp
+  - path: reweightedjarzynski-main/sn2/smd/plumed.inp
+  - path: reweightedjarzynski-main/sn2/fes/plumed.inp
+  - path: reweightedjarzynski-main/hbr/smd/plumed.inp
+  - path: reweightedjarzynski-main/hbr/fes/plumed.inp
+  - path: reweightedjarzynski-main/hbr/hlda/1/plumed.inp
+  - path: reweightedjarzynski-main/hbr/hlda/2/plumed.inp
+history:
+  2021-05-07: original submission
+instructions: >
+   A simple enhanced sampling approach using a bias potential learned from a
+   nonequilibrium work distribution and the Jarzynski equality. LAMMPS, CP2K, and PLUMED inputs are provided. For each system, the workflow is
+   as follows. 1) Perform a number of steered MD (SMD) runs along the reaction coordinate of choice. 2) Fit a neural network (NN) to the approximate free energy surface with the
+   nn.py script. 3) Calculate the true free energy surface from a biased run, using the NN as bias potential, as a reweighted histogram.
+   A matching nn.py script is provided for each system, and depends on scikit-learn and numpy. For the HBr system we also have inputs for the HLDA analysis, for
+   which you'll need G. Piccini's [scripts](https://github.com/piccig/HLDAUsed) with CP2K and LAMMPS (matching inputs provided). 
+   Processing of the SMD runs has to be done with the (also provided) nn.py scripts.
