@@ -2,7 +2,7 @@ url: https://github.com/kbal/reweightedjarzynski/archive/main.zip
 pname: Reweighted Jarzynski sampling 
 category: methods
 keyw: free energies, steered MD, neural network, nonequilibrium work, nucleation, chemical reactions 
-plumed_version: 2.8-mod
+plumed_version: 2.8
 contributor: Kristof Bal 
 doi: unpublished
 plumed_input:
