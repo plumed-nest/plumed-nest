@@ -4,8 +4,9 @@ category: methods
 keyw: metadynamics, FEP, replica-exchange
 plumed_version: 2.7
 contributor: Adriana Pietropaolo 
-doi: unpublished 
+doi: 10.1063/5.0045944 
 history:
   2021-01-26: original submission
+  2021-05-08: updated DOI
 instructions: >
  Included are the PLUMED input files to run Metadynamics Hamiltonian Replica Exchange between ground and first two excited states of a 5-mer of poly(9,9-dioctylfluoren-2,7-diyl), as well as GROMACS topology and mdp files. Simulations have been run with GROMACS version 2020.2 equipped with PLUMED 2.7.
