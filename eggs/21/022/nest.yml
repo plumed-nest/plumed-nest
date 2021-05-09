@@ -1,0 +1,11 @@
+url: https://github.com/xinqiz/SiNP-Car9-paper1/raw/main/SiNP_Car9.zip 
+pname: Predictive theoretical framework for dynamic control of bio-inspired hybrid nanoparticle self-assembly 
+category: materials
+keyw: parallel bias metadynamics, adsorption, peptide 
+plumed_version: 2.4
+contributor: Xin Qi 
+doi: unpublished
+history:
+  2021-05-09: original submission
+instructions: >
+  Tested with GROMACS 2018 and PLUMED 2.4. 
