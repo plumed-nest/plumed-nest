@@ -1,0 +1,11 @@
+url: https://archive.materialscloud.org/record/file?filename=atlas_inputs_plumed.zip&file_id=0c6984fa-4ef7-454a-9bde-ded2d8e2a422&record_id=849 
+pname: ATLAS 
+category: methods
+keyw: Machine Learning, Metadynamics 
+plumed_version: 2.7-mod
+contributor: Federico Giberti 
+doi: unpublished
+history:
+  2021-05-09: original submission
+instructions: >
+  There are different simulations that can be performed in the files. Some of them require only plumed. For the peptides calculation GROMACS 2018.6 is required, and for the LJ cluster LAMMPS. The files contain also a launch.sh bash script that illustrates how to execute the calculation. ATLAS requires a file containing a Gaussian Mixture Model that in our case was estimated using PAMM. More info can be found [here](https://arxiv.org/abs/2011.07987). 
