@@ -11,5 +11,5 @@ history:
 instructions: >
  This egg contains the GROMACS topology files (0-TOPO), input files for equilibration (1-EQUIL), and production
  scripts (2-EMMI) to model conformational ensembles of ASCT2 from cryo-EM data. All the analysis programs and scripts
- are contained in the directory 3-ANALYSIS. Detailed instructions of the procedure to follow can be found in each directory.
+ are contained in the directory 3-ANALYSIS. The final models are contained in 4-PDBs. Detailed instructions of the procedure to follow can be found in each directory.
  PLUMED [GitHub ISDB branch](https://github.com/plumed/plumed2/tree/isdb) and GROMACS 2019.6 were used. 
