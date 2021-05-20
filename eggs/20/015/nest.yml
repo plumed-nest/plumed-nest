@@ -1,5 +1,5 @@
-url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2020/EMMI-ASCT2.zip 
-pname: Structural basis for stereospecific inhibition of ASCT2 from rational design 
+url: https://github.com/maxbonomi/EMMI-ASCT2/archive/refs/heads/main.zip
+pname: Rational design of ASCT2 inhibitors using an integrated experimental-computational approach
 category: bio
 keyw: ASCT2 transporter, small-molecules, cryo-EM, metainference 
 plumed_version: 2.6-dev
@@ -7,6 +7,7 @@ contributor: Max Bonomi
 doi: 10.1101/2020.05.29.124305 
 history:
   2020-05-20: original submission
+  2021-05-20: updated path and title
 instructions: >
  This egg contains the GROMACS topology files (0-TOPO), input files for equilibration (1-EQUIL), and production
  scripts (2-EMMI) to model conformational ensembles of ASCT2 from cryo-EM data. All the analysis programs and scripts
