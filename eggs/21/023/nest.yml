@@ -1,0 +1,11 @@
+url: https://zenodo.org/record/4804489/files/MRSE-PLUMED-Egg-arXiv-2007.06377.zip 
+pname: Multiscale Reweighted Stochastic Embedding (MRSE) - Deep Learning of Collective Variables for Enhanced Sampling 
+category: methods
+keyw: enhanced sampling, collective variables, machine learning 
+plumed_version: 2.7-mod
+contributor: Jakub Rydzewski
+doi: unpublished
+history:
+  2021-05-26: original submission
+instructions: >
+  See README.md for instructions. 
