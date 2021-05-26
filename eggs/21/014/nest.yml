@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, metainference, errors, cv, SAXS, ensemble determination 
 plumed_version: 2.7
 contributor: Cristina Paissoni 
-doi: unpublished 
+doi: 10.3389/fmolb.2021.694130
 history:
   2021-04-09: original submission
 plumed_input:
