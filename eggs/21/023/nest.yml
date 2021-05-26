@@ -5,6 +5,18 @@ keyw: enhanced sampling, collective variables, machine learning
 plumed_version: 2.7-mod
 contributor: Jakub Rydzewski
 doi: unpublished
+plumed_input:
+ - path: Data-mb/mb-wtm-bf4/plumed.dat
+ - path: Data-mb/mb-wtm-bf5/plumed.dat
+ - path: Data-mb/mb-wtm-bf7/plumed.dat
+ - path: Data-mb/mb-wtm-bf3/plumed.dat
+ - path: Data-ala1/ala1-vacuum-pt/plumed.dat
+ - path: Data-ala1/ala1-vacuum-wtm-rct-ustride-1-bf5/plumed.dat
+ - path: Data-ala1/ala1-vacuum-wtm-rct-ustride-1-bf2/plumed.dat
+ - path: Data-ala1/ala1-vacuum-wtm-rct-ustride-1-bf3/plumed.dat
+ - path: Data-ala1/ala1-vacuum-wtm-rct-ustride-1-bf10/plumed.dat
+ - path: Data-ala3/ala3-vacuum-wtm-rct-ustride-50-bf5/plumed.dat
+ - path: Data-ala3/ala3-vacuum-pt/plumed.dat
 history:
   2021-05-26: original submission
 instructions: >
