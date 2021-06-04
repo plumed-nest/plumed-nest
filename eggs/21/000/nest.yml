@@ -4,8 +4,9 @@ category: bio
 keyw: uremic toxin, serum albumin, Time-structure Independent Components Analysis (tICA), Markov state models (MSMs) 
 plumed_version: 2.4
 contributor: Jim Pfaendtner 
-doi: unpublished 
+doi: 10.1021/acs.jpcb.1c00221 
 history:
   2021-01-04: original submission
+  2021-06-04: updated doi
 instructions: >
  Basic plumed files used to determine residues key to the bound poses of uremic toxins in HSA's Sudlow site ii. Plumed files are used to analyze GROMACS (2016) trajectories. 
