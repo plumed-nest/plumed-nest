@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/4903970/files/T4P_MD_PLUMED.zip
+pname: Computational and biochemical analysis of type IV pilus dynamics and stability 
+category: bio
+keyw: molecular dynamics, calcium binding, Type IV pilus 
+plumed_version: 2.6 
+contributor: Yasaman Karami 
+doi: 10.1101/2021.04.14.439816 
+history:
+  2021-06-07: original submission
+instructions: >
+  All the input files (topology, setup, plumed files) for the MD simulations of the wild-type EHEC Type 4 Pilus studied in different conditions, i.e., in presence and absence of different ions, protonation states, and salt concentrations, as well as point mutations, are deposited here. The simulations were carried out using GROMACS 2019.4 package and PLUMED 2.6.0.
+ 
