@@ -5,9 +5,10 @@ category: bio
 keyw: metadynamics, RNA, folding, SAXS
 plumed_version: 2.5
 contributor: Giovanni Bussi
-doi: unpublished
+doi: 10.1093/nar/gkab459
 history:
   2021-04-19: original submission
+  2021-06-14: added DOI
 plumed_input:
   - path: input_files/plumed.dat
     natoms: 168751
