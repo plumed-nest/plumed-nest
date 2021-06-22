@@ -1,0 +1,12 @@
+url: https://github.com/fcolizzi/coevolution/blob/main/coevolution_input.zip 
+pname: Probing allosteric regulations with coevolution-driven molecular simulations 
+category: bio
+keyw: metadynamics, coevolution, allostery, adenylate cyclase 
+plumed_version: 2.4
+contributor: Francesco Colizzi 
+doi: unpublished 
+history:
+  2021-06-22: original submission
+instructions: >
+ Simulations have been performed with GROMACS 2018.3 and PLUMED 2.4.3.
+ 
