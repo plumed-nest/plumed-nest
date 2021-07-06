@@ -8,6 +8,5 @@ doi: unpublished
 history:
   2021-07-06: original submission
 instructions: >
- This egg contains the input files to reproduce the simulations with Deep-TDA of alanine folding, the multi-state hydrobromination of propene and a step-wise double intramolecular proton transfer reaction. 
-The egg also contains the input files needed for the training of the Deep-TDA CV. For this purpose we have made available a Google Colab Notebook [Deep-TDA tutorial](https://colab.research.google.com/drive/1TO7bAkmIznsdfea2i5NXfNtytJrnkkIt?usp=sharing).
+ This egg contains the input files to reproduce the simulations with Deep-TDA of alanine folding, the multi-state hydrobromination of propene and a step-wise double intramolecular proton transfer reaction. The egg also contains the input files needed for the training of the Deep-TDA CV. For this purpose we have made available a Google Colab Notebook [Deep-TDA tutorial](https://colab.research.google.com/drive/1TO7bAkmIznsdfea2i5NXfNtytJrnkkIt?usp=sharing).
  
