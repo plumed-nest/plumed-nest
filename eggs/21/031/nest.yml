@@ -1,0 +1,12 @@
+url: https://github.com/kszewc/KATP/raw/04d5b47312b5d434e7476dc8ace91148ac38dfef/PHOTOSWITCHABLE_SULFONYLUREAS/PLUMED_METADYNAMICS_SIMULATIONS/APO.zip 
+pname: Photo-switchable sulfonulureas in KATP channel 
+category: bio 
+keyw: metadynamics, photo-pharmacology, sulfonylureas potasium ion-channels 
+plumed_version: 2.6
+contributor: Katarzyna Walczewska-Szewc 
+doi: unpublished 
+history:
+  2021-07-13: original submission
+instructions: >
+ Each directory contain full set of GROMACS/PLUMED simulation input files together with an exemplary run script. 
+ 
