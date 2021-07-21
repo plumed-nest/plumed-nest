@@ -1,0 +1,12 @@
+url: https://github.com/ManuelPerisDiaz/Plumed/raw/main/PLUMED-NEST.zip 
+pname: Metal-coupled folding mechanism to metallothionein 
+category: bio 
+keyw: parallel bias metadynamics, well tempered metadynamics, metal binding, metalloprotein, zinc coordination 
+plumed_version: 2.6
+contributor: Manuel Peris Diaz 
+doi: unpublished 
+history:
+  2021-07-21: original submission
+instructions: >
+ The directory contain input files for GROMACS/PLUMED simulation and reweighing. 
+ 
