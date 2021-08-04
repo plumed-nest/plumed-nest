@@ -4,9 +4,10 @@ category: bio
 keyw: metadynamics, well-tempered ensemble, Parallel-tempering, EGFR, L858R, A763-Y764insFQEA, D770-N771insNPG, Delta-ELREA 
 plumed_version: 2.4
 contributor: Francesco Gervasio 
-doi: unpublished 
+doi: 10.7554/eLife.65824 
 history:
   2021-06-28: original submission
+  2021-08-04: updated doi
 instructions: >
  The simulations were run with Gromacs 2018.3 simulation engine. 
  

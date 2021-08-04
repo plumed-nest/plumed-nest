@@ -4,8 +4,9 @@ category: bio
 keyw: RNA, SARS-CoV-2, partial tempering 
 plumed_version: 2.5.3 
 contributor: Sandro Bottaro 
-doi: unpublished 
+doi: 10.1021/jacs.1c01094 
 history:
   2020-12-11: original submission
+  2021-08-04: updated doi
 instructions: >
  GROMACS 2019.4 patched with PLUMED 2.5.3. 

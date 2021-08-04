@@ -4,9 +4,10 @@ category: methods
 keyw: Crystallization, Collective Variable, OPES, Structure Factor, Phase transitions, Deep-LDA 
 plumed_version: 2.7-mod
 contributor: Tarak Karmakar  
-doi: unpublished 
+doi: 10.1080/00268976.2021.1893848
 history:
   2021-01-15: original submission
+  2021-08-05: updated doi
 instructions: >
  This entry includes all input files required to run OPES simulations with the Structure Factor Deep-LDA collective variable. The simulations were carried out in GROMACS-2019.4 patched with PLUMED-2.7-dev code. Additionally, it requires a PyTorch interface which is discussed [here](https://www.plumed-nest.org/eggs/20/004/).
  

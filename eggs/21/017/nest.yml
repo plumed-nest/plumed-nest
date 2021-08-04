@@ -4,9 +4,10 @@ category: bio
 keyw: metadynamics, parallel-bias, well-tempered 
 plumed_version: 2.5
 contributor: Simone Orioli 
-doi: unpublished
+doi: 10.1101/2021.05.10.443419 
 history:
   2021-04-27: original submission
+  2021-08-04: updated doi
 plumed_input:
   - path: plumed/pbmetad/plumed.dat
   - path: plumed/pbmetad/reweight.dat

@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, umbrella sampling, coarse-grained, MARTINI, chitin, carbohydrate-binding module 
 plumed_version: 2.5
 contributor: Gaston Courtade 
-doi: unpublished 
+doi: 10.1101/2021.04.25.441307 
 plumed_input:
   - path: MetaD/CBM5/post_processing/coordination-groups.dat
   - path: MetaD/CBM5/post_processing/calc-weights.dat
@@ -60,6 +60,7 @@ plumed_input:
   - path: US/CBM73/plumed0.dat
 history:
   2021-04-15: original submission
+  2021-08-04: updated doi
 instructions: >
   To run MetaD on CBM5, please use MetaD/CBM5/run_gmx.sh and the postprocessing script MetaD/CBM5/post_processing/Flow_post-processing.sh. To run MetaD on CBM73, please use MetaD/CBM73/run_gmx.sh and the postprocessing script MetaD/CBM73/post_processing/Flow_post-processing.sh. To run Umbrella Sampling simulations, please use US/CBM5/submit{0-22}.sh  and US/CBM73/submit{0-22}.sh. All simulations have been performed with PLUMED v2.5 and GROMACS 5.1.4.
  

@@ -4,12 +4,13 @@ category: chemistry
 keyw: CmuMD, DFS clustering
 plumed_version: 2.5.1
 contributor: Aaron Finney
-doi: unpublished 
+doi: 10.1039/D1SC02289J 
 plumed_input:
   - path: NaCl_at_graphite-cmumd/clusters.plmd
   - path: NaCl_at_graphite-cmumd/cmumd.plmd 
   - path: NaCl_at_graphite-cmumd/coordination-profiles.plmd 
 history:
   2021-03-19: original submission
+  2021-08-04: updated doi
 instructions: >
   Run using GROMACS (2018.6) according to e.g., *gmx mdrun -deffnm cmumd -cpi md.cpt -plumed cmumd.plmd*. The files *coordination-profiles.plmd* and *clusters.plmd* are PLUMED driver files for post-processing of MD trajectory files. They generate average coordination number profiles and information regarding ion clusters in solution. More info can be found [here](https://github.com/mme-ucl/CmuMD).

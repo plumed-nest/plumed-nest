@@ -4,7 +4,7 @@ category: methods
 keyw: enhanced sampling, collective variables, machine learning 
 plumed_version: 2.7
 contributor: Jakub Rydzewski
-doi: unpublished
+doi: 10.1021/acs.jpca.1c02869 
 plumed_input:
  - path: Data-mb/mb-wtm-bf4/plumed.dat
  - path: Data-mb/mb-wtm-bf5/plumed.dat
@@ -19,5 +19,6 @@ plumed_input:
  - path: Data-ala3/ala3-vacuum-pt/plumed.dat
 history:
   2021-05-26: original submission
+  2021-08-04: updated doi
 instructions: >
   See README.md for instructions. 
