@@ -4,9 +4,10 @@ category: bio
 keyw: path-CV, metadynamics, multiple-walker, dna
 plumed_version: 2.6
 contributor: Alberto Pérez-de-Alba-Ortíz
-doi: unpublished
+doi: 10.1101/2021.08.04.454872 
 history:
   2021-08-04: original submission
+  2021-08-05: updated doi
 instructions: >
  This allows to run multiple-path-metadynamics on the Watson-Crick-Franklin to Hoogsteen base-pairing transition of an A-T pair in DNA. It requires PLUMED compiled with MPI and with the Path-CV code provided within. It also requires an MD engine that can run parallel replicas. We use GROMACS 2018.8 compiled with MPI.
  
