@@ -6,8 +6,8 @@ plumed_version: 2.5.1
 contributor: Aaron Finney 
 doi: unpublished 
 plumed_input:
-  - path: flat-plumed.dat 
-  - path: rough-plumed.dat 
+  - path: CmuMD-NaCl/flat-plumed.dat 
+  - path: CmuMD-NaCl/rough-plumed.dat 
 history:
   2021-08-31: original submission
 instructions: >
