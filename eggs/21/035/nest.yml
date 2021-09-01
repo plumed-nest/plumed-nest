@@ -1,0 +1,12 @@
+url: https://github.com/aaronrfinney/plumed-nest/raw/main/CmuMD-NaCl.zip 
+pname: CmuMD simulations of NaCl(aq) at NaCl 
+category: chemistry 
+keyw: CmuMD, interface 
+plumed_version: 2.5.1
+contributor: Aaron Finney 
+doi: unpublished 
+history:
+  2021-08-31: original submission
+instructions: >
+ Run using GROMACS (2018.6) according to e.g., gmx mdrun -deffnm cmumd -plumed flat-plumed.dat.
+ 
