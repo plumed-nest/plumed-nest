@@ -1,0 +1,12 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/DHH1N_sampling.zip
+pname: Modelling the structure and interactions of intrinsically disordered peptides with multiple-replica, metadynamics-based sampling methods and force-field combinations 
+category: bio
+keyw: Bias Exchange Metadynamics, PTWTE-metaD
+plumed_version: 2.5.2
+contributor: Matteo Salvalaglio
+doi: unpublished
+history:
+  2021-09-02: original submission
+instructions: >
+ Input files for BEMD and PTWTE-metaD simulations. Simulations were performed with GROMACS, example .mdp files provided in the archive.
+ 
