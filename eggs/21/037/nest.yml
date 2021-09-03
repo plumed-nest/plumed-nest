@@ -1,0 +1,12 @@
+url: https://github.com/maxbonomi/bat-MD/archive/main.zip  
+pname: Molecular Dynamics simulations of RBD/hACE2 complexes 
+category: bio
+keyw: SARS-CoV-2, MD, hACE2, RBD
+plumed_version: 2.7
+contributor: Max Bonomi
+doi: unpublished
+history:
+  2021-09-03: original submission
+instructions: >
+ See [README.md](https://github.com/maxbonomi/bat-MD/#readme) for instructions.
+ 
