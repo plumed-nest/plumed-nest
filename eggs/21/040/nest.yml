@@ -1,0 +1,12 @@
+url: https://github.com/vendruscolo-lab/tau-microtubules/raw/main/tau-microtubulesInput.zip 
+pname: A structural ensemble of a tau-microtubule complex reveals regulatory tau phosphorylation and acetylation mechanisms 
+category: bio
+keyw: EMMI, CryoEM, tau-microtubules, post-translational modifications, chemical mutagenesis, structural ensemble, Metainference 
+plumed_version: 2.6
+contributor: Faidon Brotzakis 
+doi: 10.1101/2020.11.10.376285 
+history:
+  2021-09-16: original submission
+instructions: >
+ The deposited input files contain the following directories. 1) The “TOPO_MDP” directory containing the GROMACS topology and parameter files. 2) The “PRODUCTION” directory containing the plumed input file for EMMI and the associated companion files such as an index file, data GMM file (MT_TAU.dat) More information can be found [here](https://github.com/vendruscolo-lab/tau-microtubules). GROMACS 2018.6 double precision patched with PLUMED 2.6.0-dev was used. 
+ 
