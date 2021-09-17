@@ -7,7 +7,8 @@ contributor: Max Bonomi
 doi: unpublished
 history:
   2021-09-04: original submission
+  2021-09-17: updated DOI
 instructions: >
  This egg contains the [GROMACS](https://www.gromacs.org) topology and input files as well as the PLUMED/python analysis scripts needed to reproduce the Molecular Dynamics 
- simulations of 3 different spike-RBD/human-ACE2 complexes reported [here](). See [README.md](https://github.com/maxbonomi/bat-MD/#readme) for more information and detailed instructions.
+ simulations of 3 different spike-RBD/human-ACE2 complexes reported [here](https://www.researchsquare.com/article/rs-871965/v1). See [README.md](https://github.com/maxbonomi/bat-MD/#readme) for more information and detailed instructions.
  
