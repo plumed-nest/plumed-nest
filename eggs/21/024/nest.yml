@@ -1,4 +1,4 @@
-url: https://archive.materialscloud.org/record/file?record_id=881&file_id=1068f96e-1d71-4a9f-99f7-557308f968bc&filename=propertymapff.zip 
+url: https://archive.materialscloud.org/record/file?record_id=1039&filename=propertymapff.zip 
 pname: Property map collective variable as a useful tool for force field correction 
 category: chemistry 
 keyw: molecular mechanics 
@@ -7,6 +7,7 @@ contributor: Vojtech Spiwok
 doi: unpublished
 history:
   2021-06-02: original submission
+  2021-10-06: update
 instructions: >
-  All input files for MD and MTD simulations with property map force field corrections are supplied. Property map correction is introduced via plumed.dat files.
+  All input files for MD and MTD simulations with property map force field corrections are supplied. Property map correction is introduced via plumed.dat files. 
  
