@@ -1,0 +1,13 @@
+url: https://zenodo.org/record/5554320/files/PLUMED_Input_Template-arXiv-2105.02036.zip
+pname: Nucleating a Different Coordination in a Crystal under Pressure: A Study of the B1−B2 Transition in NaCl by Metadynamics 
+category: methods
+keyw: metadynamics, structural phase transitions, pressure-induced phase transition, martensitic transitions 
+plumed_version: 2.5
+contributor: Matej Badin 
+doi: 10.1103/PhysRevLett.127.105701 
+history:
+  2021-10-07: original submission
+instructions: >
+ A template input file for PLUMED enabling the use of NPT metadynamics scheme proposed in [Phys. Rev. Lett. 127, 105701 (2021)](http://dx.doi.org/10.1103/PhysRevLett.127.105701) for studies of pressure-induced phase transitions using coordination number and volume as collective variables.
+ 
+ 
