@@ -1,0 +1,16 @@
+url: https://github.com/connorzzou/PLUMED-NEST/raw/main/UreaNucleationFromMelt.zip 
+pname: Towards automated sampling of polymorph nucleation and free energies with SGOOP and metadynamics
+category: materials
+keyw: metadynamics, SGOOP, nucleation, urea 
+plumed_version: 2.6.1 
+contributor: Ziyue Zou 
+doi: unpublished 
+plumed_input:
+  - path: UreaNucleationFromMelt/chi2.dat 
+  - path: UreaNucleationFromMelt/chi4.dat
+  - path: UreaNucleationFromMelt/chi6.dat 
+history:
+  2021-10-16: original submission
+instructions: >
+ The simulations were performed with Gromacs-2020.2. 
+ 
