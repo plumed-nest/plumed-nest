@@ -1,0 +1,12 @@
+url: https://github.com/xinqiz/peptoid_au/raw/main/Peptoid_Au.zip 
+pname: Peptoid-mediated Au nanocrystal growth 
+category: materials
+keyw: parallel-bias metadynamics, peptoid, Au 
+plumed_version: 2.4
+contributor:  Xin Qi
+doi: 10.33774/chemrxiv-2021-77bdj
+history:
+  2021-10-20: original submission
+instructions: >
+ These files can be used with GROMACS 5.1 and PLUMED 2.4 to reproduce the results.
+ 
