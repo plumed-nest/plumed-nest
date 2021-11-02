@@ -4,7 +4,7 @@ category: materials
 keyw: kinetics, free energy barriers, nucleation, droplets, metadynamics 
 plumed_version: 2.6
 contributor: Kristof Bal 
-doi: unpublished 
+doi: 10.1063/5.0063398
 plumed_input:
   - path: nvt-committor/recross/plumed.inp
   - path: nvt-committor/smd/plumed.inp
@@ -15,5 +15,6 @@ plumed_input:
 
 history:
   2021-02-08: original submission
+  2021-11-02: updated doi
 instructions: >
  Used with a recent LAMMPS snapshot (matching LAMMPS inputs are provided as well). 
