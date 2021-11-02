@@ -1,0 +1,12 @@
+url: https://github.com/HuixiaLu/Predicting-the-Conformational-Variability-of-Oncogenic-GTP-bound-G12D-Mutated-KRas-4B-Proteins-at/raw/main/Predicting-the-Conformational-Variability-of-Oncogenic-GTP-bound-G12D-Mutated-KRas-4B-Proteins-at-main.zip 
+pname: Predicting the Conformational Variability of Oncogenic GTP-bound G12D Mutated KRas-4B Proteins at Cell Membranes 
+category: chemistry
+keyw: well-tempered metadynamics, KRas-4B, anionic membrane, conformational variability 
+plumed_version: 2.4
+contributor:  Huixia Lu
+doi: 10.1101/2021.07.19.452936
+history:
+  2021-11-02: original submission
+instructions: >
+ Software used was gromacs-2018.3 patched with plumed v2.4. Well-tempered metadynamics simulations were executed using the command `gmx mdrun -s 1500ns-metadynamics.tpr -plumed plumed.dat`.
+ 
