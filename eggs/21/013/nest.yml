@@ -1,10 +1,10 @@
-url:  https://github.com/kbal/vibrationscatalysis/archive/refs/heads/main.zip 
+url:  https://github.com/kbal/vibrationscatalysis/archive/main.zip 
 pname: Role of vibrational excitation in heterogeneous catalysis 
 category: chemistry
 keyw: catalysis, vibrational excitation, free energy barriers, dissociation, chemisorption 
 plumed_version: 2.6 
 contributor: Kristof Bal 
-doi: unpublished 
+doi: 10.1088/1361-6463/ac113a
 plumed_input:
  - path: h2-diss/ni001/plumed.inp
  - path: h2-diss/ni111-excited/plumed.inp
@@ -26,5 +26,6 @@ plumed_input:
  - path: h2-base/sample/plumed.inp
 history:
   2021-04-08: original submission
+  2021-11-02: updated doi
 instructions: >
   Used with a recent LAMMPS snapshot. Matching LAMMPS inputs are provided as well, and seemingly missing LAMMPS input data should be available in the data/ dir. 

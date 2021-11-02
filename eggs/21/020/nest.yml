@@ -4,7 +4,7 @@ category: methods
 keyw: free energies, steered MD, neural network, nonequilibrium work, nucleation, chemical reactions 
 plumed_version: 2.8
 contributor: Kristof Bal 
-doi: unpublished
+doi: 10.1021/acs.jctc.1c00574
 plumed_input:
   - path: droplet/smd/plumed1.inp
   - path: droplet/smd/plumed2.inp
@@ -24,6 +24,7 @@ plumed_input:
 history:
   2021-05-07: original submission
   2021-09-01: updated examples
+  2021-11-02: updated doi
 instructions: >
    A simple enhanced sampling approach using a bias potential learned from a nonequilibrium work distribution 
    and the Jarzynski equality. LAMMPS, CP2K, and PLUMED inputs are provided. For each system, the workflow is
@@ -34,4 +35,3 @@ instructions: >
    Processing of the SMD runs has to be done with the nn.py scripts provided for each system, which depend 
    on scikit-learn and numpy. For the HBr system we also have inputs for the HLDA analysis, for which you'll 
    need G. Piccini's [scripts](https://github.com/piccig/HLDA).
-   All simulations were carried out with CP2K and LAMMPS (matching inputs provided). 
