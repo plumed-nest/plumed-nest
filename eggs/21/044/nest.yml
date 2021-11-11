@@ -1,0 +1,16 @@
+url: https://github.com/aaronrfinney/plumed-nest/raw/main/NaCl_nucleation_nest.zip 
+pname: NaCl nucleation 
+category: chemistry
+keyw: metadynamics, DFS clustering 
+plumed_version: 2.5.1
+contributor: Aaron Finney 
+doi: unpublished 
+plumed_input:
+  - path: NaCl_nucleation_nest/plumed.dat
+  - path: NaCl_nucleation_nest/driver.dat
+history:
+  2021-11-11: original submission
+instructions: >
+ Run metadynamics with GROMACS 2018.6 according to e.g., *gmx mdrun -deffnm md -plumed plumed.dat*.  Trajectories can be post-processed using PLUMED driver
+ and the command *plumed driver --plumed driver.dat --mf_xtc mytrj.xtc --timestep 0.001 --trajectory-stride 100*. 
+ For analysis using *driver.dat*. PLUMED must be configured with the crystallization and adjmat modules (see the [PLUMED documentation](https://www.plumed.org/doc)).
