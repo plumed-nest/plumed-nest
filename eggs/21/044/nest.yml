@@ -6,8 +6,8 @@ plumed_version: 2.5.1
 contributor: Aaron Finney 
 doi: unpublished 
 plumed_input:
-  - path: NaCl_nucleation_nest/plumed.dat
-  - path: NaCl_nucleation_nest/driver.dat
+  - path: plumed.dat
+  - path: driver.dat
 history:
   2021-11-11: original submission
 instructions: >
