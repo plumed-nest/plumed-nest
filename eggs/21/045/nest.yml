@@ -1,0 +1,12 @@
+url: https://www.rsc.org/suppdata/d1/cp/d1cp03129e/d1cp03129e2.zip 
+pname: QM/MM metadynamics of thiol-disulfide exchange between methylthiolate and dimethyldisulfide in water with an imposed external electrostatic potential (ESP) 
+category: chemistry
+keyw: metadynamics, QM/MM, electrostatic potential, thiol-disulfide exchange
+plumed_version: 2.5.1
+contributor: Denis Maag 
+doi: 10.1039/D1CP03129E
+history:
+  2021-11-11: original submission
+instructions: >
+ Gromacs 2020 patched with Plumed 2.5.1 and interfaced with DFTB+ 19.1. 
+ Topology, input files and README with instructions and additional information are provided in the [zip](https://www.rsc.org/suppdata/d1/cp/d1cp03129e/d1cp03129e2.zip) file.
