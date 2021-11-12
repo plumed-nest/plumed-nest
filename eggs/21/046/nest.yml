@@ -6,9 +6,9 @@ plumed_version: 2.3
 contributor: Elena Papaleo 
 doi: 10.3389/fmolb.2021.676235 
 plumed_input:
-  - path: plumednest/WT-metaD.a032005/plumed2.dat
-  - path: plumednest/WT-metaD.a03ws/plumed2.dat
-  - path: plumednest/WT-metaD.c22star/plumed2.dat 
+  - path: WT-metaD.a032005/plumed2.dat
+  - path: WT-metaD.a03ws/plumed2.dat
+  - path: WT-metaD.c22star/plumed2.dat 
 history:
   2021-11-11: original submission
 instructions: >
