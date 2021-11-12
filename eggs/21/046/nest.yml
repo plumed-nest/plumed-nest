@@ -1,0 +1,17 @@
+url: https://github.com/ELELAB/disoUIM/plumednest/plumednest.zip 
+pname: Ubiquitin Interacting Motifs, Duality Between Structured and Disordered Motifs 
+category: bio
+keyw: wt metadynamics, ubiquitin, ataxin-3, short linear motifs, ubiquitin binding motif, moonlight functions, intrinsic disorder 
+plumed_version: 2.3
+contributor: Elena Papaleo 
+doi: 10.3389/fmolb.2021.676235 
+plumed_input:
+  - path: plumednest/WT-metaD.a032005/plumed2.dat
+  - path: plumednest/WT-metaD.a03ws/plumed2.dat
+  - path: plumednest/WT-metaD.c22star/plumed2.dat 
+history:
+  2021-11-11: original submission
+instructions: >
+ Here we include the files to reproduce the WT-metaD simulations associated with the publication [Lambrughi M, Maiani E, Aykac Fas B, Shaw GS, Kragelund BB, Lindorff-Larsen K, Teilum K, Invernizzi G and Papaleo E (2021) Ubiquitin Interacting Motifs. Duality Between Structured and Disordered Motifs. Front. Mol. Biosci. 8 676235](https://www.frontiersin.org/articles/10.3389/fmolb.2021.676235/full). We include the files to reproduce the WT-metaD simulation with i) [Amber ff03w](https://pubs.acs.org/doi/10.1021/jp108618d) force field with the [TIP4P/2005](https://aip.scitation.org/doi/10.1063/1.2121687) (folder WT-metaD.a032005), ii) [Amber ff03ws](https://pubs.acs.org/doi/10.1021/ct500569b) with TIP4P/2005 water model with modified protein–water pair interactions, iii) [CHARMM22star](https://www.cell.com/biophysj/fulltext/S0006-3495(11)00409-7) force field with [TIPS3P](https://pubs.acs.org/doi/10.1021/jp973084f) water model. For each of the three metadynamics included in the publication, we provide the input files (plumed2.dat plumed.dat sim.tpr) 
+The simulations were performed using GROMACS 4.6.2 and PLUMED 1.3. We converted plumed.dat in the formalism of PLUMED 2 in the plumed2.dat and tested it using GROMACS 5.1.2 and PLUMED 2.3.
+ 
