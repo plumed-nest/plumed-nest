@@ -1,5 +1,5 @@
 url: https://github.com/etaoster/etaoster.github.io/raw/main/fenestration_project/plumed_wtmetad.zip
-pname: Enhancing ligand exploration within an channel pore and fenestrations using metadynamics 
+pname: Enhancing ligand exploration within a channel pore and fenestrations using metadynamics
 category: bio
 keyw: well-tempered metadynamics, protein-ligand enhanced sampling, sodium channel, Nav, small molecule drug 
 plumed_version: 2.5
