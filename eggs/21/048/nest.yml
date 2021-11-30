@@ -1,0 +1,12 @@
+url: https://github.com/etaoster/etaoster.github.io/raw/main/fenestration_project/plumed_wtmetad.zip
+pname: Enhancing ligand exploration within an channel pore and fenestrations using metadynamics 
+category: bio
+keyw: well-tempered metadynamics, protein-ligand enhanced sampling, sodium channel, Nav, small molecule drug 
+plumed_version: 2.5
+contributor: Elaine Tao 
+doi: unpublished 
+history:
+  2021-11-30: original submission
+instructions: >
+ Files are for running nine different walkers using AMBER/20 patched with PLUMED/2.5.0 on separate GPUs. Metadynamics potential is applied to the ligand (center of mass) position relative to the protein defined by three collective variables (z, r and theta).
+
