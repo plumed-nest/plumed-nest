@@ -3,8 +3,8 @@ pname: Multiple-path-metadynamics and PathMaps
 category: methods
 keyw: path-CV, metadynamics, multiple-walker, multiple paths, pathmap 
 plumed_version: 2.6
-contributor: Alberto Pérez-de-Alba-Ortíz 
-doi: unpublished 
+contributor: Alberto Pérez-de-Alba-Ortíz
+doi: unpublished
 history:
   2021-12-07: original submission
 instructions: >
