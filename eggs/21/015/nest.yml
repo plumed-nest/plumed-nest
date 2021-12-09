@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, umbrella sampling, coarse-grained, MARTINI, chitin, carbohydrate-binding module 
 plumed_version: 2.5
 contributor: Gaston Courtade 
-doi: 10.1101/2021.04.25.441307 
+doi: 10.1016/j.jbc.2021.101084 
 plumed_input:
   - path: MetaD/CBM5/post_processing/coordination-groups.dat
   - path: MetaD/CBM5/post_processing/calc-weights.dat

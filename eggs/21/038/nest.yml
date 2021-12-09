@@ -4,13 +4,14 @@ category: materials
 keyw: metadynamics, SGOOP, nucleation, urea 
 plumed_version: 2.6.1 
 contributor: Ziyue Zou 
-doi: unpublished 
+doi: 10.1021/acs.jpcb.1c07595 
 plumed_input:
   - path: UreaNucleationFromMelt/chi2.dat 
   - path: UreaNucleationFromMelt/chi4.dat
   - path: UreaNucleationFromMelt/chi6.dat 
 history:
   2021-10-16: original submission
+  2021-12-09: updated doi
 instructions: >
  The simulations were performed with Gromacs-2020.2. 
  

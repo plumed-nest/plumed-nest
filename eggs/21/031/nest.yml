@@ -4,9 +4,10 @@ category: bio
 keyw: metadynamics, photo-pharmacology, sulfonylureas potasium ion-channels 
 plumed_version: 2.6
 contributor: Katarzyna Walczewska-Szewc 
-doi: unpublished 
+doi: 10.1021/acs.jpcb.1c07292 
 history:
   2021-07-13: original submission
+  2021-12-09: updated doi
 instructions: >
  Each directory contain full set of GROMACS/PLUMED simulation input files together with an exemplary run script. 
  
