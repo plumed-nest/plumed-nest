@@ -8,5 +8,5 @@ doi: unpublished
 history:
   2021-12-07: original submission
 instructions: >
- This allows to run multiple-path-metadynamics for two C7eq-to-C7ax paths in alanine dipeptide and for six PP1-to-PP2 paths in tetrameric polyproline. It also allows to render a PathMap of the six PP1-to-PP2 paths in tetrameric polyproline and contains other examples of the usage of repellers and attractors together with multiple walkers. It requires PLUMED compiled with MPI and with the Path-CV code provided within. It also requires an MD engine that can run parallel replicas. We use GROMACS 2018.8 compiled with MPI.
+ This allows to run multiple-path-metadynamics for two C7eq-to-C7ax paths in alanine dipeptide and for six PP1-to-PP2 paths in tetrameric polyproline. It also allows to render a PathMap of the six PP1-to-PP2 paths in tetrameric polyproline and contains other examples of the usage of repellers and attractors together with multiple walkers. It requires PLUMED compiled with MPI and with the Path-CV code provided within. It also requires an MD engine that can run parallel replicas. We use GROMACS 2018.8 compiled with MPI. More info can be found [here](http://arxiv.org/abs/2112.04061).
  
