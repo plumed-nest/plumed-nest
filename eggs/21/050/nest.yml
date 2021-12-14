@@ -1,0 +1,12 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Rosenau_Grothaus_2021_plumed.zip
+pname: N-glycosylation of Trypanosoma congolense trans-sialidase modulates enzymatic activity 
+category: methods
+keyw: bio 
+plumed_version: 2.6
+contributor: Isabell Louise Grothaus 
+doi: unpublished
+history:
+  2021-12-13: original submission
+instructions: >
+ PLUMED files can be used for post-processing of trajectories (generated with GROMACS) by using plumed driver to calculate variables.
+ 
