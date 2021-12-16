@@ -1,0 +1,12 @@
+url: https://github.com/bussilab/ghbfix-training/archive/refs/heads/main.zip
+pname: Automatic learning of hydrogen-bond fixes in an AMBER RNA force field
+category: methods
+keyw: force field, RNA
+plumed_version: 2.5
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2021-12-16: original submission
+instructions: >
+    Simulations were performed using PLUMED 2.5. Some of the simulations where performed
+    using the LOAD keyword with a new CV that has been merged in PLUMED 2.8.
