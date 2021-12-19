@@ -6,17 +6,17 @@ plumed_version: 2.5
 contributor: Matteo Salvalaglio 
 doi: unpublished
 plumed_input:
-   - path: 002_input_and_plumed/002_acetonitrile_plumed.dat
-   - path: 002_input_and_plumed/002_butanol_plumed.dat
-   - path: 002_input_and_plumed/002_cyclohexane_plumed.dat
-   - path: 002_input_and_plumed/002_cyclohexanone_plumed.dat
-   - path: 002_input_and_plumed/002_ethanol_plumed.dat
-   - path: 002_input_and_plumed/002_ethyl-acetate_plumed.dat
-   - path: 002_input_and_plumed/002_hexane_plumed.dat
-   - path: 002_input_and_plumed/002_methanol_plumed.dat
-   - path: 002_input_and_plumed/002_toluene_plumed.dat
-   - path: 002_input_and_plumed/002_trichloromethane_plumed.dat
-   - path: 002_input_and_plumed/002_water_plumed.dat
+   - path: 002_acetonitrile_plumed.dat
+   - path: 002_butanol_plumed.dat
+   - path: 002_cyclohexane_plumed.dat
+   - path: 002_cyclohexanone_plumed.dat
+   - path: 002_ethanol_plumed.dat
+   - path: 002_ethyl-acetate_plumed.dat
+   - path: 002_hexane_plumed.dat
+   - path: 002_methanol_plumed.dat
+   - path: 002_toluene_plumed.dat
+   - path: 002_trichloromethane_plumed.dat
+   - path: 002_water_plumed.dat
 history:
   2021-12-18: original submission
 instructions: >
