@@ -1,4 +1,4 @@
-url: https://github.com/bussilab/ghbfix-training/archive/refs/heads/main.zip
+url: https://github.com/bussilab/ghbfix-training/archive/main.zip
 pname: Automatic learning of hydrogen-bond fixes in an AMBER RNA force field
 category: methods
 keyw: force field, RNA
