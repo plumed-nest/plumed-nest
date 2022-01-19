@@ -1,0 +1,51 @@
+url: https://zenodo.org/record/5881920/files/bpampel/ves_wavelets-plumed-nest-v1.0.zip
+pname: Enhanced Sampling with Wavelet-Based Bias Potentials
+category: methods
+keyw: enhanced sampling, variationally enhanced sampling, ves, metadynamics, bias representation, wavelets, adam
+plumed_version: 2.8
+contributor: Benjamin Pampel, Omar Valsson
+doi: unpublished
+plumed_input:
+ - path: ves_md_linearexpansion/1d-double_well/plumed_sym8.dat
+ - path: ves_md_linearexpansion/1d-double_well/plumed_gaussians.dat
+ - path: ves_md_linearexpansion/1d-double_well/plumed_splines.dat
+ - path: ves_md_linearexpansion/1d-double_well/plumed_legendre.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp/plumed_sym8.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp/plumed_gaussians.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp/plumed_splines.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp/plumed_legendre.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp_rotated/plumed_sym8.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp_rotated/plumed_gaussians.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp_rotated/plumed_splines.dat
+ - path: ves_md_linearexpansion/2d-wolfe_quapp_rotated/plumed_legendre.dat
+ - path: lammps/CaCO3/sym10/plumed.dat
+ - path: lammps/CaCO3/chebyshev/plumed.dat
+ - path: lammps/CaCO3/metad/plumed.0.dat
+ - path: lammps/CaCO3/metad/plumed.1.dat
+ - path: lammps/CaCO3/metad/plumed.2.dat
+ - path: lammps/CaCO3/metad/plumed.3.dat
+ - path: lammps/CaCO3/metad/plumed.4.dat
+ - path: lammps/CaCO3/metad/plumed.5.dat
+ - path: lammps/CaCO3/metad/plumed.6.dat
+ - path: lammps/CaCO3/metad/plumed.7.dat
+ - path: lammps/CaCO3/metad/plumed.8.dat
+ - path: lammps/CaCO3/metad/plumed.9.dat
+ - path: lammps/CaCO3/metad/plumed.10.dat
+ - path: lammps/CaCO3/metad/plumed.11.dat
+ - path: lammps/CaCO3/metad/plumed.12.dat
+ - path: lammps/CaCO3/metad/plumed.13.dat
+ - path: lammps/CaCO3/metad/plumed.14.dat
+ - path: lammps/CaCO3/metad/plumed.15.dat
+ - path: lammps/CaCO3/metad/plumed.16.dat
+ - path: lammps/CaCO3/metad/plumed.17.dat
+ - path: lammps/CaCO3/metad/plumed.18.dat
+ - path: lammps/CaCO3/metad/plumed.19.dat
+ - path: lammps/CaCO3/metad/plumed.20.dat
+ - path: lammps/CaCO3/metad/plumed.21.dat
+ - path: lammps/CaCO3/metad/plumed.22.dat
+ - path: lammps/CaCO3/metad/plumed.23.dat
+ - path: lammps/CaCO3/metad/plumed.24.dat
+history:
+  2022-01-20: original submission
+instructions: >
+  See README.md for instructions.
