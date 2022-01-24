@@ -1,0 +1,12 @@
+url: https://github.com/Jayashrita/GAMBES_SAMPL5_RATES/archive/master.zip 
+pname: GAMBES_SAMPL5_RATES 
+category: other 
+keyw: GAMBES, SAMPL5, Rates, Dynamics, Mechanism, Unbinding 
+plumed_version: 2.6
+contributor: Jayashrita Debnath 
+doi: unpublished
+history:
+  2022-01-24: original submission
+instructions: >
+  The state files contain the GMM fit of the probability densities of the different states are added in the directory of the different systems. All simulations were carried out using GROMACS 2019.4.
+ 
