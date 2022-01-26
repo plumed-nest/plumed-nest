@@ -1,0 +1,12 @@
+url: https://github.com/invemichele/OPES-explore/archive/main.zip 
+pname: Exploration vs Convergence Speed in Adaptive-bias Enhanced Sampling 
+category: methods
+keyw: opes, metadynamics, reweighting, alanine, muller 
+plumed_version: 2.8
+contributor: Michele Invernizzi
+doi: unpublished
+history:
+  2022-01-26: original submission
+instructions: >
+  Introducing the exploratory variant of the OPES method, [OPES_METAD_EXPLORE](https://www.plumed.org/doc-master/user-doc/html/_o_p_e_s__m_e_t_a_d__e_x_p_l_o_r_e.html). It is tested on model systems and compared with standard OPES and metadynamics. The preprint of the paper is available at [arXiv:2201.09950](https://arxiv.org/abs/2201.09950).
+ 
