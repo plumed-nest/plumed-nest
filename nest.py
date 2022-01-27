@@ -473,7 +473,7 @@ def process_egg(path,eggdb=None):
         print("  contributor: " + config["contributor"],file=eggdb)
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
-        print("  reference: '" + reference +"'",file=eggdb)
+        print("  reference: '" + ref +"'",file=eggdb)
 
     eggdb.flush()
 
