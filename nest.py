@@ -54,16 +54,21 @@ def zip(path):
         f_out.write(path)
     os.remove(path)
 
-def get_reference(doi):
-    # check if unpublished/submitted
-    if(doi.lower()=="unpublished" or doi.lower()=="submitted"): return doi.lower()
-    # retrieve citation
-    cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
-    if("DOI Not Found" in cit):
-      reference="DOI not found"
-    else:
-      reference=cit[3:cit.find(", doi")]
-    return reference
+def get_reference(doi,ref,ref_url):
+    # retrieve citation from doi
+    if(len(doi)>0):
+      # check if unpublished/submitted
+      if(doi.lower()=="unpublished" or doi.lower()=="submitted"): 
+        ref=doi.lower()
+      # get info from doi
+      else:
+        cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
+        if("DOI Not Found" in cit): 
+          ref="DOI not found"
+        else:
+          ref=cit[3:cit.find(", doi")]
+          ref_url="http://dx.doi.org/"+doi
+    return ref,ref_url
  
 def get_short_name_ini(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
@@ -270,9 +275,18 @@ def process_egg(path,eggdb=None):
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
-        for field in ("url","pname","category","keyw","contributor","doi","history"):
+        for field in ("url","pname","category","keyw","contributor","history"):
             if not field in config:
                raise RuntimeError(field+" not found")
+        # check presence of either "doi" or ("ref" and "ref_url")
+        if("doi" not in config and ("ref" not in config or "ref_url" not in config)):
+          raise RuntimeError(" doi or ref/ref_url not found")
+        # initialize some fields
+        if("doi" not in config):
+          config["doi"]=""
+        if("ref" not in config or "ref_url" not in config):
+          config["ref"]=""
+          config["ref_url"]="" 
         print(path,config)
 
         # allow using a dictionary. We might enforce a dictionary here if we prefer this syntax.
@@ -366,12 +380,12 @@ def process_egg(path,eggdb=None):
             print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
             if(len(config["history"])>1):
               print("**Last revised:** "+convert_date(config["history"][-1][0])+"  ", file=o)
-            # retrieve reference
-            reference = get_reference(config["doi"]) 
-            if(reference=="unpublished" or reference=="submitted" or reference=="DOI not found"):
-              print("**Publication:** " + reference + "  ", file=o)
+            # retrieve reference and url
+            ref, ref_url = get_reference(config["doi"],config["ref"],config["ref_url"])
+            if(ref=="unpublished" or ref=="submitted" or ref=="DOI not found"):
+              print("**Publication:** " + ref + "  ", file=o)
             else:
-              print("**Publication:** [" + reference + "](http://dx.doi.org/"+config["doi"]+")  ", file=o)
+              print("**Publication:** [" + ref + "]("+ref_url+")  ", file=o)
             print("  ", file=o)
             print("**PLUMED input files**  ", file=o)
             print("  ", file=o)
