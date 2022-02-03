@@ -1,0 +1,13 @@
+url: https://zenodo.org/record/5960030/files/afmtd.zip 
+pname: Collective Variable for Metadynamics Derived from AlphaFold Output
+category: bio 
+keyw: AlphaFold, protein folding, protein structure prediction, metadynamics, deep learning, free energy simulation, collective variable 
+plumed_version: 2.8
+contributor: Vojtech Spiwok
+doi: unpublished 
+history:
+  2022-02-03: original submission
+instructions: >
+ AlphaFold is the state of the art method for prediction of 3D structures of proteins from the amino acid sequence by neural networks. One of the outputs of AlphaFold is a probability profile of inter-residue distances for all residue pairs. We used this profile to evaluate any conformation of the studied protein to express its compliance with the AlphaFold prediction. This value can be used as a collective variable in metadynamics or parallel tempering metadynamics to accelerate protein folding in a molecular simulation. We applied this approach on folding of a mini-protein Trp-cage.
+ 
+
