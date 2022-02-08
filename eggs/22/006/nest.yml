@@ -6,9 +6,9 @@ plumed_version: 2.5
 contributor: Andrew White 
 doi: 10.1126/sciadv.abj0305 
 plumed_input:
- - path: inputs/analysis/contacts.plumed
- - path: inputs/analysis/compute_weights.plumed
- - path: inputs/analysis/new_cvs.plumed 
+ - path: analysis/contacts.plumed
+ - path: analysis/compute_weights.plumed
+ - path: analysis/new_cvs.plumed 
 history:
   2022-02-08: original submission
 instructions: >
