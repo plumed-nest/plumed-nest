@@ -7,6 +7,7 @@ contributor: Elena Papaleo
 doi: 10.1038/s41418-021-00766-3
 history:
   2022-02-08: original submission
+  2022-02-09: update doi
 instructions: >
-  We included the files to reproduce the metaD simulations associated with [Di Rita A, Angelini DF, Maiorino T, Caputo V, Cascella R, Kumar M, Tiberti M, Lambrughi M, Wesch N, Löhr F, Dötsch V, Carinci M, D'Acunzo P, Chiurchiù V, Papaleo E, Rogov VV, Giardina E, Battistini L, Strappazzon F. Characterization of a natural variant of human NDP52 and its functional consequences on mitophagy. Cell Death Differ. 2021 28, 2499-2516](https://doi.org/10.1038/s41418-021-00766-3). We included the files to reproduce the WT-metaD simulation with the [CHARMM22star](https://doi.org/10.1016/j.bpj.2011.03.051) and [TIPS3P](https://doi.org/10.1021/jp973084f) water model. We provide the input files for the metaD simulation (plumed.dat reference.pdb sim.tpr). We performed the simulations using GROMACS 2019.4 and PLUMED 2.5.3. The corresponding trajectories are deposited [here](https://osf.io/48wzq/). 
+  We included the files to reproduce the metaD simulations associated with [this paper](https://doi.org/10.1038/s41418-021-00766-3). We included the files to reproduce the WT-metaD simulation with the [CHARMM22star](https://doi.org/10.1016/j.bpj.2011.03.051) and [TIPS3P](https://doi.org/10.1021/jp973084f) water model. We provide the input files for the metaD simulation (plumed.dat reference.pdb sim.tpr). We performed the simulations using GROMACS 2019.4 and PLUMED 2.5.3. The corresponding trajectories are deposited [here](https://osf.io/48wzq/).
  
