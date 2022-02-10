@@ -1,4 +1,4 @@
-url:  https://zenodo.org/record/6013114/files/inputs.zip
+url: https://zenodo.org/record/6031047/files/inputs.zip 
 pname: Peptide framework for screening the effects of amino acids on assembly 
 category: bio 
 keyw: metadynamics, peptides 
@@ -8,9 +8,11 @@ doi: 10.1126/sciadv.abj0305
 plumed_input:
  - path: analysis/contacts.plumed
  - path: analysis/compute_weights.plumed
- - path: analysis/new_cvs.plumed 
+ - path: analysis/new_cvs.plumed
+ - path: mixed-gpu/metad.dat
 history:
   2022-02-08: original submission
+  2022-02-10: updated files
 instructions: >
-  Running the simulations requires Gromacs 2020.3, Python, and [this](https://github.com/ur-whitelab/peptidesim). Analysis requires Python and mdtraj 1.9.4.
+  Running the simulations requires Gromacs 2020.3, Python, and the [peptidesim package](https://github.com/ur-whitelab/peptidesim). Analysis requires Python and mdtraj 1.9.4.
  
