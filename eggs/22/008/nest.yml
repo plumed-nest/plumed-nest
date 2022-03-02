@@ -1,0 +1,13 @@
+url:  https://github.com/Sucerquia/Silver_ASE-plumed/archive/refs/heads/master.zip
+pname: Ab initio metadynamics determination of temperature-dependent free-energy landscape in ultrasmall silver clusters 
+category: materials 
+keyw: Well tempered metadynamics, ab-initio, ase 
+plumed_version: 2.7
+contributor: Daniel Sucerquia
+ref: "D. Sucerquia, C. Parra, P. Cossio, O. Lopez-Acevedo, Ab initio metadynamics determination of temperature-dependent free-energy landscape in ultrasmall silver clusters" 
+ref_url: "https://arxiv.org/abs/2201.08761"
+history:
+  2022-03-02: original submission
+instructions: >
+  This repository contains all the codes needed to reproduce the results presented in the paper using ab-initio Well Tempered Metadynamics simulations for Ag5 and Ag6 at different temperatures. For this work, we used a development version ASE 3.23 with the GPAW calculator (version 21.6).
+ 
