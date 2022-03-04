@@ -1,0 +1,12 @@
+url: https://github.com/piccig/Glycosylation-in-calixarenes-capsule/raw/main/NEST_repo.zip
+pname: Glycosylation in calixarenes capsule 
+category: chemistry
+keyw: Metadynamics, glycosylation, supramolecular catalysis 
+plumed_version: 2.5
+contributor: GiovanniMaria Piccini
+doi: 10.26434/chemrxiv.14199443.v1
+history:
+  2022-03-04: original submission
+instructions: >
+  CP2K input file, coordinates, and parametrization for a QM/MM calculation of a SN2 glycosylation reaction using metadynamics (parameters and settings in plumed.dat).
+ 
