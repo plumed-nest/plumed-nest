@@ -1,10 +1,10 @@
 url: https://zenodo.org/record/5881920/files/bpampel/ves_wavelets-plumed-nest-v1.0.zip
-pname: Enhanced Sampling with Wavelet-Based Bias Potentials
+pname: Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials
 category: methods
 keyw: enhanced sampling, variationally enhanced sampling, ves, metadynamics, bias representation, wavelets, adam
 plumed_version: 2.8
 contributor: Benjamin Pampel
-doi: unpublished
+doi: arXiv:2202.13459
 nreplicas: 2
 plumed_input:
  - path: ves_md_linearexpansion/1d-double_well/plumed_sym8.dat
