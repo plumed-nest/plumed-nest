@@ -3,9 +3,9 @@ pname: Critical assessment of data-driven versus heuristic reaction coordinates 
 category: chemistry
 keyw: Metadynamics, umbrella sampling, Transition path sampling
 plumed_version: 1.3
-contributor: Léon Huet
+contributor: Leon Huet
 doi: unpublished
 history:
   2022-03-08: original submission
 instructions: >
-  Supplementary files for "Critical assessment of data-driven versus heuristic reaction coordinates in solution chemistry", T. Magrino; L. Huet; F. Pietrucci; A. M. Saitta. Each folder contains plumed.dat and frames.dat input for plumed _1.3 and also inputs for cpmd_1.3.
+  Supplementary files for Critical assessment of data-driven versus heuristic reaction coordinates in solution chemistry. T. Magrino, L. Huet, F. Pietrucci, A. M. Saitta. Each folder contains plumed.dat and frames.dat input for plumed_1.3 and also inputs for cpmd_1.3.
