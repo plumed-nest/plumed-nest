@@ -339,7 +339,8 @@ def process_egg(path,eggdb=None):
                     conf[k]={"path":conf[k]}
 
         # take maximum number of input files
-        config["plumed_input"] = config["plumed_input"][0:50]
+        maxinp = min(50, len(config["plumed_input"]))
+        config["plumed_input"] = config["plumed_input"][0:maxinp]
 
         # prepend data to all paths
         for f in config["plumed_input"]:
