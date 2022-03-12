@@ -69,10 +69,11 @@ jobs:
       env:
         PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
       run: |
-        {
-          find . -name "*.md"
-          find . -name "*.stdout.txt.zip"
-          find . -name "*badge.svg"
-          echo _config.yml _layouts _data assets _sass
-        } | bash .travis/push
+        bash .travis/push $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*badge.svg") _config.yml _layouts _data assets _sass
+        #{
+        #  find . -name "*.md"
+        #  find . -name "*.stdout.txt.zip"
+        #  find . -name "*badge.svg"
+        #  echo _config.yml _layouts _data assets _sass
+        #} | bash .travis/push
 

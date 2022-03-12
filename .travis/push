@@ -21,7 +21,8 @@ hash=$( git log -1 --format="%h")
 root="$PWD"
 mkdir -p tmp/$$
 
-tar cf all.tar -T - # list of files from stdin
+tar cf all.tar $@
+#tar cf all.tar -T - # list of files from stdin
 
 cd tmp/$$
 tar xf ../../all.tar
