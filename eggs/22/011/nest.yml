@@ -1,0 +1,17 @@
+url: https://github.com/tiwarylab/SPIB-biophysical-applications/raw/8125431bf0cf7cb2fb63f084ace617bed75fc54d/plumed%20inputs/plumed_nest.zip  
+pname: Accelerating all-atom simulations and gaining mechanistic understanding of biophysical systems through State Predictive Information Bottleneck 
+category: methods
+keyw: metadynamics, membrane permeation, protein folding 
+plumed_version: 2.6.2
+contributor: Shams Mehdi 
+ref: S. Mehdi, D. Wang, S. Pant, P. Tiwary. Accelerating all-atom simulations and gaining mechanistic understanding of biophysical systems through State Predictive Information Bottleneck. 
+ref_url: https://arxiv.org/abs/2112.11201 
+plumed_input:
+ - path: BA-DMPC.dat
+ - path: (Aib)9_temporal.dat
+ - path: (Aib)9_structural_round_2.dat
+ - path: (Aib)9_structural_round_1.dat
+history:
+  2022-03-11: original submission
+instructions: >
+  The input files can be used to perform well-tempered metadynamics using GROMACS 2020.2. 
