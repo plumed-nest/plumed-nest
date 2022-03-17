@@ -1,0 +1,11 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Ayala_et_al_2022_PLUMED.zip
+pname: Identification of a HTT-specific binding motif in DNAJB1 essential for suppression and disaggregation of HTT 
+category: bio 
+keyw: contact maps, protein-protein interactions 
+plumed_version: 2.6
+contributor: Isabell-Louise Grothaus 
+doi: unpublished
+history:
+  2022-03-17: original submission
+instructions: >
+  Post-processing plumed files to compute distances, but mainly contact maps between protein-peptide interfaces or intra-protein contacts. 
