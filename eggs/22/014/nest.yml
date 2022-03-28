@@ -1,0 +1,11 @@
+url:  https://github.com/JihongShi/Quasi_Liquid_Layer_Order_Parameters/raw/4fbf99a32cac7434f5992ba1e9702e2f081d9c88/Archive.zip 
+pname: Quasi Liquid Layer Order Parameters 
+category: materials 
+keyw: Quasi-Liquid Layer, Steinhardt Order Parameter, Entropy Fingerprint 
+plumed_version: 2.5.1
+contributor: Jihong Shi  
+doi: unpublished 
+history:
+  2022-03-28: original submission
+instructions: >
+  The PLUMED data file reported here can be used to calculate the Steinhardt Order Parameters and entropy fingerprint using PLUMED 2.5.1. 
