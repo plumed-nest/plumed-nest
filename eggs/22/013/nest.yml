@@ -1,4 +1,4 @@
-url: https://github.com/yhwang17/Prave-PreQ1_riboswitch/raw/main/plumed.zip 
+url:  https://github.com/yhwang17/Prave-PreQ1_riboswitch/raw/main/plumed.zip 
 pname: Ligand dissociation from PreQ1 riboswitch 
 category: bio 
 keyw: ligand, RNA, metadynamics, pRAVE 
