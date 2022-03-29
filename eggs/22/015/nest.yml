@@ -1,0 +1,13 @@
+url: https://github.com/jakryd/plumed-eggs/raw/master/acs.jpcb.2c00131/acs.jpcb.2c00131.zip 
+pname: Enhancing the Inhomogeneous Photodynamics of Canonical Bacteriophytochrome 
+category: bio
+keyw: photodynamics, bacteriophytochrome, variationally enhanced sampling 
+plumed_version: 2.8
+contributor: Jakub Rydzewski 
+doi: 10.1021/acs.jpcb.2c00131
+history:
+  2022-03-29: original submission
+instructions: >
+  Input files for PLUMED 2.8 to run variationally enhanced sampling on bacteriophytochrome-biliverdin complexes in the red and far-red photoactive states. Simulations use the VES module. VES needs to be enabled when configuring the compilation of PLUMED by using the "--enable-modules=ves" flag. 
+PDB ID [red](https://www.rcsb.org/structure/4O0P); PDB ID [far-red](https://www.rcsb.org/structure/4O01); [AMBER03 FF](https://doi.org/10.1021/acs.jpcb.9b01117). 
+ 
