@@ -1,0 +1,13 @@
+url: https://github.com/PabloPiaggi/IceNucleationSeeding-SCAN-ML/archive/refs/heads/master.zip 
+pname: Homogeneous ice nucleation in an ab initio machine learning model of water 
+category: chemistry
+keyw: ice, water, nucleation, seeding, environment similarity, interfacial free energy, interfaces
+plumed_version: 2.8
+contributor: Pablo Piaggi 
+ref: "P. M. Piaggi, J. Weis, A. Z. Panagiotopoulos, P. G. Debenedetti, R. Car. Homogeneous ice nucleation in an ab initio machine learning model of water"
+ref_url: "https://arxiv.org/abs/2203.01376"
+history:
+  2022-03-31: original submission
+instructions: >
+  Input files for the software. LAMMPS (15 Apr 2020), DeePMD-kit v1.0.2-1-g6aee326-dirty - source brach: r1.0 - source commit: 6aee326, PLUMED 2.8.0-dev (git: 54560ef-dirty).
+ 
