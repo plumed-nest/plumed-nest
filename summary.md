@@ -30,7 +30,7 @@ with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 
 __List of eggs with failed tests__
 
-There are a total of {{ failed.size }} eggs with failing tests.
+There are {{ failed.size }} eggs with failing tests.
 
 {:#browse-table .display}
 | plumID | Name | Contributor | # inputs | # current | # master |
@@ -40,7 +40,7 @@ There are a total of {{ failed.size }} eggs with failing tests.
 
 __List of eggs with missing reference paper__
 
-There are a total of {{ missing.size }} eggs with missing reference paper.
+There are {{ missing.size }} eggs with missing reference paper.
 
 {:#browse-table2 .display}
 | plumID | Name | Contributor |
