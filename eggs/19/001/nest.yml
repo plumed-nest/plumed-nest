@@ -1,6 +1,6 @@
-url: https://github.com/srnas/shape-md/archive/476e47196772e5dc109018bc4c2447c5dc234381.zip
+url: https://github.com/srnas/shape-md/archive/4506611412ba0c88903483e814baec43b944453a.zip
 # optional checksum to avoid stealth updates
-md5: 12877107e2d86627750c4461eae5ac38
+md5: d9bffa6c195093a4d30e88286d292e4f
 pname: RNA SHAPE
 category: bio
 keyw: metadynamics, RNA, ligand binding
@@ -9,6 +9,7 @@ contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.7b02921
 history:
   2019-04-10: original submission
+  2022-04-03: fixed input for plumed nest (removed RESTART)
 instructions: >
   The zip file contains GROMACS topologies and input files together with
   a plumed example file. Notice that the simulations in the paper were performed

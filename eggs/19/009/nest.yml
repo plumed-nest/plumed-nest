@@ -1,5 +1,5 @@
-url: https://github.com/srnas/tetraloops-trajectories/archive/d54b27a82ab828f4f7a2c168c2c8c8f02d08ce09.zip
-md5: 752da87e6f72a8f2cfe5aded0ed42bfd
+url: https://github.com/srnas/tetraloops-trajectories/archive/48a88a7fb3941cf8033120a61179bf5243bb74a8.zip
+md5: b30b145f2a6e4f1b32552bc93025e48a
 pname: RNA tetraloops folding
 category: bio
 keyw: metadynamics, RNA, folding
@@ -8,6 +8,7 @@ contributor: Giovanni Bussi
 doi: 10.1021/acs.jpclett.6b01905
 history:
   2019-04-16: original submission
+  2022-04-03: fixed input for plumed nest (removed RESTART)
 plumed_input:
   - GAGA/ccGAGAgg.plumed.dat
   - UUCG/ccUUCGgg.plumed.dat
