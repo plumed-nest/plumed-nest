@@ -23,7 +23,7 @@ Eggs overview
 Total number of eggs and PLUMED input files deposited in PLUMED-NEST, along with number of failed tests
 with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 
-|   date   |  # eggs | # inputs | ![current](https://img.shields.io/badge/current-failed-red.svg) | ![master](https://img.shields.io/badge/master-failed-red.svg) |
+|   Date   |  # eggs | # inputs | ![current](https://img.shields.io/badge/current-failed-red.svg) | ![master](https://img.shields.io/badge/master-failed-red.svg) |
 | :------: |  :------:  |  :------:  | :------:  | :------:  |
 |  {{ date }} | {{ site.data.eggs.size }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
 
@@ -33,7 +33,7 @@ __List of eggs with failed tests__
 There are a total of {{ failed.size }} eggs with failing tests.
 
 {:#browse-table .display}
-| plumID | Name | Contributor | inputs | current | master |
+| plumID | Name | Contributor | # inputs | # current | # master |
 | :------: |  :------:  |  :------: | :------: | :------:  | :------: |
 {% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
 {% endfor %}
