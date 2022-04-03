@@ -4,10 +4,11 @@ category: chemistry
 keyw: molecular mechanics 
 plumed_version: 2.4
 contributor: Vojtech Spiwok 
-doi: unpublished
+doi: 10.1021/acs.jcim.1c00651 
 history:
   2021-06-02: original submission
   2021-10-06: update
+  2022-04-03: updated doi
 instructions: >
   All input files for MD and MTD simulations with property map force field corrections are supplied. Property map correction is introduced via plumed.dat files. 
  
