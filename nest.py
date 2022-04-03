@@ -488,6 +488,11 @@ def process_egg(path,eggdb=None):
     eggdb.flush()
 
 if __name__ == "__main__":
+    # write plumed version to file
+    stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip() 
+    f=open("_data/plumed.yml","w")
+    f.write("stable: v%s" % str(stable_version))
+    f.close()
     with open("_data/eggs.yml","w") as eggdb:
         print("# file containing egg database.",file=eggdb)
 
