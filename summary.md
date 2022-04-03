@@ -30,7 +30,7 @@ __List of eggs with failed tests__
 {% endfor %}
 
 {:#browse-table .display}
-| plumID | Name | Contributor | # inputs | current | master |
+| plumID | Name | Contributor | inputs | current | master |
 | :------: |  :------:  |  :------: | :------: | :------:  | :------: |
 {% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
 {% endfor %}
