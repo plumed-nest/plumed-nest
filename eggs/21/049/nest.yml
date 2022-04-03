@@ -4,7 +4,8 @@ category: methods
 keyw: path-CV, metadynamics, multiple-walker, multiple paths, pathmap 
 plumed_version: 2.6
 contributor: Alberto Pérez-de-Alba-Ortíz
-doi: unpublished
+ref: "A. Pérez de Alba Ortíz, B. Ensing. Simultaneous sampling of multiple transition channels using adaptive paths of collective variables"
+ref_url: "https://doi.org/10.48550/arXiv.2112.04061"
 history:
   2021-12-07: original submission
 instructions: >
