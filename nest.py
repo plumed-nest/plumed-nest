@@ -431,9 +431,9 @@ def process_egg(path,eggdb=None):
             has_custom = re.match(".*-mod",plumed_version)
             
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
-            if(success>0): nfail+=1
+            if(success!=0 and success!="custom"): nfail+=1
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
-            if(success_master>0): nfailm+=1
+            if(success_master!=0 and success_master!="custom"): nfailm+=1
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             if plumed_version != "not specified":
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
