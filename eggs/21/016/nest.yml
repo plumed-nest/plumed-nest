@@ -1,4 +1,4 @@
-url: https://github.com/bussilab/saxs-md-gac/archive/4730a41d1f8ef3ee7b35a279ea16ca770db1cdaa.zip
+url: https://github.com/bussilab/saxs-md-gac/archive/24f5aa860bf1b3c6eb2062a5137999dba082561d.zip
 # md5: 05a3f3580d2a1fa66785584330796886
 pname: MD SAXS GTPase associated center
 category: bio
@@ -9,6 +9,7 @@ doi: 10.1093/nar/gkab459
 history:
   2021-04-19: original submission
   2021-06-14: added DOI
+  2022-04-03: fixed input for plumed 2.8
 plumed_input:
   - path: input_files/plumed.dat
     natoms: 168751
