@@ -25,7 +25,8 @@ Table reporting eggs with failed tests.
 {:#browse-table .display}
 | plumID | Name | Contributor | # inputs | # fail current | # fail master |
 | :------: |  :------:  |  :------: | :------: | :------:  | :------: |
-{% for item in site.data.eggs %} {% if item.nfail > 0 or item.nfailm > 0 %} | [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} | {% endif %} {% endfor %}
+{% for item in site.data.eggs %} {% if item.nfail > 0 or item.nfailm > 0 %} | [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} | {% endif %}
+{% endfor %}
 
 <script>
 $(document).ready(function() {
