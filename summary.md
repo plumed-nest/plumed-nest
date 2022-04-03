@@ -42,6 +42,7 @@ __List of eggs with missing reference paper__
 
 There are a total of {{ missing.size }} eggs with missing reference paper.
 
+{:#browse-table2 .display}
 | plumID | Name | Contributor |
 | :------: |  :------:  |  :------: |
 {% for item in missing %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
@@ -58,6 +59,22 @@ var table = $('#browse-table').DataTable({
   "order": [[ 0, "desc" ]]
   });
 $('#browse-table-searchbar').keyup(function () {
+  table.search( this.value ).draw();
+  });
+});
+</script>
+   
+<script>
+$(document).ready(function() {
+var table = $('#browse-table2').DataTable({
+  "dom": '<"search"f><"top"il>rt<"bottom"Bp><"clear">',
+  language: { search: '', searchPlaceholder: "Search project..." },
+  buttons: [
+        'copy', 'excel', 'pdf'
+  ],
+  "order": [[ 0, "desc" ]]
+  });
+$('#browse-table2-searchbar').keyup(function () {
   table.search( this.value ).draw();
   });
 });
