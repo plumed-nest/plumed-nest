@@ -396,6 +396,8 @@ def process_egg(path,eggdb=None):
             print("| File     | Compatible with |  ", file=o) 
             print("|:--------:|:--------:|  ", file=o)
 
+        # count number of failing tests
+        nfail=0; nfailm=0
         for file in config["plumed_input"]:
 
             if "natoms" in file:
@@ -429,7 +431,9 @@ def process_egg(path,eggdb=None):
             has_custom = re.match(".*-mod",plumed_version)
             
             success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
+            if(success>0): nfail+=1
             success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
+            if(success_master>0): nfailm+=1
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             if plumed_version != "not specified":
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
@@ -478,7 +482,9 @@ def process_egg(path,eggdb=None):
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
         print("  reference: '" + ref +"'",file=eggdb)
-
+        print("  ninputs: " + str(len(config["plumed_input"])))
+        print("  nfail: " + str(nfail))
+        print("  nfailm: " + str(nfailm))
     eggdb.flush()
 
 if __name__ == "__main__":
