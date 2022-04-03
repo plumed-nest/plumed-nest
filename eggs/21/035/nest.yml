@@ -4,7 +4,7 @@ category: chemistry
 keyw: CmuMD, interface 
 plumed_version: 2.5.1
 contributor: Aaron Finney 
-doi: unpublished 
+doi: 10.1016/j.cherd.2022.02.018 
 plumed_input:
   - path: CmuMD-NaCl/flat-plumed.dat 
   - path: CmuMD-NaCl/rough-plumed.dat 

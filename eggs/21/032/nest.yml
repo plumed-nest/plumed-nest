@@ -3,8 +3,8 @@ pname: Metal-coupled folding mechanism to metallothionein
 category: bio 
 keyw: parallel bias metadynamics, well tempered metadynamics, metal binding, metalloprotein, zinc coordination 
 plumed_version: 2.6
-contributor: Manuel Peris Diaz 
-doi: unpublished 
+contributor: Manuel-Peris Diaz 
+doi: 10.1021/jacs.1c05495 
 history:
   2021-07-21: original submission
 instructions: >
