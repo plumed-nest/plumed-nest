@@ -4,30 +4,33 @@ Eggs overview
 {% assign ninp   = 0 %}
 {% assign nfail  = 0 %}
 {% assign nfailm = 0 %}
+{% assign failed = ''  | split: ',' %}
+{% assign missing = '' | split: ',' %}
 {% assign date = "now" | date: "%Y-%m-%d %H:%M" %}
 
 {% for item in site.data.eggs %}
    {% assign ninp   = ninp   | plus: item.ninputs %}
    {% assign nfail  = nfail  | plus: item.nfail %}
    {% assign nfailm = nfailm | plus: item.nfailm %}
+   {% if item.nfail > 0 or item.nfailm > 0 %}
+     {% assign failed = failed | push: item %}
+   {% endif %}
+   {% if item.doi == "" or item.doi == "unpublished" or item.reference == "unpublished" %}
+     {% assign missing = missing | push: item %}
+   {% endif %}
 {% endfor %}
 
-Total number of PLUMED input files deposited in PLUMED-NEST, along with number of failed tests
+Total number of eggs and PLUMED input files deposited in PLUMED-NEST, along with number of failed tests
 with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 
-|   date   |  # inputs | ![current](https://img.shields.io/badge/current-failed-red.svg) | ![master](https://img.shields.io/badge/master-failed-red.svg) |
-| :------: |  :------:  |  :------:  | :------:  |
-|  {{ date }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
+|   date   |  # eggs | # inputs | ![current](https://img.shields.io/badge/current-failed-red.svg) | ![master](https://img.shields.io/badge/master-failed-red.svg) |
+| :------: |  :------:  |  :------:  | :------:  | :------:  |
+|  {{ date }} | {{ site.data.eggs.size }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
 
 
 __List of eggs with failed tests__
 
-{% assign failed = '' | split: ',' %}
-{% for item in site.data.eggs %}
-  {% if item.nfail > 0 or item.nfailm > 0 %}
-     {% assign failed = failed | push: item %}
-  {% endif %}
-{% endfor %}
+There are a total of {{ failed.size }} eggs with failing tests.
 
 {:#browse-table .display}
 | plumID | Name | Contributor | inputs | current | master |
@@ -35,14 +38,9 @@ __List of eggs with failed tests__
 {% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
 {% endfor %}
 
-__List of eggs with unpublished reference paper__
+__List of eggs with missing reference paper__
 
-{% assign missing = '' | split: ',' %}
-{% for item in site.data.eggs %}
-  {% if item.doi == "" or item.doi == "unpublished" or item.reference == "unpublished" %}
-     {% assign missing = missing | push: item %}
-  {% endif %}
-{% endfor %}
+There are a total of {{ missing.size }} eggs with missing reference paper.
 
 | plumID | Name | Contributor |
 | :------: |  :------:  |  :------: |
