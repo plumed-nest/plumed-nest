@@ -4,7 +4,8 @@ category: methods
 keyw: metadynamics, visualization, R 
 plumed_version: 2.4
 contributor: Vojtech Spiwok
-doi: unpublished 
+ref: "D. Trapl, V. Spiwok. Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d"
+ref_url: "https://doi.org/10.48550/arXiv.2009.02241"
 history:
   2020-08-21: original submission
 instructions: >
