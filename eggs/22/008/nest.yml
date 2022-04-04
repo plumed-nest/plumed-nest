@@ -4,8 +4,7 @@ category: materials
 keyw: Well tempered metadynamics, ab-initio, ase 
 plumed_version: 2.7
 contributor: Daniel Sucerquia
-ref: "D. Sucerquia, C. Parra, P. Cossio, O. Lopez-Acevedo, Ab initio metadynamics determination of temperature-dependent free-energy landscape in ultrasmall silver clusters" 
-ref_url: "https://arxiv.org/abs/2201.08761"
+doi: 10.1063/5.0082332
 history:
   2022-03-02: original submission
 instructions: >
