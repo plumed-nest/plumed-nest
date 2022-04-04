@@ -4,7 +4,7 @@ category: chemistry
 keyw: CmuMD, DFS clustering
 plumed_version: 2.5.1
 contributor: Aaron Finney
-doi: 10.1016/j.cherd.2022.02.018 
+doi: 10.1039/D1SC02289J 
 plumed_input:
   - path: NaCl_at_graphite-cmumd/clusters.plmd
   - path: NaCl_at_graphite-cmumd/cmumd.plmd 
