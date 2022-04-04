@@ -482,6 +482,7 @@ def process_egg(path,eggdb=None):
         print("  doi: " + config["doi"],file=eggdb)
         print("  path: " + path,file=eggdb)
         print("  reference: '" + ref +"'",file=eggdb)
+        print("  ref_url: '" + ref_url +"'",file=eggdb)
         print("  ninputs: " + str(len(config["plumed_input"])),file=eggdb)
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)

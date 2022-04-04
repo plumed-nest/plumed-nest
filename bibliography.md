@@ -5,6 +5,6 @@ Here is the complete list of the published papers connected to the projects depo
 
 {% for item in site.data.eggs %}
   {% if item.reference != 'unpublished' and item.reference != 'submitted' and item.reference != 'DOI not found' %}
-   [[plumID:{{ item.id }}]({{ item.path }})] [{{ item.reference }}](http://dx.doi.org/{{ item.doi }})
+   [[plumID:{{ item.id }}]({{ item.path }})] [{{ item.reference }}]({{ item.ref_url }})
  {% endif %}
 {% endfor %}
