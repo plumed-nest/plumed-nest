@@ -55,6 +55,7 @@ jobs:
         export PATH=/usr/lib/ccache:${PATH}
         ccache -s
         .travis/install.xdrfile
+        .travis/install.libtorch
         # version=master or version=f123f12f3 to select a specific version
         # pick newest release branch (alphabetic, will fail at v2.10)
         CXX="mpic++" .travis/install.plumed version="$(cd plumed2.git ; git branch | sed "s/^ *//" | grep '^v2\.[0-9]$' | tail -n 1)" repo=$PWD/plumed2.git

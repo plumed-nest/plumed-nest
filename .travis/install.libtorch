@@ -1,0 +1,19 @@
+#! /bin/bash
+
+set -e
+set -x
+
+echo "installing libtorch library"
+
+cd $HOME/opt
+
+# get libtorch
+wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip 
+
+# unzip it
+unzip libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip
+
+# clean
+rm libtorch-cxx11-abi-shared-with-deps-1.11.0%2Bcpu.zip
+
+cd ../
