@@ -47,7 +47,7 @@ rm -fr $HOME/opt/bin/$program_name
 rm -fr $HOME/opt/include/$program_name
 rm -fr $HOME/opt/lib/lib$program_name.so*
 
-./configure --prefix=$HOME/opt  --enable-modules=all --enable-boost_serialization --enable-fftw $suffix --enable-libtorch
+./configure --prefix=$HOME/opt  --enable-modules=all --enable-boost_serialization --enable-fftw $suffix --enable-libtorch LDFLAGS=-Wl,-rpath,$LD_LIBRARY_PATH
 make -j 5
 make install
 
