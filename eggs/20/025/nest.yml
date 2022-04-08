@@ -1,8 +1,8 @@
-url: https://github.com/gilgalad33/Deep-LDA_LigandBinding_SAMPL5/archive/master.zip 
+url:  https://github.com/valeriorizzi/Deep-LDA_LigandBinding_SAMPL5/archive/refs/heads/main.zip 
 pname: The role of water in host-guest interaction
 category: bio 
 keyw: ligand binding, water, opes, SAMPL5 
-plumed_version: 2.5-dev
+plumed_version: 2.5
 contributor: Valerio Rizzi 
 doi: 10.1038/s41467-020-20310-0 
 history:
