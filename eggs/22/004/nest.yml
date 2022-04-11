@@ -1,0 +1,12 @@
+url: https://github.com/uraucci/discovery_CVs/archive/master.zip 
+pname: Discover, Sample and Refine. Exploring Chemistry with Enhanced Sampling Techniques 
+category: chemistry
+keyw: reaction discovery, OPES, collective variables 
+plumed_version: 2.8
+contributor: Umberto Raucci 
+doi: 10.1021/acs.jpclett.1c03993 
+history:
+  2022-01-31: original submission
+instructions: >
+  Molecular dynamics simulations have been carried out using the CP2K 8.1 software package patched with a development version of PLUMED 2.8. Collective variables have been computed using the Pytorch library. To import the model from Pytorch to PLUMED we have used the interface developed by Luigi Bonati. This is developed in the Python C++ API Libtorch and is available [here](https://github.com/luigibonati/datadriven-CVs/).
+
