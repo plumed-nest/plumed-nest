@@ -54,13 +54,12 @@ jobs:
         sudo ln -s ccache /usr/local/bin/mpic++
         export PATH=/usr/lib/ccache:${PATH}
         ccache -s
-        .travis/install.xdrfile
-        .travis/install.libtorch
+        .ci/install.libtorch
         # version=master or version=f123f12f3 to select a specific version
         # pick newest release branch (alphabetic, will fail at v2.10)
-        CXX="mpic++" .travis/install.plumed version="$(cd plumed2.git ; git branch | sed "s/^ *//" | grep '^v2\.[0-9]$' | tail -n 1)" repo=$PWD/plumed2.git
+        CXX="mpic++" .ci/install.plumed version="$(cd plumed2.git ; git branch | sed "s/^ *//" | grep '^v2\.[0-9]$' | tail -n 1)" repo=$PWD/plumed2.git
         # GB: in addition, we install master version as plumed_master
-        CXX="mpic++" .travis/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
+        CXX="mpic++" .ci/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
         ccache -s
     - name: Run
       run: |
@@ -70,11 +69,11 @@ jobs:
       env:
         PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
       run: |
-        bash .travis/push $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*badge.svg") _config.yml _layouts _data assets # _sass
+        bash .ci/push $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*badge.svg") _config.yml _layouts _data assets # _sass
         #{
         #  find . -name "*.md"
         #  find . -name "*.stdout.txt.zip"
         #  find . -name "*badge.svg"
         #  echo _config.yml _layouts _data assets # _sass
-        #} | bash .travis/push
+        #} | bash .ci/push
 
