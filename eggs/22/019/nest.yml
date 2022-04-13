@@ -1,0 +1,13 @@
+url: https://github.com/raitis-b/plumed_nest/raw/main/fun_path_plm.zip 
+pname: Exploring aspartic protease inhibitor binding to design selective antimalarials 
+category: bio 
+keyw: ligand binding, loop opening, path CV, funnel metadynamics, drug development 
+plumed_version: 2.7
+contributor: Raitis Bobrovs 
+doi: 10.26434/chemrxiv-2022-hw0sn 
+history:
+  2022-04-13: original submission
+instructions: >
+  Input structure and plumed files for sampling the inhibitor binding to Malaria aspartic protease under the flexible flap loop. Simulations were run using GROMACS2021 patched with PLUMED2.7.
+ 
+ 

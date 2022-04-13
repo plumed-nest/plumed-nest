@@ -1,0 +1,12 @@
+url: https://gitlab.com/KirmizialtinLab/hb_cufix/-/raw/main/plumed_analysis.zip 
+pname: Refining the RNA Force Field with Small-Angle X-ray Scattering of Helix–Junction–Helix RNA 
+category: bio 
+keyw: RNA force field, Helix-Junction-Helix RNA, SAXS, Well tempered metadynamics 
+plumed_version: 2.4
+contributor: Weiwei He 
+doi: 10.1021/acs.jpclett.2c00359
+history:
+  2022-04-13: original submission
+instructions: >
+  The input files can be used to generate free energy profiles in the manuscript. GROMACS 5.0.5 package was used for MD simulations. For more information about the HB-CUFIX, please have a look [here](HB-CUFIX at https://gitlab.com/KirmizialtinLab/hb_cufix). 
+ 

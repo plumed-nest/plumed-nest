@@ -4,7 +4,8 @@ category: bio
 keyw: ligand binding, water, opes, benzamidine trypsin, unbinding rates, machine learning, Deep-LDA, Deep-TICA 
 plumed_version: 2.8
 contributor: Narjes Ansari 
-doi: unpublished
+ref: "N. Ansari, V. Rizzi, M. Parrinello. Water regulates the residence time of Benzamidine in Trypsin."
+ref_url: https://arxiv.org/abs/2204.05572
 history:
   2022-04-11: original submission
 instructions: >
