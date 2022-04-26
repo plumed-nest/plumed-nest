@@ -1,0 +1,12 @@
+url: https://github.com/sigbjobo/TIP4P-Ice-Phase-Diagram/archive/refs/heads/plumed-nest.zip  
+pname: Phase diagram of the TIP4P/Ice water model by enhanced sampling simulations 
+category: chemistry 
+keyw: Ice, water, nucleation, environment similarity, interfaces, phase diagram, multiumbrella 
+plumed_version: 2.8
+contributor: Sigbjørn Løland Bore
+doi: unpublished 
+history:
+  2022-04-26: original submission
+instructions: >
+  Input files for LAMMPS (29 Sep 2021) and PLUMED 2.8.  
+ 
