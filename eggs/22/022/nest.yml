@@ -1,0 +1,12 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Arend_Grothaus_2022_PLUMED.zip 
+pname: Modulation of Multidrug Resistance Protein 1 - mediated transport processes by the antiretroviral drug ritonavir
+category: bio 
+keyw: RMSD, protein-ligand interactions 
+plumed_version: 2.7
+contributor: Isabell Grothaus 
+doi: unpublished 
+history:
+  2022-04-29: original submission
+instructions: >
+  Plumed files for the calculation of RMSD values for ligand molecules, associated to a protein. Ref*.pdb files assign which atoms are used in the RMSD calculation by setting values in the B-factor column to 0 (exclusion) or 1 (inclusion).
+ 
