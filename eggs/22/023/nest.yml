@@ -1,0 +1,14 @@
+url: https://github.com/vendruscolo-lab/IAPP/raw/main/IAPPInput.zip
+pname: Determination of the structure and dynamics of the fuzzy coat of an amyloid fibril of IAPP using cryo-electron microscopy
+category: bio
+keyw: CryoEM, MEMMI,EMMI, Metadynamics, Metainference, IAPP, structural ensemble
+plumed_version: 2.6-mod
+contributor: Faidon Brotzakis
+doi: unpublished
+history:
+  2022-05-04: original submission
+instructions: >
+  The TOPO_MDP folder containts GROMACS topology and parameter files. PRODUCTION contains the PLUMED file and the associated companion files such as an index file, data GMM file (iapp.dat), structure.pdb file and job submission file used.  ANALYSIS folder contains the plumed_analysis.dat file used to print the CVs of 
+the biased N-tail side as well as the final torrie-value weight per-frame. plumed_analysis_unbiased.dat is used to print the unbiased N-tail side CVs. 
+The MEMMI method is implemented in the `emmi-bias-sigmasem` branch of the plumed master branch accessible [here](https://github.com/tlhr/plumed2.git). More information can be found in [here](https://github.com/vendruscolo-lab/IAPP). 
+ 
