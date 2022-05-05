@@ -4,9 +4,10 @@ category: bio
 keyw: ligand binding, docking, EMMI, LAT1
 plumed_version: 2.7
 contributor: Max Bonomi 
-doi: unpublished
+doi: 10.1101/2022.05.03.490502 
 history:
   2022-04-13: original submission
+  2022-05-05: updated doi
 instructions: >
   This egg contains the input files for replicating metainference simulations of LAT1. PLUMED [GitHub ISDB branch](https://github.com/plumed/plumed2/tree/isdb) and GROMACS 2020.1 were used. 
  
