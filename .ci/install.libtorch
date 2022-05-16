@@ -5,6 +5,7 @@ set -x
 
 echo "installing libtorch library"
 
+if [ ! -d "$HOME/opt" ]; then mkdir $HOME/opt; fi
 cd $HOME/opt
 
 if [ -d "./libtorch" ]
