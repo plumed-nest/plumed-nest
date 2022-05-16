@@ -54,6 +54,8 @@ jobs:
         sudo ln -s ccache /usr/local/bin/mpic++
         export PATH=/usr/lib/ccache:${PATH}
         ccache -s
+        # test create directory
+        if [ ! -d "$HOME/opt" ]; then mkdir $HOME/opt; fi 
         .ci/install.libtorch
         # version=master or version=f123f12f3 to select a specific version
         # pick newest release branch (alphabetic, will fail at v2.10)
