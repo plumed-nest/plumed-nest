@@ -4,22 +4,22 @@ category: materials
 keyw: metadynamics, peptide-surface binding 
 plumed_version: 2.4
 plumed_input:
-  - path: TBP/12mer_NH.dat
-  - path: TBP/12mer_NeNH.dat
-  - path: TBP/6mer_NH.dat
-  - path: TBP/6mer_NeNH.dat
-  - path: TBP/ARG_NH.dat
-  - path: TBP/ARG_NNH.dat
-  - path: TBP/ARG_NeH.dat
-  - path: TBP/ARG_NeNH.dat
-  - path: TBP/ASP_NH.dat
-  - path: TBP/ASP_NNH.dat
-  - path: TBP/ASP_NeH.dat
-  - path: TBP/ASP_NeNH.dat
-  - path: TBP/LYS_NH.dat
-  - path: TBP/LYS_NNH.dat
-  - path: TBP/LYS_NeH.dat
-  - path: TBP/LYS_NeNH.dat
+  - path: 12mer_NH.dat
+  - path: 12mer_NeNH.dat
+  - path: 6mer_NH.dat
+  - path: 6mer_NeNH.dat
+  - path: ARG_NH.dat
+  - path: ARG_NNH.dat
+  - path: ARG_NeH.dat
+  - path: ARG_NeNH.dat
+  - path: ASP_NH.dat
+  - path: ASP_NNH.dat
+  - path: ASP_NeH.dat
+  - path: ASP_NeNH.dat
+  - path: LYS_NH.dat
+  - path: LYS_NNH.dat
+  - path: LYS_NeH.dat
+  - path: LYS_NeNH.dat
 contributor: Jim Pfaendtner 
 doi: 10.1038/s41524-020-0288-7
 history:
