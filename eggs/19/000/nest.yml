@@ -1,4 +1,4 @@
-url: https://archive.materialscloud.org/record/file?file_id=7a284a85-9d86-45dc-b187-8e0d7f1a715f&record_id=92&filename=inputs.zip 
+url: https://github.com/invemichele/VESdeltaF/archive/master.zip
 pname: VesDeltaF 
 category: methods 
 keyw: VES, convergence, suboptimal CVs 
@@ -21,4 +21,4 @@ instructions: >
   See the provided README file.
   Other useful links are
   the PLUMED manual for [VES_DELTA_F](https://plumed.github.io/doc-master/user-doc/html/_v_e_s__d_e_l_t_a__f.html) action
-  and [https://archive.materialscloud.org/2019.0004](https://archive.materialscloud.org/2019.0004)
+  and [https://archive.materialscloud.org/record/2019.0004/v4](https://archive.materialscloud.org/record/2019.0004/v4)
