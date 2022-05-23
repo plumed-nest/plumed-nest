@@ -1,0 +1,12 @@
+url: https://github.com/vendruscolo-lab/sdab-entropy/raw/main/plumed-nest.zip
+pname: Conformational Entropy as a Potential Liability of Computationally Designed Antibodies 
+category: bio
+keyw: metadynamics, conformational entropy, antibody, nanobody 
+plumed_version: 2.6
+contributor: Thomas Löhr 
+doi: 10.3390/biom12050718
+history:
+  2022-05-23: original submission
+instructions: >
+  GROMACS 2019.3, Simulations run using mpirun -n 32 gmx_mpi mdrun -s topol -cpi state -multidir r{0..31} -plumed ../plumed.dat -v
+ 
