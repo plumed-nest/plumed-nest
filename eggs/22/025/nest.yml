@@ -1,0 +1,40 @@
+url: https://github.com/kbal/bubblenucleation/archive/main.zip 
+pname: Bubble nucleation rate predictions in a Lennard-Jones fluid 
+category: bio
+keyw: free energies, kinetics, reweighted Jarzynski sampling, neural network, nucleation 
+plumed_version: 2.8
+contributor: Kristof Bal 
+plumed_input:
+ - path:  p0.026/t0.8600-fes/plumed.inp
+ - path:  p0.026/t0.8660-fes/plumed.inp
+ - path:  p0.026/t0.8675-fes/plumed.inp
+ - path:  p0.026/t0.8640-fes/plumed.inp
+ - path:  p0.026/t0.8680-fes/plumed.inp
+ - path:  p0.026/t0.8580-smd/plumed1.inp
+ - path:  p0.026/t0.8580-smd/plumed2.inp
+ - path:  p0.026/t0.8580-fes/plumed.inp
+ - path:  p0.026/t0.8580-recross/plumed1.inp
+ - path:  p0.026/t0.8580-recross/plumed2.inp
+ - path:  t0.700/p0.14000-smd/plumed1.inp
+ - path:  t0.700/p0.14000-smd/plumed2.inp
+ - path:  t0.700/p0.14000-fes/plumed.inp
+ - path:  t0.700/p0.16627-fes/plumed.inp
+ - path:  t0.700/p0.16222-fes/plumed.inp
+ - path:  t0.700/p0.14724-fes/plumed.inp
+ - path:  t0.700/p0.15808-fes/plumed.inp
+ - path:  t0.700/p0.15000-fes/plumed.inp
+ - path:  t0.855/p0.026-fes/plumed.inp
+ - path:  t0.855/p0.026-smd/plumed1.inp
+ - path:  t0.855/p0.026-smd/plumed2.inp
+ - path:  t0.855/p0.020-fes/plumed.inp
+ - path:  t0.855/p0.023-fes/plumed.inp
+ - path:  t0.855/p0.014-fes/plumed.inp
+ - path:  t0.855/p0.026-recross/plumed1.inp
+ - path:  t0.855/p0.026-recross/plumed2.inp
+ - path:  t0.855/p0.017-fes/plumed.inp
+doi: unpublished 
+history:
+  2022-05-31: original submission
+instructions: >
+  LAMMPS and PLUMED input files for calculation of bubble nucleation rates in Lennard-Jones fluids. Combines the reweighted Jarzynski sampling recipe with recrossing-corrected TST for rate calculation. Python with scikit-learn is also needed for intermediate processing. See README for more details. 
+ 
