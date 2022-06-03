@@ -1,0 +1,12 @@
+url: https://github.com/UWPRG/PRGNESTS/raw/main/Silica_peptoid_PB/Silica_peptoid_PB.zip 
+pname: Designing Sequence-Defined Peptoids for Fibrillar Self-Assembly and Silicification 
+category: materials
+keyw: Peptoid, silica 
+plumed_version: 2.5
+contributor:  Jim Pfaendtner
+doi: unpublished 
+history:
+  2022-06-03: original submission
+instructions: >
+  Peptoid binding free energy to silica surfaces were calculated with GROMACS using the codes in the URL. All files needed to reproduce the results are included, such as configuration, .mdp, .itp, and plumed.dat.
+ 
