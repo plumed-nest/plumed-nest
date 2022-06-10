@@ -1,0 +1,13 @@
+url: https://github.com/maxbonomi/BANAL-236/archive/main.zip 
+pname: Molecular Dynamics simulations of BANAL-236 RBD/hACE2 complexes 
+category: bio 
+keyw: SARS-CoV-2, COVID-19, MD, human-ACE2, spike, receptor-binding domain, BANAL-236 
+plumed_version: 2.7
+contributor:  Max Bonomi 
+doi: unpublished 
+history:
+  2022-06-10: original submission
+instructions: >
+  This egg contains the [GROMACS](https://www.gromacs.org) topology and input files as well as the PLUMED/python analysis scripts needed to reproduce the Molecular Dynamics
+ simulations of the WT and mutant BANAL-236 spike-RBD/human-ACE2 complexes. See [README.md](https://github.com/maxbonomi/BANAL-236/#readme) for more information and detailed instructions. 
+ 
