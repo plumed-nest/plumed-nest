@@ -6,6 +6,7 @@ Eggs overview
 {% assign nfailm = 0 %}
 {% assign failed = ''  | split: ',' %}
 {% assign missing = '' | split: ',' %}
+{% assign preprint = '' | split: ',' %}
 {% assign date = "now" | date: "%Y-%m-%d %H:%M" %}
 
 {% for item in site.data.eggs %}
@@ -17,6 +18,9 @@ Eggs overview
    {% endif %}
    {% if item.doi == "" or item.doi == "unpublished" or item.reference == "unpublished" %}
      {% assign missing = missing | push: item %}
+   {% endif %}
+   {% if item.preprint > 0 %}
+     {% assign preprint = preprint | push: item %}
    {% endif %}
 {% endfor %}
 
@@ -38,11 +42,21 @@ There are {{ failed.size }} eggs with failing tests.
 {% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
 {% endfor %}
 
-__List of eggs with missing reference paper__
+__List of eggs with preprint reference__
 
-There are {{ missing.size }} eggs with missing reference paper.
+There are {{ preprint.size }} eggs with preprint reference (arXiv, bioRxiv, medRxiv, or ChemRxiv).
 
 {:#browse-table2 .display}
+| plumID | Name | Contributor |
+| :------: |  :------:  |  :------: |
+{% for item in preprint %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
+{% endfor %}
+
+__List of eggs without reference paper__
+
+There are {{ missing.size }} eggs without reference paper, marked as unpublished or submitted.
+
+{:#browse-table3 .display}
 | plumID | Name | Contributor |
 | :------: |  :------:  |  :------: |
 {% for item in missing %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
@@ -75,6 +89,22 @@ var table = $('#browse-table2').DataTable({
   "order": [[ 0, "desc" ]]
   });
 $('#browse-table2-searchbar').keyup(function () {
+  table.search( this.value ).draw();
+  });
+});
+</script>
+
+<script>
+$(document).ready(function() {
+var table = $('#browse-table3').DataTable({
+  "dom": '<"search"f><"top"il>rt<"bottom"Bp><"clear">',
+  language: { search: '', searchPlaceholder: "Search project..." },
+  buttons: [
+        'copy', 'excel', 'pdf'
+  ],
+  "order": [[ 0, "desc" ]]
+  });
+$('#browse-table3-searchbar').keyup(function () {
   table.search( this.value ).draw();
   });
 });
