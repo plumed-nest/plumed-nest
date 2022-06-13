@@ -55,6 +55,8 @@ def zip(path):
     os.remove(path)
 
 def get_reference(doi,ref,ref_url):
+    # initialize preprint
+    prep = 0
     # retrieve citation from doi
     if(len(doi)>0):
       # check if unpublished/submitted
@@ -66,9 +68,15 @@ def get_reference(doi,ref,ref_url):
         if("DOI Not Found" in cit): 
           ref="DOI not found"
         else:
+          # get citation
           ref=cit[3:cit.find(", doi")]
+          # and url
           ref_url="http://dx.doi.org/"+doi
-    return ref,ref_url
+          # check if bioRxiv
+          if(doi.split('/')[0]=='10.1101'): prep = 1
+    # arXiv and ChemRxiv
+    if('arxiv' in ref_url.lower() or 'chemrxiv' in ref_url.lower()): prep = 1
+    return ref,ref_url,prep
  
 def get_short_name_ini(lname, length):
     if(len(lname)>length): sname = lname[0:length]+"..."
@@ -384,8 +392,8 @@ def process_egg(path,eggdb=None):
             print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
             if(len(config["history"])>1):
               print("**Last revised:** "+convert_date(config["history"][-1][0])+"  ", file=o)
-            # retrieve reference and url
-            ref, ref_url = get_reference(config["doi"],config["ref"],config["ref_url"])
+            # retrieve reference,url, and preprint flag
+            ref,ref_url,prep = get_reference(config["doi"],config["ref"],config["ref_url"])
             if(ref=="unpublished" or ref=="submitted" or ref=="DOI not found"):
               print("**Publication:** " + ref + "  ", file=o)
             else:
@@ -486,6 +494,7 @@ def process_egg(path,eggdb=None):
         print("  ninputs: " + str(len(config["plumed_input"])),file=eggdb)
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)
+        print("  preprint: " + str(prep),file=eggdb)
     eggdb.flush()
 
 if __name__ == "__main__":
