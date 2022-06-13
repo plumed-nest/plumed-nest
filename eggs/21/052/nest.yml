@@ -4,7 +4,7 @@ category: materials
 keyw: Ibuprofen, unbinding, WTmetaD 
 plumed_version: 2.5
 contributor: Matteo Salvalaglio 
-doi: 10.26434/chemrxiv-2021-01dfq-v2 
+doi: 10.1021/acs.cgd.1c01479
 plumed_input:
    - path: 002_acetonitrile_plumed.dat
    - path: 002_butanol_plumed.dat
