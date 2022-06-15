@@ -223,15 +223,17 @@ def plumed_format(source,global_header=None,header=None,docbase=None,actions=Non
 def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
+    # raw std output - to be zipped
     outfile=source + "." + exe + ".stdout.txt"
+    # raw std error - to be zipped
     errtxtfile=source + "." + exe + ".stderr.txt"
+    # std error markdown page
     errfile=source + "." + exe + ".stderr.md"
     # write header and preamble to errfile
     with open(errfile,"w") as stderr:
         print(global_header,file=stderr)
         print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
-        print("Download: [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip))  ",file=stderr)
-        print("Download: [zipped raw stderr](" + plumed_file + "." + exe + ".stderr.txt.zip))  ",file=stderr)
+        print("Download: [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip) - [zipped raw stderr](" + plumed_file + "." + exe + ".stderr.txt.zip) ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"w") as stdout:
         with open(errtxtfile,"w") as stderr:
@@ -452,8 +454,15 @@ def process_egg(path,eggdb=None):
                 plumed_version="not specified"
 
             header="**Originally used with PLUMED version:** " + plumed_version + "  \n"
-            header+= "**Stable:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
-            header+= "**Master:** [raw zipped stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.zip) - [stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+            # output and error files for stable version
+            header+= "**Stable:** [zipped raw stdout]("+ re.sub(".*/","",file["path"]) +".plumed.stdout.txt.zip) - "
+            header+= "[zipped raw stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr.txt.zip) - "
+            header+= "[stderr]("+ re.sub(".*/","",file["path"]) +".plumed.stderr)  \n"
+            # output and error files for master version
+            header+= "**Master:** [zipped raw stdout]("+ re.sub(".*/","",file["path"]) +".plumed_master.stdout.txt.zip) - "
+            header+= "[zipped raw stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr.txt.zip) - "
+            header+= "[stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
+
             actions=[]
 # in principle returns the list of produced files, not used yet:
             plumed_format(file["path"],global_header=global_header,header=header,actions=actions)
