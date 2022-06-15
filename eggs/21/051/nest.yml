@@ -4,8 +4,7 @@ category: methods
 keyw: force field, RNA
 plumed_version: 2.5
 contributor: Giovanni Bussi
-ref: "T. Frohlking, V. Mlynsky, M. Janecek, P. Kuhrova, M. Krepl, P. Banas, J. Sponer, G. Bussi. Automatic learning of hydrogen-bond fixes in an AMBER RNA force field"
-ref_url: "https://doi.org/10.48550/arXiv.2201.04078"
+doi: 10.1021/acs.jctc.2c00200
 history:
   2021-12-16: original submission
 instructions: >
