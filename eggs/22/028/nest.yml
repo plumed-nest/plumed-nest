@@ -1,0 +1,12 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Grothaus_et_al_2022_PLUMED.zip 
+pname: N-glycan conformer distributions in atomistic simulation 
+category: bio
+keyw: REST2, RECT, N-glycan, pucker 
+plumed_version: 2.7
+contributor: Isabell Grothaus 
+doi: unpublished
+history:
+  2022-06-15: original submission
+instructions: >
+ Plumed files to perform enhanced sampling simulations using the method REST-RECT for different N-glycans. All dihedral angles in the glycan are biased as well as the glycan itself effectively heated via REST2. One exemplary plumed file to construct 2D free energy plots along the puckering coordinates phi and theta.
+ 
