@@ -2,7 +2,7 @@ url: https://github.com/luigibonati/deep-ves-data/archive/master.zip
 pname: Neural networks-based variationally enhanced sampling
 category: methods 
 keyw: ves, neural networks
-plumed_version: 2.5-mod
+plumed_version: 2.5
 contributor: Luigi Bonati
 doi: 10.1073/pnas.1907975116
 history:
