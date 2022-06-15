@@ -224,14 +224,17 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     run_folder = str(pathlib.PurePosixPath(source).parent)
     plumed_file = os.path.basename(source)
     outfile=source + "." + exe + ".stdout.txt"
+    errtxtfile=source + "." + exe + ".stderr.txt"
     errfile=source + "." + exe + ".stderr.md"
+    # write header and preamble to errfile
     with open(errfile,"w") as stderr:
         print(global_header,file=stderr)
         print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
-        print("(download [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip))  ",file=stderr)
+        print("Download: [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip))  ",file=stderr)
+        print("Download: [zipped raw stderr](" + plumed_file + "." + exe + ".stderr.txt.zip))  ",file=stderr)
         print("{% raw %}\n<pre>",file=stderr)
     with open(outfile,"w") as stdout:
-        with open(errfile,"a") as stderr:
+        with open(errtxtfile,"w") as stderr:
             with cd(run_folder):
                 options=[exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file]
                 if nreplicas>0:
@@ -239,9 +242,28 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
                 child = subprocess.Popen(options, stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
-    with open(errfile,"a") as stderr:
-        print("</pre>\n{% endraw %}",file=stderr)
+    # now we add the first 1000 lines of errtxtfile to errfile
+    with open(errtxtfile, "r") as stdtxterr:
+     with open(errfile,"a") as stderr:
+          # line counter
+          lc = 0
+          # write note
+          print("First 1000 rows of error file", file=stderr)
+          while True:
+            lc += 1
+            # read line by line
+            line = stdtxterr.readline()
+            # if end of file, break
+            if not line: break
+            # print line to stderr
+            print(line.strip(), file=stderr)
+            # check if max number of lines is reached
+            if(lc>=1000): break
+          # close stderr
+          print("</pre>\n{% endraw %}",file=stderr)
+    # and finally we compress both outfile and errtxtfile
     zip(outfile)
+    zip(errtxtfile)
     return rc
 
 def add_readme(file, tested, success, exe, has_load, has_custom):
