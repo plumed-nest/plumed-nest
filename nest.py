@@ -251,7 +251,7 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
           lc = 0
           # print comment
           print("#! Only the first 1000 rows of the error file are shown below", file=stderr)
-          print("#! To inspect the full error file, please download the stderr.txt.zip file", file=stderr)
+          print("#! To inspect the full error file, please download the zipped raw stderr file above", file=stderr)
           while True:
             lc += 1
             # read line by line
