@@ -227,7 +227,7 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
     outfile=source + "." + exe + ".stdout.txt"
     # raw std error - to be zipped
     errtxtfile=source + "." + exe + ".stderr.txt"
-    # std error markdown page
+    # std error markdown page (with only the first 1000 lines of stderr.txt)
     errfile=source + "." + exe + ".stderr.md"
     # write header and preamble to errfile
     with open(errfile,"w") as stderr:
@@ -244,26 +244,25 @@ def plumed_input_test(exe,source,global_header,natoms,nreplicas):
                 child = subprocess.Popen(options, stdout=stdout, stderr=stderr)
                 child.communicate()
                 rc = child.returncode
-    # now we add the first 1000 lines of errtxtfile to errfile
+    # now we print the first 1000 lines of errtxtfile to errfile
     with open(errtxtfile, "r") as stdtxterr:
      with open(errfile,"a") as stderr:
           # line counter
           lc = 0
-          # write note
-          print("First 1000 rows of error file", file=stderr)
+          # print comment
+          print("#! Only the first 1000 rows of the error file are shown below", file=stderr)
+          print("#! To inspect the full error file, please download the stderr.txt.zip file", file=stderr)
           while True:
             lc += 1
             # read line by line
             line = stdtxterr.readline()
-            # if end of file, break
-            if not line: break
+            # if end of file or max number of lines reached, break
+            if(not line or lc>1000): break
             # print line to stderr
             print(line.strip(), file=stderr)
-            # check if max number of lines is reached
-            if(lc>=1000): break
           # close stderr
           print("</pre>\n{% endraw %}",file=stderr)
-    # and finally we compress both outfile and errtxtfile
+    # compress both outfile and errtxtfile
     zip(outfile)
     zip(errtxtfile)
     return rc
