@@ -1,4 +1,4 @@
-url: https://sites.google.com/site/fabiopietrucci/Home/download/example-plumed2-pathcoordtable.zip 
+url: https://github.com/physix-repo/plumed_input_pathcoordtable/raw/main/example-plumed2-pathcoordtable.zip 
 pname: Chemical reaction in solution using path collective variables based on coordination patterns 
 category: chemistry
 keyw: chemical reactions, solutions, metadynamics, coordination patterns 

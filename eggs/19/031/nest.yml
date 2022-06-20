@@ -1,4 +1,4 @@
-url: https://sites.google.com/site/fabiopietrucci/Home/download/plumed-input-nucleation.zip
+url: https://github.com/physix-repo/plumed_input_nucleation/raw/main/plumed-input-nucleation.zip
 pname: Ice nucleation using PIV-based path coordinates 
 category: materials
 keyw: phase transitions, nucleation, TIP4P, path CV, PIV, metadynamics 
