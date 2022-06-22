@@ -1,0 +1,14 @@
+url: https://github.com/AmericaChi/Angiotensin-1-7_Metadynamics/archive/refs/heads/main.zip
+pname: Angiotensin-1-7_Metadynamics
+category: bio
+keyw: Metadynamics, Angiotensin-(1-7), peptide
+plumed_version: 2.5
+contributor: L.-América Chi
+doi: 10.1101/2022.05.23.493150
+plumed_input:
+ - path: metad.dat
+history:
+  2022-03-21: original submission
+instructions: >
+  These scripts can be used to run  Metadynamics simulation of Angiotensin-(1-7) vasoactive peptide in order to explore its conformational landscape in solution at neutral pH. Collective variables are a kind of HBs and gyration radius. If useful for your project, please cite this [preprint](https://doi.org/10.1101/2022.05.23.493150). Call via `bash run.sh`. This script needs md.tpr, index_metad2.ndx and metad.dat files in the root directory. md.tpr should be created in its corresponding GROMACS version by using .itr, .top, .mdp and .pdb files. Force field used can be found here as a .zip file. FF reference [Horta, B. A., et al (2016). A GROMOS-compatible force field for small organic molecules in the condensed phase The 2016H66 parameter set. J. Chem. Theory Comput. 2016, 12, 8, 3825–3850](https://doi.org/10.1021/acs.jctc.6b00187). Scripts require a proper GROMACS patched with PLUMED installed. This simulations were run on a GROMACS 2016.5 and PLUMED Version 2.5.0.
+ 
