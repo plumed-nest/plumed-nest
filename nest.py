@@ -11,6 +11,7 @@ from contextlib import contextmanager
 import os
 import pathlib
 import subprocess
+from PlumedToHTML import get_html, get_html_header
 from datetime import datetime
 from pytz import timezone
 
@@ -538,6 +539,11 @@ if __name__ == "__main__":
 
         # list of paths - not ordered
         pathlist=list(pathlib.Path('.').glob('eggs/*/*/nest.yml'))
+        # Reduce the eggs by reading in the eggs to use from a file -- used for testing
+        if os.path.exists("selected_eggs.dat") :
+           pathlist = []
+           with open("selected_eggs.dat", "r") as file:
+              for readline in file : pathlist.append( pathlib.Path( './' + readline.strip() ) )
         # cycle on ordered list
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
