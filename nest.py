@@ -11,7 +11,7 @@ from contextlib import contextmanager
 import os
 import pathlib
 import subprocess
-from PlumedToHTML import get_html, get_html_header
+from PlumedToHTML import test_plumed, get_html 
 from datetime import datetime
 from pytz import timezone
 
@@ -40,20 +40,6 @@ def md5(path):
                 break
             md5.update(data)
     return md5.hexdigest()
-
-def gzip(path):
-    """ Gzip a path (very much like command line gzip does) """
-    import gzip as gz
-    with open(path, 'rb') as f_in:
-        with gz.open(path + '.gz', 'wb') as f_out:
-            shutil.copyfileobj(f_in, f_out)
-    os.remove(path)
-
-def zip(path):
-    """ Zip a path removing the original file """
-    with zipfile.ZipFile(path + ".zip", "w") as f_out:
-        f_out.write(path)
-    os.remove(path)
 
 def get_reference(doi,ref,ref_url):
     # initialize preprint
@@ -90,7 +76,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,global_header=None,header=None,docbase=None,actions=None):
+def plumed_format(source,status,global_header=None,header=None):
     """ Format plumed input file.
 
     source: path to master input file
@@ -99,174 +85,26 @@ def plumed_format(source,global_header=None,header=None,docbase=None,actions=Non
 
     """
     suffix="md"
-    if not docbase:
-        docbase="https://plumed.github.io/doc-master/user-doc/html/"
     # list of generated files, returned
     lista=[]
     with open(source) as f:
         destination=source + "." + suffix
         lista.append(destination)
         with open(destination,"w") as o:
-            lines = f.read().splitlines()
-            continuation=False
-            action=""
-            endplumed=False
-            action_next_line=False
             if global_header:
                  print(global_header,file=o)
             print("**Source:** " + re.sub("^data/","",source)+"  ",file=o)
             if header:
                  print(header,file=o)
+            # Read in the input file and get the rendered html
+            lines = f.read()
+            html = get_html( lines, source, status, "plumed_master" )
             # make sure Jekyll does not interfere with format
-            # <pre> marks a preformatted block
-            print("{% raw %}<pre>",file=o)
-            for line in lines:
-                words=re.sub("#.*","",line).split()
-                if endplumed:
-                    line="<span style=\"color:blue\">" + line + "</span>"
-                else:
-                    if continuation:
-                        if len(words)>0:
-                            if words[0]=="...":
-                                # end of continuation
-                                continuation=False
-                            if action_next_line:
-                                # action was not in first line, thus it is here
-                                action=words[0]
-                                action_next_line=False
-                    else:
-                        action=""
-                        action_next_line=False
-                        if len(words)>0:
-                            if len(words)>1 and words[-1]=="...":
-                                # first line of multiline action:
-                                continuation=True
-                                if re.match("^.*:$",words[0]):
-                                    if len(words)>2:
-                                        # first word is the label
-                                        action=words[1]
-                                    else:
-                                        # first word of next nonempty line will be the action
-                                        action_next_line=True
-                                else:
-                                    action=words[0]
-                            else:
-                                # single line action, easy to parse:
-                                if re.match("^.*:$",words[0]):
-                                    action=words[1]
-                                else:
-                                    action=words[0]
-                    if len(action)>0:
-                        und_action = ''
-                        for ch in action:
-                            if(not ch.isdigit()):
-                                und_action = und_action + '_' + ch
-                            else:
-                                und_action = und_action + ch
-                        action_url="<a href=\"" + docbase + re.sub('___+', '__', und_action.lower()) + ".html\">" + action + "</a>"
-                        # only replace first instance and make sure it is followed by a space or an end of line
-                        # this is to avoid problems when someone use in the label the name of the action
-                        line=re.sub(action+"([ #])",action_url+"\\1",line,count=1)
-                        line=re.sub(action+"$",action_url,line,count=1)
-                        if actions is not None:
-                            actions.append(action)
-                    
-                    if action=="ENDPLUMED":
-                        endplumed=True
-                    
-                    if action=="INCLUDE":
-                        # for now only oneline INCLUDE statements are supported. Could be extended later
-                        if len(words)>1 and re.match("^FILE=.*",words[1]):
-                            file=re.sub("^FILE=","",words[1])
-                            try:
-                                lista+=plumed_format(str(pathlib.PurePosixPath(source).parent)+"/"+file,global_header=global_header,actions=actions)
-                                # we here link with html suffix (even if we generated md files) otherwise links to do work after rendering
-                                file_url="<a href=\"" + file + ".html\">" + file + "</a>" 
-                                line=re.sub(" FILE=[^ ]*"," FILE=" + file_url,line)
-                            except FileNotFoundError:
-                                # if file is not found, do not replace the link and do not append lista
-                                pass
-                            
-                # mark comments as such
-                line=re.sub("(#.*$)","<span style=\"color:blue\">\\1</span>",line)    
-
-                # store special links here to make it easier to change them later if we modify the manual:
-                links={"vim":"_vim_syntax.html",
-                       "replicas":"special-replica-syntax.html",
-                       "groups":"_group.html",
-                       "molinfo":"_m_o_l_i_n_f_o.html"}
-
-                # list of special atom selections. only those that are not for a specific residue are needed.
-                # the others are found searching the dash (s)
-                keys={"groups":["mdatoms","allmdatoms"],
-                      "molinfo":["nucleic","protein","water","ions","hydrogens","nonhydrogens"]
-                     }
-
-                # link to vim:ft=plumed
-                line=re.sub("(vim: *ft=plumed)","<a href=\"" + docbase + links["vim"] +"\">\\1</a>",line)
-
-                # @ is kept out of the link so that the following substitutions do not find it
-                line=re.sub("@(replicas):","@<a href=\"" + docbase + links["replicas"]+"\">\\1</a>:",line)
-                for w in keys["groups"]:
-                    line=re.sub("@("+w+")([^0-9A-Za-z_]|$)","@<a href=\"" + docbase + links["groups"]+"\">\\1</a>\\2",line)
-                for w in keys["molinfo"]:
-                    line=re.sub("@("+w+")([^0-9A-Za-z_]|$)","@<a href=\"" + docbase + links["molinfo"]+"\">\\1</a>\\2",line)
-                # this is generic MOLINFO substitution: @anything followed by -
-                line=re.sub("@([^ ,{}<-]+-[0-9A-Za-z_-]+)","@<a href=\"" + docbase + links["molinfo"] + "\">\\1</a>",line)
-
-                print(line,file=o)
-                
-            print("</pre>{% endraw %}",file=o)
+            print("{% raw %}",file=o)
+            print( html, file=o )
+            print("{% endraw %}",file=o)
             # convert to set to remove duplicates
             return list(set(lista))
-
-
-def plumed_input_test(exe,source,global_header,natoms,nreplicas):
-    run_folder = str(pathlib.PurePosixPath(source).parent)
-    plumed_file = os.path.basename(source)
-    # raw std output - to be zipped
-    outfile=source + "." + exe + ".stdout.txt"
-    # raw std error - to be zipped
-    errtxtfile=source + "." + exe + ".stderr.txt"
-    # std error markdown page (with only the first 1000 lines of stderr.txt)
-    errfile=source + "." + exe + ".stderr.md"
-    # write header and preamble to errfile
-    with open(errfile,"w") as stderr:
-        print(global_header,file=stderr)
-        print("Stderr for source: ",re.sub("^data/","",source),"  ",file=stderr)
-        print("Download: [zipped raw stdout](" + plumed_file + "." + exe + ".stdout.txt.zip) - [zipped raw stderr](" + plumed_file + "." + exe + ".stderr.txt.zip) ",file=stderr)
-        print("{% raw %}\n<pre>",file=stderr)
-    with open(outfile,"w") as stdout:
-        with open(errtxtfile,"w") as stderr:
-            with cd(run_folder):
-                options=[exe, 'driver', '--natoms', str(natoms), '--parse-only', '--kt', '2.49', '--plumed', plumed_file]
-                if nreplicas>0:
-                    options=['mpiexec', '-np', str(nreplicas)] + options + ['--multi', str(nreplicas)]
-                child = subprocess.Popen(options, stdout=stdout, stderr=stderr)
-                child.communicate()
-                rc = child.returncode
-    # now we print the first 1000 lines of errtxtfile to errfile
-    with open(errtxtfile, "r") as stdtxterr:
-     with open(errfile,"a") as stderr:
-          # line counter
-          lc = 0
-          # print comment
-          print("#! Only the first 1000 rows of the error file are shown below", file=stderr)
-          print("#! To inspect the full error file, please download the zipped raw stderr file above", file=stderr)
-          while True:
-            lc += 1
-            # read line by line
-            line = stdtxterr.readline()
-            # if end of file or max number of lines reached, break
-            if(not line or lc>1000): break
-            # print line to stderr
-            print(line.strip(), file=stderr)
-          # close stderr
-          print("</pre>\n{% endraw %}",file=stderr)
-    # compress both outfile and errtxtfile
-    zip(outfile)
-    zip(errtxtfile)
-    return rc
 
 def add_readme(file, tested, success, exe, has_load, has_custom):
     with open("README.md","a") as o:
@@ -445,6 +283,18 @@ def process_egg(path,eggdb=None):
                 nreplicas = int(config["nreplicas"])
             else:
                 nreplicas = 0 # 0 means do not use mpiexec
+            
+            # If the number of replicas is not one or the number of atoms is not 1000000 then put that information in the input file
+            if natoms!=100000 or nreplicas!=0 : 
+               ifile = open( file["path"] )
+               inp = ifile.read()
+               ifile.close()
+               ofile = open( file["path"], "w+" )
+               if natoms!=10000 and nreplicas!=0 : ofile.write("#SETTINGS NREPLICAS=" + str(nreplicas) + " NATOMS=" + str(natoms) + "\n" )
+               elif natoms!=10000 : ofile.write("#SETTINGS NATOMS=" + str(natoms) + "\n" )
+               elif nreplicas!=0 : ofile.write("#SETTINGS NREPLICAS=" + str(nreplicas) + "\n" )
+               ofile.write( inp )
+               ofile.close()
 
             if "plumed_version" in file:
                 plumed_version=file["plumed_version"]
@@ -463,16 +313,17 @@ def process_egg(path,eggdb=None):
             header+= "[zipped raw stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr.txt.zip) - "
             header+= "[stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 
-            actions=[]
 # in principle returns the list of produced files, not used yet:
-            plumed_format(file["path"],global_header=global_header,header=header,actions=actions)
-            has_load = "LOAD" in actions
+            with open(file["path"]) as f : has_load = "LOAD" in f.read()
             has_custom = re.match(".*-mod",plumed_version)
             
-            success=plumed_input_test("plumed",file["path"],global_header,natoms,nreplicas)
+            success=test_plumed("plumed",file["path"],header=global_header)
             if(success!=0 and success!="custom"): nfail+=1
-            success_master=plumed_input_test("plumed_master",file["path"],global_header,natoms,nreplicas)
+            success_master=test_plumed("plumed_master",file["path"],header=global_header)
             if(success_master!=0 and success_master!="custom"): nfailm+=1
+            # Generate the plumed input 
+            plumed_format(file["path"],success_master,global_header=global_header,header=header)
+            # Find the stable version 
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
             if plumed_version != "not specified":
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
