@@ -1,0 +1,13 @@
+url: https://github.com/yhwang17/Plumed_DDPM_REMD/raw/main/plumed.zip 
+pname: Mixing physics across temperatures with generative artificial intelligence 
+category: methods
+keyw: REMD, Generative AI, DDPM
+plumed_version: 2.4
+contributor: Yihang Wang 
+ref: 'Y. Wang, L. Herron, P. Tiwary. From data to noise to data: mixing physics across temperatures with generative artificial intelligence'
+ref_url: 'https://arxiv.org/abs/2107.07369v2'
+history:
+  2022-07-21: original submission
+instructions: >
+  The PLUMED files are used to calculate the dihedral angles of the systems, which are later used to train the generative models. They can be run with  GROMACS/2016.5 using “gmx mdrun md_0_1 -plumed plumed.dat".
+ 
