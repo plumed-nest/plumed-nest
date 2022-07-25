@@ -3,6 +3,7 @@
 
 import yaml
 import sys
+import getopt
 import shutil
 import re
 import urllib.request
@@ -380,12 +381,27 @@ def process_egg(path,eggdb=None):
     eggdb.flush()
 
 if __name__ == "__main__":
+    nreplicas, replica, argv = 1, 0, sys.argv[1:] 
+    try: 
+        opts, args = getopt.getopt(argv,"hn:r:",["nreplicas=","replica="])
+    except: 
+       print('nest.py -n <nreplicas> -r <replica number>')
+
+    for opt, arg in opts:
+       if opt in ['-h'] :
+          print('nest.py -n <nreplicas> -r <replica number>')
+          sys.exit()
+       elif opt in ["-n", "--nreplicas"]:
+          nreplicas = int(arg)
+       elif opt in ["-r", "--replica"]:
+          replica = int(arg)
+    print("RUNNING", nreplicas, "REPLICAS. THIS IS REPLICA", replica )
     # write plumed version to file
     stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip() 
     f=open("_data/plumed.yml","w")
     f.write("stable: v%s" % str(stable_version))
     f.close()
-    with open("_data/eggs.yml","w") as eggdb:
+    with open("_data/eggs" + str(replica) + ".yml","w") as eggdb:
         print("# file containing egg database.",file=eggdb)
 
         # list of paths - not ordered
@@ -396,7 +412,9 @@ if __name__ == "__main__":
            with open("selected_eggs.dat", "r") as file:
               for readline in file : pathlist.append( pathlib.Path( './' + readline.strip() ) )
         # cycle on ordered list
+        k=0
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
-            process_egg(re.sub("nest.yml$","",str(path)),eggdb)
+            if k%nreplicas==replica : process_egg(re.sub("nest.yml$","",str(path)),eggdb)
+            k = k + 1 
 
