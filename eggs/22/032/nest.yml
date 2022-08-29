@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/7030287/files/CRL-VHL-degrader-SMARCA2-ring-closure-path-meta-eabf.zip
+pname: Reciprocal barrier restraint. Application to path-meta-eABF 
+category: methods
+keyw: restraint, upper wall, lower wall, path colvar, meta-eABF, metadynamics, DRR, protein conformational transition, PROTAC 
+plumed_version: 2.7
+contributor: Istvan Kolossvary 
+doi: 10.1101/2022.08.27.505552
+history:
+  2022-08-29: original submission
+instructions: >
+ To run this simulation you need OpenMM 7.6 or newer and the OpenMM-PLUMED plugin installed. To start the job run the following command line `python run_path-meta-eabf.py n_steps do_relax do_plumed`. For example, `python run_path-meta-eabf.py 50000 1 0` will minimize the system and run 50,000 steps of MD relaxation while `python run_path-meta-eabf.py 5000000 0 1` will read the checkpoint file and continue 5 million steps of meta-eABF simulation using the path colvar representing the opening and closing of the full CRL-VHL-degrader-SMARCA2 ring complex. NOTE. The current implementation of the PATHMSD action has a flaw that results in numerical instability due to computing `exp(-lambda*(it.distance))` with very large lambda values, without scaling. I highly recommend to make the following simple edit to `PathMSDBase.cpp` to introduce proper scaling.
+ 
