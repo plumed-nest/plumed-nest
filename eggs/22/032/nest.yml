@@ -8,5 +8,22 @@ doi: 10.1101/2022.08.27.505552
 history:
   2022-08-29: original submission
 instructions: >
- To run this simulation you need OpenMM 7.6 or newer and the OpenMM-PLUMED plugin installed. To start the job run the following command line `python run_path-meta-eabf.py n_steps do_relax do_plumed`. For example, `python run_path-meta-eabf.py 50000 1 0` will minimize the system and run 50,000 steps of MD relaxation while `python run_path-meta-eabf.py 5000000 0 1` will read the checkpoint file and continue 5 million steps of meta-eABF simulation using the path colvar representing the opening and closing of the full CRL-VHL-degrader-SMARCA2 ring complex. NOTE. The current implementation of the PATHMSD action has a flaw that results in numerical instability due to computing `exp(-lambda*(it.distance))` with very large lambda values, without scaling. I highly recommend to make the following simple edit to `PathMSDBase.cpp` to introduce proper scaling.
+ To run this simulation you need OpenMM 7.6 or newer and the OpenMM-PLUMED plugin installed. To start the job run the following command line `python run_path-meta-eabf.py n_steps do_relax do_plumed`. For example, `python run_path-meta-eabf.py 50000 1 0` will minimize the system and run 50,000 steps of MD relaxation while `python run_path-meta-eabf.py 5000000 0 1` will read the checkpoint file and continue 5 million steps of meta-eABF simulation using the path colvar representing the opening and closing of the full CRL-VHL-degrader-SMARCA2 ring complex. NOTE. The current implementation of the PATHMSD action has a flaw that results in numerical instability due to computing `exp(-lambda*(it.distance))` with very large lambda values, without scaling. I highly recommend to make the following simple edit to `PathMSDBase.cpp` to introduce proper scaling, as follows.
+ ```
+ $ diff PathMSDBase.cpp PathMSDBase.cpp-orig 
+ 275d274 
+ < double min_distance=1e10; 
+ 281,285c280 
+ < if(it.distance < min_distance) min_distance=it.distance; 
+ < } 
+ < 
+ < for(auto & it : imgVec) { 
+ < it.similarity=exp(-lambda*(it.distance - min_distance)); 
+ --- 
+ > it.similarity=exp(-lambda*(it.distance)); 
+ 293c288 
+ < val_z_path->set(-(1./lambda)*std::log(partition) +min_distance); 
+ --- 
+ > val_z_path->set(-(1./lambda)*std::log(partition)); 
+ ```
  
