@@ -4,7 +4,7 @@ category: bio
 keyw: Metadynamics, Angiotensin-(1-7), peptide
 plumed_version: 2.5
 contributor: L.-América Chi
-doi: 10.1101/2022.05.23.493150
+doi: 10.1007/s10822-022-00470-5 
 plumed_input:
  - path: metad.dat
 history:

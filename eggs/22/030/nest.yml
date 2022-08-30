@@ -4,8 +4,7 @@ category: methods
 keyw: REMD, Generative AI, DDPM
 plumed_version: 2.4
 contributor: Yihang Wang 
-ref: 'Y. Wang, L. Herron, P. Tiwary. From data to noise to data: mixing physics across temperatures with generative artificial intelligence'
-ref_url: 'https://arxiv.org/abs/2107.07369v2'
+doi: 10.1073/pnas.2203656119
 history:
   2022-07-21: original submission
 instructions: >

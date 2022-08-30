@@ -32,7 +32,8 @@ plumed_input:
  - path:  t0.855/p0.026-recross/plumed1.inp
  - path:  t0.855/p0.026-recross/plumed2.inp
  - path:  t0.855/p0.017-fes/plumed.inp
-doi: unpublished 
+ref: 'Kristof M. Bal, Erik C. Neyts. Extending and validating bubble nucleation rate predictions in a Lennard-Jones fluid with enhanced sampling methods and transition state theory'
+ref_url: 'https://arxiv.org/abs/2207.04819'
 history:
   2022-05-31: original submission
 instructions: >

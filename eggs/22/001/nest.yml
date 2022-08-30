@@ -4,8 +4,7 @@ category: methods
 keyw: enhanced sampling, variationally enhanced sampling, ves, metadynamics, bias representation, wavelets, adam
 plumed_version: 2.8
 contributor: Benjamin Pampel
-ref: B. Pampel, O. Valsson. Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials.
-ref_url: https://arxiv.org/abs/2202.13459
+doi: 10.1021/acs.jctc.2c00197
 nreplicas: 2
 plumed_input:
  - path: ves_md_linearexpansion/1d-double_well/plumed_sym8.dat
