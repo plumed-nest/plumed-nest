@@ -44,7 +44,7 @@ There are {{ failed.size }} eggs with failing tests.
 
 __List of eggs with preprint reference__
 
-There are {{ preprint.size }} eggs with preprint reference (arXiv, bioRxiv, medRxiv, or ChemRxiv).
+There are {{ preprint.size }} eggs with preprint reference (arXiv, bioRxiv, Research Square, medRxiv, or ChemRxiv).
 
 {:#browse-table2 .display}
 | plumID | Name | Contributor |

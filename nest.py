@@ -62,6 +62,8 @@ def get_reference(doi,ref,ref_url):
           ref_url="http://dx.doi.org/"+doi
           # check if bioRxiv/medRxiv
           if(doi.split('/')[0]=='10.1101'): prep = 1
+          # check if Research Square
+          if(doi.split('/')[0]=='10.21203'): prep = 1
     # arXiv and ChemRxiv
     if('arxiv' in ref_url.lower() or 'chemrxiv' in ref_url.lower()): prep = 1
     return ref,ref_url,prep
