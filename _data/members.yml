@@ -39,9 +39,9 @@
   city:        Milan 
   country:     Italy 
 - name:        Riccardo Capelli
-  affiliation: Forschungszentrum Jülich
-  city:        Jülich
-  country:     Germany
+  affiliation: University of Milan 
+  city:        Milan 
+  country:     Italy
 - name:        Paolo Carloni
   affiliation: Forschungszentrum Jülich
   city:        Jülich
@@ -69,6 +69,10 @@
 - name:        Sandip De
   affiliation: BASF
   city:        Ludwigshafen
+  country:     Germany
+- name:        Jayashrita Debnath 
+  affiliation: Max Plank Institute of Biophysics
+  city:        Frankfurt 
   country:     Germany
 - name:        Marco DeLaPierre
   affiliation: Pawsey Supercomputing Centre
