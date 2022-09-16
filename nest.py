@@ -52,18 +52,22 @@ def get_reference(doi,ref,ref_url):
         ref=doi.lower()
       # get info from doi
       else:
-        cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
-        if("DOI Not Found" in cit): 
-          ref="DOI not found"
-        else:
+        try:
           # get citation
-          ref=cit[3:cit.find(", doi")]
-          # and url
-          ref_url="http://dx.doi.org/"+doi
-          # check if bioRxiv/medRxiv
-          if(doi.split('/')[0]=='10.1101'): prep = 1
-          # check if Research Square
-          if(doi.split('/')[0]=='10.21203'): prep = 1
+          cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
+          if("DOI Not Found" in cit): 
+           ref="DOI not found"
+          else:
+           # get citation
+           ref=cit[3:cit.find(", doi")]
+           # and url
+           ref_url="http://dx.doi.org/"+doi
+           # check if bioRxiv/medRxiv
+           if(doi.split('/')[0]=='10.1101'): prep = 1
+           # check if Research Square
+           if(doi.split('/')[0]=='10.21203'): prep = 1
+        except:
+          ref="DOI not found" 
     # arXiv and ChemRxiv
     if('arxiv' in ref_url.lower() or 'chemrxiv' in ref_url.lower()): prep = 1
     return ref,ref_url,prep
