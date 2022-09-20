@@ -1,0 +1,12 @@
+url: https://github.com/mme-ucl/plumed-nest-data/raw/master/Sulflowers_plumed.dat.zip 
+pname: Rationalising the difference in crystallisability of two Sulflowers using efficient in silico methods 
+category: materials 
+keyw: metadynamics, crystallizability, crystal structure prediction, sulflower, persulforated coronene 
+plumed_version: 2.4
+contributor: Matteo Salvalaglio 
+doi: 10.1039/d2ce00942k 
+history:
+  2022-09-20: original submission
+instructions: >
+ Example input file for performing metadynamics simulations as discussed in [Rationalising the difference in crystallisability of two Sulflowers using efficient in silico methods, Isaac J. Sugden, Nicholas F. Francia, Torsten Jensen,c Claire S. Adjiman, and Matteo Salvalaglio, CrystEngComm, 2022](http://dx.doi.org/10.1039/d2ce00942k). 
+ 
