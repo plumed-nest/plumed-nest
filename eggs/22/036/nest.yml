@@ -1,0 +1,12 @@
+url: https://github.com/MoiCatPigeon/WT-MetaD-HREX_HJ/archive/refs/heads/main.zip 
+pname: Well-tempered MetaDynamics with Hamiltonian Replica Exchange on Holliday Junction 
+category: bio 
+keyw: Well-tempered MetaDynamics with Hamiltonian Replica Exchange 
+plumed_version: 2.5.6
+contributor: Miroslav Krepl
+doi: unpublished
+history:
+  2022-09-24: original submission
+instructions: >
+ Detailed instruction under README.dat file. The topology and coordinate files were prepared in AMBER18, proceeded by ParmED. Then, they were converted to GROMACS format by ParmED. GROMACS-v2018 and PLUMED-v2.5.6 were used for the WT-MetaD-HREX simulations, and the latter was also used for data processing.
+ 
