@@ -1,0 +1,21 @@
+url: https://github.com/KULL-Centre/_2022_Roesgaard-Lundsgaard_DSS1/raw/main/plumed-input.zip 
+pname: Rationalising the difference in crystallisability of two Sulflowers using efficient in silico methods 
+category: bio
+keyw: intrinsically disordered proteins, parallel bias metadynamics, protein 
+plumed_version: 2.6.1
+contributor: Kresten Lindorff-Larsen 
+doi: 10.1101/2022.08.25.505250v2 
+plumed_input:
+  - path: allD.dat
+  - path: allD_helix.dat
+  - path: allE.dat
+  - path: allE_helix.dat
+  - path: swap.dat
+  - path: swap_helix.dat
+  - path: wt.dat
+  - path: wt_helix.dat
+history:
+  2022-09-24: original submission
+instructions: >
+ Software used. GROMACS v. 2019.6, cuda toolkit 10.2.89, openmpi 1.10.2. Example command line.  mpirun -np 160 ${gmx} mdrun -deffnm wt_helix_prod -plumed wt_helix.dat -pin on -npme 0 -notunepme -v -maxh 0.5 -cpi -cpt 360. 
+ 
