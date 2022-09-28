@@ -1,10 +1,10 @@
 url: https://github.com/KULL-Centre/_2022_Roesgaard-Lundsgaard_DSS1/raw/main/plumed-input.zip 
-pname: Rationalising the difference in crystallisability of two Sulflowers using efficient in silico methods 
+pname: Deciphering the alphabet of disorder — Glu and Asp act differently on local but not global properties 
 category: bio
 keyw: intrinsically disordered proteins, parallel bias metadynamics, protein 
 plumed_version: 2.6.1
 contributor: Kresten Lindorff-Larsen 
-doi: 10.1101/2022.08.25.505250v2 
+doi: 10.1101/2022.08.25.505250 
 plumed_input:
   - path: allD.dat
   - path: allD_helix.dat
