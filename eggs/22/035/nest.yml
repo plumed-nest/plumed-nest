@@ -6,14 +6,14 @@ plumed_version: 2.6.1
 contributor: Kresten Lindorff-Larsen 
 doi: 10.1101/2022.08.25.505250v2 
 plumed_input:
-  - path: allD.dat
-  - path: allD_helix.dat
-  - path: allE.dat
-  - path: allE_helix.dat
-  - path: swap.dat
-  - path: swap_helix.dat
-  - path: wt.dat
-  - path: wt_helix.dat
+  - path: transfer2/allD.dat
+  - path: transfer2/allD_helix.dat
+  - path: transfer2/allE.dat
+  - path: transfer2/allE_helix.dat
+  - path: transfer2/swap.dat
+  - path: transfer2/swap_helix.dat
+  - path: transfer2/wt.dat
+  - path: transfer2/wt_helix.dat
 history:
   2022-09-24: original submission
 instructions: >
