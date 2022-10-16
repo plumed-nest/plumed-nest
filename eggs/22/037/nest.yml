@@ -1,0 +1,12 @@
+url: https://github.com/mrjoness/abasic-thermo/archive/refs/heads/main.zip 
+pname: Splitting of Energetic and Dynamics Base Pairing Cooperativity in DNA Duplexes by an Abasic Site 
+category: chemistry 
+keyw: metadynamics, DNA, abasic 
+plumed_version: 2.7
+contributor: Mike Jones 
+doi: unpublished
+history:
+  2022-10-16: original submission
+instructions: >
+ Input files are compatible with the 3 Sites Per Nucleotide (3SPN.2) plugin for LAMMPS and applied to three 11-mer DNA oligomer sequences. 11bp_plumed.dat biases the mean distance between native base pairs for an intact (WT) oligomer. 11bp_abasic-6_plumed.dat biases the mean distance between all available native base pairs for an abasic sequence with the central nucleobase removed. PLUMED files for additional abasic configurations can be generated using abasic_site_to_plumed.py.
+ 
