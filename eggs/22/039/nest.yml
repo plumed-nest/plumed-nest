@@ -1,0 +1,16 @@
+url: https://github.com/tiwarylab/Driving-and-characterizing-nucleation-of-urea-and-glycine-polymorphs-in-water/raw/main/plumed.zip 
+pname: Driving and characterizing nucleation of urea and glycine polymorphs in water 
+category: bio 
+keyw: metadynamics, nucleation, amino acids, polymorphism 
+plumed_version: 2.6.1
+contributor: Eric Beyerle 
+plumed_input:
+  - path: urea_plumed.dat
+  - path: glycine_plumed.dat 
+ref: 'Z. Zou, E. Beyerle, S-T. Tsai, P. Tiwary. Driving and characterizing nucleation of urea and glycine polymorphs in water'
+ref_url: 'https://arxiv.org/abs/2210.04822'
+history:
+  2022-11-02: original submission
+instructions: >
+ Run using PLUMED driver. plumed driver --mf_xtc ${sys}.xtc --plumed ${sys}_plumed.dat, where ${sys} is one of urea or glycine and ${sys}.xtc is the XTC file generated from a GROMACS trajectory. Of course, any other PLUMED driver supported trajectories should work, and the flag changed appropriately.
+ 
