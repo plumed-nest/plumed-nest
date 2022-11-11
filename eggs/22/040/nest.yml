@@ -1,0 +1,12 @@
+url: https://github.com/milafternoon/plumed-spike-omicron/archive/refs/heads/main.zip 
+pname: From Closed to Open. Omicron Mutations Increase Interdomain Interactions and Reduce Epitope Exposure 
+category: bio 
+keyw: SARS-CoV-2, Spike, Omicron  
+plumed_version: 2.8.0
+contributor: Miłosz Wieczór
+doi: unpublished
+history:
+  2022-11-11: original submission
+instructions: >
+ For space-saving reasons, starting geometries were provided only for the 1st walker (18 per system were used in total). In the mw-* directories, XXX should be replaced to the walker's index (0-17). Code versions. PLUMED 2.8.0 and GROMACS 2021.4
+ 
