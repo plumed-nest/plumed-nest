@@ -4,9 +4,9 @@ category: methods
 keyw: OPES Flooding, Kinetics, Rate, OPES, Machine Learning 
 plumed_version: 2.9
 contributor:  Dhiman Ray
-ref: 'D. Ray, N. Ansari, V. Rizzi, M. Invernizzi, M. Parrinello. Rare Event Kinetics from Adaptive Bias Enhanced Sampling.'
-ref_url: 'https://doi.org/10.48550/arXiv.2208.04942'
+doi: 10.1021/acs.jctc.2c00806
 history:
   2022-08-11: original submission
+  2022-11-14: updated doi
 instructions: >
  Introducing the OPES Flooding method for calculating kinetics of rare event processes. It is tested on model systems and folding/unfolding of chignolin. The MD engine used is GROMACS 2021. The Deep-LDA and Deep-TICA CV were trained using Pytorch 1.8.2 and mlcvs package. Note. The OPES flooding method is available from PLUMED version 2.8. But the Deep-LDA and Deep-TICA CV we used in this work are implemented in PLUMED 2.9.
