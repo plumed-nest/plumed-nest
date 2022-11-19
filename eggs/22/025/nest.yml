@@ -1,6 +1,6 @@
 url: https://github.com/kbal/bubblenucleation/archive/main.zip 
 pname: Bubble nucleation rate predictions in a Lennard-Jones fluid 
-category: bio
+category: materials
 keyw: free energies, kinetics, reweighted Jarzynski sampling, neural network, nucleation 
 plumed_version: 2.8
 contributor: Kristof Bal 
@@ -32,10 +32,10 @@ plumed_input:
  - path:  t0.855/p0.026-recross/plumed1.inp
  - path:  t0.855/p0.026-recross/plumed2.inp
  - path:  t0.855/p0.017-fes/plumed.inp
-ref: 'Kristof M. Bal, Erik C. Neyts. Extending and validating bubble nucleation rate predictions in a Lennard-Jones fluid with enhanced sampling methods and transition state theory'
-ref_url: 'https://arxiv.org/abs/2207.04819'
+doi: 10.1063/5.0120136
 history:
   2022-05-31: original submission
+  2022-11-19: updated reference
 instructions: >
   LAMMPS and PLUMED input files for calculation of bubble nucleation rates in Lennard-Jones fluids. Combines the reweighted Jarzynski sampling recipe with recrossing-corrected TST for rate calculation. Python with scikit-learn is also needed for intermediate processing. See README for more details. 
  
