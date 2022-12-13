@@ -1,11 +1,10 @@
 url: https://github.com/invemichele/learned-replica-exchange/archive/main.zip
-pname: Skipping the replica exchange ladder with normalizing flows
+pname: Skipping the Replica Exchange Ladder with Normalizing Flows
 category: methods
 keyw: OPES, alanine, normalizing flows, replica exchange
 plumed_version: 2.8
 contributor: Michele Invernizzi
-ref: 'M. Invernizzi, A. Krämer, C. Clementi, F. Noé. Skipping the replica exchange ladder with normalizing flows'
-ref_url: 'https://arxiv.org/abs/2210.14104'
+doi: 10.1021/acs.jpclett.2c03327
 history:
   2022-11-14: original submission
 instructions: >
