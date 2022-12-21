@@ -107,7 +107,10 @@ def plumed_format(source,tested,status,exe,global_header=None,header=None):
                  print(header,file=o)
             # Read in the input file and get the rendered html
             lines = f.read()
-            html = get_html( lines, source, os.path.basename(source), tested, status, exe )
+            try:
+              html = get_html( lines, source, os.path.basename(source), tested, status, exe )
+            except:
+              pass
             # make sure Jekyll does not interfere with format
             print("{% raw %}",file=o)
             print( html, file=o )
