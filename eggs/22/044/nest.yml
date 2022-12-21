@@ -1,0 +1,12 @@
+url: https://github.com/aaronrfinney/VAMP-MSM/raw/main/PLUMED-driver.zip 
+pname: Colloid Crystallisation Analyses 
+category: materials
+keyw: Q4, Q6, Pair Entropy, DFS 
+plumed_version: 2.7.2
+contributor: Aaron Finney 
+doi: unpublished
+history:
+  2022-12-21: original submission
+instructions: >
+ The input file is designed to be executed using the driver to post-process LAMMPS simulation trajectories and compute a range of CVs used in Variational Analysis of Markov Processes (VAMP) and to construct Bayesian Markov State Models (MSMs). Run the driver using e.g. `plumed driver --ixyz dump.3Dcolloid.xyz --plumed plumed-all-search.dat --timestep 1 --trajectory-stride 1 --box 92.83178,92.83178,92.83178`.
+ 
