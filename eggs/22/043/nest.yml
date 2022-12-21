@@ -1,0 +1,12 @@
+url: https://github.com/gzerze/rna_opes_example_input/raw/main/290_525.zip 
+pname: Atomistic simulations of RNA tetraloop folding via expanded ensemble OPES 
+category: bio 
+keyw: OPES, RNA, Tetraloop, Folding 
+plumed_version: 2.8
+contributor: Gül Zerze 
+doi: unpublished
+history:
+  2022-12-21: original submission
+instructions: >
+ This is a multiple walkers simulation. Please refer to the [README](https://github.com/gzerze/rna_opes_example_input) file for further instructions on how to submit a job with these input files (with GMX-2020.5).
+ 
