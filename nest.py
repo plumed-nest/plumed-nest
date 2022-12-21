@@ -109,12 +109,12 @@ def plumed_format(source,tested,status,exe,global_header=None,header=None):
             lines = f.read()
             try:
               html = get_html( lines, source, os.path.basename(source), tested, status, exe )
+              # make sure Jekyll does not interfere with format
+              print("{% raw %}",file=o)
+              print( html, file=o )
+              print("{% endraw %}",file=o)
             except:
               pass
-            # make sure Jekyll does not interfere with format
-            print("{% raw %}",file=o)
-            print( html, file=o )
-            print("{% endraw %}",file=o)
             # convert to set to remove duplicates
             return list(set(lista))
 
