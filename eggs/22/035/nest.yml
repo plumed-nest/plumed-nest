@@ -4,7 +4,7 @@ category: bio
 keyw: intrinsically disordered proteins, parallel bias metadynamics, protein 
 plumed_version: 2.6.1
 contributor: Kresten Lindorff-Larsen 
-doi: 10.1101/2022.08.25.505250 
+doi: 10.3390/biom12101426 
 plumed_input:
   - path: allD.dat
   - path: allD_helix.dat
