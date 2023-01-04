@@ -1,0 +1,12 @@
+url: https://github.com/gzerze/rna_ptwte_wtm_example_input/raw/main/plumed.zip 
+pname: Atomistic simulations of RNA tetraloop folding via PTWTE-WTM 
+category: bio
+keyw: parallel tempering, well-tempered metadynamics, well-tempered ensemble, RNA, Tetraloop, Folding 
+plumed_version: 2.3.1
+contributor: Gül Zerze 
+doi: 10.1021/acs.jpcb.1c08038 
+history:
+  2023-01-04: original submission
+instructions: >
+  Originally used with GROMACS version 2016.3. 
+
