@@ -1,0 +1,12 @@
+url: https://github.com/sigbjobo/Quantum-phase-diagram-of-water/archive/refs/heads/plumed-nest.zip 
+pname: Quantum phase diagram of water
+category: chemistry 
+keyw: Ice, water, nucleation, environment similarity, interfaces, phase diagram, multiumbrella 
+plumed_version: 2.8
+contributor: Sigbjørn-Løland Bore 
+doi: 10.26434/chemrxiv-2023-kmmmz 
+history:
+  2023-01-17: original submission
+instructions: >
+  These Input files are for LAMMPS (29 Sep 2021) and PLUMED 2.8. 
+
