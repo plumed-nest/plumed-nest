@@ -4,9 +4,9 @@ category: methods
 keyw: metadynamics, visualization, R 
 plumed_version: 2.4
 contributor: Vojtech Spiwok
-ref: "D. Trapl, V. Spiwok. Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d"
-ref_url: "https://doi.org/10.48550/arXiv.2009.02241"
+doi: 10.32614/RJ-2022-057
 history:
   2020-08-21: original submission
+  2022-01-18: updated doi
 instructions: >
  Metadynminer and metadynminer3d are R packages for analysis and visualization of metadynamics results. It calculates and plots free energy surfaces, finds minima, evolution of relative free energy, nudged elastic band etc. Here we submit sample data (1D, 2D and 3D free energy surfaces of alanine dipeptide).
