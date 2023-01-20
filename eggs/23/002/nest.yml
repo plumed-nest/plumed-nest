@@ -1,0 +1,12 @@
+url: https://github.com/julienlamcnrs/2023_PhysRevE_PIVvsS/archive/refs/heads/main.zip 
+pname: Critical comparison of general-purpose collective variables for crystal nucleation
+category: methods
+keyw: metadynamics, umbrella sampling, commitor, entropy, PIV 
+plumed_version: 2.5.1
+contributor: Julien Lam 
+doi: unpublished 
+history:
+  2023-01-20: original submission
+instructions: >
+  The GitHub repository includes 3 folders that stand for each type of simulations, Metadynamics, Commitor UmbrellaSampling. Except for Commitor that does not require biasing, the other are split in 3 folders depending on which CV is employed for biasing.
+
