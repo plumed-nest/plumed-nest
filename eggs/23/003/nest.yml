@@ -1,0 +1,12 @@
+url: https://github.com/shirtsgroup/alchemical_metadynamics_project/archive/master.zip
+pname: Alchemical metadynamics: Adding alchemical variables to metadynamics to enhance sampling in free energy calculations
+category: methods
+keyw: metadynamics, alchemical variable, alchemical free energy calculations
+plumed_version: 2.8
+contributor: Wei-Tse Hsu
+ref_url: https://doi.org/10.48550/arXiv.2206.01329
+history:
+  2023-02-01: original submission
+instructions: |
+    The method of alchemical metadynamics has been implemented in PLUMED 2.8, which can be used when PLUMED is patched to any GROMACS version later than 2020. All simulation inputs, including input GRO, TOP, TPR, and PLUMED input files have been provided for each case presented in our paper, along with relevant python codes and jupyter notebook for data analysis. More information can be found in the README files in the repo.
+
