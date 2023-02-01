@@ -4,7 +4,7 @@ category: methods
 keyw: metadynamics, alchemical variable, alchemical free energy calculations
 plumed_version: 2.8
 contributor: Wei-Tse Hsu
-ref_url: https://doi.org/10.48550/arXiv.2206.01329
+ref_url: 'https://doi.org/10.48550/arXiv.2206.01329'
 history:
   2023-02-01: original submission
 instructions: |
