@@ -372,8 +372,8 @@ def process_egg(path,eggdb=None):
 
 # quote around id is required otherwise Jekyll thinks it is a number
         print("- id: '" + egg_id + "'",file=eggdb)
-        print("  name: " + config["pname"],file=eggdb)
-        print("  shortname: " + get_short_name_ini(config["pname"],15),file=eggdb)
+        print("  name: '" + config["pname"] + "'",file=eggdb)
+        print("  shortname: '" + get_short_name_ini(config["pname"],15) +"'",file=eggdb)
         print("  category: " + config["category"],file=eggdb)
         print("  keywords: " + config["keyw"],file=eggdb)
         print("  shortkeywords: " + get_short_name_ini(config["keyw"],25),file=eggdb)
