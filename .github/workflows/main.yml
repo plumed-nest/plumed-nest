@@ -51,8 +51,7 @@ jobs:
         # GB: in addition, we install master version as plumed_master
         CXX="mpic++" .ci/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
         ccache -s
-        pwd
-        tar czf opt.tgz $HOME/opt
+        tar czf $HOME/opt.tgz $HOME/opt
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
@@ -86,7 +85,7 @@ jobs:
       uses: actions/download-artifact@v3
     - name: Unpack dependencies
       run: |
-        tar xzf opt.tgz
+        tar xzf $HOME/opt.tgz
 
     - name: Run
       run: |
