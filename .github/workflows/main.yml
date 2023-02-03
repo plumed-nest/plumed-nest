@@ -31,7 +31,7 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        source .ci/install.dependencies
+        .ci/install.dependencies
     - name: Set paths
       run: |
         source .ci/setup.environment
@@ -51,12 +51,13 @@ jobs:
         # GB: in addition, we install master version as plumed_master
         CXX="mpic++" .ci/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
         ccache -s
-        tar czf opt.tgz opt
+        pwd
+        tar czf opt.tgz $HOME/opt
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: dependencies
-        path: opt.tgz
+        path: ~/opt.tgz
         retention-days: 1
       
     
