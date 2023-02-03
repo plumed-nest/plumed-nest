@@ -1,0 +1,10 @@
+# This is to install all dependencies that are
+# not cached in the $HOME/opt directory
+
+sudo apt update
+sudo apt install mpi-default-bin mpi-default-dev
+sudo apt install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
+sudo apt install ccache
+sudo apt-get update
+pip install PyYAML pytz
+pip install PlumedToHTML
