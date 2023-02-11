@@ -1,0 +1,12 @@
+url: https://github.com/PabloPiaggi/mishima-melting-lines-2023/archive/refs/heads/main.zip 
+pname: "Melting curves of ice polymorphs in the vicinity of the liquid-liquid critical point" 
+category: chemistry 
+keyw: water, liquid-liquid transition, second critical point, ice, polymorphs, melting curves, environment similarity, opes, density-functional theory, scan, machine learning potential
+plumed_version: 2.8
+contributor: Pablo Piaggi 
+doi: unpublished
+history:
+  2023-02-11: original submission
+instructions:
+   Simulations were performed using the following codes. LAMMPS (15 Apr 2020), DeePMD-kit v1.0.2-1-g6aee326-dirty - source branch r1.0 - source commit 6aee326, PLUMED 2.8.0-dev (git 54560ef-dirty)
+
