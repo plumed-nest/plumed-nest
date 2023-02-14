@@ -1,0 +1,12 @@
+url: https://github.com/dorotheagobbo/5HT1_NEST/raw/main/apo-5HT1A.zip 
+pname: "A general metadynamics protocol to simulate activation/deactivation of Class A GPCRs"
+category: bio 
+keyw: metadynamics, activation/deactivation, activation index, GPCRs, 5HT1A 
+plumed_version: 2.5.3
+contributor: Timothy Clark 
+doi: unpublished
+history:
+  2023-02-13: original submission
+instructions:
+   Multiple-walkers Metadynamics simulations were performed using GROMACS 2019.4 with the PLUMED 2.5.3 plug-in. Topologies for the receptors were generated using the AMBER99SB-ILDN force field. Ligands were parameterized using the generalized AMBER force field (GAFF) together with AM1-BCC partial charges. 
+
