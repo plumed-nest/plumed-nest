@@ -1,0 +1,12 @@
+url: https://github.com/mallu2/Transcriptionfactor_unbinding/archive/main.zip 
+pname: "Transcription factor unbinding"
+category: bio 
+keyw: metadynamics, DNA, conformational changes
+plumed_version: 2.7.2
+contributor: Malin Lüking 
+doi: unpublished
+history:
+  2023-02-15: original submission
+instructions:
+ This repository contains the starting structures and GROMACS input files to run conventional molecular dynamics simulations, MD simulations with NMR restraints and metadynamics on a complex between the transcription factor LacI and different sequences of DNA. 
+
