@@ -6,21 +6,21 @@ plumed_version: 2.4
 contributor: Jim Pfaendtner  
 doi: unpublished 
 plumed_input:
- - path: npm/ab.dat
- - path: npm/cn.dat
- - path: npm/cv.dat
- - path: npm/plumed.dat
- - path: nrpe/ab.dat
- - path: nrpe/cn.dat
- - path: nrpe/cv.dat
- - path: nrpe/plumed.dat
- - path: nspe/ab.dat
- - path: nspe/cn.dat
- - path: nspe/cv.dat
- - path: nspe/plumed.dat
- - path: sarc/ab.dat
- - path: sarc/cv.dat
- - path: sarc/plumed.dat
+ - path: plumed-nest/npm/ab.dat
+ - path: plumed-nest/npm/cn.dat
+ - path: plumed-nest/npm/cv.dat
+ - path: plumed-nest/npm/plumed.dat
+ - path: plumed-nest/nrpe/ab.dat
+ - path: plumed-nest/nrpe/cn.dat
+ - path: plumed-nest/nrpe/cv.dat
+ - path: plumed-nest/nrpe/plumed.dat
+ - path: plumed-nest/nspe/ab.dat
+ - path: plumed-nest/nspe/cn.dat
+ - path: plumed-nest/nspe/cv.dat
+ - path: plumed-nest/nspe/plumed.dat
+ - path: plumed-nest/sarc/ab.dat
+ - path: plumed-nest/sarc/cv.dat
+ - path: plumed-nest/sarc/plumed.dat
 history:
   2021-07-09: original submission
   2023-02-27: updated link
