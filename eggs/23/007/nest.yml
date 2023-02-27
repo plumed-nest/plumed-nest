@@ -1,0 +1,37 @@
+url: https://zenodo.org/record/7679518/files/plumed-nest.zip 
+pname: "Origins of Conformational Heterogeneity in Peptoid Helices formed by Chiral N-1-Phenylethyl Sidechains"
+category: bio 
+keyw: metadynamics, peptoids, parallel-bias metadynamics 
+plumed_version: 2.4.2
+contributor: Jim Pfaendtner 
+plumed_input:
+ - path: nrpe2/cn.dat
+ - path: nrpe2/cv.dat
+ - path: nrpe2/imp.dat
+ - path: nrpe2/plumed.dat
+ - path: nrpe3/cn.dat
+ - path: nrpe3/cv.dat
+ - path: nrpe3/imp.dat
+ - path: nrpe3/plumed.dat
+ - path: nrpe4/cn.dat
+ - path: nrpe4/cv.dat
+ - path: nrpe4/imp.dat
+ - path: nrpe4/plumed.dat
+ - path: nspe2/cn.dat
+ - path: nspe2/cv.dat
+ - path: nspe2/imp.dat
+ - path: nspe2/plumed.dat
+ - path: nspe3/cn.dat
+ - path: nspe3/cv.dat
+ - path: nspe3/imp.dat
+ - path: nspe3/plumed.dat
+ - path: nspe4/cn.dat
+ - path: nspe4/cv.dat
+ - path: nspe4/imp.dat
+ - path: nspe4/plumed.dat
+doi: unpublished
+history:
+  2023-02-27: original submission
+instructions:
+ PLUMED files contain everything needed to reproduce parallel bias metadynamics on 2,3,4-mer helical peptoids. 
+

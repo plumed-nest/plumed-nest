@@ -1,12 +1,29 @@
-url: https://zenodo.org/record/5084617/files/plumed-nest.zip
+url: https://zenodo.org/record/7679375/files/plumed-nest.zip 
 pname: Thermodynamic Basis for Stabilization of Helical Peptoids by Chiral Sidechains 
 category: bio 
-keyw: parallel bias parallel tempered metadynamics in WTE,synthetic foldamers, self-assembly, peptoid secondary structure 
+keyw: parallel bias parallel tempered metadynamics in WTE, synthetic foldamers, self-assembly, peptoid secondary structure 
 plumed_version: 2.4
 contributor: Jim Pfaendtner  
-doi: 10.1021/acs.biomac.1c01385 
+doi: unpublished 
+plumed_input:
+ - path: npm/ab.dat
+ - path: npm/cn.dat
+ - path: npm/cv.dat
+ - path: npm/plumed.dat
+ - path: nrpe/ab.dat
+ - path: nrpe/cn.dat
+ - path: nrpe/cv.dat
+ - path: nrpe/plumed.dat
+ - path: nspe/ab.dat
+ - path: nspe/cn.dat
+ - path: nspe/cv.dat
+ - path: nspe/plumed.dat
+ - path: sarc/ab.dat
+ - path: sarc/cv.dat
+ - path: sarc/plumed.dat
 history:
   2021-07-09: original submission
+  2023-02-27: updated link
 instructions: >
  PLUMED files contain everything needed to reproduce metadynamics results presented in paper. 
  
