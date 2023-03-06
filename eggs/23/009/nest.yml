@@ -1,0 +1,13 @@
+url: https://github.com/dhimanray/TPI_deepTDA/archive/main.zip
+pname: "Deep Learning Collective Variables from Transition Path Ensemble"
+category: methods
+keyw: TPI-Deep-TDA, Deep-TDA, Transition Path, OPES, OPES Flooding, Machine Learning, Protein folding, Ligand binding 
+plumed_version: 2.9
+contributor: Dhiman Ray
+ref: 'D. Ray, E. Trizio, M. Parrinello. Deep Learning Collective Variables from Transition Path Ensemble'
+ref_url: 'https://doi.org/10.48550/arXiv.2303.01629'
+history:
+  2023-03-06: original submission
+instructions:
+ Introducing the Transition Path Informed Deep Targeted Discriminant Analysis (TPI-Deep-TDA) method for improving deep neural network-based collective variables by utilizing information about the transition pathways. It is tested on Muller potential, folding/unfolding of chignolin, and ligand binding in the OAMe-G2 complex studied in SAMPL5 challenge. The MD engine used is GROMACS 2021. The Deep-TDA and TPI-Deep-TDA CV were trained using Pytorch 1.8.2 and mlcvs package.
+ 
