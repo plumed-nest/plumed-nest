@@ -1,0 +1,12 @@
+url: https://github.com/valeriorizzi/OneOPES/archive/main.zip 
+pname: "OneOPES, a combined enhanced sampling method to rule them all"
+category: bio
+keyw: OPES, Replica Exchange, Multithermal, Ligand Binding, Protein Folding 
+plumed_version: 2.9
+contributor: Valerio Rizzi 
+doi: 10.1101/2023.03.06.531337v1 
+history:
+  2023-03-08: original submission
+instructions:
+ This egg contains the input files for replicating the results contained in the OneOPES paper. OneOPES is a method that combines the power of CV-based enhanced sampling and replica exchange by combining different version of OPES, namely OPES, OPES Explore and OPES Multithermal. We applied OneOPES to Alanine Dipeptide, Trypsin-Benzamidine and Chignolin. The simulations were run in combination with Gromacs 2022.5.  
+ 
