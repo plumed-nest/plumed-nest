@@ -1,0 +1,12 @@
+url: https://github.com/jacquecr23/GPCR-small-ligand-binding-protocol/raw/main/GPCR%20binding%20protocol.zip 
+pname: "An Efficient Metadynamics-Based Protocol To Model the Binding Affinity and the Transition State Ensemble of G‑Protein-Coupled Receptor Ligands"
+category: bio
+keyw: GPCR, binding free energy, free energy surface
+plumed_version: 2.5.3
+contributor: Timothy Clark
+doi: 10.1021/acs.jcim.6b00772
+history:
+  2023-03-06: original submission
+instructions:
+ Topologies for the receptors were generated using the AMBER99SB-ILDN force field. Ligands were parameterized using the generalized AMBER force field (GAFF) together with AM1-BCC partial charges.
+ 
