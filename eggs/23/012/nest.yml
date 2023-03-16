@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/7741393/files/JAK2-PMF-2D-meta-eABF.zip
+pname: "JAK2 2D meta-eABF PMF with statistical analysis"
+category: bio
+keyw: 2D meta-eABF, path CV, PMF 
+plumed_version: 2.8.1
+contributor: Istvan Kolossvary 
+doi: unpublished 
+history:
+  2023-03-15: original submission
+instructions:
+ To run this calculation you need OpenMM 7.6 or later. 'python run-2D-meta-eABF-path-CV.py' will start the job. Directories run0-run9 contain data to demonstrate how to compute rigorous statistical error estimate for the PMF using boot strapping. The README file contains the instructions.
+ 
