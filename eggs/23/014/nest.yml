@@ -1,0 +1,12 @@
+url: https://github.com/limresgrp/chemokine_receptors_oligomerization/raw/main/plumed_input.zip 
+pname: "Structural basis of dimerization of chemokine receptors CCR5 and CXCR4"
+category: bio 
+keyw: metadynamics, oligomerization, chemokine receptors, GPCR, membrane 
+plumed_version: 2.3
+contributor: Vittorio Limongelli 
+doi: unpublished 
+history:
+  2023-03-24: original submission
+instructions:
+ MD simulations can be performed using GROMACS 5.1 or later patched with PLUMED 2.3 and using the following command. gmx mdrun -v -deffnm prod -plumed plumed_{dimer_name}.dat 
+ 
