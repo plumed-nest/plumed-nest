@@ -1,0 +1,12 @@
+url: https://github.com/vikast282/MPCs_aggregation/archive/refs/heads/main.zip
+pname: "MPCs aggregation"
+category: bio 
+keyw: opes_explore, dimerization, MPCs, self-assembly 
+plumed_version: 2.8
+contributor: Vikas Tiwari 
+doi: unpublished 
+history:
+  2023-04-09: original submission
+instructions:
+ Input files are prepared in gromacs version 2021.4 and plumed2 version 2.8.0.
+ 
