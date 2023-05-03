@@ -7,8 +7,7 @@ contributor: Eric Beyerle
 plumed_input:
   - path: urea_plumed.dat
   - path: glycine_plumed.dat 
-ref: 'Z. Zou, E. Beyerle, S-T. Tsai, P. Tiwary. Driving and characterizing nucleation of urea and glycine polymorphs in water'
-ref_url: 'https://arxiv.org/abs/2210.04822'
+doi: 10.1073/pnas.2216099120
 history:
   2022-11-02: original submission
 instructions: >

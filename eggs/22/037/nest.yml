@@ -4,7 +4,7 @@ category: chemistry
 keyw: metadynamics, DNA, abasic 
 plumed_version: 2.7
 contributor: Mike Jones 
-doi: unpublished
+doi: 10.1073/pnas.2219124120 
 plumed_input:
   - path: metad_setup/11bp_abasic-2_plumed.dat
   - path: metad_setup/11bp_abasic-4_plumed.dat

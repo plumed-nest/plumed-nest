@@ -4,7 +4,7 @@ category: methods
 keyw: metadynamics, umbrella sampling, commitor, entropy, PIV 
 plumed_version: 2.5.1
 contributor: Julien Lam 
-doi: unpublished 
+doi: 10.1103/PhysRevE.107.L012601 
 history:
   2023-01-20: original submission
 instructions: >
