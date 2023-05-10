@@ -1,0 +1,13 @@
+url: https://github.com/sudipdas789/Reaction_discovery/archive/refs/heads/main.zip 
+pname: "How and When Does an Enzyme React? Unraveling α-Amylase Catalytic Activity with Enhanced Sampling Techniques"
+category: bio 
+keyw: enzymatic reaction discovery, reaction mechanism, catalysis, ligand-binding modes, water, alpha-amylase, sugar, QM/MM MD, OPES, OPES explore, graph CV, machine learning, Deep TDA CV, path CV 
+plumed_version: 2.9
+contributor: Sudip Das 
+doi: 10.26434/chemrxiv-2023-h1498 
+history:
+  2023-05-10: original submission
+instructions:
+ This egg contains the input files for replicating the reaction discovery and enhanced sampling OPES simulations for alpha-amylase enzyme with a sugar substrate using graph CV, Deep TDA CVs, and path CV. The graph CVs accelerate the exploration of the enzymatic reaction space in QM/MM discovery MD simulations with the explore version of OPES. The path CV used in OPES simulations enhances the sampling (in the Deep TDA CVs' space) of different substrate-binding modes within the enzyme's active site. For more information about Deep TDA, we refer to [plumID:21.028](https://www.plumed-nest.org/eggs/21/028/) and graph-CV to [plumID:22.004](https://www.plumed-nest.org/eggs/22/004/). The CVs were trained with Pytorch version 1.8 and the simulations were run with GROMACS 2021.5, CP2K 9.1, and PLUMED 2.9. 
+ 
+ 
