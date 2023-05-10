@@ -1,0 +1,11 @@
+url: https://github.com/katorke/Au_Facet_Selectivity/raw/main/plumed_nest.zip 
+pname: "Anisotropic Gold Nanomaterial Synthesis Using Peptide Facet Specificity and Timed Intervention"
+category: materials
+keyw: metadynamics, surface binding, peptide adsorption
+plumed_version: 2.8
+contributor: Kaylyn Torkelson
+doi: unpublished 
+history:
+  2023-05-11: original submission
+instructions:
+ Each directory (Z2_Au100, Z2_Au111, Z2M246I_Au100, Z2M246I_Au111) contains an initial gro file (system.gro) for the system, a corresponding index file (system.ndx), a reference PDB for each peptide, the files necessary for the topology of the system (topol.top/*.itp), and the plumed file (plumed.dat) that was used to run each metadynamics calculation in Gromacs 2020.5. The main directory contains an example MDP file, the forcefield that was used for Au interactions, and the ndx files corresponding to the Au(111) and Au(100) surfaces. 
