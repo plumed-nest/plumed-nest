@@ -8,5 +8,5 @@ doi: 10.1016/j.ica.2023.121452
 history:
   2023-05-26: original submission
 instructions:
- The software used was GROMACS version 2020.2, plumed 2.7.0-dev. 
+ Included are the PLUMED input files to run Metadynamics Hamiltonian Replica Exchange simulating the dissociation of the zinc ion from the Atox1 homodimer. GROMACS topology and the gro file are also included. Simulations have been run with GROMACS version 2020.2 equipped with PLUMED 2.7-dev.
 
