@@ -1,0 +1,12 @@
+url: https://github.com/adpietropaolo/plumed-nest-data/raw/master/_FEP_Zn.zip 
+pname: "FEP simulations of ATOX1 homodimer"
+category: chemistry 
+keyw: parallel bias metadynamics, FEP, free-energy of metal ion dissociation 
+plumed_version: 2.7
+contributor: Adriana Pietropaolo 
+doi: 10.1016/j.ica.2023.121452 
+history:
+  2023-05-26: original submission
+instructions:
+ The software used was GROMACS version 2020.2, plumed 2.7.0-dev. 
+
