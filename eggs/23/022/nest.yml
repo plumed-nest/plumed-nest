@@ -1,0 +1,12 @@
+url: https://github.com/luigibonati/mlcolvar/raw/main/docs/notebooks/paper_experiments/paper_experiments.zip 
+pname: "A unified framework for machine learning collective variables for enhanced sampling simulations: mlcolvar"
+category: methods
+keyw: collective variables, machine learning, toy model 
+plumed_version: 2.9
+contributor: Enrico Trizio 
+doi: unpublished 
+history:
+  2023-06-01: original submission
+instructions:
+ This egg contains the input files to reproduce the simulation biasing different data-driven CVs with the [`mlcolvar` library](https://github.com/luigibonati/mlcolvar). We report the study of the movement of a particle in two dimension under the action of a three-states potential obtained by modifying the Muller-Brown potential. The simulations require the `ves` and [`pytorch`](https://www.plumed.org/doc-v2.9/user-doc/html/_p_y_t_o_r_c_h.html) modules of PLUMED and can be run using the [ves_md_linearexpansion](https://www.plumed.org/doc-v2.9/user-doc/html/ves_md_linearexpansion.html) PLUMED command. In the zip file at the given URL (and in the [library documentation](https://mlcolvar.readthedocs.io), the Jupyter notebooks for training the CVs, running the simulations and analyzing the results can also be found. All the trained CV models are also provided in the zip folder provided at the URL.
+
