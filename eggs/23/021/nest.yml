@@ -1,0 +1,19 @@
+url: https://github.com/GMPavanLab/MIMs/raw/main/input_data.zip 
+pname: "Into the Dynamics of Rotaxanes at Atomistic Resolution"
+category: materials
+keyw: metadynamics, rotaxanes, molecular shuttles, molecular machines 
+plumed_version: 2.5
+contributor: Luigi Leanza 
+plumed_input:
+ - path: plumed_metad/system3/metad_syst3.dat
+ - path: plumed_metad/system4/metad_syst4.dat
+ - path: plumed_metad/system1/1metad_ACN.dat
+ - path: plumed_metad/system1/1metad_DMSO.dat
+ - path: plumed_metad/system1/1metad_DCM.dat
+ - path: plumed_metad/system1/1metad_CHL.dat
+doi: 10.1039/D3SC01593A 
+history:
+  2023-06-01: original submission
+instructions:
+ Input files to reproduce results of the paper "Into the dynamics of rotaxanes at atomistic resolution"
+
