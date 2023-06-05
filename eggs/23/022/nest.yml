@@ -4,7 +4,8 @@ category: methods
 keyw: collective variables, machine learning, toy model 
 plumed_version: 2.9
 contributor: Enrico Trizio 
-doi: unpublished 
+ref: 'L. Bonati, E. Trizio, A. Rizzi, M. Parrinello. A unified framework for machine learning collective variables for enhanced sampling simulations: mlcolvar'
+ref_url: 'https://arxiv.org/abs/2305.19980'
 history:
   2023-06-01: original submission
 instructions:
