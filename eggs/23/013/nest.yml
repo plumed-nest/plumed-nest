@@ -4,8 +4,7 @@ category: methods
 keyw: meta-eABF, path CV, large scale conformational change, STING protein, reciprocal barrier restraint 
 plumed_version: 2.8.1
 contributor: Istvan Kolossvary 
-ref: "I. B. Kolossvary, W. Sherman, Comprehensive Approach to Simulating Large Scale Conformational Changes in Biological Systems Utilizing a Path Collective Variable and New Barrier Restraint (2023)"
-ref_url: "http://dx.doi.org/10.1101/2023.03.26.534298"
+doi: 10.1021/acs.jpcb.3c02028
 history:
   2023-03-15: original submission
 instructions:

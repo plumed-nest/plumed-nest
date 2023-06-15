@@ -1,0 +1,12 @@
+url: https://github.com/katorke/R5_Mineralization/raw/main/plumed_nest.zip 
+pname: "Rational design of novel biomimetic sequence-defined polymers for mineralization applications"
+category: methods
+keyw: metadynamics, surface binding, biomimetic mineralization 
+plumed_version: 2.8
+contributor: Kaylyn Torkelson 
+doi: unpublished
+history:
+  2023-06-15: original submission
+instructions:
+ Each directory (dimer_files, silicate_files, surface_files) contains an example gro file (system.gro), the topology files needed to run that system (*.itp and topol.top), an example mdp file, and the plumed.dat file corresponding to each simulation type. Each metadynamics calculation was run in GROMACS 2020.5 with PLUMED 2.8. The main directory contains a directory named PDB that has example structures for all five systems studied (R5 peptide, R5 peptoid mimic, R5 peptoid analog, R5 peptide reverse, and R5 peptoid analog reverse) as well as another forcefield directory that contains all the modifications necessary to run our peptoid systems.
+ 
