@@ -1,0 +1,12 @@
+url: https://github.com/Ferg-Lab/pines/raw/main/plumed_files.zip 
+pname: "Permutationally Invariant Networks for Enhanced Sampling (PINES)"
+category: methods
+keyw: collective variables, enhanced sampling, data-driven, deep learning, permutational invariance, solvent 
+plumed_version: 2.8
+contributor: Nicholas Herringer 
+doi: unpublished
+history:
+  2023-06-27: original submission
+instructions:
+ PINES has only been tested with GROMACS to date. Add the plumed flag to the GROMACS mdrun command to run.(gmx mdrun -plumed plumed.dat). 
+ 
