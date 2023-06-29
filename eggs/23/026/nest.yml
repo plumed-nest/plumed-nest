@@ -1,0 +1,12 @@
+url: https://github.com/mme-ucl/NNucleate/raw/main/examples/plumed_files.zip 
+pname: "Machine Learning Nucleation Collective Variables with Graph Neural Networks"
+category: chemistry 
+keyw: Nucleation, Machine Learning, Enhanced Sampling, Collective Variables, Graph Neural Networks 
+plumed_version: 2.5.2
+contributor: Florian Dietrich 
+doi: unpublished
+history:
+  2023-06-29: original submission
+instructions:
+ The input file is designed to be executed using the driver to post-process LAMMPS simulations of the colloidal system described in the publication to obtain analytical reference values for the collective variables n and n(Q6). The model.py file contains a fully trained GNN model that can be used as a nucleation CV in this system using the [PyCV](https://giorginolab.github.io/plumed2-pycv/) PLUMED fork. The other PLUMED input demonstrate an example use of the trained CV in a pulling simulation. 
+ 
