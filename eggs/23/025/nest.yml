@@ -1,0 +1,17 @@
+url: https://github.com/mdpoleto/gq_ion_binding/archive/refs/heads/main.zip 
+pname: "Probing ion binding to G-quadruplexes and related events"
+category: chemistry 
+keyw: metadynamics, repulsive potential, nucleic acids, G-quadruplexes 
+plumed_version: 2.7
+contributor: Marcelo Poleto
+plumed_input:
+ - path: cylinder_metadynamics/1k8p/telomere_metady_cyl_K1.dat
+ - path: cylinder_metadynamics/3ibk/terra_metady_cyl_K1.dat
+ - path: repulsive/1k8p/telomere_repulsive.dat
+ - path: repulsive/3ibk/terra_repulsive.dat
+doi: unpublished
+history:
+  2023-06-29: original submission
+instructions:
+ Plumed scripts used to run 1) volumed-based (cylinder) well tempered metadynamics simulations to probe ion binding to G-quadruplexes and 2) repulsive potential simulations (lower walls) to prevent ion binding. MD engine used is OpenMM v7.6.
+ 
