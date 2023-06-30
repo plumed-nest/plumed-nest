@@ -1,0 +1,13 @@
+url: https://github.com/tiwarylab/Belief-Propagation/raw/main/nest/Archive.zip 
+pname: Making high-dimensional molecular distribution functions tractable through Belief Propagation on Factor Graphs 
+category: bio 
+keyw: metadynamics, small peptide, machine learning
+plumed_version: 2.4
+contributor: Pratyush Tiwary 
+doi: 10.1021/acs.jpcb.1c05717 
+history:
+  2021-07-06: original submission
+  2021-12-09: updated doi
+instructions: >
+ Use tpr files to run GROMACS (version 2016.5p2.4.2) patched with PLUMED 2.4.2 using plumed.dat.
+ 
