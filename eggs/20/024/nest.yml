@@ -1,0 +1,11 @@
+url: https://github.com/Jayashrita/GAMBES/archive/master.zip 
+pname: Gaussian Mixture Based Enhanced Sampling (GAMBES)
+category: methods
+keyw: enhanced sampling, probability based sampling, chemical reactions, rate calculation, static bias 
+plumed_version: 2.7
+contributor: Jayashrita Debnath 
+doi: 10.1021/acs.jpclett.0c01125 
+history:
+  2020-08-26: original submission
+instructions: >
+ The state files contain the GMM fit of the probability densities of the different states. GROMACS 2019 for running the Alanine input files and CP2K for running the Hydrobromination example. 
