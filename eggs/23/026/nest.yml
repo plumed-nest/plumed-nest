@@ -8,5 +8,5 @@ doi: 10.26434/chemrxiv-2023-l6jjd
 history:
   2023-06-29: original submission
 instructions:
- The input file is designed to be executed using the driver to post-process LAMMPS simulations of the colloidal system described in the publication to obtain analytical reference values for the collective variables n and n(Q6). The model.py file contains a fully trained GNN model that can be used as a nucleation CV in this system using the [PyCV](https://giorginolab.github.io/plumed2-pycv/) PLUMED fork. The other PLUMED input demonstrate an example use of the trained CV in a pulling simulation. 
+ The input file is designed to be executed using the driver to post-process LAMMPS simulations of the colloidal system described in the publication to obtain analytical reference values for the collective variables n and n(Q6). The model.py file contains a fully trained GNN model that can be used as a nucleation CV in this system using the [PyCV](https://giorginolab.github.io/plumed2-pycv/) PLUMED fork. The other PLUMED input demonstrate an example use of the trained CV in a pulling simulation. For code documentation and a tutorial visit [here](https://flofega.github.io/NNucleate/).
  
