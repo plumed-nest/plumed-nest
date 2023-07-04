@@ -12,8 +12,8 @@ doi: unpublished
 history:
   2023-07-04: original submission
 instructions:
- Run using GROMACS (2018.6) according to e.g., `gmx mdrun -deffnm cmumd -cpi md.cpt -plumed plumed.dat`. 
-`ion-structure-driver.dat` and `water-structure-driver.dat` are PLUMED driver files to post-process the trajectories. Execute them using, 
-`plumed driver --plumed ion-structure-driver.dat --mf_xtc md.xtc`.
+ Run using GROMACS (2018.6) according to e.g., gmx mdrun -deffnm cmumd -cpi md.cpt -plumed plumed.dat. 
+ion-structure-driver.dat and water-structure-driver.dat are PLUMED driver files to post-process the trajectories. Execute them using, 
+plumed driver --plumed ion-structure-driver.dat --mf_xtc md.xtc.
  
 
