@@ -1,0 +1,12 @@
+url: https://github.com/Manyi-Yang/Li2NH-NH3-decomposition/archive/refs/heads/main.zip 
+pname: "Reactant-Induced Dynamics of Lithium Imide Surfaces during the Ammonia Decomposition Process"
+category: chemistry 
+keyw: Ammonia decomposition; Dynamics;OPES; Neural Network potential 
+plumed_version: 2.9
+contributor: Manyi Yang 
+doi: 10.26434/chemrxiv-2022-qr7wt
+history:
+  2023-07-09: original submission
+instructions:
+ It contains the input files necessary to reproduce the results contained [here](https://chemrxiv.org/engage/chemrxiv/article-details/633ad64ae665bdfc891bb5a2). Simulations were performed in combination with LAMMPS, Deepmd-kit, and CP2K. Please check the README file in each folder of the [GitHub](https://github.com/Manyi-Yang/Li2NH-NH3-decomposition) repository for more details. 
+ 
