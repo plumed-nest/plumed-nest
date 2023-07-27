@@ -1,9 +1,13 @@
-url: https://github.com/Ferg-Lab/pines/raw/main/examples/plumed_files.zip 
+url: https://github.com/Ferg-Lab/pines/archive/refs/heads/main.zip 
 pname: "Permutationally Invariant Networks for Enhanced Sampling (PINES)"
 category: methods
 keyw: collective variables, enhanced sampling, data-driven, deep learning, permutational invariance, solvent 
 plumed_version: 2.8
 contributor: Nicholas Herringer 
+plumed_input:
+ - path: examples/driverTests/plumed_Ar13.dat
+ - path: examples/driverTests/plumed_C45.dat
+ - path: examples/driverTests/plumed_NaCl.dat
 doi: unpublished
 history:
   2023-06-27: original submission
