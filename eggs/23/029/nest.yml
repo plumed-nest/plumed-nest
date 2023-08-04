@@ -12,5 +12,5 @@ plumed_input:
   - path: GELSOLIN/SLC_ON/plumed.dat 
   - path: UP1_RNA/SLC_OFF/plumed.dat  
   - path: UP1_RNA/SLC_ON/plumed.dat 
-instructions: > Included are the input files to perform a metainference calculation using SAXS data as restraints and our latest hybrid SAXS forward model. 
-This model allows for the inclusion of a solvent layer correction term. The simulations are meant to be performed using GROMACS and multiple replicas in the case of GELSOLIN, while using a single replica in the case of UP1. 
+instructions: 
+ Included are the input files to perform a metainference calculation using SAXS data as restraints and our latest hybrid SAXS forward model. This model allows for the inclusion of a solvent layer correction term. The simulations are meant to be performed using GROMACS and multiple replicas in the case of GELSOLIN, while using a single replica in the case of UP1. 
