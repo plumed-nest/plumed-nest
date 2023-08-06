@@ -4,8 +4,7 @@ category: bio
 keyw: RNA, metadynamics, probes, mixed-solvent MD, small molecules, binding sites
 plumed_version: 2.10
 contributor: Max Bonomi
-nreplicas: 2
-doi: unpublished 
+doi: unpublished
 history:
   2023-08-06: original submission
 instructions:
