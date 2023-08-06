@@ -2,7 +2,7 @@ url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2023/SHAM
 pname: "Identifying small molecules binding sites in RNA conformational ensembles with SHAMAN"
 category: bio 
 keyw: RNA, metadynamics, probes, mixed-solvent MD, small molecules, binding sites
-plumed_version: 2.10
+plumed_version: 2.9
 contributor: Max Bonomi
 doi: unpublished 
 history:
