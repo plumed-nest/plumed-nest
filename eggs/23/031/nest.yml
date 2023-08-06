@@ -1,4 +1,4 @@
-url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2023/SHAMAN-benchmark/SHAMAN-input.tgz 
+url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2023/SHAMAN-benchmark/SHAMAN-benchmark.zip
 pname: "Identifying small molecules binding sites in RNA conformational ensembles with SHAMAN"
 category: bio 
 keyw: RNA, metadynamics, probes, mixed-solvent MD, small molecules, binding sites
