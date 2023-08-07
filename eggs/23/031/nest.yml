@@ -2,13 +2,13 @@ url: https://github.com/maxbonomi/plumed-nest-data/raw/master/projects-2023/SHAM
 pname: "Identifying small molecules binding sites in RNA conformational ensembles with SHAMAN"
 category: bio 
 keyw: RNA, metadynamics, probes, mixed-solvent MD, small molecules, binding sites
-plumed_version: 2.10
+plumed_version: 2.9
 contributor: Max Bonomi
 doi: unpublished
 nreplicas: 2
 plumed_mpi: True
 history:
   2023-08-06: original submission
-instructions: >
+instructions: 
  PLUMED input files to perform Shadow Mixed-Solvent MetaDynamics simulations. Simulations have been performed with the master branch of PLUMED available [here](https://github.com/plumed/plumed.github.io) and GROMACS 2021.5. All the GROMACS topology files are available [here](https://github.com/maxbonomi/plumed-nest-data/tree/master/projects-2023/SHAMAN-benchmark).
  
