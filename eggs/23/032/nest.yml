@@ -1,0 +1,12 @@
+url: https://zenodo.org/record/8246298/files/ptltsne_nest.zip 
+pname: "Acceleration of Molecular Simulations by Parametric Time-Lagged tSNE Metadynamics"
+category: bio 
+keyw: metadynamics, tSNE, neural network, machine learning, trp-cage, folding 
+plumed_version: 2.9
+contributor: Vojtech Spiwok 
+doi: unpublished
+history:
+  2023-08-14: original submission
+instructions: 
+ Data for metadynamics with two parametric time-lagged tSNE collective variables are in the mtd1 directory. Data for metadynamics with two parametric time-lagged tSNE collective variables and alphaRMSD are in the mtd2 directory. Data for parallel tempering metadynamics with two parametric time-lagged tSNE collective variables are in the ptmtd directory. Data for reference parallel tempering simulations are in the pt directory. The results were obtained using Gromacs (2021.4, 2021), Plumed (2.8.0, 2.9.0) and other codes available [here](https://github.com/spiwokv/ptltsne) and [here](https://github.com/kurecka/plumed2/tree/uvt_extensions).
+ 
