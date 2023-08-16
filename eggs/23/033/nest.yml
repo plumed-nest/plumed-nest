@@ -1,4 +1,4 @@
-url: wget https://github.com/sponerlab/G4_folding_parallel/raw/main/archive.zip 
+url: https://github.com/sponerlab/G4_folding_parallel/raw/main/archive.zip 
 pname: "DNA G-quadruplex and G-hairpin folding with ST-metaD protocol"
 category: bio 
 keyw: DNA, G4, GQ, quadruplex, hairpin, folding, metadynamics, REST2, ST-metaD 
