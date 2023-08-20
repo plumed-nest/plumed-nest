@@ -1,0 +1,12 @@
+url: https://github.com/connorzzou/PLUMED-NEST/raw/main/LMF-UREA-AQ.zip 
+pname: "Urea nucleation in water: do long-range forces matter?"
+category: materials 
+keyw: LMF theory, Metadynamics, Nucleation 
+plumed_version: 2.7.2
+contributor: Ziyue Zou 
+doi: unpublished
+history:
+  2023-08-20: original submission
+instructions:
+ The three folders contain the input files for the simulations with the full model, the Gaussian-truncated model, and the short solvent model, respectively. The .intl file is the initial configuration for the urea-water system. The GT_potential.table contains tabulated Gaussian-truncated electrostatic potentials. The urea_lmf.table contains tabulated renormalized long-range electrostatic potentials in the short solvent model. The ${sys}1.in file is the input script for LAMMPS-29Sep2021, where ${sys} stands for the corresponding model, and ${sys}2.in is the input script if one needs to restart the simulation continued from ${sys}1.in.
+
