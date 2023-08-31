@@ -1,0 +1,12 @@
+url: https://github.com/jacquecr23/Peptide-ligands-binding-protocol/raw/main/Peptide-ligands-binding-unbinding-protocol.zip 
+pname: "An Extended Metadynamics Protocol for Binding/Unbinding of Peptide Ligands to Class A G-Protein Coupled Receptors"
+category: bio 
+keyw: G protein coupled receptor, peptide ligands, metadynamics, multiple-walker 
+plumed_version: 2.7.3
+contributor: Timothy Clark 
+doi: unpublished
+history:
+  2023-08-30: original submission
+instructions:
+ Multiple-walker metadynamics simulations were performed using GROMACS 2021.4 with the PLUMED 2.7.3 plug-in. Topologies for the receptor, peptides, and G protein were generated using the AMBER99SB-ILDN force field.
+
