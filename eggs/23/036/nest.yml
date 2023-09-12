@@ -1,0 +1,12 @@
+url: https://github.com/ruiyuwangwork/NaCl_nucleation_melt_aq/raw/main/nacl_nucleation_melt_aq.zip 
+pname: "Is the local ion density sufficient to drive NaCl nucleation in vacuum and in water?"
+category: bio 
+keyw: NaCl, nucleation, metadynamics 
+plumed_version: 2.8.1
+contributor: Ruiyu Wang 
+doi: unpublished
+history:
+  2023-09-12: original submission
+instructions:
+ The zip file contains essential files to run metadynamics simulations of NaCl nucleation from the melt (the "melt" folder) and aqueous solution (the "aq" folder). Software used are GROMACS-2022.3 and PLUMED-2.8.1.
+
