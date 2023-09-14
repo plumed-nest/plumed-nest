@@ -1,0 +1,12 @@
+url: https://github.com/xinqi23/SBP2023/raw/main/SBP_plumed_nest.zip 
+pname: "Estimating binding free energy of solid binding peptides without extensive sampling"
+category: bio 
+keyw: metadynamics, solid binding peptides 
+plumed_version: 2.6
+contributor: Xin Qi 
+doi: unpublished
+history:
+  2023-09-14: original submission
+instructions:
+ Initial configurations, run files for GROMACS and two complete examples of metadynamics are included. 
+
