@@ -8,5 +8,5 @@ doi: 10.1101/2023.08.08.552403
 history:
   2023-08-06: original submission
 instructions: 
- PLUMED input files to perform Shadow Mixed-Solvent MetaDynamics simulations. Simulations have been performed with the master branch of PLUMED available [here](https://github.com/plumed/plumed.github.io) and GROMACS 2021.5. All the GROMACS topology files are available [here](https://github.com/maxbonomi/plumed-nest-data/tree/master/projects-2023/SHAMAN-benchmark).
+ PLUMED input files to perform Shadow Mixed-Solvent MetaDynamics simulations. Simulations have been performed with the master branch of PLUMED available [here](https://github.com/plumed/plumed2) and GROMACS 2021.5. All the GROMACS topology files are available [here](https://github.com/maxbonomi/plumed-nest-data/tree/master/projects-2023/SHAMAN-benchmark).
  
