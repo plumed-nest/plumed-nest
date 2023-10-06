@@ -1,0 +1,12 @@
+url: https://github.com/tiwarylab/hydrophobic-ligand-dissociation/plumed.zip 
+pname: "Thermodynamically inspired machine-learned reaction coordinates for hydrophobic ligand dissociation"
+category: chemistry 
+keyw: metadynamics, ligand dissociation 
+plumed_version: 2.8
+contributor: Eric Beyerle 
+doi: unpublished
+history:
+  2023-10-06: original submission
+instructions:
+ WTMetaD simulations run using using GROMACS 2021.4 patched with PLUMED 2.8.0. To run the simulations, just use the run.sh file in the GitHub repository (in the methane and fullerene directories; the sh file is not located in the zipped folder).
+
