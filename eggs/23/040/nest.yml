@@ -1,0 +1,12 @@
+url: https://github.com/riccardocapelli/papers_data/raw/master/capsule_assembly2023/input_data.zip 
+pname: "Supramolecular capsules assembly dynamics"
+category: chemistry 
+keyw: Self-assembly, H-bond capsules, resorcinarene, pyrogallolarene, metadynamics 
+plumed_version: 2.6
+contributor: Riccardo Capelli 
+doi: unpublished
+history:
+  2023-10-06: original submission
+instructions:
+ We performed for both resorcinarene and pyrogallolarene capsules a Well-Tempered metadynamics simulation, using GROMACS 2019.2 patched with PLUMED 2.6 (all the needed files for the GROMACS run are in the "input" folder, while the ones needed for plumed are in "plumed_metad" folder). The PLUMED input files for i) the calculation of the CVs used for the reweighting, ii) the calculation of the solvent molecules included in the capsules, and iii) the reweighting are in the "plumed_analysis" folder.
+ 
