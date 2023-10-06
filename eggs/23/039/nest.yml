@@ -1,4 +1,4 @@
-url: https://github.com/tiwarylab/hydrophobic-ligand-dissociation/plumed.zip 
+url: https://github.com/tiwarylab/hydrophobic-ligand-dissociation/raw/main/plumed.zip 
 pname: "Thermodynamically inspired machine-learned reaction coordinates for hydrophobic ligand dissociation"
 category: chemistry 
 keyw: metadynamics, ligand dissociation 
