@@ -1,0 +1,49 @@
+url: https://github.com/maxbonomi/EMMIVox-BENCHMARK/archive/refs/heads/main.zip 
+pname: "Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference"
+category: methods
+keyw: EMMIVox, cryo-EM, single-structure refinement, ensemble refinement, Bayesian inference, B-factors, structural ensembles
+plumed_version: 2.10
+contributor: Samuel Hoff 
+doi: unpublished
+plumed_input:
+ - path:  03-7n00/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  03-7n00/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  03-7n00/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  03-7n00/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  05-7b5o/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  05-7b5o/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  05-7b5o/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  05-7b5o/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  06-7mjs/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  06-7mjs/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  06-7mjs/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  06-7mjs/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  07-7lq6/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  07-7lq6/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  07-7lq6/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  07-7lq6/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  01-7p6a/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  01-7p6a/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  01-7p6a/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  01-7p6a/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  09-6yeg/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  09-6yeg/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  09-6yeg/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  09-6yeg/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  04-7t4n/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  04-7t4n/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  04-7t4n/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  04-7t4n/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  08-7nqk/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  08-7nqk/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  08-7nqk/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  08-7nqk/2-Production/cc-0.9/plumed_EMMI.dat
+ - path:  02-7w9w/2-Production/cc-0.8/plumed_EMMI.dat
+ - path:  02-7w9w/2-Production/cc-0.7/plumed_EMMI.dat
+ - path:  02-7w9w/2-Production/cc-1.0/plumed_EMMI.dat
+ - path:  02-7w9w/2-Production/cc-0.9/plumed_EMMI.dat
+history:
+  2023-10-16: original submission
+instructions:
+ GROMACS topology and PLUMED input files to perform model refinement using cryo-EM density maps and EMMIVox. Additional information and analysis scripts can be found [here](https://github.com/maxbonomi/EMMIVox).  
+ 
