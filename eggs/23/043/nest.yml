@@ -1,0 +1,13 @@
+url: https://github.com/lgigli/BTO-paper/archive/refs/heads/main.zip 
+pname: "Modeling the ferroelectric phase transition in barium titanate with DFT accuracy and converged sampling"
+category: materials 
+keyw: Barium Titanate, ferroelectric phase transition, Machine Learning, polarization order parametersd 
+plumed_version: 2.10-mod
+contributor: Lorenzo Gigli 
+ref: 'L. Gigli, A. Goscinski, M. Ceriotti, G. A. Tribello. Modeling the ferroelectric phase transition in barium titanate with DFT accuracy and converged sampling'
+ref_url: 'https://arxiv.org/abs/2310.12579'
+history:
+  2023-10-24: original submission
+instructions:
+ This project is associated with the recent preprint "Modeling the ferroelectric phase transition in barium titanate with DFT accuracy and converged sampling" by L. Gigli et al. and available on [arXiv](https://arxiv.org/abs/2310.12579). In this work, we study the effect of system size in the thermodynamics of barium titanate, by performing metadynamics simulations with PLUMED, LAMMPS, i-Pi and librascal. Modifications to the PLUMED source code (forked from the hack-the-tree branch) were required for the construction of a custom collective variable that mimicks the polarization of the system. The github repository [here](https://github.com/agoscinski/plumed2) provides links to the up-to-date versions of the codes used, instructions on how to install the software stack and an example of a metadynamics run.
+ 
