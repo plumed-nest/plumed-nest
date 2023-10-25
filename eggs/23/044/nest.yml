@@ -1,0 +1,15 @@
+url: https://github.com/GMPavanLab/C14-Catenane/raw/main/input_data.zip 
+pname: "Synthesis of C60/[10]CPP-Catenanes by Regioselective, Nanocapsule-Templated Bingel Bis-Addition"
+category: materials 
+keyw: metadynamics, interlocked molecules 
+plumed_version: 2.5
+contributor: Luigi Leanza 
+doi: 10.1002/anie.202309393
+plumed_input:
+ - path: plumed_files/plumed.dat
+ - path: plumed_files/reweight_md.dat
+history:
+  2023-10-24: original submission
+instructions:
+ Plumed input files to reproduce results of the paper [Synthesis of C60/[10]CPP-Catenanes by Regioselective, Nanocapsule-Templated Bingel Bis-Addition](https://onlinelibrary.wiley.com/doi/10.1002/anie.202309393). The file "plumed.dat" is used as input for infrequent metadynamics simulations. The file "reweight_md.dat" is used to obtain the FES in Fig.4c, right panel, as function of theta and phi.
+ 
