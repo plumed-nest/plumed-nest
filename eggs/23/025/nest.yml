@@ -9,9 +9,10 @@ plumed_input:
  - path: cylinder_metadynamics/3ibk/terra_metady_cyl_K1.dat
  - path: repulsive/1k8p/telomere_repulsive.dat
  - path: repulsive/3ibk/terra_repulsive.dat
-doi: unpublished
+doi: 10.1021/acs.jcim.3c01305 
 history:
   2023-06-29: original submission
+  2023-10-30: updated doi
 instructions:
  Plumed scripts used to run 1) volumed-based (cylinder) well tempered metadynamics simulations to probe ion binding to G-quadruplexes and 2) repulsive potential simulations (lower walls) to prevent ion binding. MD engine used is OpenMM v7.6.
  
