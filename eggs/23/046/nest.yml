@@ -1,0 +1,12 @@
+url: https://github.com/gabedahora/HLDA-WTMetaD-lasso/raw/main/lasso_HLDA.zip
+pname: "Lasso Peptides - HLDA CV"
+category: bio
+keyw: metadynamics, protein folding, HLDA, harmonic
+plumed_version: 2.7.1
+contributor: Gabriel da Hora
+doi: unpublished 
+history:
+  2023-12-21: original submission
+instructions:
+ These are AMBER and PLUMED files to run Well-Tempered Metadynamics for each lasso peptide (MccJ25, ulleungdin and sungsanpin) with two CVs. One of the CVs biases the isopeptide bond between residues 1 and 8 and the second is defined by HLDA as a combination of weighted distances from the ring 1-8 to the piercing residue. 
+ 
