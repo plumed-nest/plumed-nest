@@ -83,7 +83,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,tested,status,exe,global_header=None,header=None):
+def plumed_format(source,tested,status,exe,actions,global_header=None,header=None):
     """ Format plumed input file.
 
     source: path to master input file
@@ -107,7 +107,7 @@ def plumed_format(source,tested,status,exe,global_header=None,header=None):
                  print(header,file=o)
             # Read in the input file and get the rendered html
             lines = f.read()
-            html = get_html( lines, source, os.path.basename(source), tested, status, exe )
+            html = get_html( lines, source, os.path.basename(source), tested, status, exe, actions=actions )
             # make sure Jekyll does not interfere with format
             print("{% raw %}",file=o)
             print( html, file=o )
@@ -277,6 +277,7 @@ def process_egg(path,eggdb=None):
 
         # count number of failing tests
         nfail=0; nfailm=0
+        actions = set({})
         for file in config["plumed_input"]:
 
             if "natoms" in file:
@@ -336,7 +337,7 @@ def process_egg(path,eggdb=None):
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
                    success="ignore"
             # Generate the plumed input 
-            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), global_header=global_header,header=header)
+            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, global_header=global_header,header=header)
             add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
 
         # print instructions, if present
@@ -386,6 +387,8 @@ def process_egg(path,eggdb=None):
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)
         print("  preprint: " + str(prep),file=eggdb)
+        astr = ' '.join(actions)
+        print("  actions: " + astr,file=eggdb)
     eggdb.flush()
 
 if __name__ == "__main__":
