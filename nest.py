@@ -10,6 +10,7 @@ import urllib.request
 import zipfile
 from contextlib import contextmanager
 import os
+import json
 import pathlib
 import subprocess
 from PlumedToHTML import test_plumed, get_html 
@@ -144,7 +145,7 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-def process_egg(path,eggdb=None):
+def process_egg(path,action_counts,eggdb=None):
 
     if not eggdb:
         eggdb=sys.stdout
@@ -387,6 +388,8 @@ def process_egg(path,eggdb=None):
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)
         print("  preprint: " + str(prep),file=eggdb)
+        for a in actions :
+            if a in action_counts.keys() : action_counts[a] += 1
         astr = ' '.join(actions)
         print("  actions: " + astr,file=eggdb)
     eggdb.flush()
@@ -412,6 +415,20 @@ if __name__ == "__main__":
     f=open("_data/plumed.yml","w")
     f.write("stable: v%s" % str(stable_version))
     f.close()
+    # Get list of plumed actions from syntax file
+    cmd = ['plumed', 'info', '--root']
+    plumed_info = subprocess.run(cmd, capture_output=True, text=True )
+    keyfile = plumed_info.stdout.strip() + "/json/syntax.json"
+    with open(keyfile) as f :
+        try:
+           plumed_syntax = json.load(f)
+        except ValueError as ve:
+           raise InvalidJSONError(ve)
+    # Make a dictionary to hold all the actions
+    action_counts = {} 
+    for key in plumed_syntax :
+        if key=="vimlink" or key=="replicalink" or key=="groups" : continue
+        action_counts[key] = 0
     with open("_data/eggs" + str(replica) + ".yml","w") as eggdb:
         print("# file containing egg database.",file=eggdb)
 
@@ -426,6 +443,12 @@ if __name__ == "__main__":
         k=0
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
-            if k%nreplicas==replica : process_egg(re.sub("nest.yml$","",str(path)),eggdb)
+            if k%nreplicas==replica : process_egg(re.sub("nest.yml$","",str(path)),action_counts,eggdb)
             k = k + 1 
+    # output yaml file with action counts
+    action_list = [] 
+    for key, value in action_counts.items() : action_list.append( {'name': key, 'number': value } )
+    cfilename = "_data/actioncount" + str(replica) + ".yml"
+    with open(cfilename, 'w' ) as file : 
+        yaml.safe_dump(action_list, file)
 
