@@ -62,6 +62,33 @@ There are {{ missing.size }} eggs without reference paper, marked as unpublished
 {% for item in missing %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
 {% endfor %}
 
+__Action Usage Chart__
+
+{% assign actionlist = site.data.actioncount0 | map: "name" %}
+{% assign actionno = site.data.actioncount0 | map: "number" %}
+{% assign actionno1 = site.data.actioncount1 | map: "number" %}
+{% assign actionno2 = site.data.actioncount2 | map: "number" %}
+{% assign actionno3 = site.data.actioncount3 | map: "number" %}
+{% assign actionno4 = site.data.actioncount4 | map: "number" %}
+{% assign actionno5 = site.data.actioncount5 | map: "number" %}
+{% assign actionno6 = site.data.actioncount6 | map: "number" %}
+{% assign actionno7 = site.data.actioncount7 | map: "number" %}
+{% assign actionno8 = site.data.actioncount8 | map: "number" %}
+{% assign actionno9 = site.data.actioncount9 | map: "number" %}
+{% assign nactions=actionno.size %}
+
+{% assign astr="" %}
+{% assign ano=actionno[0] | plus: actionno1[i] %}
+{% assign astr=astr | append: ano %}
+{% for i in (1..nactions) %}
+   {% assign ano=actionno[i] | plus: actionno1[i] | plus: actionno2[i] | plus: actionno3[i] | plus: actionno4[i] | plus: actionno5[i] | plus: actionno6[i] | plus: actionno7[i] | plus: actionno8[i] | plus: actionno9[i] %}
+   {% assign astr=astr | append: ", " | append: ano %}
+{% endfor %}
+
+The chart below shows how many eggs make use of each of the available actions in PLUMED (it will look clearer if you resize the window).
+
+<canvas id="myChart" style="width:100%;"></canvas>
+
 <script>
 $(document).ready(function() {
 var table = $('#browse-table').DataTable({
@@ -107,5 +134,30 @@ var table = $('#browse-table3').DataTable({
 $('#browse-table3-searchbar').keyup(function () {
   table.search( this.value ).draw();
   });
+});
+</script>
+
+<script>
+var xValues = [ {{ actionlist | join: '", "' | prepend: '"' | append: '"' }} ];
+var yValues = [ {{ astr }} ];
+var barColors = "green";
+
+new Chart("myChart", {
+  type: "horizontalBar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Number of eggs using this action"
+    }
+  }
 });
 </script>
