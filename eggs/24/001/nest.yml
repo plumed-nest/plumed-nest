@@ -1,0 +1,12 @@
+url: https://github.com/dhimanray/Enzyme_Kinetics_OPES_flooding/archive/main.zip 
+pname: A Kinetic View of Enzyme Catalysis from Enhanced Sampling QM/MM Simulations 
+category: bio 
+keyw: OPES, OPES-Flooding, QM/MM, Kinetics, Enzyme Catalysis 
+plumed_version: 2.9
+contributor: Dhiman Ray 
+doi: 10.26434/chemrxiv-2024-np1kh 
+history:
+  2024-01-30: original submission
+instructions: >
+ To perform OPES simulation at MM level we used GROMACS v2022. For OPES flooding simulation at QM/MM level we used CP2K v9.1. Python scripts have been used for rescaling transition times and for KS tests.
+
