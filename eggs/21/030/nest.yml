@@ -4,7 +4,7 @@ category: bio
 keyw: parallel bias parallel tempered metadynamics in WTE, synthetic foldamers, self-assembly, peptoid secondary structure 
 plumed_version: 2.4
 contributor: Jim Pfaendtner  
-doi: unpublished 
+doi: 10.1021/acs.jpcb.3c01913 
 plumed_input:
  - path: plumed-nest/npm/ab.dat
  - path: plumed-nest/npm/cn.dat

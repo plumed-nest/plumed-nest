@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, activation/deactivation, activation index, GPCRs, 5HT1A 
 plumed_version: 2.5.3
 contributor: Timothy Clark 
-doi: unpublished
+doi: 10.1021/acs.jcim.3c00208 
 history:
   2023-02-13: original submission
 instructions:

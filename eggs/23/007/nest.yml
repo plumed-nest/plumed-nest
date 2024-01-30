@@ -29,7 +29,7 @@ plumed_input:
  - path: plumed-nest/nspe4/cv.dat
  - path: plumed-nest/nspe4/imp.dat
  - path: plumed-nest/nspe4/plumed.dat
-doi: unpublished
+doi: 10.1021/acs.jpcb.3c02576 
 history:
   2023-02-27: original submission
 instructions:

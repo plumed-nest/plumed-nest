@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, TfCut2, PET, HREX, enzymatic polyethylene terephthalate degradation 
 plumed_version: 2.4.3
 contributor: Francesco Colizzi 
-doi: unpublished
+doi: 10.1021/acscatal.3c00259 
 history:
   2022-12-28: original submission
 instructions: >

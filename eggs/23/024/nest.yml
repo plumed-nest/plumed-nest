@@ -8,7 +8,7 @@ plumed_input:
  - path: examples/driverTests/plumed_Ar13.dat
  - path: examples/driverTests/plumed_C45.dat
  - path: examples/driverTests/plumed_NaCl.dat
-doi: unpublished
+doi: 10.1021/acs.jctc.3c00923 
 history:
   2023-06-27: original submission
 instructions:
