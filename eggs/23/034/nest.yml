@@ -4,8 +4,7 @@ category: materials
 keyw: LMF theory, Metadynamics, Nucleation 
 plumed_version: 2.7.2
 contributor: Ziyue Zou 
-ref: 'R. Zhao, Z. Zou, J. D. Weeks, P. Tiwary. Urea nucleation in water: do long-range forces matter?'
-ref_url: 'https://arxiv.org/abs/2307.13189'
+doi: 10.1021/acs.jctc.3c01120
 history:
   2023-08-20: original submission
 instructions:

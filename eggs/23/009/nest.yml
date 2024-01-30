@@ -4,8 +4,7 @@ category: methods
 keyw: TPI-Deep-TDA, Deep-TDA, Transition Path, OPES, OPES Flooding, Machine Learning, Protein folding, Ligand binding 
 plumed_version: 2.9
 contributor: Dhiman Ray
-ref: 'D. Ray, E. Trizio, M. Parrinello. Deep Learning Collective Variables from Transition Path Ensemble'
-ref_url: 'https://doi.org/10.48550/arXiv.2303.01629'
+doi: 10.1063/5.0148872
 history:
   2023-03-06: original submission
 instructions:
