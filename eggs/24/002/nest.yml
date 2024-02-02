@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/10127154/files/MTD_ligand_design.zip 
+pname: Using Metadynamics to Reveal Extractant Conformational Free Energy Landscapes 
+category: chemistyr 
+keyw: metadynamics, ligand design, solvent extraction 
+plumed_version: 2.9
+contributor: Xiaoyu Wang 
+doi: 10.1021/acs.jpcb.3c06637 
+history:
+  2024-02-02: original submission
+instructions: >
+ LAMMPS is used as the MD engine with Plumed. LAMMPS input and datafile are provided in the same folder with Plumed input. 
+
