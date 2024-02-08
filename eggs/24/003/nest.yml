@@ -1,0 +1,12 @@
+url: https://github.com/katorke/tertiary_peptoids/raw/main/plumed_nest.zip 
+pname: Exploration of Tertiary Structure in Sequence-Defined Polymers Using Molecular Dynamics Simulations 
+category: chemistry 
+keyw: steered molecular dynamics, foldamers, peptoids, bio-inspired 
+plumed_version: 2.8
+contributor: Kaylyn Torkelson 
+doi: unpublished 
+history:
+  2024-02-08: original submission
+instructions: >
+ The directory diff_sequences contains subdirectories for each peptoid sequence explored in this work. Each subdirectory contains the plumed files needed to perform the steered MD as well as any other .dat files needed to track other CVs, a topology generated for each system with HMR, and an example gro file (system.gro). The directory diff_helices contains subdirectories labeled for the different helical steering of sequence CH30 with all necessary .dat files found within (main plumed.dat for CVs and steering, alphabeta.dat for setting up the alphabeta CV of each phi/psi/omega dihedral, minima.dat for more specifically establishing the ideal helical minima, and dihedral.dat for listing all dihedrals in each sequence). To run these simulations, you can use the system.gro file and hmr.top file from the other CH30 directory under diff_sequences. Lastly, we have a FF directory that contains all updates necessary to run these systems and an example mdp file for simulations in both water and acetonitrile. All simulations were run on GPU with GROMACS 2020.5 and PLUMED 2.8 (with ToidRMSD CV update).
+
