@@ -1,0 +1,13 @@
+url: https://github.com/connorzzou/PLUMED-NEST/raw/main/GNN-PLUMED-Nucleation-main.zip 
+pname: Enhanced sampling of Crystal Nucleation with Graph Representation Learnt Variables 
+category: materials
+keyw: metadynamics, nucleation, machine learning
+plumed_version: 2.8.1
+contributor: Ziyue Zou
+ref: 'Ziyue Zou, Pratyush Tiwary. Enhanced sampling of Crystal Nucleation with Graph Representation Learnt Variables.'
+ref_url: 'https://arxiv.org/abs/2310.07927'
+history:
+  2024-02-16: original submission
+instructions: >
+ LAMMPS version 23Jun2022. Gromacs version 2021.6. PLUMED version 2.8.1. Libtorch plugin required. 
+
