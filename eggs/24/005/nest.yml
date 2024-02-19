@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/10678142/files/plumed-egg.zip 
+pname: Learning Markovian Dynamics with Spectral Maps 
+category: methods
+keyw: spectral map, collective variables, machine learning 
+plumed_version: 2.7
+contributor: Jakub Rydzewski 
+doi: unpublished
+history:
+  2024-02-16: original submission
+instructions: >
+ Postprocessed datasets for CLN025 (original data published by DE Shaw Research) and a modified Muller-Brown potential; Scripts for running multiple simulations on the MB potential with PLUMED 2; A reference implementation of spectral map. 
+
