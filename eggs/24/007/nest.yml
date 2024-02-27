@@ -1,0 +1,12 @@
+url: https://github.com/Gervasiolab/Gervasio-Protein-Dynamics/raw/master/swish_expanded/tem1_plumed/tem1_plumed.zip 
+pname: SWISH-X 
+category: bio 
+keyw: swish-x, SWISH-X, swish, expanded SWISH 
+plumed_version: 2.9
+contributor: Alberto Borsatto 
+doi: unpublished
+history:
+  2024-02-27: original submission
+instructions: >
+ Please refer to [this tutorial](https://github.com/Gervasiolab/Gervasio-Protein-Dynamics/tree/master/swishX_bootcamp) for further instructions on how to set up a SWISH-X simulation.
+
