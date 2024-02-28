@@ -4,10 +4,10 @@ category: bio
 keyw: OPES Explore, OPES Flooding, Benzene T4 Lysozyme, Ligand unbinding, Pathway classification, Kinetics, Residence time 
 plumed_version: 2.9
 contributor: Dhiman Ray 
-ref: 'D. Ray, M. Parrinello. Data Driven Classification of Ligand Unbinding Pathways'
-ref_url: 'https://arxiv.org/abs/2308.05752'
+doi: 10.1073/pnas.2313542121 
 history:
   2023-08-04: original submission
+  2024-02-28: updated doi
 instructions:
  Simulations of Alanine Dipeptide and Benzene-T4-Lysozyme complex are conducted using GROMACS v2021.5. The objectives of these simulations are to explore reactive pathways and to classify the transition paths using Dynamic Time Warping.
  
