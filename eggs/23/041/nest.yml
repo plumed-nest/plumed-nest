@@ -1,4 +1,4 @@
-url: https://github.com/maxbonomi/EMMIVox-BENCHMARK/archive/refs/heads/main.zip 
+url: https://github.com/COSBlab/EMMIVox-BENCHMARK/archive/refs/heads/main.zip 
 pname: "Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference"
 category: methods
 keyw: EMMIVox, cryo-EM, single-structure refinement, ensemble refinement, Bayesian inference, B-factors, structural ensembles
