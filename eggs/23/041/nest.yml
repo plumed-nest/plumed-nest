@@ -45,5 +45,5 @@ plumed_input:
 history:
   2023-10-16: original submission
 instructions:
- GROMACS topology and PLUMED input files to perform model refinement using cryo-EM density maps and EMMIVox. Additional information and analysis scripts can be found [here](https://github.com/maxbonomi/EMMIVox).  
+ GROMACS topology and PLUMED input files to perform model refinement using cryo-EM density maps and EMMIVox. Additional information and analysis scripts can be found [here](https://github.com/COSBlab/EMMIVox).
  

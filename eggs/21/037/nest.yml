@@ -1,5 +1,5 @@
-url: https://github.com/maxbonomi/bat-MD/archive/main.zip  
-pname: Molecular Dynamics simulations of RBD/hACE2 complexes 
+url: https://github.com/COSBlab/bat-MD/archive/main.zip
+pname: Molecular Dynamics simulations of RBD/hACE2 complexes
 category: bio
 keyw: SARS-CoV-2, COVID-19, MD, human-ACE2, spike, receptor-binding domain
 plumed_version: 2.7
@@ -10,5 +10,5 @@ history:
   2021-09-17: updated DOI
 instructions: >
  This egg contains the [GROMACS](https://www.gromacs.org) topology and input files as well as the PLUMED/python analysis scripts needed to reproduce the Molecular Dynamics 
- simulations of 3 different spike-RBD/human-ACE2 complexes reported [here](https://www.researchsquare.com/article/rs-871965/v1). See [README.md](https://github.com/maxbonomi/bat-MD/#readme) for more information and detailed instructions.
+ simulations of 3 different spike-RBD/human-ACE2 complexes reported [here](https://www.nature.com/articles/s41586-022-04532-4). See [README.md](https://github.com/COSBlab/bat-MD/#readme) for more information and detailed instructions.
  
