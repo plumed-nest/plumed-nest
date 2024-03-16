@@ -37,11 +37,12 @@ __Please note that:__
 
 Fields marked with "<sup>*</sup>" are optional  
 
+{% assign sorted_eggs = site.data.eggs | sort: "id" | reverse %}
 <form class="wj-contact" method="POST" action="https://formspree.io/plumed.nest@gmail.com">
   <table>
     <tr>
       <td><label for="id">plumID</label></td>
-      <td width="600"><select id="id" type="texy" name="plumID"><option>new (plumID to be assigned)</option>{% for item in site.data.eggs %}<option>{{ item.id }}:{{ item.shortname }}</option>{% endfor %} required</select> </td>
+      <td width="600"><select id="id" type="texy" name="plumID"><option>new (plumID to be assigned)</option>{% for item in sorted_eggs %}<option>{{ item.id }}:{{ item.shortname }}</option>{% endfor %} required</select> </td>
     </tr>
     <tr>  
       <td><label for="name">Project name</label></td>
