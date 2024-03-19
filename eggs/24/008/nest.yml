@@ -1,0 +1,12 @@
+url: https://github.com/mccartygroup/yCD_Metadynamics/raw/main/yCD_Metadynamics.zip 
+pname: yCD Metadynamics 
+category: bio 
+keyw: volume-based MetaD, path CVs, infrequent MetaD, product release 
+plumed_version: 2.4
+contributor: James McCarty 
+doi: 10.1021/acs.jpcb.3c07972 
+history:
+  2024-03-19: original submission
+instructions: >
+ All input files to simulate yCD with 5-FU bound or uracil bound are provided in the Structure folder. In the Volume_MetaD_Input is the plumed input for running volume based metadynamics. All the necessary files are in the Structure folder. In the iMetaD folder is the plumed input for running unbinding simulations used to estimate k_off from infrequent metadynamics. Plumed inputs for post-processing and reweighting are in the Reweighting directory. 
+
