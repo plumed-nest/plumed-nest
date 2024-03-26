@@ -1,4 +1,4 @@
-url: https://zenodo.org/record/4676091/files/PLUMED-NEST_chignolin.zip 
+url: https://zenodo.org/records/10880520/files/PLUMED-NEST_chignolin.zip
 pname: how to determine statistically accurate conformational ensembles 
 category: bio 
 keyw: metadynamics, metainference, errors, cv, SAXS, ensemble determination 
@@ -7,6 +7,7 @@ contributor: Cristina Paissoni
 doi: 10.3389/fmolb.2021.694130
 history:
   2021-04-09: original submission
+  2024-03-26: fix to keep input working with recent plumed
 plumed_input:
   - path: PLUMED-NEST_chignolin/Part1_MetaD_PBMetaD/plumed_ME2.dat
   - path: PLUMED-NEST_chignolin/Part1_MetaD_PBMetaD/plumed_PB4.dat
