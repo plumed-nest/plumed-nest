@@ -1,4 +1,4 @@
-[![Homepage](https://img.shields.io/badge/Home-plumed.org-green.svg)](http://www.plumed-nest.org)
+[![Homepage](https://img.shields.io/badge/Home-plumed--nest.org-green.svg)](http://www.plumed-nest.org)
 [![CI](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml/badge.svg)](https://github.com/plumed-nest/plumed-nest/actions/workflows/main.yml)
 
 
