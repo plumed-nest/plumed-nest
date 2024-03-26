@@ -1,4 +1,4 @@
-url: https://zenodo.org/record/4471368/files/E2F1-DP1_PLUMED-NEST.zip 
+url: https://zenodo.org/records/10879504/files/E2F1-DP1_PLUMED-NEST.zip 
 pname: High Conformational Flexibility of the E2F1/DP1/DNA complex 
 category: bio 
 keyw: SAXS, protein-DNA complex, hySAXS, ensemble determination 
@@ -7,6 +7,7 @@ contributor: Cristina Paissoni
 doi: 10.1016/j.jmb.2021.167119 
 history:
   2020-10-29: original submission
+  2024-03-26: fix to make the input work with current plumed
 plumed_input:
   - path: E2F1-DP1_PLUMED-NEST/MULTI_REPLICA/plumed-main.dat
     natoms: 303032 
