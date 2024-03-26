@@ -19,9 +19,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
-    - uses: actions/cache@v2
+    - uses: actions/cache@v4
       with:
         path: |
           ~/opt
@@ -29,10 +29,10 @@ jobs:
         key: ccache-${{ runner.os }}-${{ github.sha }}
         restore-keys: ccache-${{ runner.os }}-
       
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.8
+        python-version: 3.11
 
     - name: Set paths
       run: |
@@ -73,7 +73,7 @@ jobs:
         tar cf nest_files.tar $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*.stderr.txt.zip") $(find . -name "*badge.svg") _data/*.yml
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nest-content${{matrix.replica}}
         path: nest_files.tar
@@ -87,9 +87,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Download artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
     - name: Upload
       env:
         PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
