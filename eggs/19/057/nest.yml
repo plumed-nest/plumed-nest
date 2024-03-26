@@ -10,7 +10,7 @@ history:
   2020-05-23: updated doi
   2024-03-26: fixed to keep the input compatible with newest plumed
 plumed_input:
-  - plumed-main.dat
+  - diubq_k63/plumed-main.dat
 natoms: 117366
 nreplicas: 2
 instructions: >
