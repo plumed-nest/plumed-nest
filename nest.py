@@ -3,6 +3,7 @@
 
 import yaml
 import sys
+import time
 import getopt
 import shutil
 import re
@@ -443,7 +444,11 @@ if __name__ == "__main__":
         k=0
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
 
-            if k%nreplicas==replica : process_egg(re.sub("nest.yml$","",str(path)),action_counts,eggdb)
+            if k%nreplicas==replica :
+               start_time = time.perf_counter() 
+               process_egg(re.sub("nest.yml$","",str(path)),action_counts,eggdb)
+               end_time = time.perf_counter()
+               print(f"Egg took {end_time - start_time:0.4f} seconds")
             k = k + 1 
     # output yaml file with action counts
     action_list = [] 
