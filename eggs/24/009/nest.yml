@@ -1,0 +1,12 @@
+url: https://github.com/hocky-research-group/weighted-SGMM-paper/raw/main/wSGMM_plumed_nest.zip 
+pname: Weighted Shape Gaussian Mixture Models 
+category: bio 
+keyw: metadynamics, clustering 
+plumed_version: 2.8
+contributor: Glen Hocky 
+doi: 10.1101/2024.01.22.576692v1 
+history:
+  2024-03-31: original submission
+instructions: >
+ All files for running and analysis are give at [this website](https://github.com/hocky-research-group/weighted-SGMM-paper). This includes plumed source files for position LDA code. Software used include gromacs and lammps.
+
