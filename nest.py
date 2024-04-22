@@ -331,6 +331,13 @@ def process_egg(path,action_counts,eggdb=None):
             
             success=test_plumed("plumed",file["path"],header=global_header)
             if(success!=0 and success!="custom"): nfail+=1
+
+            # remove .so files potentially compiled with the previous plumed version
+            if has_load:
+               for item in os.listdir():
+                 if item.endswith(".so"):
+                   os.remove(item)
+
             success_master=test_plumed("plumed_master",file["path"],header=global_header)
             if(success_master!=0 and success_master!="custom"): nfailm+=1
             # Find the stable version 
