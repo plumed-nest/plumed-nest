@@ -29,5 +29,10 @@ var table = $('#browse-table').DataTable({
 $('#browse-table-searchbar').keyup(function () {
   table.search( this.value ).draw();
   });
+  hu = window.location.search.substring(1);
+  searchfor = hu.split("=");
+  if( searchfor[0]=="search" ) {
+      table.search( searchfor[1] ).draw();
+  }
 });
 </script>
