@@ -30,6 +30,12 @@ __Please note that:__
 * PLUMED-NEST will not host your archive, so make sure the indicated URL remains accessible. More info about where to host your contribution can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
 * PLUMED-NEST will not test your execution scripts, but only the compatibility of the PLUMED input files provided.
 
+Lastly, note that if you want to a link to the content that you have contributed to plumed nest on your personal website you can use a url like the one below:
+
+````
+https://www.plumed-nest.org/browse.html?search=yourname
+````
+
 <center>
 <p><b>Questions related to the submission to PLUMED-NEST can be directed to:</b></p>
 <p><b><a href="mailto:plumed.nest@gmail.com">plumed.nest@gmail.com</a></b></p>
