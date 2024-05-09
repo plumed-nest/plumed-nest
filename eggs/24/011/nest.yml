@@ -1,0 +1,13 @@
+url: https://github.com/alphatestK/Committor/raw/main/plumed_nest.zip 
+pname: Computing the Committor with the Committor, an Anatomy of the Transition State Ensemble 
+category: methods 
+keyw: committor, machine learning 
+plumed_version: 2.9
+contributor: Peilin Kang 
+ref: 'P. Kang, E. Trizio, M. Parrinello. Computing the Committor with the Committor: an Anatomy of the Transition State Ensemble'
+ref_url: 'https://doi.org/10.48550/arXiv.2401.05279'
+history:
+  2024-04-22: original submission
+instructions: >
+ The Müller-Brown potential’s simulations have been performed using the MD engine in the ves_md_linearexpansion module of PLUMED. The vacuum alanine dipeptide simulations have been carried out using the GROMACS v2021.5 MD engine and the Amber99-SB force field. The DASA reaction simulations have been carried out using the CP2K-8.1 software package at PM6 semi-empirical level. For the study of folding and unfolding of chignolin in explicit solvent, we performed our simulations using GROMACS v2021.5 the CHARMM22∗ force field and TIP3P water force field. 
+ 
