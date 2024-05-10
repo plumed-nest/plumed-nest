@@ -417,7 +417,7 @@ if __name__ == "__main__":
     f.write("stable: v%s" % str(stable_version))
     f.close()
     # Get list of plumed actions from syntax file
-    cmd = ['plumed', 'info', '--root']
+    cmd = ['plumed_master', 'info', '--root']
     plumed_info = subprocess.run(cmd, capture_output=True, text=True )
     keyfile = plumed_info.stdout.strip() + "/json/syntax.json"
     with open(keyfile) as f :
