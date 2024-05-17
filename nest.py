@@ -146,7 +146,7 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-def process_egg(path,action_counts,eggdb=None):
+def process_egg(path,action_counts,plumed_syntax,eggdb=None):
 
     if not eggdb:
         eggdb=sys.stdout
@@ -389,10 +389,18 @@ def process_egg(path,action_counts,eggdb=None):
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)
         print("  preprint: " + str(prep),file=eggdb)
+        modules = set()
         for a in actions :
+            if a in plumed_syntax.keys() :
+               try :
+                 modules.add( plumed_syntax[a]["module"] )
+               except : 
+                 raise Exception("could not find module for action " + a)
             if a in action_counts.keys() : action_counts[a] += 1
         astr = ' '.join(actions)
         print("  actions: " + astr,file=eggdb)
+        modstr = ' '.join(modules)
+        print("  modules: " + modstr, file=eggdb)
     eggdb.flush()
 
 if __name__ == "__main__":
@@ -446,7 +454,7 @@ if __name__ == "__main__":
 
             if k%nreplicas==replica :
                start_time = time.perf_counter() 
-               process_egg(re.sub("nest.yml$","",str(path)),action_counts,eggdb)
+               process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb)
                end_time = time.perf_counter()
                print(f"Egg took {end_time - start_time:0.4f} seconds")
             k = k + 1 
