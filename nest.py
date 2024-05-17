@@ -85,7 +85,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,tested,status,exe,actions,global_header=None,header=None):
+def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=None,header=None):
     """ Format plumed input file.
 
     source: path to master input file
@@ -109,7 +109,7 @@ def plumed_format(source,tested,status,exe,actions,global_header=None,header=Non
                  print(header,file=o)
             # Read in the input file and get the rendered html
             lines = f.read()
-            html = get_html( lines, source, os.path.basename(source), tested, status, exe, actions=actions )
+            html = get_html( lines, source, os.path.basename(source), tested, status, exe, usejson=usejson, maxchecks=100, actions=actions )
             # make sure Jekyll does not interfere with format
             print("{% raw %}",file=o)
             print( html, file=o )
@@ -331,7 +331,8 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
             
             success=test_plumed("plumed",file["path"],header=global_header)
             if(success!=0 and success!="custom"): nfail+=1
-            success_master=test_plumed("plumed_master",file["path"],header=global_header)
+            plumed_file = os.path.basename(file["path"])
+            success_master=test_plumed("plumed_master",file["path"],header=global_header, printjson=True )
             if(success_master!=0 and success_master!="custom"): nfailm+=1
             # Find the stable version 
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
@@ -339,7 +340,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
                    success="ignore"
             # Generate the plumed input 
-            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, global_header=global_header,header=header)
+            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, usejson=(not success_master), global_header=global_header,header=header)
             add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
 
         # print instructions, if present
