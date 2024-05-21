@@ -326,7 +326,6 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
             header+= "[stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 
 # in principle returns the list of produced files, not used yet:
-            with open(file["path"]) as f : has_load = "LOAD" in f.read()
             has_custom = re.match(".*-mod",plumed_version)
             
             success=test_plumed("plumed",file["path"],header=global_header)
@@ -341,7 +340,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
                    success="ignore"
             # Generate the plumed input 
             plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, usejson=(not success_master), global_header=global_header,header=header)
-            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
+            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),("LOAD" in actions),has_custom)
 
         # print instructions, if present
         with open("README.md","a") as o:
