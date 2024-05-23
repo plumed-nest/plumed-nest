@@ -8,7 +8,5 @@ doi: 10.26434/chemrxiv-2024-83h5q-v2
 history:
   2024-05-23: original submission
 instructions: >
- Input files to replicate the examples included in [Estimating Free Energy Surfaces and their Convergence from multiple, independent static and history-dependent biased molecular-dynamics simulations with Mean Force Integration](https://chemrxiv.org/engage/chemrxiv/article-details/6625a37791aefa6ce10d4b04) by Bjola and Salvalaglio.
-Additional information on methods and scripts is available [here](https://github.com/mme-ucl/MFI), 
-the source code [here](https://github.com/mme-ucl/pyMFI). The plumed-NEST egg related to the example featured in Fig.5 is [here](https://www.plumed-nest.org/eggs/23/026/).
+ Input files to replicate the examples included in [Estimating Free Energy Surfaces and their Convergence from multiple, independent static and history-dependent biased molecular-dynamics simulations with Mean Force Integration](https://chemrxiv.org/engage/chemrxiv/article-details/6625a37791aefa6ce10d4b04) by Bjola and Salvalaglio. Additional information on methods and scripts is available [here](https://github.com/mme-ucl/MFI), the source code [here](https://github.com/mme-ucl/pyMFI). The plumed-NEST egg related to the example featured in Fig.5 is [here](https://www.plumed-nest.org/eggs/23/026/).
  
