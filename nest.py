@@ -85,7 +85,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,tested,status,exe,actions,global_header=None,header=None):
+def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=None,header=None):
     """ Format plumed input file.
 
     source: path to master input file
@@ -109,7 +109,7 @@ def plumed_format(source,tested,status,exe,actions,global_header=None,header=Non
                  print(header,file=o)
             # Read in the input file and get the rendered html
             lines = f.read()
-            html = get_html( lines, source, os.path.basename(source), tested, status, exe, actions=actions )
+            html = get_html( lines, source, os.path.basename(source), tested, status, exe, usejson=usejson, maxchecks=100, actions=actions )
             # make sure Jekyll does not interfere with format
             print("{% raw %}",file=o)
             print( html, file=o )
@@ -146,7 +146,7 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-def process_egg(path,action_counts,eggdb=None):
+def process_egg(path,action_counts,plumed_syntax,eggdb=None):
 
     if not eggdb:
         eggdb=sys.stdout
@@ -326,12 +326,12 @@ def process_egg(path,action_counts,eggdb=None):
             header+= "[stderr]("+ re.sub(".*/","",file["path"]) +".plumed_master.stderr)  \n"
 
 # in principle returns the list of produced files, not used yet:
-            with open(file["path"]) as f : has_load = "LOAD" in f.read()
             has_custom = re.match(".*-mod",plumed_version)
             
             success=test_plumed("plumed",file["path"],header=global_header)
             if(success!=0 and success!="custom"): nfail+=1
-            success_master=test_plumed("plumed_master",file["path"],header=global_header)
+            plumed_file = os.path.basename(file["path"])
+            success_master=test_plumed("plumed_master",file["path"],header=global_header, printjson=True )
             if(success_master!=0 and success_master!="custom"): nfailm+=1
             # Find the stable version 
             stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
@@ -339,8 +339,8 @@ def process_egg(path,action_counts,eggdb=None):
                 if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
                    success="ignore"
             # Generate the plumed input 
-            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, global_header=global_header,header=header)
-            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),has_load,has_custom)
+            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, usejson=(not success_master), global_header=global_header,header=header)
+            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),("LOAD" in actions),has_custom)
 
         # print instructions, if present
         with open("README.md","a") as o:
@@ -389,10 +389,18 @@ def process_egg(path,action_counts,eggdb=None):
         print("  nfail: " + str(nfail),file=eggdb)
         print("  nfailm: " + str(nfailm),file=eggdb)
         print("  preprint: " + str(prep),file=eggdb)
+        modules = set()
         for a in actions :
+            if a in plumed_syntax.keys() :
+               try :
+                 modules.add( plumed_syntax[a]["module"] )
+               except : 
+                 raise Exception("could not find module for action " + a)
             if a in action_counts.keys() : action_counts[a] += 1
         astr = ' '.join(actions)
         print("  actions: " + astr,file=eggdb)
+        modstr = ' '.join(modules)
+        print("  modules: " + modstr, file=eggdb)
     eggdb.flush()
 
 if __name__ == "__main__":
@@ -446,7 +454,7 @@ if __name__ == "__main__":
 
             if k%nreplicas==replica :
                start_time = time.perf_counter() 
-               process_egg(re.sub("nest.yml$","",str(path)),action_counts,eggdb)
+               process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb)
                end_time = time.perf_counter()
                print(f"Egg took {end_time - start_time:0.4f} seconds")
             k = k + 1 
