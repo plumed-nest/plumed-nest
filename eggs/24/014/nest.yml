@@ -1,0 +1,13 @@
+url: https://github.com/learningmatter-mit/geodesic-interpolation-cv/archive/refs/tags/v0.1.0.zip 
+pname: Learning Collective Variables with Synthetic Data Augmentation through Physics-inspired Geodesic Interpolation 
+category: methods 
+keyw: data augmentation, geodesic interpolation, collective variables, protein folding 
+plumed_version: 2.9
+contributor: Juno Nam 
+ref: 'S. Yang, J. Nam, J. C. B. Dietschreit, R. Gómez-Bombarelli. Learning Collective Variables with Synthetic Data Augmentation through Physics-inspired Geodesic Interpolation'
+ref_url: 'https://arxiv.org/abs/2402.01542'
+history:
+  2024-06-16: original submission
+instructions: >
+ To deploy the learned CV in MD simulations, you need to build the PLUMED package with the pytorch and drr modules, and then build the GROMACS package with the PLUMED patch. We tested our code with PLUMED 2.9.0 with libtorch 2.0.1 and GROMACS 2023. 
+ 
