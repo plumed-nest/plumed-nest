@@ -1,0 +1,12 @@
+url: https://github.com/vikast282/mpc_QMMM/raw/main/mpc_QMMM-main.zip 
+pname: nanocluster QM/MM 
+category: chemistry 
+keyw: nanocluster, QM/MM, pathCV, OPES, reaction modelling 
+plumed_version: 2.8
+contributor: Vikas Tiwari 
+doi: unpublished
+history:
+  2024-06-18: original submission
+instructions: >
+ Input files for classical MD simulations were prepared in Gromacs version 2021.4 and PLUMED2 version 2.8.0. Input files for QM/MM simulations were prepared in CP2K version 2022.1 and PLUMED2 version 2.9.0. 
+ 
