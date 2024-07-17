@@ -1,0 +1,12 @@
+url: https://github.com/ElisPo/Cryo-EM-refinement/archive/main.zip
+pname: Cryo-EM guided simulations of ribozyme
+category: bio
+keyw: metainference, cryo-EM
+plumed_version: 2.9
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2024-07-17: original submission
+instructions: >
+ PLUMED input files for single structure refinement and ensemble refinement.
+ 
