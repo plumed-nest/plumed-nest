@@ -4,7 +4,7 @@ category: methods
 keyw: EMMIVox, cryo-EM, single-structure refinement, ensemble refinement, Bayesian inference, B-factors, structural ensembles
 plumed_version: 2.10
 contributor: Samuel Hoff 
-doi: 10.1101/2023.10.18.562710 
+doi: 10.1371/journal.pcbi.1012180
 plumed_input:
  - path:  03-7n00/2-Production/cc-0.8/plumed_EMMI.dat
  - path:  03-7n00/2-Production/cc-1.0/plumed_EMMI.dat

@@ -4,8 +4,7 @@ category: methods
 keyw: data augmentation, geodesic interpolation, collective variables, protein folding 
 plumed_version: 2.9
 contributor: Juno Nam 
-ref: 'S. Yang, J. Nam, J. C. B. Dietschreit, R. Gómez-Bombarelli. Learning Collective Variables with Synthetic Data Augmentation through Physics-inspired Geodesic Interpolation'
-ref_url: 'https://arxiv.org/abs/2402.01542'
+doi: 10.1021/acs.jctc.4c00435
 history:
   2024-06-16: original submission
 instructions: >

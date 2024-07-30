@@ -4,8 +4,7 @@ category: materials
 keyw: Barium Titanate, ferroelectric phase transition, Machine Learning, polarization order parameters
 plumed_version: 2.10-mod
 contributor: Lorenzo Gigli 
-ref: 'L. Gigli, A. Goscinski, M. Ceriotti, G. A. Tribello. Modeling the ferroelectric phase transition in barium titanate with DFT accuracy and converged sampling'
-ref_url: 'https://arxiv.org/abs/2310.12579'
+doi: 10.1103/PhysRevB.110.024101
 history:
   2023-10-24: original submission
 instructions:

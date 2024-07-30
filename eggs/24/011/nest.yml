@@ -4,8 +4,7 @@ category: methods
 keyw: committor, machine learning 
 plumed_version: 2.9
 contributor: Peilin Kang 
-ref: 'P. Kang, E. Trizio, M. Parrinello. Computing the Committor with the Committor: an Anatomy of the Transition State Ensemble'
-ref_url: 'https://doi.org/10.48550/arXiv.2401.05279'
+doi: 10.1038/s43588-024-00645-0
 history:
   2024-04-22: original submission
 instructions: >
