@@ -7,11 +7,11 @@ pages:
   url: /plumed.html
 - title: Consortium
   url: /consortium.html
+- title: Browse eggs
+  url: /browse.html
 - title: Contribute
   url: /contribute.html
 - title: Cite
   url: /cite.html
-- title: Browse
-  url: /browse.html
 - title: Tutorials
   url: /tutorials.html
