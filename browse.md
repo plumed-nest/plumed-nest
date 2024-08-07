@@ -1,4 +1,4 @@
-Browse the nest
+Browse the eggs in PLUMED-NEST
 -----------------------------
 PLUMED-NEST provides all the data needed to reproduce the results of a PLUMED-enhanced molecular dynamics simulation or analysis contained in a published paper. Furthermore, PLUMED-NEST monitors the compatibility of the provided PLUMED input files with the current and development versions of the code and integrates links from these files to the PLUMED manual.
   
