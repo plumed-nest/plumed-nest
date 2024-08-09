@@ -1,0 +1,12 @@
+url: https://github.com/HUETLeon/A_new_route_to_glycine/raw/master/NEST_prebiotic_synthesis_of_glycine.zip 
+pname: A new route to the prebiotic synthesis of glycine via ab initio-based machine learning calculations 
+category: chemistry 
+keyw: prebiotic chemistry, glycine, Strecker synthesis, ab initio calculations, machine learning 
+plumed_version: 2.5
+contributor: Léon HUET 
+doi: unpublished 
+history:
+  2024-08-09: original submission
+instructions: >
+ All the input files are sorted into folders where calculations are run directly. The files at the root folder are used to launch the AIMD calculation with the CPMD4.3 software. The MLMD calculations are runned with the Lammps software version 2-Aug-2023. 
+ 
