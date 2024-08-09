@@ -2,7 +2,7 @@ url: https://github.com/HUETLeon/A_new_route_to_glycine/raw/master/NEST_prebioti
 pname: A new route to the prebiotic synthesis of glycine via ab initio-based machine learning calculations 
 category: chemistry 
 keyw: prebiotic chemistry, glycine, Strecker synthesis, ab initio calculations, machine learning 
-plumed_version: 2.5
+plumed_version: 1.3
 contributor: Léon HUET 
 doi: unpublished 
 history:
