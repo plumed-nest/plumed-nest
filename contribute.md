@@ -4,6 +4,7 @@ Contributing to PLUMED-NEST is free and easy. To do so you must:
 
 * Collect the files you used in your calculations.  Please test the validity of the PLUMED input files you are submitting before you upload.  The tests that are run by PLUMED-NEST use the command `plumed driver --natoms 100000 --parse-only --kt 2.49 --plumed plumed.dat`
 * Create and upload a zip file containing all your inputs to your favorite repository. Popular solutions are [Zenodo](https://zenodo.org) and [GitHub](http://github.com). Additional info about where to host your zip file can be found [here](https://github.com/plumed-nest/plumed-nest/blob/master/README.md#zip-info).
+* Please keep you zip file around 100 MB.
 * Fill in the sections of the form below. All fields are required, unless otherwise specified.
 
 The fields you must fill are:
