@@ -17,6 +17,12 @@ Download citation:
 RIS format: | <a id="risc">consortium as authors</a> | <a id="ris4">PLUMED developers + consortium as authors</a> | <a id="risa">full list of authors</a>
 BibTeX format: | <a id="bibc">consortium as authors</a> | <a id="bib4">PLUMED developers + consortium as authors</a> | <a id="biba">full list of authors</a>
 
+
+Who cited us?
+-----------------------------
+If you want to discover papers that cited us, you can have a look [here](https://scholar.google.com/scholar?hl=en&as_sdt=2005&cites=7790917719575878515&scipsc=&q=&scisbd=1).
+
+
 <script>
 const downloadToFile = (content, filename, contentType) => {
 const a = document.createElement('a');
