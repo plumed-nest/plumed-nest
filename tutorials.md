@@ -1,7 +1,7 @@
 To learn more: PLUMED Tutorials!
 -----------------------------
 
-<center><a href="https://www.plumed-tutorials.org"><img width="20%" src="teacher.png"></a></center>
+<center><a href="https://www.plumed-tutorials.org"><img width=150 src="teacher.png"></a></center>
 
 PLUMED-TUTORIALS is a living textbook that teaches students about the research done by the members of the PLUMED consortium.
   All members can upload tutorials that explain how methods that they have developed can be used.  Members

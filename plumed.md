@@ -1,7 +1,7 @@
 What is a nest without a bird?
 -----------------------------
 
-<center><a href="https://www.plumed.org"><img width="20%" src="pigeon.png"></a></center>
+<center><a href="https://www.plumed.org"><img width=150 src="pigeon.png"></a></center>
 
 PLUMED is an open-source, community-developed library that provides a wide range of different methods, which include:
 
