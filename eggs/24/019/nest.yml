@@ -1,0 +1,47 @@
+url: https://zenodo.org/records/13300929/files/ALICE_ala2_ala10.zip  
+pname: Enhanced Sampling of Biomolecular Slow Conformational Transitions Using Adaptive Sampling and Machine Learning 
+category: bio 
+keyw: Metadynamics, Adaptive Sampling, Machine Learning 
+plumed_version: 2.9 
+contributor: Yong Wang 
+doi: unpublished 
+plumed_input:
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/0/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/1/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/10/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/11/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/12/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/13/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/14/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/15/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/2/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/3/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/4/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/5/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/6/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/7/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/8/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/9/plumed.dat
+ - path:  ALICE_ala2_ala10/ala10/5-adaptive/opes/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/0/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/1/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/10/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/11/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/12/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/13/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/14/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/15/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/2/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/3/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/4/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/5/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/6/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/7/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/8/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/9/plumed.dat
+ - path:  ALICE_ala2_ala10/ala2/7-adaptive-40ps/opes/plumed.dat
+history:
+  2024-08-19: original submission
+instructions: >
+ This repository contains the official implementation for the paper "Enhanced Sampling of Biomolecular Slow Conformational Transitions Using Adaptive Sampling and Machine Learning" by Mingyuan Zhang, Hao Wu, and Yong Wang. Included are all trajectories from our MD simulations in the form of PLUMED COLVAR files, as well as all analysis scripts and files needed to replicate the results and figures presented in both the main text and Supporting Information (SI) of the pape  The paper features two examples, Ala2 and Ala10. For each, we have organized all the associated simulation files as they were during our automated simulation pipeline. The directory structure is the same for both examples.
+ 
