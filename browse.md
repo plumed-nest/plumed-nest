@@ -10,7 +10,7 @@ If you are a contributor, you can check if your eggs are still compatible with t
 {:#browse-table .display}
 | plumID | Name | Category | Keywords | Contributor | Actions | Modules |
 |:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-{% for item in site.data.eggs %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.category }} | {{ item.keywords }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.actions }} | {{ item.modules }} |
+{% for item in site.data.eggs %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.category }} | {{ item.keywords }} | {{ item.contributor }} | {{ item.actions }} | {{ item.modules }} |
 {% endfor %}
 
 <script>
