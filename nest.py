@@ -56,7 +56,7 @@ def get_reference(doi,ref,ref_url):
       else:
         try:
           # get citation
-          cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" http://dx.doi.org/'+doi, shell=True).decode('utf-8').strip()
+          cit = subprocess.check_output('curl -LH "Accept: text/bibliography; style=science" \'http://dx.doi.org/'+doi+'\'', shell=True).decode('utf-8').strip()
           if("DOI Not Found" in cit): 
            ref="DOI not found"
           else:
