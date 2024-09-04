@@ -65,6 +65,10 @@ jobs:
         # GB: in addition, we install master version as plumed_master
         CXX="mpic++" .ci/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
         ccache -s
+    - name: Optimize parallel build
+      run: |
+        wget https://github.com/plumed-nest/plumed-nest.github.io/raw/master/_data/timing
+        python optimize_build.py ${{matrix.replica}} 10 0.0 eggs/*/*/nest.yml
     - name: Run
       run: |
         python --version
