@@ -5,6 +5,8 @@ keyw: parallel bias metadynamics, well tempered metadynamics, metal binding, met
 plumed_version: 2.6
 contributor: Manuel-Peris Diaz 
 doi: 10.1021/jacs.1c05495 
+plumed_input:
+   - path: plumed_PB_WTMetad.dat
 history:
   2021-07-21: original submission
 instructions: >
