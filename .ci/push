@@ -31,7 +31,6 @@ for file in `ls ../../nest-content*/nest_files.tar` ; do
     tar xf $file
 done
 cat _data/eggs*.yml > _data/eggs.yml
-cat _data/timing* > _data/timing
 
 export GIT_BOT_EMAIL=giovanni.bussi+plumedbot@gmail.com
 

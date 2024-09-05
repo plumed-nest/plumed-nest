@@ -5,6 +5,7 @@ import copy
 import glob
 import numpy as np
 import os
+import yaml
 
 # fix random seed
 random.seed(10)
@@ -53,17 +54,13 @@ def accept_or_reject(x, x_new, ene, e_new, kbt):
           ac = 1.0
     return x, ene, ac
 
-# read timing data file
-rlab=[]; rtime=[]
-try:
- for lines in open("timing", "r").readlines():
-     riga=lines.strip().split()
-     # add label
-     rlab.append(riga[0])
-     # add timing
-     rtime.append(float(riga[1]))
-except:
- pass
+# read YML file
+stram = open("_data/eggs.yml", "r")
+config=yaml.load(stram,Loader=yaml.BaseLoader)
+# load paths
+rlab = [ c['path'] for c in config ]
+# load time
+rtime = [ float(c['time']) for c in config ]
 
 # calculate average time
 if(len(rtime)>0):

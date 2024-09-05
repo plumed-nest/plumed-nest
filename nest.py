@@ -444,8 +444,6 @@ if __name__ == "__main__":
     for key in plumed_syntax :
         if key=="vimlink" or key=="replicalink" or key=="groups" : continue
         action_counts[key] = 0
-    # open file to store timings
-    ftime = open("_data/timing"+str(replica), "w")
     # loop over lesson for this replica
     with open("_data/eggs" + str(replica) + ".yml","w") as eggdb:
         print("# file containing egg database.",file=eggdb)
@@ -460,12 +458,8 @@ if __name__ == "__main__":
               for readline in file : pathlist.append( pathlib.Path( './' + readline.strip() ) )
         # cycle on ordered list
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
-            start_time = time.perf_counter()
             # process egg
             process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb)
-            end_time = time.perf_counter()
-            # store path and timing
-            ftime.write("%s %lf\n" % (str(path), end_time-start_time))
     # output yaml file with action counts
     action_list = [] 
     for key, value in action_counts.items() : action_list.append( {'name': key, 'number': value } )

@@ -68,8 +68,8 @@ jobs:
         ccache -s
     - name: Optimize parallel build
       run: |
-        wget https://github.com/plumed-nest/plumed-nest.github.io/raw/master/_data/timing
-        python optimize_build.py ${{matrix.replica}} 10 0.0 eggs/*/*/nest.yml
+        wget https://github.com/plumed-nest/plumed-nest.github.io/raw/master/_data/eggs.yml -P _data/
+        python optimize_build.py ${{matrix.replica}} 10 0.0 eggs/*/*/
     - name: Run
       run: |
         python --version
