@@ -39,7 +39,7 @@ There are {{ failed.size }} eggs with failing tests.
 {:#browse-table .display}
 | plumID | Name | Contributor | # inputs | # current | # master |
 | :------: |  :------:  |  :------: | :------: | :------:  | :------: |
-{% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
+{% for item in failed %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor }} | {{ item.ninputs }} | {{ item.nfail }} | {{ item.nfailm }} |
 {% endfor %}
 
 __List of eggs with preprint reference__
@@ -49,7 +49,7 @@ There are {{ preprint.size }} eggs with preprint reference (arXiv, bioRxiv, Rese
 {:#browse-table2 .display}
 | plumID | Name | Contributor |
 | :------: |  :------:  |  :------: |
-{% for item in preprint %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
+{% for item in preprint %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor }} |
 {% endfor %}
 
 __List of eggs without reference paper__
@@ -59,7 +59,7 @@ There are {{ missing.size }} eggs without reference paper, marked as unpublished
 {:#browse-table3 .display}
 | plumID | Name | Contributor |
 | :------: |  :------:  |  :------: |
-{% for item in missing %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor | split: " " | last}} {{ item.contributor | split: " " | first | slice: 0}}. |
+{% for item in missing %}| [{{ item.id }}]({{ item.path }}) | {{ item.name }} | {{ item.contributor }} |
 {% endfor %}
 
 __Action Usage Chart__
