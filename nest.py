@@ -152,7 +152,9 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
         eggdb=sys.stdout
 
     with cd(path):
-
+        # start timing
+        start_time = time.perf_counter()
+        # open file
         stram = open("nest.yml", "r")
         config=yaml.load(stram,Loader=yaml.BaseLoader)
         # check fields
@@ -401,6 +403,10 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
         print("  actions: " + astr,file=eggdb)
         modstr = ' '.join(modules)
         print("  modules: " + modstr, file=eggdb)
+        # end timing
+        end_time = time.perf_counter()
+        # store time
+        print("  time: " + str(end_time-start_time), file=eggdb)
     eggdb.flush()
 
 if __name__ == "__main__":
