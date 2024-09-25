@@ -1,0 +1,12 @@
+url: https://github.com/PabloPiaggi/CaCO3-SCAN-ML/archive/refs/heads/light.zip 
+pname: Ab initio machine learning simulation of calcium carbonate from aqueous solutions to the solid state 
+category: chemistry
+keyw: ion pairing, caco3, opes, proton transfer, crystallization
+plumed_version: 2.8
+contributor: Pablo Piaggi 
+doi: unpublished
+history:
+  2024-09-25: original submission
+instructions: >
+ Simulations were performed using the following codes. LAMMPS (23 Jun 2022), DeePMD-kit v2.1.3, and PLUMED 2.8.0
+ 
