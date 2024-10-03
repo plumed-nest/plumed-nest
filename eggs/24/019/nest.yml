@@ -1,10 +1,10 @@
 url: https://zenodo.org/records/13343727/files/ALICE_ala2_ala10.zip
 pname: Enhanced Sampling of Biomolecular Slow Conformational Transitions Using Adaptive Sampling and Machine Learning 
 category: bio 
-keyw: Metadynamics, Adaptive Sampling, Machine Learning 
+keyw: OPES, machine learning, protein folding, adaptive sampling
 plumed_version: 2.9 
-contributor: Yong Wang 
-doi: unpublished 
+contributor: Mingyuan Zhang
+doi: 10.1021/acs.jctc.4c00764
 plumed_input:
  - path:  ala10/5-adaptive/opes/0/plumed.dat
  - path:  ala10/5-adaptive/opes/1/plumed.dat
@@ -42,6 +42,7 @@ plumed_input:
  - path:  ala2/7-adaptive-40ps/opes/plumed.dat
 history:
   2024-08-19: original submission
+  2024-10-03: updated info
 instructions: >
- This repository contains the official implementation for the paper "Enhanced Sampling of Biomolecular Slow Conformational Transitions Using Adaptive Sampling and Machine Learning" by Mingyuan Zhang, Hao Wu, and Yong Wang. Included are all trajectories from our MD simulations in the form of PLUMED COLVAR files, as well as all analysis scripts and files needed to replicate the results and figures presented in both the main text and Supporting Information (SI) of the paper. The paper features two examples, Ala2 and Ala10. For each, we have organized all the associated simulation files as they were during our automated simulation pipeline. The directory structure is the same for both examples. Here, we use Ala2, found in the `Ala2` folder, as an example. **Automated Pipeline Implementation.** The pipeline is implemented in `Ala2/7-adaptive-40ps/ala2.ipynb`. This implementation is ready to use once all required packages are installed, and gmx/gmx_mpi/plumed are callable within the notebook. After configuring the environment and specifying parameters like `gpu_id`, `ntomp`, and `n_sim` according to your hardware, running the blocks will replicate the entire pipeline. **Analysis Scripts.** The scripts to replicate the results or figures from the main text or SI are organized in three files, called `Ala2/7-adaptive-40ps/AdaptiveSamplingAnalysis.ipynb`, `Ala2/7-adaptive-40ps/compare_with_msm.ipynb`, and `Ala2/7-adaptive-40ps/opes/COLVAR/analysis.ipynb`. The software used is GROMACS 2023 and PLUMED 2.9.
+ features.dat are the PLUMED driver files of input features for machine learning adaptive sampling trajectories. ref.dat are the PLUMED driver files of reference CV for adaptive sampling trajectories. plumed.dat are the actual OPES simulation files for enhanced sampling. For details, we refer the users to the original paper or this following Github [link](https://github.com/Mingyuan00/Adaptive_Sampling_for_OPES). Softwares: Gromacs 2023 patched with PLUMED 2.9.0.
  
