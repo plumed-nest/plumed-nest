@@ -1,0 +1,12 @@
+url: https://github.com/dhimanray/Enhanced_Sampling_Path_Sampling/archive/main.zip 
+pname: Integrating Path Sampling with Enhanced Sampling for Rare-event Kinetics 
+category: methods
+keyw: OPES Flooding, Weighted Ensemble, Metadynamics, Kinetics, Infrequent Metadynamics, Integrated Sampling 
+plumed_version: 2.9
+contributor: Dhiman Ray 
+doi: 10.26434/chemrxiv-2024-qr6kv
+history:
+  2024-10-16: original submission
+instructions: >
+ The files were used with GROMACS 2021.5 and PLUMED 2.9. 
+ 
