@@ -1,0 +1,12 @@
+url: https://github.com/Pefema/OneOpes_protocol/archive/main.zip 
+pname: Host-Guest binding free energies à la carte, an automated OneOPES protocol 
+category: bio
+keyw: OneOPES, ligand binding, binding free energy,SAMPL challenge, host-guest
+plumed_version: 2.9
+contributor: Valerio Rizzi 
+doi: 10.1101/2024.08.23.609378v1 
+history:
+  2024-10-22: original submission
+instructions: >
+ The simulations were run with GROMACS 2023. 
+ 

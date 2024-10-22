@@ -1,0 +1,12 @@
+url: https://github.com/valeriorizzi/miRNA/archive/main.zip
+pname: Investigating Ligand-Mediated Conformational Dynamics of Pre-miR21. A Machine-Learning-Aided Enhanced Sampling Study 
+category: bio
+keyw: RNA, miRNA, OneOPES, ligand binding, conformational changes 
+plumed_version: 2.9
+contributor: Valerio Rizzi 
+doi: 10.1101/2024.06.27.601024v1
+history:
+  2024-10-22: original submission
+instructions: >
+ The simulations were run with GROMACS 2023. 
+ 
