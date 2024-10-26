@@ -1,0 +1,12 @@
+url: https://github.com/sudipdas789/Transferable_DeepCVs/archive/refs/heads/main.zip 
+pname: Correlating Enzymatic Reactivity for Different Substrates using Transferable Data-Driven Collective Variables 
+category: bio
+keyw: enzymatic reactivity, k_cat, transfer learning, data-driven CVs, catalysis, ligand-binding modes, water, alpha-amylase, sugar, classical MD, OPES, machine learning, Deep TDA CV, path CV 
+plumed_version: 2.9
+contributor: Sudip Das 
+doi: 10.26434/chemrxiv-2024-1xhm0 
+history:
+  2024-10-26: original submission
+instructions: >
+ This egg contains the input files for replicating the unbiased classical MD simulations and enhanced sampling OPES simulations using Deep TDA CVs, and path CV for alpha-amylase enzyme with four different sugar substrates. The path CV used in OPES simulations enhances the sampling (in the Deep TDA CVs’ space) of different substrate-binding modes within the enzyme’s active site. For more information about Deep TDA, we refer to plumID:21.028. The CVs were trained with Pytorch version 1.8 and the simulations were run with GROMACS 2021.5, and PLUMED 2.9.
+ 
