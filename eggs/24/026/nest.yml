@@ -1,0 +1,15 @@
+url: https://github.com/Tomfersil/CpH-MetaD/archive/main.zip
+pname: Constant pH metadynamics of RNA oligomers
+category: bio
+keyw: metadynamics, pH, RNA
+plumed_version: 2.9
+contributor: Giovanni Bussi
+ref_url: 'https://arxiv.org/abs/2410.16064'
+history:
+  2024-10-31: original submission
+plumed_input:
+  - CpHMD_metaD/scripts/PLUMED_HILL.dat
+  - CpHMD_metaD/scripts/PLUMED_GRID.dat
+instructions: >
+ Scripts to generate input files for constant pH metadynamics. A sample input file is also provided.
+ 
