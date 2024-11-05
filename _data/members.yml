@@ -1,3 +1,7 @@
+- name:        Luigi Bonati
+  affiliation: Istituto Italiano di Tecnologia
+  city:        Genova
+  country:     Italy
 - name:        Kristof Bal
   affiliation: Janssen Pharmaceutical Companies of Johnson & Johnson
   city:        Beerse
@@ -314,7 +318,3 @@
   affiliation: University of Rochester
   city:        Rochester
   country:     USA
-- name:        Luigi Bonati
-  affiliation: Istituto Italiano di Tecnologia
-  city:        Genova
-  country:     Italy
