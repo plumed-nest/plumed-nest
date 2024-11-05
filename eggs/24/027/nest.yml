@@ -1,4 +1,4 @@
-url: https://github.com/alicejpettitt/orf6-ctr_cis_trans_conformers/raw/master/Metadynamic_simulations/PLUMED_input_files/a03ws_run1/plumed/plumed.zip 
+url: https://github.com/alicejpettitt/orf6-ctr_cis_trans_conformers/raw/master/Metadynamic_simulations/PLUMED_input_files/a03ws_run1/plumed-nest.zip 
 pname: Proline cis and trans subensembles of a disordered peptide 
 category: bio
 keyw: intrinsically disordered proteins, proline cis trans isomerisation, metadynamics, collective variables 
