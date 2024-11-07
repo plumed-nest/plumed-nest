@@ -1,0 +1,12 @@
+url: https://github.com/alicejpettitt/orf6-ctr_cis_trans_conformers/raw/master/Metadynamic_simulations/PLUMED_input_files/a03ws_run1/plumed-nest.zip 
+pname: Proline cis and trans subensembles of a disordered peptide 
+category: bio
+keyw: intrinsically disordered proteins, proline cis trans isomerisation, metadynamics, collective variables 
+plumed_version: 2.7.1 
+contributor: Alice Pettitt 
+doi: 10.1016/j.bpj.2024.09.028
+history:
+  2024-11-05: original submission
+instructions: >
+ This study uses metadynamic simulations to enhance sampling of the global and local features of a disordered peptide, as well as proline cis/trans isomerisation. We used PLUMED version 2.7.1 and GROMACS 2021.2.
+ 
