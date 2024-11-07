@@ -5,6 +5,29 @@ keyw: metadynamics, membrane, RNA
 plumed_version: 2.9
 contributor: Giovanni Bussi
 doi: 10.1101/2024.11.01.618995
+plumed_input:
+  - inputs/A3/metadyn/plumed_metad.dat
+  - inputs/A2/metadyn/plumed_orientation.dat
+  - inputs/A2/metadyn/plumed_metad.dat
+  - inputs/quadruplex/metadyn/plumed_metad.dat
+  - inputs/U/metadyn/plumed_orientation.dat
+  - inputs/U/metadyn/plumed_metad.dat
+  - inputs/G/metadyn/plumed_orientation.dat
+  - inputs/G/metadyn/plumed_metad.dat
+  - inputs/A/metadyn/plumed_orientation.dat
+  - inputs/A/metadyn/plumed_metad.dat
+  - inputs/U3/metadyn/plumed_metad.dat
+  - inputs/U2/metadyn/plumed_orientation.dat
+  - inputs/U2/metadyn/plumed_metad.dat
+  - inputs/G2/metadyn/plumed_orientation.dat
+  - inputs/G2/metadyn/plumed_metad.dat
+  - inputs/G3/metadyn/plumed_metad.dat
+  - inputs/C3/metadyn/plumed_metad.dat
+  - inputs/strand/metadyn/plumed_metad.dat
+  - inputs/C2/metadyn/plumed_orientation.dat
+  - inputs/C2/metadyn/plumed_metad.dat
+  - inputs/C/metadyn/plumed_orientation.dat
+  - inputs/C/metadyn/plumed_metad.dat
 history:
   2024-11-07: original submission
 instructions: >
