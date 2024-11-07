@@ -1,0 +1,12 @@
+url: https://github.com/salvatoredimarco/rna-membrane/archive/main.zip
+pname: All-atom simulations of RNA-membrane interactions
+category: bio
+keyw: metadynamics, membrane, RNA
+plumed_version: 2.9
+contributor: Giovanni Bussi
+doi: 10.1101/2024.11.01.618995
+history:
+  2024-11-07: original submission
+instructions: >
+ Scripts and inputs related to the preprint All-atom simulations elucidate
+ the molecular mechanism underlying RNA-membrane interactions.
