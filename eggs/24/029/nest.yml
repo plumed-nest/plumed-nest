@@ -1,0 +1,12 @@
+url: https://github.com/dhimanray/OPES_and_OPES-EXPLORE/archive/main.zip 
+pname: Combination of OPES and OPES-Explore 
+category: methods
+keyw: OPES, OPES-Explore, Metadynamics, Protein Folding, Ligand Binding, Chignolin, Trypsin 
+plumed_version: 2.9
+contributor: Dhiman Ray 
+doi: 10.26434/chemrxiv-2024-mfpcn 
+history:
+  2024-11-09: original submission
+instructions: >
+ Enhanced sampling simulations using a combination of OPES and OPES-Explore algorithms are performed and tested using GROMACS v2021.5, v2022.3, and v2024.3.
+ 
