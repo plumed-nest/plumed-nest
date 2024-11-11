@@ -1,0 +1,18 @@
+url: https://github.com/debadutta-patra/dsRBD_simulation/archive/refs/heads/main.zip 
+pname: NMR guided simulation of dsRBD 
+category: bio
+keyw: Metainference, NMR, protein dynamics 
+plumed_version: 2.9
+contributor: Debadutta Patra 
+doi: unpublished 
+plumed_input:
+  - drb2d1/drb2d1_plumed.dat 
+  - drb2d1/plumed_distances_pp.dat
+  - drb3d1/drb3d1_plumed.dat
+  - drb3d1/plumed_distances_pp.dat
+history:
+  2024-11-11: original submission
+instructions: >
+ The code used is gromacs-2022.5 with PLUMED v2.9.
+ The command line to run the simulation is `mpirun -np # gmx_mpi mdrun -deffnm metainf.tpr -multidir rep_* -plumed drb*d1_plumed.dat`
+ 
