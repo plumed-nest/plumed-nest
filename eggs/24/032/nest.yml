@@ -1,0 +1,12 @@
+url: https://github.com/ThorbenF/DeepLNE_PlusPlus/archive/main.zip 
+pname: DeepLNE++
+category: methods
+keyw: PATHCV, OPES
+plumed_version: 2.9
+contributor: Thorben Fröhlking 
+doi: 10.1063/5.0226721 
+history:
+  2024-11-13: original submission
+instructions: >
+ The simulations were run with GROMACS 2022.5. 
+ 
