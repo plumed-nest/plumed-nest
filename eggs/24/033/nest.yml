@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/14277703/files/INPUT.zip 
+pname: Transient interactions between the fuzzy coat and the cross-b core of brain-derived Ab42 filaments
+category: bio
+keyw: CryoEM, MEMMI, Metadynamics, Metainference, Ab42 Fibrils, structural ensemble 
+plumed_version: 2.6
+contributor: Maria Milanesi 
+doi: 10.1101/2024.01.08.574772
+history:
+  2024-12-04: original submission
+instructions: >
+ The simulations were run with PLUMED v. 2.6.0 and GROMACS 2020.5. 
+ 
