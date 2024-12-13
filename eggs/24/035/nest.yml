@@ -1,0 +1,12 @@
+url: https://github.com/luigibonati/DEAL/archive/main.zip 
+pname: Data efficient machine learning potentials for modeling catalytic reactivity via active learning and enhanced sampling 
+category: chemistry
+keyw: opes, catalysis, ammonia, machine learning potentials 
+plumed_version: 2.9
+contributor: Luigi Bonati 
+doi: 10.1038/s41524-024-01481-6 
+history:
+  2024-12-13: original submission
+instructions: >
+ See software and instructions to generate the input files [here](https://github.com/luigibonati/DEAL).
+ 
