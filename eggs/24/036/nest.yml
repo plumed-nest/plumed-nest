@@ -1,0 +1,12 @@
+url: https://github.com/fcolizzi/cryptic_envelope/archive/refs/heads/main.zip 
+pname: Leveraging cryptic ligand envelopes through enhanced molecular simulations 
+category: bio 
+keyw: HREX, conformational heterogeneity, drug discovery, ligand binding, plitidepsin, aplidin, ligand-target complexes, cryptic ligand envelope 
+plumed_version: 2.4
+contributor: Francesco Colizzi 
+doi: unpublished 
+history:
+  2024-12-14: original submission
+instructions: >
+ Simulations have been performed with GROMACS 2018.3 and PLUMED 2.4.3. The input files for HREX simulations of several ligand-protein complexes are provided, along with PLUMED input files for the analysis of free-in-solution and target-bound conformational heterogeneity of ligands (aka the cryptic ligand envelope).
+ 
