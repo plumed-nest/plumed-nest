@@ -1,0 +1,12 @@
+url: https://github.com/sahithya34/-PNEST_files/raw/main/arp23_branchJpath.zip 
+pname: Molecular mechanism of Arp2/3 activation by nucleation promoting factors and actin monomer 
+category: bio 
+keyw: metadynamics, pathCV 
+plumed_version: 2.8.1
+contributor: Sahithya Sridharan Iyer 
+doi: unpublished 
+history:
+  2025-01-07: original submission
+instructions: >
+ Files needed to run the plumed free energy calculation. PLUMED input file for pathCV-based metadynamics with protein structure and path file. Gromacs 2021.5 input file tpr is given.
+
