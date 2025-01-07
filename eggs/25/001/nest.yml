@@ -1,0 +1,12 @@
+url: https://github.com/ppokor/G4_folding_RNA/raw/main/archive.zip 
+pname: RNA G-quadruplex folding with ST-metaD protocol 
+category: bio 
+keyw: RNA, G4, GQ, quadruplex, folding, metadynamics, REST2, ST-metaD 
+plumed_version: 2.7.3 
+contributor: Pavlína Pokorná 
+doi: unpublished 
+history:
+  2025-01-07: original submission
+instructions: >
+ Simulation setting, analysis files, and pipelines. PLUMED v. 2.5.6 and 2.7.3 were used with Gromacs v. 2018.8 and 2021.4, respectively. 
+
