@@ -1,0 +1,12 @@
+url: https://github.com/sompriya/Surrogate_CV/archive/main.zip 
+pname: Surrogate Model CV
+category: methods
+keyw: Metadynamics, OPES, Machine Learning, Collective Variable, Protein Folding 
+plumed_version: 2.10
+contributor: Sompriya Chatterjee 
+doi: 10.26434/chemrxiv-2024-x00x1 
+history:
+  2025-01-24: original submission
+instructions: >
+ We used GROMACS 2024.3 with PLUMED 2.10 for performing all simulations. 
+
