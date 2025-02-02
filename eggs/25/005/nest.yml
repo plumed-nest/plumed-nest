@@ -1,0 +1,12 @@
+url: https://github.com/AxelTG/BaH2/archive/master.zip 
+pname: Machine Learning-Driven Molecular Dynamics Unveil a Bulk Phase Transformation Driving Ammonia Synthesis on Barium Hydride 
+category: chemistry 
+keyw: OPES, OPES flooding, Catalysis, Ammonia Synthesis 
+plumed_version: 2.9
+contributor: Axel Tosello Gardini 
+doi: unpublished 
+history:
+  2025-02-02: original submission
+instructions: >
+ It contains the input files necessary to reproduce the results contained here. Simulations were performed in combination with LAMMPS, Deepmd-kit, and CP2K. Please check the README file in each folder of the GitHub repository for more details.
+ 
