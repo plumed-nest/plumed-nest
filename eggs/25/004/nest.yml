@@ -1,0 +1,13 @@
+url: https://github.com/vikast282/Ag6L6_nucleation/archive/main.zip 
+pname: Mechanism of Nanocluster Formation from Machine-Learned Potential-based Simulations 
+category: chemistry 
+keyw: WT-metadynamics, metal nanoclusters, nucleation, neural network potential, deepMD 
+plumed_version: 2.8.2
+contributor: Vikas Tiwari and Tarak Karmakar 
+doi: 10.26434/chemrxiv-2025-rkv0g 
+history:
+  2025-02-02: original submission
+instructions: >
+ The inputs files can be used to run the neural network potential based molecular dynamics for metal nanocluster nucleation in LAAMPS integrated with DeepMD-kit 2.2.10 and PLUMED 2.8.2.
+ 
+
