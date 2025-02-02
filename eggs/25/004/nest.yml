@@ -1,12 +1,12 @@
-url: https://github.com/vikast282/Ag6L6_nucleation/archive/main.zip 
-pname: Mechanism of Nanocluster Formation from Machine-Learned Potential-based Simulations 
+url: https://github.com/AxelTG/BaH2/archive/master.zip 
+pname: Machine Learning-Driven Molecular Dynamics Unveil a Bulk Phase Transformation Driving Ammonia Synthesis on Barium Hydride 
 category: chemistry 
-keyw: WT-metadynamics, metal nanoclusters, nucleation, neural network potential, deepMD 
-plumed_version: 2.8.2
-contributor: Vikas Tiwari, Tarak Karmakar 
-doi: 10.26434/chemrxiv-2025-rkv0g 
+keyw: OPES, OPES flooding, Catalysis, Ammonia Synthesis 
+plumed_version: 2.9
+contributor: Axel Tosello Gardini 
+doi: unpublished 
 history:
   2025-02-02: original submission
 instructions: >
- The inputs files can be used to run the neural network potential based molecular dynamics for metal nanocluster nucleation in LAAMPS integrated with DeepMD-kit 2.2.10 and PLUMED 2.8.2.
+ It contains the input files necessary to reproduce the results contained here. Simulations were performed in combination with LAMMPS, Deepmd-kit, and CP2K. Please check the README file in each folder of the GitHub repository for more details.
  
