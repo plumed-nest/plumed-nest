@@ -283,6 +283,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
         nfail=0; nfailm=0
         actions = set({})
         for file in config["plumed_input"]:
+            print("PROCESSING FILE NAMED " + file )
 
             if "natoms" in file:
                 natoms = int(file["natoms"])
@@ -458,6 +459,7 @@ if __name__ == "__main__":
               for readline in file : pathlist.append( pathlib.Path( './' + readline.strip() ) )
         # cycle on ordered list
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
+            print("### PROCESSING EGG AT PATH " + str(path) ) 
             # process egg
             process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb)
     # output yaml file with action counts

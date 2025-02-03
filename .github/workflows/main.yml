@@ -29,10 +29,10 @@ jobs:
         key: ccache-${{ runner.os }}-${{ github.sha }}
         restore-keys: ccache-${{ runner.os }}-
       
-    - name: Set up Python 3.8
+    - name: Set up Python 3.10
       uses: actions/setup-python@v5
       with:
-        python-version: 3.8
+        python-version: 3.10
 
     - name: Set paths
       run: |
@@ -74,7 +74,7 @@ jobs:
       run: |
         python --version
         # N.B. If you adjust the number of replicas used here you need to adjust the liquid syntax in summary.md that builds the total number of lessons that use each action
-        python nest.py --nreplicas 10 --replica ${{matrix.replica}}
+        python -u nest.py --nreplicas 10 --replica ${{matrix.replica}}
         tar cf nest_files.tar $(find . -name "*.md") $(find . -name "*.stdout.txt.zip") $(find . -name "*.stderr.txt.zip") $(find . -name "*badge.svg") _data/*.yml
 
     - name: Upload artifact
