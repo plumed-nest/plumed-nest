@@ -18,6 +18,8 @@ from PlumedToHTML import test_plumed, get_html, get_javascript, get_css
 from datetime import datetime
 from pytz import timezone
 
+PLUMED_MASTER="plumed_master"
+
 if not (sys.version_info > (3, 0)):
    raise RuntimeError("We are using too many python 3 constructs, so this is only working with python 3")
 
@@ -95,6 +97,7 @@ def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=N
     run_header: header added only to the master file.
 
     """
+    print("\t - formatting")
     suffix="md"
     # list of generated files, returned
     lista=[]
@@ -118,6 +121,7 @@ def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=N
             return list(set(lista))
 
 def add_readme(file, tested, success, exe, has_load, has_custom):
+    print("\t - udating README.md")
     with open("README.md","a") as o:
         badge = ''
         for i in range(len(tested)):
@@ -146,8 +150,11 @@ def cd(newdir):
     finally:
         os.chdir(prevdir)
 
-def process_egg(path,action_counts,plumed_syntax,eggdb=None):
-
+def process_egg(path,
+                action_counts,
+                plumed_syntax,
+                eggdb=None,
+                plumeds=["plumed",PLUMED_MASTER]):
     if not eggdb:
         eggdb=sys.stdout
 
@@ -280,11 +287,10 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
             print("|:--------:|:--------:|  ", file=o)
 
         # count number of failing tests
-        nfail=0; nfailm=0
+        nfail=[0]  * len(plumeds)
         actions = set({})
-        for file in config["plumed_input"]:
-            print("PROCESSING FILE NAMED " + str(file["path"]) )
-
+        for file in config["plumed_input"]:            
+            print(f'## Working on "{file["path"]}":')
             if "natoms" in file:
                 natoms = int(file["natoms"])
             elif "natoms" in config:
@@ -339,20 +345,37 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
             if not pathlib.Path(f"./{directory}/plumedtohtml.css").exists() :
                # Print the css for plumedToHTML to a file
                with open(f"{directory}/plumedtohtml.css", "w+") as jf : jf.write( get_css() )
-            
-            success=test_plumed("plumed",file["path"],header=global_header)
-            if(success!=0 and success!="custom"): nfail+=1
-            plumed_file = os.path.basename(file["path"])
-            success_master=test_plumed("plumed_master",file["path"],header=global_header, printjson=True )
-            if(success_master!=0 and success_master!="custom"): nfailm+=1
+
+            plumed_status=[""] * len(plumeds)
+            for i in range(len(plumeds)):
+                print(f'\t - Testing with "{plumeds[i]}": ', end="")
+                plumed_status[i]=test_plumed(plumeds[i],file["path"],header=global_header)
+                if(plumed_status[i]!=0 and plumed_status[i]!="custom"): 
+                   print("Failed")
+                   nfail[i]+=1
+                else:
+                   print("Success")
+                               
+            versions=[]
+
             # Find the stable version 
-            stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip()
-            if plumed_version != "not specified":
-                if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
-                   success="ignore"
-            # Generate the plumed input 
-            plumed_format(file["path"], ("v"+ stable_version,"master"), (success,success_master), ("plumed","plumed_master"), actions, usejson=(not success_master), global_header=global_header,header=header)
-            add_readme(file["path"], ("v"+ stable_version,"master"), (success,success_master),("plumed","plumed_master"),("LOAD" in actions),has_custom)
+            for i in range(len(plumeds)):
+                if plumeds[i]==PLUMED_MASTER:
+                   versions.append("master")
+                   continue
+                stable_version=subprocess.check_output(f'{plumeds[i]} info --version', shell=True).decode('utf-8').strip()
+                if plumed_version != "not specified":
+                    if int(re.sub("[^0-9].*","",re.sub("^2\\.","",stable_version))) < int(re.sub("[^0-9].*","",re.sub("^2\\.","",plumed_version))):
+                        plumed_status[i]="ignore"
+                # Generate the plumed input 
+                versions.append("v"+ stable_version)
+
+            
+            use_json = False
+            if len(plumed_status)>1: 
+               use_json =not plumed_status[1]
+            plumed_format(file["path"], versions, plumed_status,plumeds, actions, usejson=use_json, global_header=global_header,header=header)
+            add_readme(file["path"], versions, plumed_status,plumeds,("LOAD" in actions),has_custom)
 
         # print instructions, if present
         with open("README.md","a") as o:
@@ -408,8 +431,10 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
         print("  reference: '" + ref +"'",file=eggdb)
         print("  ref_url: '" + ref_url +"'",file=eggdb)
         print("  ninputs: " + str(len(config["plumed_input"])),file=eggdb)
-        print("  nfail: " + str(nfail),file=eggdb)
-        print("  nfailm: " + str(nfailm),file=eggdb)
+        print("  nfail: " + str(nfail[0]),file=eggdb)
+        #nfailm became nfail[1]
+        if len(nfail) > 1:
+            print("  nfailm: " + str(nfail[1]),file=eggdb)
         print("  preprint: " + str(prep),file=eggdb)
         modules = set()
         for a in actions :
@@ -444,14 +469,14 @@ if __name__ == "__main__":
           nreplicas = int(arg)
        elif opt in ["-r", "--replica"]:
           replica = int(arg)
-    print("RUNNING", nreplicas, "REPLICAS. THIS IS REPLICA", replica )
+    print("RUNNING", nreplicas, "REPLICAS. THIS IS REPLICA", replica)
     # write plumed version to file
     stable_version=subprocess.check_output('plumed info --version', shell=True).decode('utf-8').strip() 
     f=open("_data/plumed.yml","w")
     f.write("stable: v%s" % str(stable_version))
     f.close()
     # Get list of plumed actions from syntax file
-    cmd = ['plumed_master', 'info', '--root']
+    cmd = [PLUMED_MASTER, 'info', '--root']
     plumed_info = subprocess.run(cmd, capture_output=True, text=True )
     keyfile = plumed_info.stdout.strip() + "/json/syntax.json"
     with open(keyfile) as f :
