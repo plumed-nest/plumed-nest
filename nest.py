@@ -283,7 +283,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
         nfail=0; nfailm=0
         actions = set({})
         for file in config["plumed_input"]:
-            print("PROCESSING FILE NAMED " + file )
+            print("PROCESSING FILE NAMED " + str(file["path"]) )
 
             if "natoms" in file:
                 natoms = int(file["natoms"])
