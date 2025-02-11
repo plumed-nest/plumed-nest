@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/14846297/files/PROTACs_PBMetaD_PLUMED-NEST.zip 
+pname: Characterizing the conformational ensemble of PROTAC degraders in solutions via atomistic simulations 
+category: methods 
+keyw: Enhanced sampling, Atomistic simulations, Conformational ensemble, PROTACs, Targeted Protein Degradation, Chamelonic molecules 
+plumed_version: 2.8.2
+contributor: Shikshya Bhusal, Omar Valsson 
+doi: 10.26434/chemrxiv-2025-bxf47 
+history:
+  2025-02-11: original submission
+instructions: >
+ Files were run with GROMACS 2022.5, PLUMED 2.8.2, and VMD 1.9.3 for trajectory analysis. 
+ 
