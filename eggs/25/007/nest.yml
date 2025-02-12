@@ -1,0 +1,12 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Grothaus_et_al_2022_PLUMED.zip 
+pname: Shaping the glycan landscape. Hidden relationships between linkage and ring distortion induced by carbohydrate-active enzmyes 
+category: bio 
+keyw: REST-RECT, REST2, glycan, enzyme, CAZyme, steered 
+plumed_version: 2.8
+contributor: Isabell Grothaus
+doi:  unpublished
+history:
+  2025-02-12: original submission
+instructions: >
+ Example plumed.dat files to perform REST-RECT simulations of glycans in solution or bound as substrate to their respective enzyme. GROMACS 2022 was used.
+ 
