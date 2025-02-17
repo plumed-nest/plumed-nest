@@ -1,0 +1,6 @@
+/venv*/
+/env
+/eggs/*/*/*
+/eggs/*/*/egg.yml
+__pycache__
+_data/eggs.yml
