@@ -333,10 +333,10 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
 
             # Get the directory we are working in
             directory = os.path.dirname(file["path"])
-            if not Path(f"./{directory}/plumedtohtml.js").exists() :
+            if not pathlib.Path(f"./{directory}/plumedtohtml.js").exists() :
                # Print the js for plumedToHTML to a file
                with open(f"{directory}/plumedtohtml.js", "w+") as jf : jf.write( get_javascript() )
-            if not Path(f"{directory}/plumedtohtml.css").exists() :
+            if not pathlib.Path(f"./{directory}/plumedtohtml.css").exists() :
                # Print the css for plumedToHTML to a file
                with open(f"{directory}/plumedtohtml.css", "w+") as jf : jf.write( get_css() )
             
