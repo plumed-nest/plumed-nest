@@ -14,7 +14,7 @@ import os
 import json
 import pathlib
 import subprocess
-from PlumedToHTML import test_plumed, get_html 
+from PlumedToHTML import test_plumed, get_html, get_javascript, get_css 
 from datetime import datetime
 from pytz import timezone
 
@@ -330,6 +330,15 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
 
 # in principle returns the list of produced files, not used yet:
             has_custom = re.match(".*-mod",plumed_version)
+
+            # Get the directory we are working in
+            directory = os.path.dirname(file["path"])
+            if not Path(f"./{directory}/plumedtohtml.js").exists() :
+               # Print the js for plumedToHTML to a file
+               with open(f"{directory}/plumedtohtml.js", "w+") as jf : jf.write( get_javascript() )
+            if not Path(f"{directory}/plumedtohtml.css").exists() :
+               # Print the css for plumedToHTML to a file
+               with open(f"{directory}/plumedtohtml.css", "w+") as jf : jf.write( get_css() )
             
             success=test_plumed("plumed",file["path"],header=global_header)
             if(success!=0 and success!="custom"): nfail+=1
