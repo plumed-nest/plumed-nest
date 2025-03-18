@@ -1,0 +1,12 @@
+url: https://github.com/dhimanray/Nonequilibrium_DeepTICA/archive/main.zip 
+pname: Deep TICA CV from Nonequilibrium Metadynamics using Koopman Reweighting 
+category: methods
+keyw: metadynamics, OPES, Machine Learning CV, PyTorch, Koopman Reweighting 
+plumed_version: 2.10
+contributor: Dhiman Ray
+doi: 10.26434/chemrxiv-2025-vswkj 
+history:
+  2025-03-18: original submission
+instructions: >
+ All simulations were performed using the PLUMED-PyTorch interface patched with GROMACS 2024.3. 
+ 
