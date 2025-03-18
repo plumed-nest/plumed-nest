@@ -6,30 +6,54 @@ plumed_version: 2.9
 contributor: Giovanni Bussi
 doi: 10.1101/2024.11.01.618995
 plumed_input:
-  - inputs/A3/metadyn/plumed_metad.dat
-  - inputs/A2/metadyn/plumed_orientation.dat
-  - inputs/A2/metadyn/plumed_metad.dat
-  - inputs/quadruplex/metadyn/plumed_metad.dat
-  - inputs/U/metadyn/plumed_orientation.dat
-  - inputs/U/metadyn/plumed_metad.dat
-  - inputs/G/metadyn/plumed_orientation.dat
-  - inputs/G/metadyn/plumed_metad.dat
-  - inputs/A/metadyn/plumed_orientation.dat
-  - inputs/A/metadyn/plumed_metad.dat
-  - inputs/U3/metadyn/plumed_metad.dat
-  - inputs/U2/metadyn/plumed_orientation.dat
-  - inputs/U2/metadyn/plumed_metad.dat
-  - inputs/G2/metadyn/plumed_orientation.dat
-  - inputs/G2/metadyn/plumed_metad.dat
-  - inputs/G3/metadyn/plumed_metad.dat
-  - inputs/C3/metadyn/plumed_metad.dat
-  - inputs/strand/metadyn/plumed_metad.dat
-  - inputs/C2/metadyn/plumed_orientation.dat
-  - inputs/C2/metadyn/plumed_metad.dat
-  - inputs/C/metadyn/plumed_orientation.dat
-  - inputs/C/metadyn/plumed_metad.dat
+  - inputs/opc/U/metadyn/plumed_metad.dat
+  - inputs/opc/G/metadyn/plumed_metad.dat
+  - inputs/opc/A/metadyn/plumed_metad.dat
+  - inputs/opc/C/metadyn/plumed_metad.dat
+  - inputs/tip3p/16mer_elong/metadyn/plumed_metad.dat
+  - inputs/tip3p/GGC/metadyn/plumed_metad.dat
+  - inputs/tip3p/GA/metadyn/plumed_metad.dat
+  - inputs/tip3p/A3/metadyn/plumed_metad.dat
+  - inputs/tip3p/A2/metadyn/plumed_puckering.dat
+  - inputs/tip3p/A2/metadyn/plumed_orientation.dat
+  - inputs/tip3p/A2/metadyn/plumed_metad.dat
+  - inputs/tip3p/GU/metadyn/plumed_metad.dat
+  - inputs/tip3p/quadruplex/metadyn/plumed_pucker.dat
+  - inputs/tip3p/quadruplex/metadyn/plumed_metad.dat
+  - inputs/tip3p/CU/metadyn/plumed_metad.dat
+  - inputs/tip3p/16mer_loose1/metadyn/plumed_metad.dat
+  - inputs/tip3p/U/metadyn/plumed_puckering.dat
+  - inputs/tip3p/U/metadyn/plumed_orientation.dat
+  - inputs/tip3p/U/metadyn/plumed_metad.dat
+  - inputs/tip3p/G/metadyn/plumed_puckering.dat
+  - inputs/tip3p/G/metadyn/plumed_orientation.dat
+  - inputs/tip3p/G/metadyn/plumed_metad.dat
+  - inputs/tip3p/A/metadyn/plumed_puckering.dat
+  - inputs/tip3p/A/metadyn/plumed_orientation.dat
+  - inputs/tip3p/A/metadyn/plumed_metad.dat
+  - inputs/tip3p/U3/metadyn/plumed_metad.dat
+  - inputs/tip3p/U2/metadyn/plumed_puckering.dat
+  - inputs/tip3p/U2/metadyn/plumed_orientation.dat
+  - inputs/tip3p/U2/metadyn/plumed_metad.dat
+  - inputs/tip3p/G2/metadyn/plumed_puckering.dat
+  - inputs/tip3p/G2/metadyn/plumed_orientation.dat
+  - inputs/tip3p/G2/metadyn/plumed_metad.dat
+  - inputs/tip3p/G3/metadyn/plumed_metad.dat
+  - inputs/tip3p/GC/metadyn/plumed_metad.dat
+  - inputs/tip3p/C3/metadyn/plumed_metad.dat
+  - inputs/tip3p/strand/metadyn/plumed_metad.dat
+  - inputs/tip3p/hairpin/metadyn/plumed_metad.dat
+  - inputs/tip3p/C2/metadyn/plumed_puckering.dat
+  - inputs/tip3p/C2/metadyn/plumed_orientation.dat
+  - inputs/tip3p/C2/metadyn/plumed_metad.dat
+  - inputs/tip3p/16mer_loose2/metadyn/plumed_metad.dat
+  - inputs/tip3p/GCG/metadyn/plumed_metad.dat
+  - inputs/tip3p/C/metadyn/plumed_puckering.dat
+  - inputs/tip3p/C/metadyn/plumed_orientation.dat
+  - inputs/tip3p/C/metadyn/plumed_metad.dat
 history:
   2024-11-07: original submission
+  2025-03-18: fixed list of input files to reflect update in upstream repository
 instructions: >
  Scripts and inputs related to the preprint All-atom simulations elucidate
  the molecular mechanism underlying RNA-membrane interactions.
