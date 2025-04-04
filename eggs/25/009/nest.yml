@@ -1,0 +1,12 @@
+url: https://github.com/kamtung-tonybill/Nitrate_Photolysis_Aqueous_Solution/archive/refs/heads/main.zip 
+pname: Ab Initio Multiple Walkers Metadynamics Simulations of Nitrate Photolysis in Water
+category: chemistry 
+keyw: metadynamics, nitrate photolysis 
+plumed_version: 2.8
+contributor: Kam-Tung Chan 
+doi: 10.26434/chemrxiv-2025-lrx59 
+history:
+  2025-04-04: original submission
+instructions: >
+ Ab initio metadynamics simulations with multiple walkers were performed with CP2K 8.2 package. Further instructions can be found [here](https://github.com/kamtung-tonybill/Nitrate_Photolysis_Aqueous_Solution). 
+ 
