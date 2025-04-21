@@ -371,7 +371,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
                     manlink += a
                     first = False
                  else :
-                    manlink += "|" + a
+                    manlink += "," + a
              print("  ", file=o)
              print("{% raw %}", file=o)
              print("<b><a href=\"" + manlink + "\" target=\"_blank\">Click here</a> to open manual pages for actions used in this project.</b>", file=o)
