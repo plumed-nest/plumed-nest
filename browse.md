@@ -7,6 +7,10 @@ Here is the list of projects already deposited in PLUMED-NEST, while a complete 
 If you are a contributor, you can check if your eggs are still compatible with the current and master PLUMED versions [here](summary.md).
 -->
 
+{% raw %}
+<div id="diplay_description"> </div>
+{% endraw %}
+
 {:#browse-table .display}
 | plumID | Name | Category | Keywords | Contributor | Actions | Modules |
 |:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|
