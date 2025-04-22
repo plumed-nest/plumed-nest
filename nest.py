@@ -365,7 +365,7 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
                print(config["instructions"], file=o)
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
-             first, manlink = True, "https://www.plumed.org/doc-master/user-doc/html/actionlist/?"
+             first, manlink = True, "https://www.plumed.org/doc-master/user-doc/html/actionlist/?actions="
              for a in actions :
                  if first :
                     manlink += a
