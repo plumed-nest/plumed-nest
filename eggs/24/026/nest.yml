@@ -4,10 +4,10 @@ category: bio
 keyw: metadynamics, pH, RNA
 plumed_version: 2.9
 contributor: Giovanni Bussi
-ref: 'Tomas F. D. Silva, Giovanni Bussi, Characterizing RNA oligomers using Stochastic Titration Constant-pH Metadynamics simulations'
-ref_url: 'https://arxiv.org/abs/2410.16064'
+doi: 10.1021/acs.jcim.4c02185
 history:
   2024-10-31: original submission
+  2025-04-23: updated doi
 plumed_input:
   - CpHMD_metaD/scripts/PLUMED_HILL.dat
   - CpHMD_metaD/scripts/PLUMED_GRID.dat

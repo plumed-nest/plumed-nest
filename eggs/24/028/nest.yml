@@ -4,7 +4,7 @@ category: bio
 keyw: metadynamics, membrane, RNA
 plumed_version: 2.9
 contributor: Giovanni Bussi
-doi: 10.1101/2024.11.01.618995
+doi: 10.1021/acs.nanolett.5c01254
 plumed_input:
   - inputs/opc/U/metadyn/plumed_metad.dat
   - inputs/opc/G/metadyn/plumed_metad.dat
@@ -54,6 +54,7 @@ plumed_input:
 history:
   2024-11-07: original submission
   2025-03-18: fixed list of input files to reflect update in upstream repository
+  2025-04-23: updated doi
 instructions: >
  Scripts and inputs related to the preprint All-atom simulations elucidate
  the molecular mechanism underlying RNA-membrane interactions.

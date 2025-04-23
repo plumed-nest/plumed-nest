@@ -4,10 +4,10 @@ category: bio
 keyw: metadynamics, alchemistry, RNA modification, RNA:protein interactions
 plumed_version: 2.9
 contributor: Giovanni Bussi
-ref: 'V. Piomponi, Miroslav Krepl, Jiri Sponer, and Giovanni Bussi. Molecular simulations to investigate the impact of N6-methylation in RNA recognition: Improving accuracy and precision of binding free energy prediction'
-ref_url: 'https://arxiv.org/abs/2404.14821'
+doi: 10.1021/acs.jpcb.4c03397
 history:
   2024-05-21: original submission
+  2025-04-23: updated doi
 instructions: >
  Input file for metadynamics simulation is located in directory `AFEC_YTH_example/plumed.dat`.
  
