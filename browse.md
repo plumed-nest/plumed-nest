@@ -7,6 +7,10 @@ Here is the list of projects already deposited in PLUMED-NEST, while a complete 
 If you are a contributor, you can check if your eggs are still compatible with the current and master PLUMED versions [here](summary.md).
 -->
 
+{% raw %}
+<div id="diplay_description"> </div>
+{% endraw %}
+
 {:#browse-table .display}
 | plumID | Name | Category | Keywords | Contributor | Actions | Modules |
 |:--------:|:--------:|:---------:|:---------:|:---------:|:---------:|:---------:|
@@ -34,6 +38,26 @@ $('#browse-table-searchbar').keyup(function () {
   searchfor = hu.split("=");
   if( searchfor[0]=="search" ) {
       table.search( searchfor[1] ).draw();
+  } else if( searchfor[0]=="action" ) {
+      fetch("./syntax.0.json")
+        .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+        })
+        .then( data => document.getElementById("diplay_description").innerHTML = "<b>Showing eggs that use:</br></br>" + searchfor[1] + " (action): " + data[ searchfor[1] ]["description"] + " <a href=\"" + data[ searchfor[1] ]["hyperlink"] + "\">More details</a></b>")
+      table.columns(5).search( "\\b" + searchfor[1] + "\\b", true, false, false ).draw();
+  } else if( searchfor[0]=="module" ) {
+      fetch("./syntax.0.json")
+        .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+        })
+        .then( data => document.getElementById("diplay_description").innerHTML = "<b>Showing eggs that use:</br></br>" + searchfor[1] + " (module): " + data["modules"][ searchfor[1] ]["description"] + " <a href=\"" + data["modules"][ searchfor[1] ]["hyperlink"] + "\">More details</a></b>")
+      table.columns(6).search( "\\b" + searchfor[1] + "\\b", true, false, false ).draw();
   }
 });
 </script>

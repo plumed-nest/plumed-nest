@@ -365,7 +365,17 @@ def process_egg(path,action_counts,plumed_syntax,eggdb=None):
                print(config["instructions"], file=o)
              except KeyError:
                print("*Description and instructions not provided*  ",file=o)
+             first, manlink = True, "https://www.plumed.org/doc-master/user-doc/html/actionlist/?actions="
+             for a in actions :
+                 if first :
+                    manlink += a
+                    first = False
+                 else :
+                    manlink += "," + a
              print("  ", file=o)
+             print("{% raw %}", file=o)
+             print("<b><a href=\"" + manlink + "\" target=\"_blank\">Click here</a> to open manual pages for actions used in this project.</b>", file=o)
+             print("{% endraw %}", file=o)
              print("**Submission history**  ", file=o)
              for i,h in enumerate(config["history"]): 
                  print("**[v"+str(i+1)+"]** "+convert_date(h[0])+": "+h[1]+"  ", file=o)
