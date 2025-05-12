@@ -1,0 +1,12 @@
+url: https://github.com/adpietropaolo/plumed-nest-data/raw/master/ChiralPerovskiteNucleation.zip 
+pname: Chiral perovskite nucleation 
+category: chemistry
+keyw: metadynamics, chiral perovskites, nucleation 
+plumed_version: 2.9
+contributor: Adriana Pietropaolo 
+doi: 10.1039/D4NR04735D 
+history:
+  2025-05-12: original submission
+instructions: >
+ The folder provides the data to simulate the nucleation of chiral perovskites and contains the two pdb files of the two chiral ligands and the plumed input file.:w
+ 
