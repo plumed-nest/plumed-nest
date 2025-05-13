@@ -11,8 +11,101 @@ env:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a job called "build"
+  # setting up the python cache
+  setup-python:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+    - name: Setting up python
+      run: pip install -r requirements.txt
+
+  # setting up the plumed cache
+  setup-plumed:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        version:
+          - master
+          - stable
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: calculate cache key for the compilation
+        id: get-key
+        run: |
+          if [[ ${{ matrix.version }} = master ]];then
+          mastersha=$(gh api repos/plumed/plumed2/branches --paginate --jq '.[] | select( .name | match("^master$")) | .commit.sha')
+          echo "key=$mastersha" >> $GITHUB_OUTPUT
+          echo "branch=master" >> $GITHUB_OUTPUT
+          echo "suffix=_master" >> $GITHUB_OUTPUT
+          else
+          # gets the list of the v2.* branches and sort it by version
+          gh api repos/plumed/plumed2/branches --paginate --jq '.[] | select( .name | match("^v2.[0-9]{1,2}$")) | {name:.name, sha:.commit.sha}'  | jq -s 'sort_by ( .name | sub("v";"") | split (".") | map(tonumber))[-1]' > latest_version
+          branch=$(cat latest_version | jq -r '.name')
+          sha=$(cat latest_version | jq -r '.sha')
+          echo "key=$sha" >> $GITHUB_OUTPUT
+          echo "branch=$branch" >> $GITHUB_OUTPUT
+          echo "suffix=" >> $GITHUB_OUTPUT
+          fi
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.ccache
+            ~/opt
+          key: ccache-${{ runner.os }}-${{ matrix.version }}-${{ steps.get-key.outputs.key }}
+          restore-keys: ccache-${{ runner.os }}-${{ matrix.version }}
+      - name: Set paths
+        run: |
+            echo "$HOME/opt/bin" >> $GITHUB_PATH
+            echo "CPATH=$HOME/opt/include:$HOME/opt/libtorch/include/torch/csrc/api/include/:$HOME/opt/libtorch/include/:$HOME/opt/libtorch/include/torch:$CPATH" >> $GITHUB_ENV
+            echo "INCLUDE=$HOME/opt/include:$HOME/opt/libtorch/include/torch/csrc/api/include/:$HOME/opt/libtorch/include/:$HOME/opt/libtorch/include/torch:$INCLUDE" >> $GITHUB_ENV
+            echo "LIBRARY_PATH=$HOME/opt/lib:$HOME/opt/libtorch/lib:$LIBRARY_PATH" >> $GITHUB_ENV
+            echo "LD_LIBRARY_PATH=$HOME/opt/lib:$HOME/opt/libtorch/lib:$LD_LIBRARY_PATH" >> $GITHUB_ENV
+            echo "PYTHONPATH=$HOME/opt/lib/plumed/python:$PYTHONPATH" >> $GITHUB_ENV
+            # needed to avoid MPI warning
+            echo "OMPI_MCA_btl=^openib" >> $GITHUB_ENV
+      #we need to checkout to access .ci/install.libtorch
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install mpi-default-bin mpi-default-dev
+          sudo apt-get install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
+          sudo apt-get install ccache
+          ccache -p
+          ccache -s
+          mkdir -p ~/.ccache/ccache
+          .ci/install.libtorch
+      - name: Install plumed
+        uses: plumed/install-plumed@v1
+        with:
+          CC: "ccache mpicc"
+          CXX: "ccache mpic++"
+          suffix: "${{ steps.get-key.outputs.suffix }}"
+          version: "${{ steps.get-key.outputs.branch }}"
+          extra_options: --enable-modules=all --enable-boost_serialization --enable-fftw --enable-libtorch LDFLAGS=-Wl,-rpath,$LD_LIBRARY_PATH --disable-basic-warnings
+      - name: prepare plumed tar
+        run: |
+          cd $HOME
+          tar cf plumed-${{matrix.version}}.tar opt/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: plumed-${{matrix.version}}
+          path: ~/plumed-${{matrix.version}}.tar
+          retention-days: 1 
+
+  # After compiling plumed and setting up the python cache, we can build the nest
   build:
+    needs: 
+      - setup-python
+      - setup-plumed
     strategy:
       fail-fast: false
       matrix:
@@ -38,7 +131,20 @@ jobs:
       with:
         python-version: "3.10"
         cache: 'pip'
-
+    - name: Download compiled plumed
+      uses: actions/download-artifact@v4
+      with:
+        pattern: plumed-*
+        #merge multiple should merge the two directories
+        merge-multiple: true
+        path: ~/
+  
+    - name: Unpacking plumed artifacts
+      run: |
+        cd $HOME
+        tar xf ~/plumed-master.tar
+        tar xf ~/plumed-stable.tar
+    
     - name: Set paths
       run: |
         echo "$HOME/opt/bin" >> $GITHUB_PATH
@@ -52,23 +158,11 @@ jobs:
 
     - name: Install software
       run: |
-        sudo apt update
-        sudo apt install mpi-default-bin mpi-default-dev
-        sudo apt install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
-        sudo apt install ccache
         sudo apt-get update
+        sudo apt-get install mpi-default-bin mpi-default-dev
+        sudo apt-get install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
         pip install -r requirements.txt
-        git clone --bare https://github.com/plumed/plumed2.git
-        sudo ln -s ccache /usr/local/bin/mpic++
-        export PATH=/usr/lib/ccache:${PATH}
-        ccache -s
-        .ci/install.libtorch
-        # version=master or version=f123f12f3 to select a specific version
-        # pick newest release branch (--sort=-version:refname sorts by versions)
-        CXX="mpic++" .ci/install.plumed version="$(cd plumed2.git ; git branch --sort=-version:refname | sed "s/^ *//" | grep '^v2\.[0-9][0-9]*$' | head -n 1)" repo=$PWD/plumed2.git
-        # GB: in addition, we install master version as plumed_master
-        CXX="mpic++" .ci/install.plumed version=master suffix=_master repo=$PWD/plumed2.git
-        ccache -s
+
     - name: Optimize parallel build
       run: |
         wget https://github.com/plumed-nest/plumed-nest.github.io/raw/master/_data/eggs.yml -P _data/
