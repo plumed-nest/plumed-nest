@@ -5,7 +5,8 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on: [push, pull_request]
-
+env:
+  PLUMED_APT_PACKAGES: "mpi-default-bin mpi-default-dev libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev"
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # setting up the python cache
@@ -71,8 +72,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install mpi-default-bin mpi-default-dev
-          sudo apt-get install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
+          sudo apt-get install ${{ env.PLUMED_APT_PACKAGES }}
           sudo apt-get install ccache
           ccache -p
           ccache -s
@@ -156,8 +156,7 @@ jobs:
     - name: Install software
       run: |
         sudo apt-get update
-        sudo apt-get install mpi-default-bin mpi-default-dev
-        sudo apt-get install libfftw3-dev gsl-bin libgsl0-dev libboost-serialization-dev
+        sudo apt-get install ${{ env.PLUMED_APT_PACKAGES }}
         pip install -r requirements.txt
 
     - name: Optimize parallel build
