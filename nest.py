@@ -374,8 +374,11 @@ def process_egg(path,
             use_json = False
             if len(plumed_status)>1: 
                use_json =not plumed_status[1]
-            plumed_format(file["path"], versions, plumed_status,plumeds, actions, usejson=use_json, global_header=global_header,header=header)
-            add_readme(file["path"], versions, plumed_status,plumeds,("LOAD" in actions),has_custom)
+            inpactions = set({})
+            plumed_format(file["path"], versions, plumed_status,plumeds, inpactions, usejson=use_json, global_header=global_header,header=header)
+            add_readme(file["path"], versions, plumed_status,plumeds,("LOAD" in inpactions),has_custom)
+            for a in inpactions :
+                actions.add( a )
 
         # print instructions, if present
         with open("README.md","a") as o:
