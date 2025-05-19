@@ -1,0 +1,12 @@
+url: https://github.com/alexberlaga/cmp_plumed_nest/archive/refs/heads/main.zip 
+pname: Data-Driven Engineering of Highly Thermostable Collagen-Mimetic Peptoid Triple Helices 
+category: bio
+keyw: umbrella sampling, temperature ramping 
+plumed_version: 2.9
+contributor: Alexander Berlaga 
+doi: unpublished 
+history:
+  2025-05-19: original submission
+instructions: >
+ This repository has the necessary code to run annealing and umbrella simulations of collagen-mimetic peptoids. Files are organized as follows. The `Annealing` Folder contains initial structure (npt.gro) and topology files (topol.top); Code generating PLUMED files to track CVs (gen_plumed.py); molecular dynamics parameters for annealing (npt_run.mdp); Example PLUMED file (plumed0.dat); code to run the MD (anneal.sbatch and run_sim.py). The `Umbrella` Folder contains initial structure (npt.gro) and topology files (topol.top); Code generating TICA object and PLUMED files to bias CVs (make_tica_plumed.py); molecular dynamics parameters for equilibration and umbrella runs (umbrella_equil.mdp and umbrella_run.mdp, respectively); Example PLUMED file (plumed.dat); code to run the MD (run_umbrella.sbatch).
+
