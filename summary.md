@@ -80,7 +80,7 @@ __Action Usage Chart__
 {% assign astr="" %}
 {% assign ano=actionno[0] | plus: actionno1[i] %}
 {% assign astr=astr | append: ano %}
-{% for i in (1..nactions) %}
+{% for i in (0..nactions) %}
    {% assign ano=actionno[i] | plus: actionno1[i] | plus: actionno2[i] | plus: actionno3[i] | plus: actionno4[i] | plus: actionno5[i] | plus: actionno6[i] | plus: actionno7[i] | plus: actionno8[i] | plus: actionno9[i] %}
    {% assign astr=astr | append: ", " | append: ano %}
 {% endfor %}
