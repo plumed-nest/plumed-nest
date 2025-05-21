@@ -1,4 +1,4 @@
 PyYAML
 pytz
-PlumedToHTML==0.104
+PlumedToHTML==0.115
 numpy
