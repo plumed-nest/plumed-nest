@@ -64,26 +64,8 @@ There are {{ missing.size }} eggs without reference paper, marked as unpublished
 
 __Action Usage Chart__
 
-{% assign actionlist = site.data.actioncount0 | map: "name" %}
-{% assign actionno = site.data.actioncount0 | map: "number" %}
-{% assign actionno1 = site.data.actioncount1 | map: "number" %}
-{% assign actionno2 = site.data.actioncount2 | map: "number" %}
-{% assign actionno3 = site.data.actioncount3 | map: "number" %}
-{% assign actionno4 = site.data.actioncount4 | map: "number" %}
-{% assign actionno5 = site.data.actioncount5 | map: "number" %}
-{% assign actionno6 = site.data.actioncount6 | map: "number" %}
-{% assign actionno7 = site.data.actioncount7 | map: "number" %}
-{% assign actionno8 = site.data.actioncount8 | map: "number" %}
-{% assign actionno9 = site.data.actioncount9 | map: "number" %}
-{% assign nactions=actionno.size %}
-
-{% assign astr="" %}
-{% assign ano=actionno[0] | plus: actionno1[i] %}
-{% assign astr=astr | append: ano %}
-{% for i in (1..nactions) %}
-   {% assign ano=actionno[i] | plus: actionno1[i] | plus: actionno2[i] | plus: actionno3[i] | plus: actionno4[i] | plus: actionno5[i] | plus: actionno6[i] | plus: actionno7[i] | plus: actionno8[i] | plus: actionno9[i] %}
-   {% assign astr=astr | append: ", " | append: ano %}
-{% endfor %}
+{% assign actionlist = site.data.actioncount_sum | map: "name" %}
+{% assign actionno = site.data.actioncount_sum | map: "number" %}
 
 The chart below shows how many eggs make use of each of the available actions in PLUMED (it will look clearer if you resize the window).
 
@@ -139,7 +121,7 @@ $('#browse-table3-searchbar').keyup(function () {
 
 <script>
 var xValues = [ {{ actionlist | join: '", "' | prepend: '"' | append: '"' }} ];
-var yValues = [ {{ astr }} ];
+var yValues = [ {{ actionno   | join: ', '}} ];
 // do sorting in descending order based on yValues
 //1) combine the arrays:
 var list = [];
