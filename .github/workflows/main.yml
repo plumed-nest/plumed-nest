@@ -106,7 +106,7 @@ jobs:
     - name: postprocessing
       run: |
         pip install -r requirements.txt
-        python -m postprocessing.py -r ${{env.nreplicas}}
+        python postprocessing.py -r ${{env.nreplicas}}
     - name: Upload
       env:
         PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
