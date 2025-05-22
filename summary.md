@@ -119,7 +119,7 @@ $('#browse-table3-searchbar').keyup(function () {
 });
 </script>
 
-<script>
+<script id="actionChart">
 var xValues = [ {{ actionlist | join: '", "' | prepend: '"' | append: '"' }} ];
 var yValues = [ {{ actionno   | join: ', '}} ];
 // do sorting in descending order based on yValues
