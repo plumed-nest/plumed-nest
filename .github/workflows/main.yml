@@ -103,10 +103,9 @@ jobs:
       with:
         python-version: "3.10"
         cache: 'pip'
-    - name: postprocessing
+    - name: Prepare postprocessing
       run: |
         pip install -r requirements.txt
-        python postprocessing.py -r ${{env.nreplicas}}
     - name: Upload
       env:
         PLUMED_NEST_GITHUB_TOKEN: ${{ secrets.PLUMED_NEST_GITHUB_TOKEN }}
@@ -118,4 +117,3 @@ jobs:
         #  find . -name "*badge.svg"
         #  echo _config.yml _layouts _data assets # _sass
         #} | bash .ci/push
-
