@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/15652662/files/ROY-ForceField-PLUMED-NEST-1.1.zip 
+pname: Assessment of Force Fields for Describing Conformational Polymorphic Crystals of ROY 
+category: materials 
+keyw: Molecular crystal, Force Field, Collective Variable 
+plumed_version: 2.8.2
+contributor: Pradip Si and Omar Valsson 
+doi: unpublished 
+history:
+  2025-06-17: original submission
+instructions: >
+ The simulations and the PLUMED analysis can be performed using .gro, .mdp, .top, and .dat files. GROMACS 2022.5 MD code with PLUMED 2.8.2.
+
