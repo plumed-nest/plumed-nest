@@ -2,7 +2,7 @@ url: https://github.com/COSBlab/bAIes-IDP/archive/refs/heads/main.zip
 pname: Atomic resolution ensembles of intrinsically disordered and multi-domain proteins with Alphafold
 category: bio
 keyw: bAIes, AlphaFold2, random coil, IDPs, Bayesian refinement
-plumed_version: 2.10
+plumed_version: 2.11
 contributor: Vincent Schnapka
 plumed_input:
  -  ./benchmark/bAIes/Ab40/plumed_Ab40.dat
