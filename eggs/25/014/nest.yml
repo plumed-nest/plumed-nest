@@ -1,49 +1,49 @@
 url: https://github.com/COSBlab/bAIes-IDP/archive/refs/heads/main.zip 
 pname: Atomic resolution ensembles of intrinsically disordered and multi-domain proteins with Alphafold
 category: bio
-keyw: AlphaFold2, random coil, IDPs, Bayesian refinement
+keyw: bAIes, AlphaFold2, random coil, IDPs, Bayesian refinement
 plumed_version: 2.10
 contributor: Vincent Schnapka
 plumed_input:
- -  ./bAIes/Ab40/plumed_Ab40.dat
- -  ./bAIes/ACTR/plumed_ACTR.dat
- -  ./bAIes/Alb3-A3CT/plumed_Alb3-A3CT.dat
- -  ./bAIes/asyn/plumed_asyn.dat
- -  ./bAIes/Colicin_N_T_domain/plumed_Colicin_N_T_domain.dat
- -  ./bAIes/drkN/plumed_drkN.dat
- -  ./bAIes/emerin_67-170/plumed_emerin_67-170.dat
- -  ./bAIes/FCP1/plumed_FCP1.dat
- -  ./bAIes/GS8/plumed_GS8.dat
- -  ./bAIes/His-PknG_1-75/plumed_His-PknG_1-75.dat
- -  ./bAIes/Hug1_/plumed_Hug1_.dat
- -  ./bAIes/idr_SSRP1/plumed_idr_SSRP1.dat
- -  ./bAIes/NHE1/plumed_NHE1.dat
- -  ./bAIes/Nsp2_CtlIDR/plumed_Nsp2_CtlIDR.dat
- -  ./bAIes/Nt-SOCS5/plumed_Nt-SOCS5.dat
- -  ./bAIes/p61_Hck/plumed_p61_Hck.dat
- -  ./bAIes/PaaA2/plumed_PaaA2.dat
- -  ./bAIes/spm_FrpC/plumed_spm_FrpC.dat
- -  ./bAIes/UBact/plumed_UBact.dat
- -  ./bAIes/Ubq2/plumed_Ubq2.dat
- -  ./bAIes/Ubq3/plumed_Ubq3.dat
- -  ./bAIes-N/Ab40/plumed_Ab40.dat
- -  ./bAIes-N/ACTR/plumed_ACTR.dat
- -  ./bAIes-N/Alb3-A3CT/plumed_Alb3-A3CT.dat
- -  ./bAIes-N/asyn/plumed_asyn.dat
- -  ./bAIes-N/Colicin_N_T_domain/plumed_Colicin_N_T_domain.dat
- -  ./bAIes-N/drkN/plumed_drkN.dat
- -  ./bAIes-N/emerin_67-170/plumed_emerin_67-170.dat
- -  ./bAIes-N/FCP1/plumed_FCP1.dat
- -  ./bAIes-N/His-PknG_1-75/plumed_His-PknG_1-75.dat
- -  ./bAIes-N/Hug1_/plumed_Hug1_.dat
- -  ./bAIes-N/idr_SSRP1/plumed_idr_SSRP1.dat
- -  ./bAIes-N/NHE1/plumed_NHE1.dat
- -  ./bAIes-N/Nsp2_CtlIDR/plumed_Nsp2_CtlIDR.dat
- -  ./bAIes-N/Nt-SOCS5/plumed_Nt-SOCS5.dat
- -  ./bAIes-N/p61_Hck/plumed_p61_Hck.dat
- -  ./bAIes-N/PaaA2/plumed_PaaA2.dat
- -  ./bAIes-N/spm_FrpC/plumed_spm_FrpC.dat
- -  ./bAIes-N/UBact/plumed_UBact.dat
+ -  ./benchmark/bAIes/Ab40/plumed_Ab40.dat
+ -  ./benchmark/bAIes/ACTR/plumed_ACTR.dat
+ -  ./benchmark/bAIes/Alb3-A3CT/plumed_Alb3-A3CT.dat
+ -  ./benchmark/bAIes/asyn/plumed_asyn.dat
+ -  ./benchmark/bAIes/Colicin_N_T_domain/plumed_Colicin_N_T_domain.dat
+ -  ./benchmark/bAIes/drkN/plumed_drkN.dat
+ -  ./benchmark/bAIes/emerin_67-170/plumed_emerin_67-170.dat
+ -  ./benchmark/bAIes/FCP1/plumed_FCP1.dat
+ -  ./benchmark/bAIes/GS8/plumed_GS8.dat
+ -  ./benchmark/bAIes/His-PknG_1-75/plumed_His-PknG_1-75.dat
+ -  ./benchmark/bAIes/Hug1_/plumed_Hug1_.dat
+ -  ./benchmark/bAIes/idr_SSRP1/plumed_idr_SSRP1.dat
+ -  ./benchmark/bAIes/NHE1/plumed_NHE1.dat
+ -  ./benchmark/bAIes/Nsp2_CtlIDR/plumed_Nsp2_CtlIDR.dat
+ -  ./benchmark/bAIes/Nt-SOCS5/plumed_Nt-SOCS5.dat
+ -  ./benchmark/bAIes/p61_Hck/plumed_p61_Hck.dat
+ -  ./benchmark/bAIes/PaaA2/plumed_PaaA2.dat
+ -  ./benchmark/bAIes/spm_FrpC/plumed_spm_FrpC.dat
+ -  ./benchmark/bAIes/UBact/plumed_UBact.dat
+ -  ./benchmark/bAIes/Ubq2/plumed_Ubq2.dat
+ -  ./benchmark/bAIes/Ubq3/plumed_Ubq3.dat
+ -  ./benchmark/bAIes-N/Ab40/plumed_Ab40.dat
+ -  ./benchmark/bAIes-N/ACTR/plumed_ACTR.dat
+ -  ./benchmark/bAIes-N/Alb3-A3CT/plumed_Alb3-A3CT.dat
+ -  ./benchmark/bAIes-N/asyn/plumed_asyn.dat
+ -  ./benchmark/bAIes-N/Colicin_N_T_domain/plumed_Colicin_N_T_domain.dat
+ -  ./benchmark/bAIes-N/drkN/plumed_drkN.dat
+ -  ./benchmark/bAIes-N/emerin_67-170/plumed_emerin_67-170.dat
+ -  ./benchmark/bAIes-N/FCP1/plumed_FCP1.dat
+ -  ./benchmark/bAIes-N/His-PknG_1-75/plumed_His-PknG_1-75.dat
+ -  ./benchmark/bAIes-N/Hug1_/plumed_Hug1_.dat
+ -  ./benchmark/bAIes-N/idr_SSRP1/plumed_idr_SSRP1.dat
+ -  ./benchmark/bAIes-N/NHE1/plumed_NHE1.dat
+ -  ./benchmark/bAIes-N/Nsp2_CtlIDR/plumed_Nsp2_CtlIDR.dat
+ -  ./benchmark/bAIes-N/Nt-SOCS5/plumed_Nt-SOCS5.dat
+ -  ./benchmark/bAIes-N/p61_Hck/plumed_p61_Hck.dat
+ -  ./benchmark/bAIes-N/PaaA2/plumed_PaaA2.dat
+ -  ./benchmark/bAIes-N/spm_FrpC/plumed_spm_FrpC.dat
+ -  ./benchmark/bAIes-N/UBact/plumed_UBact.dat
 doi: unpublished 
 history:
   2025-06-17: original submission
