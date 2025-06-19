@@ -1,0 +1,29 @@
+url: https://github.com/COSBlab/bAIes-SM/archive/refs/heads/main.zip
+pname: Advancing in silico drug design with Bayesian refinement of AlphaFold models
+category: bio
+keyw: bAIes, AlphaFold, Bayesian refinement, virtual screening, docking, small-molecule, enrichment 
+plumed_version: 2.11
+contributor: Samiran Sen
+plumed_input:
+  -  ./benchmark/1H00/logn_jeff.dat
+  -  ./benchmark/2AM9/logn_jeff.dat
+  -  ./benchmark/3BGS/logn_jeff.dat
+  -  ./benchmark/1UDT/logn_jeff.dat
+  -  ./benchmark/3F9M/logn_jeff.dat
+  -  ./benchmark/3PBL/logn_jeff.dat
+  -  ./benchmark/2NNQ/logn_jeff.dat
+  -  ./benchmark/3KBA/logn_jeff.dat
+  -  ./benchmark/1SQT/logn_jeff.dat
+  -  ./benchmark/4LDO/logn_jeff.dat
+  -  ./benchmark/3G6Z/logn_jeff.dat
+  -  ./benchmark/1D3G/logn_jeff.dat
+  -  ./benchmark/2UZ3/logn_jeff.dat
+  -  ./benchmark/3ERD/logn_jeff.dat
+  -  ./benchmark/1UYG/logn_jeff.dat
+  -  ./benchmark/2ICA/logn_jeff.dat
+doi: unpublished 
+history:
+  2025-06-19: original submission
+instructions: >
+ This repository contains all the input files to reproduce the benchmark on 16 systems using bAIes. Calculations were performed with GROMACS v2022.5 and the development version of PLUMED.  
+
