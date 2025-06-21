@@ -4,6 +4,9 @@ category: bio
 keyw: Metainference, Metadynamics, SAXS, protein dimer 
 plumed_version: 2.9
 contributor: Debadutta Patra 
+plumed_input:
+  - path: ./dsRBD_dimer/plumed.dat
+    nreplicas: 2
 doi: unpublished 
 history:
   2025-06-21: original submission
