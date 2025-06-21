@@ -1,0 +1,12 @@
+url: https://github.com/COSBlab/GS-LOOP-data/archive/refs/heads/main.zip 
+pname: Product-stabilized filamentation by human glutamine synthetase allosterically tunes metabolic activity 
+category: bio
+keyw: EMMIVox, cryo-EM, ensemble refinement, glutamine synthetase
+plumed_version: 2.10
+contributor: Samuel Hoff
+doi: unpublished 
+history:
+  2025-06-21: original submission
+instructions: >
+ This repository contains all the input files to reproduce the cryo-EM EMMIVOX ensembles of human glutamine synthetase in decamer and filament form, as well as the final refined single-structure models. Calculations were performed with GROMACS v2021.5 and the development version of PLUMED.  
+
