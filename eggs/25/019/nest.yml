@@ -1,0 +1,12 @@
+url: https://github.com/valeriorizzi/FoldingFeatures/archive/main.zip 
+pname: The Arch from the Stones. Understanding Protein Folding Energy Landscapes via Bio-inspired Collective Variables 
+category: bio
+keyw: protein folding, OPES, OneOPES, binding free energy 
+plumed_version: 2.9.1
+contributor: Valerio Rizzi 
+doi: 10.1101/2025.05.28.656575 
+history:
+  2025-06-27: original submission
+instructions: >
+ The simulations were run with GROMACS 2023. 
+
