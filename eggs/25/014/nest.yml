@@ -44,7 +44,7 @@ plumed_input:
  -  ./benchmark/bAIes-N/PaaA2/plumed_PaaA2.dat
  -  ./benchmark/bAIes-N/spm_FrpC/plumed_spm_FrpC.dat
  -  ./benchmark/bAIes-N/UBact/plumed_UBact.dat
-doi: unpublished 
+doi: 10.1101/2025.06.18.660298 
 history:
   2025-06-17: original submission
 instructions: >

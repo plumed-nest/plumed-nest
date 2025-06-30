@@ -21,7 +21,7 @@ plumed_input:
   -  ./benchmark/3ERD/logn_jeff.dat
   -  ./benchmark/1UYG/logn_jeff.dat
   -  ./benchmark/2ICA/logn_jeff.dat
-doi: unpublished 
+doi: 10.1101/2025.06.25.661454 
 history:
   2025-06-19: original submission
 instructions: >
