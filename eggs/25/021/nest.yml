@@ -1,0 +1,13 @@
+url: https://github.com/valeriorizzi/WaterFP/archive/main.zip 
+pname: All You Need Is Water. Converging Ligand Binding Simulations with Hydration Collective Variables 
+category: bio
+keyw: OPES Explore, ligand binding, binding free energy, water, hydration CVs, SAMPL challenge, host-guest 
+plumed_version: 2.9
+contributor: Valerio Rizzi 
+doi: 10.1101/2025.06.27.661893 
+natoms: 1000000
+history:
+  2025-07-03: original submission
+instructions: >
+ The simulations were run with GROMACS 2023.
+
