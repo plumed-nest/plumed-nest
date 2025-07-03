@@ -5,6 +5,7 @@ keyw: OneOPES, GPCR, ADRB1, activation, microswitches, conformational changes, a
 plumed_version: 2.9
 contributor: Valerio Rizzi 
 doi: 10.1101/2025.03.03.641221 
+natoms: 2000000
 history:
   2025-07-03: original submission
 instructions: >
