@@ -4,9 +4,10 @@ category: bio
 keyw: CryoEM, MEMMI, Metadynamics, Metainference, Ab42 Fibrils, structural ensemble 
 plumed_version: 2.6
 contributor: Maria Milanesi 
-doi: 10.1101/2024.01.08.574772
+doi: 10.1126/sciadv.adr7008
 history:
   2024-12-04: original submission
+  2025-07-16: updated reference
 instructions: >
  The simulations were run with PLUMED v. 2.6.0 and GROMACS 2020.5. 
  

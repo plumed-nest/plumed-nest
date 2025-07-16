@@ -4,9 +4,10 @@ category: bio
 keyw: RNA, miRNA, OneOPES, ligand binding, conformational changes 
 plumed_version: 2.9
 contributor: Valerio Rizzi 
-doi: 10.1101/2024.06.27.601024
+doi: 10.1021/acs.jcim.4c01166
 history:
   2024-10-22: original submission
+  2025-07-16: updated reference
 instructions: >
  The simulations were run with GROMACS 2023. 
  
