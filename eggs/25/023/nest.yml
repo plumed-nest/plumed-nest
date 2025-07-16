@@ -1,0 +1,12 @@
+url: https://github.com/lauricella/tau-analysis/archive/refs/heads/main.zip
+pname: Molecular simulations of Tau-protein oligomers
+category: bio
+keyw: metadynamics, proteins, aggregation
+plumed_version: 2.8
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2025-07-16: original submission
+instructions: >
+ Input files related to the simulation of increasingly large Tau-protein oligomers\
+ using metadynamics.
