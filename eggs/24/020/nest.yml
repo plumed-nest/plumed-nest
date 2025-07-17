@@ -4,7 +4,7 @@ category: bio
 keyw: LJ7, alanine, well-tempered metadynamics, infrequent metadynamics, machine learning 
 plumed_version: 2.8.1
 contributor: Ziyue Zou, Dedi Wang, Pratyush Tiwary 
-ref: 10.1039/D4DD00315B
+doi: 10.1039/D4DD00315B
 history:
   2024-09-22: original submission
   2025-07-16: updated reference
