@@ -4,9 +4,10 @@ category: methods
 keyw: protein ligand binding free energy, oneopes, metadynamics, brd4, hsp90, absolute binding free energy 
 plumed_version: 2.9
 contributor: Francesco Gervasio 
-doi: 10.26434/chemrxiv-2024-sjgg2-v2 
+doi: 10.1021/acs.jpclett.4c02352
 history:
   2024-08-02: original submission
+  2025-07-16: updated reference
 instructions: >
  We did OneOPES calculations on multiple protein-ligand systems, for each system there are 8 replicas, for each replica there is a plumed.dat file. The SBATCH scripts we used to run the calculations are on [Zenodo](https://doi.org/10.5281/zenodo.11126468). Calculations were run with GROMACS 2022 patched with Plumed-2.9. 
  
