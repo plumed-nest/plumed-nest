@@ -4,10 +4,9 @@ category: bio
 keyw: Path CVs Metadynamics, GPCRs activation transition 
 plumed_version: 2.7.1
 contributor: Vittorio Limongelli 
-doi: 10.1016/j.chempr.2024.08.004
+doi: 10.1101/2023.09.14.557711 
 history:
   2023-11-16: original submission
-  2025-07-13: updated reference
 instructions:
  Input files (input structures, topology, PLUMED input) for simulations used to investigate the activation mechanism of A2A receptor. The simulations were performed with Gromacs 2020.6 version patched with Plumed 2.7.1
  

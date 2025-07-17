@@ -4,10 +4,9 @@ category: methods
 keyw: OPES, OPES-Explore, Metadynamics, Protein Folding, Ligand Binding, Chignolin, Trypsin 
 plumed_version: 2.9
 contributor: Dhiman Ray 
-doi: 10.1021/acs.jctc.4c01231
+doi: 10.26434/chemrxiv-2024-mfpcn 
 history:
   2024-11-09: original submission
-  2025-07-16: updated reference
 instructions: >
  Enhanced sampling simulations using a combination of OPES and OPES-Explore algorithms are performed and tested using GROMACS v2021.5, v2022.3, and v2024.3.
  

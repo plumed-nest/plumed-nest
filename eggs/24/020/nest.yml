@@ -4,10 +4,10 @@ category: bio
 keyw: LJ7, alanine, well-tempered metadynamics, infrequent metadynamics, machine learning 
 plumed_version: 2.8.1
 contributor: Ziyue Zou, Dedi Wang, Pratyush Tiwary 
-doi: 10.1039/D4DD00315B
+ref: 'Ziyue Zou, Dedi Wang, Pratyush Tiwary. Graph Neural Network-State Predictive Information Bottleneck (GNN-SPIB) approach for learning molecular thermodynamics and kinetics'
+ref_url: 'https://arxiv.org/abs/2409.11843'
 history:
   2024-09-22: original submission
-  2025-07-16: updated reference
 instructions: >
  Software used was PLUMED-2.8.1 with PYTORCH module, GROMACS 2021.6 (alanine tetrapeptide), and GROMACS 2019.6 (alanine dipeptide)
  

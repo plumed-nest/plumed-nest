@@ -4,10 +4,9 @@ category: chemistry
 keyw: WT-metadynamics, metal nanoclusters, nucleation, neural network potential, deepMD 
 plumed_version: 2.8.2
 contributor: Vikas Tiwari, Tarak Karmakar
-doi: 10.1021/acs.nanolett.5c01340
+doi: 10.26434/chemrxiv-2025-rkv0g
 history:
   2025-02-02: original submission
-  2025-07-16: updated reference
 instructions: >
  The inputs files can be used to run the neural network potential based molecular dynamics for metal nanocluster nucleation in LAAMPS integrated with DeepMD-kit 2.2.10 and PLUMED 2.8.2.
  
