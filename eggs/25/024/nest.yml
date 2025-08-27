@@ -1,0 +1,12 @@
+url: https://github.com/IsabellGrothaus/Data_repository/raw/main/Grothaus_et_al_2025_B22_PLUMED.zip 
+pname: Sampling glycan-glycan interactions for B22 calculations 
+category: bio
+keyw: B22, glycan, carbohydrates, distance, REST2, metadynamics, RECT, replica exchange 
+plumed_version: 2.8
+contributor: Isabell Louise Grothaus 
+doi: unpublished
+history:
+  2025-08-27: original submission
+instructions: >
+ Example plumed.dat (glucose_longbox.dat) file to sample COM-distance between two glucose molecules from a standard MD with restraints in x and y direction. Example plumed.dat (A2G2S2_longbox.dat) file to sample COM-distances between two complex N-glycan molecules with restraints in x and y. The distance is additionally biased via a metadynamics potential across multiple replica (RECT), where the glycan molecules are defined as the solute (hot) region (REST2) for enhanced sampling of their conformational phase space. Perform REST-RECT simulations of glycans in solution or bound as substrate to their respective enzyme. GROMACS 2022 was used.
+ 
