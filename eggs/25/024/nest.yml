@@ -5,6 +5,9 @@ keyw: B22, glycan, carbohydrates, distance, REST2, metadynamics, RECT, replica e
 plumed_version: 2.8
 contributor: Isabell Louise Grothaus 
 doi: unpublished
+plumed_input:
+ -  A2G2S2_longbox.dat 
+ -  glucose_longbox.dat 
 history:
   2025-08-27: original submission
 instructions: >
