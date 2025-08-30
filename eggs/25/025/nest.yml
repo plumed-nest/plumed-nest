@@ -1,0 +1,12 @@
+url: https://github.com/Revanth27-08/Theophylline-RNA-aptamer/archive/main.zip 
+pname: Enhanced Sampling of Ligand Binding Coupled to RNA Conformational Dynamics 
+category: bio
+keyw: OPES, OPES Flooding , Metadynamics, RNA, Ligand binding, Free Energy, Kinetics, Funnel
+plumed_version: 2.11
+contributor: Revanth Elangovan and Dhiman Ray 
+doi: unpublished
+history:
+  2025-08-30: original submission
+instructions: >
+ All simulations were performed using the GROMACS 2024.3 patched with PLUMED 2.11. 
+ 
