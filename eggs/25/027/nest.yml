@@ -1,0 +1,12 @@
+url: https://github.com/mbernett/zip_for_nest/raw/master/saxs-xlms-md_rad.zip
+pname: Enhanced-sampling MD simulations of a protein-peptide complex integrating SAXS and XL-MS experimental information 
+category: bio
+keyw: steered MD, metadynamics, SAXS, XL-MS, ensemble reconstruction 
+plumed_version: 2.9
+contributor: Mattia Bernetti
+doi: 10.1101/2025.03.07.642044 
+history:
+  2025-09-02: original submission
+instructions: >
+ Input files to carry out MD simulations of the RAD51-BRC4 complex using enhanced sampling methods, namely steered MD and metadynamics. The simulations integrate experimental information, specifically from SAXS in the steered MD and from XL-MS in the metad. The input folders contain all files required to perform the simulations, while the reweighting subfolder in the metad directory includes input files to compute metad weights a posteriori using the final bias. Simulations were conducted using GROMACS 2023.1 patched with PLUMED 2.9. All the files necessary to reproduce the analyses through a Jupyter Notebook are available on Zenodo under accession code 10.5281/zenodo.17035732.
+ 
