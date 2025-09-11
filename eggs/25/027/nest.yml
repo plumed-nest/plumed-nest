@@ -4,6 +4,7 @@ category: bio
 keyw: steered MD, metadynamics, SAXS, XL-MS, ensemble reconstruction 
 plumed_version: 2.9
 contributor: Mattia Bernetti
+natoms: 269937 
 doi: 10.1101/2025.03.07.642044 
 history:
   2025-09-02: original submission
