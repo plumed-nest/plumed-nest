@@ -1,0 +1,12 @@
+url: https://github.com/saikat-ai/polymer_enhanced_sampling/archive/refs/heads/main.zip 
+pname: Designing transferable transition state guided collective variable via interpretable machine learning model for enhanced sampling. A case study on polymer collapse transition 
+category: bio
+keyw: metadynamics, polymer collapse transition, transferable CV,interpretable ML-model 
+plumed_version: 2.7
+contributor: Saikat Dhibar and Biman Jana 
+doi: unpublished 
+history:
+  2025-20-28: original submission
+instructions: >
+ Simulations were performed with GROMACS 2020.6 and plumed 2.7.3. 
+ 
