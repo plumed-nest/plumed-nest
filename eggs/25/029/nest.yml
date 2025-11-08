@@ -1,0 +1,12 @@
+url: https://github.com/fcolizzi/PETase_Cryst-vs-Amor/raw/main/PETase-cryst-vs-amor.zip
+pname: Energetic Constraints in the Enzymatic Depolymerization of Crystalline PET from enhanced molecular simulations 
+category: bio
+keyw: HREX-Metadynamics, PETase, crystalline PET, amorphous PET, conformational ensembles, substrate binding, chain detachment 
+plumed_version: 2.8
+contributor: Ania Di Pede-Mattatelli and Francesco Colizzi 
+doi: unpublished 
+history:
+  2025-11-08: original submission
+instructions: >
+ Simulations have been performed with GROMACS 2021.4 and PLUMED 2.8. The input files for wt-MTD, and combined HREX-wt-MTD simulations of IsPETase-PET and PET-PET systems are provided, along with PLUMED input files for the analysis and reweighting. To get the .tpr and .gro files, please see [here](https://github.com/fcolizzi/PETase_Cryst-vs-Amor). 
+ 
