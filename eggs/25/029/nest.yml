@@ -5,6 +5,21 @@ keyw: HREX-Metadynamics, PETase, crystalline PET, amorphous PET, conformational 
 plumed_version: 2.8
 contributor: Ania Di Pede-Mattatelli and Francesco Colizzi 
 doi: unpublished 
+plumed_input:
+  - ./PET_extr/eq2_amor.dat
+  - ./PET_extr/mtd_amor.dat
+  - ./PET_extr/mtd_crys.dat
+  - ./PET_extr/eq2_crys.dat
+  - ./amor/4-reweight_amor.dat
+  - ./amor/2-eq2_amor.dat
+  - path: ./amor/3-production_mtd_hrex_amor.dat
+    nreplicas: 2
+  - path: ./crys/3-production_mtd_hrex_crys.dat
+    nreplicas: 2
+  - ./crys/2-eq2_crys.dat
+  - ./crys/4-reweight_crys.dat
+  - ./orbital-pulling/1-pull.dat
+
 history:
   2025-11-08: original submission
 instructions: >
