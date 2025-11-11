@@ -18,7 +18,6 @@ plumed_input:
     nreplicas: 2
   - ./crys/2-eq2_crys.dat
   - ./crys/4-reweight_crys.dat
-  - ./orbital-pulling/1-pull.dat
 
 history:
   2025-11-08: original submission
