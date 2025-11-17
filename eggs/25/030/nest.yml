@@ -1,0 +1,12 @@
+url: https://github.com/mme-ucl/NNucleate/raw/main/examples/CR_paper_inputs_all.zip 
+pname: Committor Regularization 
+category: methods
+keyw: metadynamics, enhanced sampling, mlcvs, committor, machine learning 
+plumed_version: 2.5.2
+contributor: Florian Dietrich 
+doi: 10.26434/chemrxiv-2025-8gqqj
+history:
+  2025-11-17: original submission
+instructions: >
+ The simulations run with lammps (input file lmp_in) and use the plumed fork PyCV, requiring the PYTHONCV keyword. The GNNs run using a cythonized version of the neighbourlist algorithm implemented in MDTraj which can be compiled using the files provided [here](https://github.com/mme-ucl/NNucleate/tree/main/Cython_Neighbourlist). 
+ 
