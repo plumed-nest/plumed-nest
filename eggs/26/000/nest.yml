@@ -1,0 +1,11 @@
+url: https://github.com/KULL-Centre/_2026_streit_opes/tree/main/plumed_files/PLUMED.zip 
+pname: OPES simulations of disordered proteins 
+category: bio 
+keyw: OPES, IDPs
+plumed_version: 2.10
+contributor: Julian Streit 
+doi: unpublished 
+history:
+  2026-01-14: original submission
+instructions: >
+ plumed_trial_start.dat activates an OPES bias for a new simulation. plumed_trial_restart.dat is used for restarting. plumed_prod.dat is used for production simulations with a static bias (e.g., STATE.production). Simulations were performed with GROMACS 2023.4 + PLUMED 2.10.
