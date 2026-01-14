@@ -1,0 +1,38 @@
+url: https://github.com/Tomfersil/Alx-Riboswitch-MD/archive/refs/heads/main.zip
+pname: Molecular simulations Alx riboswitch
+category: bio
+keyw: RNA, riboswitch
+plumed_version: 2.8
+contributor: Giovanni Bussi
+doi: unpublished
+history:
+  2026-01-14: original submission
+plumed_inputs:
+  - input_files/Wobble-Prot/4-Steered/chain-A/rep2/steered_A_P_2.dat
+  - input_files/Wobble-Prot/4-Steered/chain-A/rep1/steered_A_P_1.dat
+  - input_files/Wobble-Prot/4-Steered/chain-C/rep2/steered_C_P_2.dat
+  - input_files/Wobble-Prot/4-Steered/chain-C/rep2/plumed_test_metad_params.dat
+  - input_files/Wobble-Prot/4-Steered/chain-C/rep1/steered_C_P_1.dat
+  - input_files/Wobble-Prot/4-Steered/chain-D/rep2/steered_D_P_2.dat
+  - input_files/Wobble-Prot/4-Steered/chain-D/rep1/steered_D_P_1.dat
+  - input_files/Wobble-Prot/4-Steered/chain-B/rep2/steered_B_P_2.dat
+  - input_files/Wobble-Prot/4-Steered/chain-B/rep1/steered_B_P_1.dat
+  - input_files/Wobble-Prot/5-Equil/chain-A/rep2/equil_A_P_2.dat
+  - input_files/Wobble-Prot/5-Equil/chain-A/rep1/equil_A_P_1.dat
+  - input_files/Wobble-Prot/5-Equil/chain-C/rep2/equil_C_P_2.dat
+  - input_files/Wobble-Prot/5-Equil/chain-C/rep2/plumed_test_metad_params.dat
+  - input_files/Wobble-Prot/5-Equil/chain-C/rep1/equil_C_P_1.dat
+  - input_files/Wobble-Prot/5-Equil/chain-D/rep2/equil_D_P_2.dat
+  - input_files/Wobble-Prot/5-Equil/chain-D/rep1/equil_D_P_1.dat
+  - input_files/Wobble-Prot/5-Equil/chain-B/rep2/equil_B_P_2.dat
+  - input_files/Wobble-Prot/5-Equil/chain-B/rep1/equil_B_P_1.dat
+  - input_files/Native-Deprot/4-Steered/chain-A/rep2/steered_A_2.dat
+  - input_files/Native-Deprot/4-Steered/chain-A/rep1/steered_A_1.dat
+  - input_files/Native-Deprot/4-Steered/chain-C/rep2/steered_C_2.dat
+  - input_files/Native-Deprot/4-Steered/chain-C/rep1/steered_C_1.dat
+  - input_files/Native-Deprot/4-Steered/chain-D/rep2/steered_D_2.dat
+  - input_files/Native-Deprot/4-Steered/chain-D/rep1/steered_D_1.dat
+  - input_files/Native-Deprot/4-Steered/chain-B/rep2/steered_B_2.dat
+  - input_files/Native-Deprot/4-Steered/chain-B/rep1/steered_B_1.dat
+instructions: >
+ This repository stores input files and scripts used in MD simulations of the alx riboswitch.
