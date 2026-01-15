@@ -7,7 +7,7 @@ contributor: Giovanni Bussi
 doi: unpublished
 history:
   2026-01-14: original submission
-plumed_inputs:
+plumed_input:
   - input_files/Wobble-Prot/4-Steered/chain-A/rep2/steered_A_P_2.dat
   - input_files/Wobble-Prot/4-Steered/chain-A/rep1/steered_A_P_1.dat
   - input_files/Wobble-Prot/4-Steered/chain-C/rep2/steered_C_P_2.dat
