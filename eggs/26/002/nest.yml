@@ -1,0 +1,12 @@
+url: https://github.com/valeriorizzi/GPCR_Euclidean_PATH/archive/main.zip 
+pname: A Transferable and Robust Computational Framework for Class A GPCR Activation Free Energies 
+category: bio
+keyw: OneOPES, GPCR, ADRB1, activation, euclidean path, microswitches, conformational changes, allostery
+plumed_version: 2.9.1
+contributor: Valerio Rizzi 
+doi: 10.64898/2025.12.05.692536 
+history:
+  2026-02-03: original submission
+instructions: >
+ The simulations were run with GROMACS 2023 and PLUMED 2.9.1
+ 
