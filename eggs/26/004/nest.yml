@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/18886253/files/calcineurin_quercetin_deeptica.zip 
+pname: Resolving the ambiguous binding site of quercetin at the calcineurin subunit junction using funnel metadynamics with deep learning collective variables 
+category: bio 
+keyw: metadynamics, funnel metadynamics, DeepTICA 
+plumed_version: 2.9
+contributor: Jason Loo 
+doi: unpublished 
+history:
+  2026-03-09: original submission
+instructions: >
+ Simulations were conducted using GROMACS 2024.3 patched with PLUMED 2.9.4.
+ 
