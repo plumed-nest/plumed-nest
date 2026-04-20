@@ -1,12 +1,18 @@
-url: https://zenodo.org/records/19649272/files/plumed_nest_cryptad.zip 
-pname: Cryptic pocket discovery in Alzheimer's disease risk proteins BIN1, PICALM, and CD2AP via well-tempered metadynamics 
+url: https://zenodo.org/records/19649272/files/plumed_nest_cryptad.zip
+pname: Cryptic pocket discovery in Alzheimer disease risk proteins BIN1, PICALM, and CD2AP via well-tempered metadynamics 
 category: methods 
-keyw: cryptic pockets, Alzheimer's disease, BIN1, PICALM, CD2AP, well-tempered metadynamics, endocytosis, clathrin-mediated trafficking, virtual screening 
+keyw: cryptic pockets, Alzheimer disease, BIN1, PICALM, CD2AP, well-tempered metadynamics, endocytosis, clathrin-mediated trafficking, virtual screening 
 plumed_version: 2.9
-contributor: Çağrı Özkurt 
+contributor: Cagrı Ozkurt 
 doi: unpublished 
+plumed_input:
+  - plumed_S5_CD2AP_SH3-1.dat
+  - plumed_S4_CD2AP_SH3-2.dat
+  - plumed_S3_PICALM_ANTH.dat
+  - plumed_S2_BIN1_SH3.dat
+  - plumed_S1_BIN1_BAR.dat
 history:
   2026-04-19: original submission
 instructions: >
- GROMACS 2023.3 patched with PLUMED 2.9.2 (see singularity/gromacs-plumed.def in the paper repository for a reproducible build). Run with gmx_mpi mdrun -plumed plumed_S*.dat -ntomp 2 -npme 4 -deffnm meta. One .dat file per system; each uses 2 distance CVs and well-tempered MetaD (SIGMA=0.05 nm, HEIGHT=1.2 kJ/mol, BIASFACTOR=15, PACE=500).
+ GROMACS 2023.3 patched with PLUMED 2.9.2 (see singularity/gromacs-plumed.def in the paper repository for a reproducible build). Run with gmx_mpi mdrun -plumed `plumed_S*.dat` -ntomp 2 -npme 4 -deffnm meta. One .dat file per system; each uses 2 distance CVs and well-tempered MetaD (SIGMA=0.05 nm, HEIGHT=1.2 kJ/mol, BIASFACTOR=15, PACE=500).
  
