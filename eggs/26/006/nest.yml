@@ -1,0 +1,12 @@
+url: https://github.com/julian-streit/PTM_MD_analyses/raw/main/PLUMED.zip 
+pname: Metadynamics simulations of buried phosphorylation sites and proline isomerisation 
+category: bio 
+keyw: metadynamics
+plumed_version: 2.9
+contributor: Julian Streit  
+doi: 10.1101/2025.06.25.661537 
+history:
+  2026-05-12: original submission
+instructions: >
+ plumed.dat activates the METAD bias for a new simulation. Simulations were performed with GROMACS 2022.4 + GROMACS 2.8.2 (FLN5) and GROMACS 2020.4 + PLUMED 2.6.2 or GROMACS 2023.5 + PLUMED 2.9.3 for FLNA21, FLNC24, PARK7. 
+ 
