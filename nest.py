@@ -387,7 +387,7 @@ def process_egg(path,
                         plumed_status[i]="ignore"
                 # Generate the plumed input 
                 versions.append("v"+ stable_version)
-                status_dict[versions[i]] = plumed_status[i]
+                statusdict[versions[i]] = plumed_status[i]
 
             
             use_json = False
