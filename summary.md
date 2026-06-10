@@ -32,7 +32,7 @@ with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 |  {{ date }} | {{ site.data.eggs.size }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
 
 {% raw %}
-<a download href="https://github.com/plumed-nest/test-site/blob/master/_data/nest.json">
+<a href="https://raw.github.com/plumed-nest/test-site/master/_data/nest.json" download>
 <button id="downloadButton">
 Download nest
 </button>
