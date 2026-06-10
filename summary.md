@@ -34,7 +34,7 @@ with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 Clicking the button below takes you to a page on GibHub that you can download the contents of the PLUMED nest from.
 
 {% raw %}
-<a href="https://github.com/plumed-nest/test-site/blob/master/_data/nest.json">
+<a href="https://github.com/plumed-nest/plumed-nest.github.io/blob/master/_data/nest.json">
 <button id="downloadButton">
 Get nest
 </button>
