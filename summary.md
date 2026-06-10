@@ -31,13 +31,24 @@ with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 | :------: |  :------:  |  :------:  | :------:  | :------:  |
 |  {{ date }} | {{ site.data.eggs.size }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
 
+Clicking the button below takes you to a page on GibHub that you can download the contents of the PLUMED nest from.
+
 {% raw %}
-<a href="https://raw.github.com/plumed-nest/test-site/master/_data/nest.json" download>
+<a href="https://github.com/plumed-nest/test-site/blob/master/_data/nest.json">
 <button id="downloadButton">
-Download nest
+Get nest
 </button>
 </a>
 {% endraw %}
+
+The file you download from this site has the contents of the nest in a json dictionary.  You can load this data into a python dictionary by using the commands:
+
+```python
+import json
+
+with open("nest.json", "r" ) as f : 
+   nestdict = json.load( f )
+```
 
 __List of eggs with failed tests__
 
