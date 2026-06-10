@@ -31,6 +31,13 @@ with current ({{ site.data.plumed.stable }}) and master PLUMED versions.
 | :------: |  :------:  |  :------:  | :------:  | :------:  |
 |  {{ date }} | {{ site.data.eggs.size }} | {{ ninp }} | {{ nfail }} | {{ nfailm }} |
 
+{% raw %}
+<a download href="_data/nest.json">
+<button id="downloadButton">
+Download nest
+</button>
+</a>
+{% endraw %}
 
 __List of eggs with failed tests__
 

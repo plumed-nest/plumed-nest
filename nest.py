@@ -380,6 +380,8 @@ def process_egg(path,
             for i in range(len(plumeds)):
                 if plumeds[i]==PLUMED_MASTER:
                    versions.append("master")
+                   if plumed_status[i]!=0 : statusdict[versions[i]] = "failing"
+                   else : statusdict[versions[i]] = "working" 
                    continue
                 stable_version=subprocess.check_output(f'{plumeds[i]} info --version', shell=True).decode('utf-8').strip()
                 if plumed_version != "not specified":
@@ -387,7 +389,8 @@ def process_egg(path,
                         plumed_status[i]="ignore"
                 # Generate the plumed input 
                 versions.append("v"+ stable_version)
-                statusdict[versions[i]] = plumed_status[i]
+                if plumed_status[i]!=0 : statusdict[versions[i]] = "failing"
+                else : statusdict[versions[i]] = "working"
 
             
             use_json = False
