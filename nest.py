@@ -156,9 +156,11 @@ def process_egg(path,
                 plumed_syntax,
                 eggdb=None,
                 plumeds=["plumed",PLUMED_MASTER],
-                feggdb={}):
+                feggdb=None):
     if not eggdb:
         eggdb=sys.stdout
+    if feggdb is None:
+        feggdb = {}
 
     with cd(path):
         # start timing
