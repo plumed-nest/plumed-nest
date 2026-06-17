@@ -44,7 +44,7 @@ def joinJSONFiles(nreplicas: int):
          except ValueError as ve : 
             raise InvalidJSONError(ve)
        fulldict.update(repdic)
-    with open("_data/nest.json", "w" ) as f :
+    with open("nest.json", "w" ) as f :
        json.dump( fulldict, f, indent=2 )
 
 
