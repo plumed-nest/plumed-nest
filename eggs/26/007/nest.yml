@@ -1,0 +1,12 @@
+url: https://github.com/gmelisi/GSK-3b_METAD/raw/main/GSK3b_METAD.zip
+pname: Metadynamics Simulations Reveal the Protonation-Dependent Conformational Landscape of GSK-3β Dual Inhibitors
+category: chemistry
+keyw: metadynamics, ligand unbinding, path CVs, funnel metadynamics
+plumed_version: 2.9
+contributor: Gian Marco Elisi 
+doi: unpublished
+history:
+  2026-06-23: original submission
+instructions: >
+  Input files for GROMACS and PLUMED to perform Path Collective Variables (PCVs) and Funnel Metadynamics simulations of the GSK-3β complex with a phenyl-piperazine derivative, including topology, MD parameters and coordinates, and structural templates for PBC treatment, definition of PCVs and restraint application.
+ 
