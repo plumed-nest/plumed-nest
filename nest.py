@@ -87,7 +87,7 @@ def get_short_name_end(lname, length):
     else: sname = lname
     return sname
 
-def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=None,header=None):
+def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=None,header=None,stored_inpt=[]):
     """ Format plumed input file.
 
     source: path to master input file
@@ -95,6 +95,7 @@ def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=N
     exe: executables that were used for testing
     global_header: header added to all the (recursively) converted files.
     run_header: header added only to the master file.
+    stored_inpt: on output a list of dictionaries that contains the PLUMED input that was formatted
 
     """
     print("\t - formatting")
@@ -112,7 +113,7 @@ def plumed_format(source,tested,status,exe,actions,usejson=False,global_header=N
                  print(header,file=o)
             # Read in the input file and get the rendered html
             lines = f.read()
-            html = get_html( lines, source, os.path.basename(source), tested, status, exe, usejson=usejson, maxchecks=100, actions=actions )
+            html = get_html( lines, source, os.path.basename(source), tested, status, exe, usejson=usejson, maxchecks=100, actions=actions, input_store=stored_inpt )
             # make sure Jekyll does not interfere with format
             print("{% raw %}",file=o)
             print( html, file=o )
@@ -154,9 +155,12 @@ def process_egg(path,
                 action_counts,
                 plumed_syntax,
                 eggdb=None,
-                plumeds=["plumed",PLUMED_MASTER]):
+                plumeds=["plumed",PLUMED_MASTER],
+                feggdb=None):
     if not eggdb:
         eggdb=sys.stdout
+    if feggdb is None:
+        feggdb = {}
 
     with cd(path):
         # start timing
@@ -254,9 +258,11 @@ def process_egg(path,
             print("<text x=\"92.5\" y=\"15\" fill=\"#010101\" fill-opacity=\".3\">"+egg_id+"</text>", file=badge)
             print("<text x=\"92.5\" y=\"14\">"+egg_id+"</text></g></svg>", file=badge)
 
+        thiseggdb = {}
         with open("README.md","w") as o:
             print(global_header, file=o)
             print("**Name:** ",config["pname"]+"  ", file=o)
+            thiseggdb["name"] = config["pname"]
             browse_archive=""
             if re.match("https://github\.com/[^/]+/[^/]+/archive/[^/]+\.zip\Z",config["url"]):
                 browse_archive=" [(browse)](" + (
@@ -264,25 +270,39 @@ def process_egg(path,
                 )+ ")"
             print("**Archive:** [",config["url"]+"]("+config["url"]+")" +
                   browse_archive +"  ", file=o)
+            thiseggdb["archive"] = config["url"]
             if "md5" in config:
                 print("**Checksum (md5):**",config["md5"]+"  ", file=o)
             print("**Category:** ",config["category"]+"  ", file=o)
+            thiseggdb["category"] = config["category"]
             print("**Keywords:** ",config["keyw"]+"  ", file=o)
+            thiseggdb["keywords"] = config["keyw"]
             if "plumed_version" in config:
                 print("**PLUMED version:** ",config["plumed_version"]+"  ", file=o)
+                thiseggdb["version"] = config["plumed_version"]
+            else : 
+                thiseggdb["version"] = "unspecified" 
             print("**Contributor:** ",config["contributor"]+"  ", file=o)
+            thiseggdb["contributor"] = config["contributor"]
             print("**Submitted on:** "+convert_date(config["history"][0][0])+"  ", file=o)
+            thiseggdb["first_submission"] = convert_date(config["history"][0][0])
+            thiseggdb["nrevisions"] = len(config["history"]) 
             if(len(config["history"])>1):
               print("**Last revised:** "+convert_date(config["history"][-1][0])+"  ", file=o)
             # retrieve reference,url, and preprint flag
             ref,ref_url,prep = get_reference(config["doi"],config["ref"],config["ref_url"])
             if(ref=="unpublished" or ref=="submitted" or ref=="DOI not found"):
               print("**Publication:** " + ref + "  ", file=o)
+              thiseggdb["publication"] = ref
+              thiseggdb["publication_doi"] = "unspecified"
             else:
               print("**Publication:** [" + ref + "]("+ref_url+")  ", file=o)
+              thiseggdb["publication"] = ref
+              thiseggdb["publication_doi"] = ref_url
             print("  ", file=o)
             print("**PLUMED input files**  ", file=o)
             print("  ", file=o)
+            thiseggdb["all_inputs"] = []
             print("| File     | Compatible with |  ", file=o) 
             print("|:--------:|:--------:|  ", file=o)
 
@@ -356,12 +376,14 @@ def process_egg(path,
                 else:
                    print("Success")
                                
-            versions=[]
+            versions,statusdict=[],{}
 
             # Find the stable version 
             for i in range(len(plumeds)):
                 if plumeds[i]==PLUMED_MASTER:
                    versions.append("master")
+                   if plumed_status[i]!=0 : statusdict[versions[i]] = "failing"
+                   else : statusdict[versions[i]] = "working" 
                    continue
                 stable_version=subprocess.check_output(f'{plumeds[i]} info --version', shell=True).decode('utf-8').strip()
                 if plumed_version != "not specified":
@@ -369,13 +391,16 @@ def process_egg(path,
                         plumed_status[i]="ignore"
                 # Generate the plumed input 
                 versions.append("v"+ stable_version)
+                if plumed_status[i]!=0 : statusdict[versions[i]] = "failing"
+                else : statusdict[versions[i]] = "working"
 
             
             use_json = False
             if len(plumed_status)>1: 
                use_json =not plumed_status[1]
-            inpactions = set({})
-            plumed_format(file["path"], versions, plumed_status,plumeds, inpactions, usejson=use_json, global_header=global_header,header=header)
+            inpactions, out_input = set({}), []
+            plumed_format(file["path"], versions, plumed_status,plumeds, inpactions, usejson=use_json, global_header=global_header,header=header,stored_inpt=out_input)
+            thiseggdb["all_inputs"].append({"status": statusdict, "input": out_input})
             add_readme(file["path"], versions, plumed_status,plumeds,("LOAD" in inpactions),has_custom)
             for a in inpactions :
                 actions.add( a )
@@ -456,6 +481,7 @@ def process_egg(path,
         # store time
         print("  time: " + str(end_time-start_time), file=eggdb)
     eggdb.flush()
+    feggdb[egg_id] = thiseggdb
 
 if __name__ == "__main__":
     nreplicas, replica, argv = 1, 0, sys.argv[1:] 
@@ -493,6 +519,7 @@ if __name__ == "__main__":
         if key=="vimlink" or key=="replicalink" or key=="groups" : continue
         action_counts[key] = 0
     # loop over lesson for this replica
+    alleggdata = {}
     with open("_data/eggs" + str(replica) + ".yml","w") as eggdb:
         print("# file containing egg database.",file=eggdb)
 
@@ -508,7 +535,9 @@ if __name__ == "__main__":
         for path in sorted(pathlist, reverse=True, key=lambda m: str(m)):
             print("### PROCESSING EGG AT PATH " + str(path) ) 
             # process egg
-            process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb)
+            process_egg(re.sub("nest.yml$","",str(path)),action_counts,plumed_syntax,eggdb,feggdb=alleggdata)
+    with open( "_data/eggdictionary." + str(replica) + ".json", 'w' ) as file : 
+        json.dump( alleggdata, file, indent=2 )  
     # output yaml file with action counts
     action_list = [] 
     for key, value in action_counts.items() : action_list.append( {'name': key, 'number': value } )

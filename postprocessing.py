@@ -1,4 +1,5 @@
 # formatted and checked with ruff v0.11
+import json
 import yaml
 
 
@@ -34,6 +35,18 @@ def actionCount(nreplicas: int):
     with open("_data/actioncount_sum.yml", "w") as f:
         yaml.dump(dictToList(actionCounts), f)
 
+def joinJSONFiles(nreplicas: int):
+    fulldict = {}
+    for i in range(nreplicas) :
+       with open(f"_data/eggdictionary.{i}.json", "r" ) as f :
+         try:
+            repdic = json.load(f)
+         except ValueError as ve : 
+            raise InvalidJSONError(ve)
+       fulldict.update(repdic)
+    with open("nest.json", "w" ) as f :
+       json.dump( fulldict, f, indent=2 )
+
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
@@ -49,3 +62,4 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     actionCount(args.nreplicas)
+    joinJSONFiles(args.nreplicas)
