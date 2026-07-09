@@ -1,0 +1,12 @@
+url: https://github.com/Flofega/EnsembleDynamicsPaper/raw/main/plumednest.zip 
+pname: Ensemble Dynamics 
+category: methods 
+keyw: State Exploration, Protein Folding, Drug Binding, Phase Transition 
+plumed_version: 2.10
+contributor: Florian M. Dietrich 
+doi: 10.26434/chemrxiv.15005686/v1 
+history:
+  2026-07-09: original submission
+instructions: >
+  The plumed files all require additional functionality which can be loaded by compiling the included .cpp files. All the plumed inputs expect a torchscript exported model trained with the protocols outlined in the publication and GitHub. The simulations for alanine dipeptide, calixarene, chignolin and trp-cage were performed with GROMACS 2024 patched with Plumed 2.10 and the Sodium simulation with LAMMPS 2025.7.22.3
+ 
