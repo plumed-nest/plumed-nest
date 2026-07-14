@@ -1,0 +1,13 @@
+url: https://github.com/stefano-bosio/zip_for_nest/raw/main/tar-ensemble-modeling.zip 
+pname: Exploring the Conformational Landscape of HIV-1 TAR RNA by PT-WTE
+category: bio 
+keyw: RNA, PT-WTE, HIV-1 TAR 
+plumed_version: 2.9
+contributor: Stefano Bosio 
+doi: unpublished 
+history:
+  2026-07-14: original submission
+instructions: >
+  Input files to perform PT-WTE molecular dynamics simulations of HIV-1 TAR RNA. Simulations were carried out using GROMACS 2023.2 patched with PLUMED 2.9.
+The Jupyter notebooks used for data analysis and figure generation are available [here](github.com/CompMedChemLab/tar-ensemble-modeling). 
+ 
