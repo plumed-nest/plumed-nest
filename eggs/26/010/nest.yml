@@ -1,0 +1,12 @@
+url: https://github.com/AxelTG/LiNa/archive/refs/heads/main.zip 
+pname: Solvation-Mediated Ammonia Synthesis in a Nanoheterogeneous Liquid Alloy 
+category: materials
+keyw: OPES, Catalysis, Ammonia Synthesis 
+plumed_version: 2.9
+contributor: Axel Tosello Gardini
+doi: 10.1021/jacs.6c11189 
+history:
+  2026-07-27:  
+instructions: >
+  It contains the input files necessary to reproduce the results contained here. Simulations were performed in combination with LAMMPS, Deepmd-kit, and plumed. 
+ 
