@@ -1,0 +1,12 @@
+url: https://github.com/giorgiarossii/membrane_fusion_committor/releases/download/plumed-nest-v1/membrane_fusion_committor_plumed_inputs.zip 
+pname: Let's Stalk About Membranes. Committor-Based Enhanced Sampling of Stalk Formation. 
+category: bio 
+keyw: committor, machine learning, enhanced sampling, OPES, membrane fusion, stalk formation, nanoparticles 
+plumed_version: 2.9.4
+contributor: Giorgia Rossi 
+doi: 10.48550/arXiv.2607.20122
+history:
+  2026-08-10:  
+instructions: >
+ The archive contains the PLUMED input, trained committor model, GROMACS index, and custom PLUMED actions. The input was developed and tested with PLUMED 2.9.4 compiled with LibTorch support. The custom actions are compiled automatically using LOAD FILE=*.cpp.
+ 
