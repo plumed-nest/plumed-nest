@@ -1,0 +1,12 @@
+url: https://github.com/saureli/MOR_OneOPES/archive/refs/heads/main.zip 
+pname: Buprenorphine Restricts the Conformational Landscape of the μ-Opioid Receptor 
+category: bio
+keyw: OneOPES, GPCR, MOR, activation, euclidean path, conformational changes, allostery 
+plumed_version: 2.9.1
+contributor: Simone Aureli 
+doi: 10.64898/2026.06.12.731880 
+history:
+  2026-08-21:
+instructions: >
+ The simulations were run with GROMACS 2023 and PLUMED 2.9.1
+ 
