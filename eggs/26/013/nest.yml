@@ -1,0 +1,12 @@
+url: https://zenodo.org/records/22127314/files/PLUMED-NEST-moPrP.zip 
+pname: Characterizing Partially Unfolded States of the C-Terminal Domain in WT and 3PA Mouse Prion Protein 
+category: bio
+keyw: parallel-bias metadynamics, PBMetaD, metadynamics, mouse prion protein, prion protein, protein folding, partially unfolded states, molecular dynamics 
+plumed_version: 2.9
+contributor: Sonali M. Jadhav 
+doi: unpublished 
+history:
+  2026-08-27:
+instructions: >
+ The deposited files contain the PLUMED input files and GROMACS input files required to reproduce the parallel-bias metadynamics (PBMetaD) simulations of the WT and 3PA mouse prion protein systems. The simulations were performed using GROMACS 2022.5 and PLUMED 2.9.0, both compiled with MPI support. Each system consists of 20 parallel walkers. For the WT system, execute the simulation from the WT directory. For the 3PA system, execute the simulation from the 3PA directory. The simulations can be run using mpiexec --oversubscribe -np 20 gmx_mpi mdrun -multidir walker1 walker2 walker3 walker4 walker5 walker6 walker7 walker8 walker9 walker10 walker11 walker12 walker13 walker14 walker15 walker16 walker17 walker18 walker19 walker20 -plumed ../plumed.dat -v -ntomp 6. The same command is used for both WT and 3PA, with the command executed from the corresponding WT or 3PA directory. The deposited README file provides the directory structure and additional instructions.
+ 
