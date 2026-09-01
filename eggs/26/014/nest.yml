@@ -1,0 +1,12 @@
+url: https://github.com/gcourtade/papers/raw/master/2026/GPR15L_polySia/plumed_nest.zip
+pname: Dissociation free energy (DFE) calculationsfor GPR15L–polySia 
+category: bio
+keyw: metadynamics, protein-carbohydrate interaction 
+plumed_version: 2.8.3
+contributor: Davide Luciano and Gaston Courtade
+doi: unpublished 
+history:
+  2026-09-01:
+instructions: >
+ 1) build solvated, neutralized system (see unbiased_run.sh header) with editconf -> solvate -> genion -> emin.mdp. 2) one long unbiased reference trajectory with ./unbiased_run.sh (slurm job; grompp mdp/{nvt,npt,md}.mdp then mdrun). 3) metadynamics replica ensemble with ./run.sh (regenerates plumed.dat, loops rep_i with seeded velocities; grompp nvt_seeded.mdp -> npt.mdp -> md_short.mdp + plumed). `run.sh` writes `plumed.dat` itself and is self-contained apart from cluster environment variables (`$gmx`, `$plumed`, `PLUMED_KERNEL`) — adjust the paths at the top for your installation. Seeds are derived from `BASE_SEED` to make the ensemble reproducible. 
+ 
