@@ -1,0 +1,12 @@
+url: https://github.com/Flofega/EnsembleDynamicsPaper/raw/main/plumednest.zip 
+pname: Ensemble Dynamics 
+category: methods
+keyw: State Exploration, Protein Folding, Drug Binding, Phase Transition 
+plumed_version: 2.10
+contributor: Florian M. Dietrich 
+doi: 10.26434/chemrxiv.15005686/v1 
+history:
+  2026-10-26:
+instructions: >
+ The enhanced sampling simulations were performed using Plumed 2.10, gromacs 2024.4, lammps 22 July 2025 The plumed inputs require addtional functionalities developed for this publications. All the extra functions and modified source files are ready to be compiled with plumed mklib.
+ 
