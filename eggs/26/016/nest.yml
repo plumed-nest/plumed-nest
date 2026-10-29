@@ -1,0 +1,12 @@
+url: https://github.com/COSBlab/PilQ/archive/refs/heads/main.zip
+pname: Cryo-EM ensemble of the PilQ secretin 
+category: bio
+keyw: EMMIVox, cryo-EM, ensemble 
+plumed_version: 2.9
+contributor: Tatiana I. Morozova 
+doi: unpublished 
+history:
+  2026-10-29:
+instructions: >
+ The EMMIVox simulations were performed using Plumed 2.9 and gromacs 2022.5.
+ 
