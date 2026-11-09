@@ -1,0 +1,12 @@
+url: https://github.com/saureli/Beta-arrestin_activation/archive/refs/heads/main.zip 
+pname: Vasopressin V2 receptor phosphopeptide reshapes the conformational landscape of arrestin-2 beyond C-tail detachment 
+category: bio
+keyw: Arrestin, GPCR, OneOPES, conformational changes, allostery 
+plumed_version: 2.9.1
+contributor: Simone Aureli 
+doi: unpublished 
+history:
+  2026-11-09:
+instructions: >
+ The simulations were run with GROMACS 2023 and PLUMED 2.9.1 
+ 
