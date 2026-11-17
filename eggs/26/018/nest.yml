@@ -1,0 +1,12 @@
+url: https://github.com/d-SEAMS/dseams-plumed/releases/download/v0.4.0/dseams-plumed-v0.4.0-nest.zip 
+pname: d-SEAMS cage counts 
+category: methods
+keyw: ice, nucleation, cages, CHILL+, hydrate, brine, topology 
+plumed_version: 2.9
+contributor: Rohit Goswami 
+doi: 10.1021/acs.jcim.0c00031
+history:
+  2026-11-17:
+instructions: >
+ DSEAMS_CAGES is the d-SEAMS topological ice score as a PLUMED action with no derivatives. The three actions in plumed.dat score ice nucleation, a brine front, and the filled cages of a methane hydrate. PLUMED 2.9 or later. Build libdseams_plumed.so from [here](https://github.com/d-SEAMS/dseams-plumed) at tag v0.4.0 against seams-core v2.14.0.
+ 
