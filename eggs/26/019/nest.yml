@@ -1,0 +1,12 @@
+url: https://github.com/VasilyAkulovSBP/Coupled-folding-and-binding-OneOPES/archive/refs/heads/main.zip 
+pname: Multimodal Conformational Landscape and Thermodynamics of Folding and Binding in an Intrinsically Disordered Protein Region 
+category: bio 
+keyw: OneOPES, disordered protein, IDP, IDP, OPES 
+plumed_version: 2.9.3
+contributor: Vasily Akulov 
+doi: 10.64898/2026.11.13.766518 
+history:
+  2026-11-24:
+instructions: >
+ Molecular dynamics simulations were performed using GROMACS 2023.5, patched with PLUMED 2.9.3. 
+ 
