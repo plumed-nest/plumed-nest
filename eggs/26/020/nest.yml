@@ -1,0 +1,12 @@
+url: https://github.com/saureli/CCR5_activation/archive/refs/heads/main.zip 
+pname: Ligands and pathway-selective mutation reshape CCR5 activation landscapes 
+category: bio 
+keyw: OneOPES, GPCR, CCR5, activation, path, conformational changes, allostery 
+plumed_version: 2.9.1
+contributor: Simone Aureli 
+doi: unpublished
+history:
+  2026-11-24:
+instructions: >
+ The simulations were run with GROMACS 2023 and PLUMED 2.9.1 
+ 
